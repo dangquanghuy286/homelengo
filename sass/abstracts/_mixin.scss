@@ -1,5 +1,148 @@
-// @mixin center {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
+// Định nghĩa breakpoints
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    llg: 1024px,
+    xl: 1200px,
+    xxl: 1400px) !default;
+
+// Mixin responsive chính
+@mixin responsive($breakpoint, $rule: max-width) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        $value: map-get($breakpoints, $breakpoint
+        );
+
+    @if $rule ==max-width {
+        @media (max-width: #{$value - 1px}) {
+            @content;
+        }
+    }
+
+    @else if $rule ==min-width {
+        @media (min-width: #{$value}) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (#{$rule}: #{$value}) {
+            @content;
+        }
+    }
+}
+
+@else {
+    @warn "Breakpoint '#{$breakpoint}' không tồn tại trong $breakpoints map.";
+}
+}
+
+// Mixin responsive range 
+@mixin responsive-range($from, $to) {
+    @if map-has-key($breakpoints, $from) and map-has-key($breakpoints, $to) {
+        $min-value: map-get($breakpoints, $from);
+        $max-value: map-get($breakpoints, $to) - 1px;
+
+        @media (min-width: #{$min-value}) and (max-width: #{$max-value}) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Không tồn tại.";
+    }
+}
+
+// Các mixin shorthand cho từng breakpoint
+@mixin xs-down {
+    @include responsive(xs, max-width) {
+        @content;
+    }
+}
+
+@mixin sm-down {
+    @include responsive(sm, max-width) {
+        @content;
+    }
+}
+
+@mixin md-down {
+    @include responsive(md, max-width) {
+        @content;
+    }
+}
+
+@mixin lg-down {
+    @include responsive(lg, max-width) {
+        @content;
+    }
+}
+
+@mixin llg-down {
+    @include responsive(llg, max-width) {
+        @content;
+    }
+}
+
+@mixin xl-down {
+    @include responsive(xl, max-width) {
+        @content;
+    }
+}
+
+@mixin xs-up {
+    @include responsive(xs, min-width) {
+        @content;
+    }
+}
+
+@mixin sm-up {
+    @include responsive(sm, min-width) {
+        @content;
+    }
+}
+
+@mixin md-up {
+    @include responsive(md, min-width) {
+        @content;
+    }
+}
+
+@mixin lg-up {
+    @include responsive(lg, min-width) {
+        @content;
+    }
+}
+
+@mixin llg-up {
+    @include responsive(llg, min-width) {
+        @content;
+    }
+}
+
+@mixin xl-up {
+    @include responsive(xl, min-width) {
+        @content;
+    }
+}
+
+@mixin xxl-up {
+    @include responsive(xxl, min-width) {
+        @content;
+    }
+}
+
+// Mixin cho mobile-first approach
+@mixin mobile-first($breakpoint) {
+    @include responsive($breakpoint, min-width) {
+        @content;
+    }
+}
+
+// Mixin cho desktop-first approach  
+@mixin desktop-first($breakpoint) {
+    @include responsive($breakpoint, max-width) {
+        @content;
+    }
+}
