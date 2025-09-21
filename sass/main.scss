@@ -600,7 +600,9 @@
     }
 
     .home-page__menu-frame__nav {
-        gap: 0
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
     .home-page__footer-top {
