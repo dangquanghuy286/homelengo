@@ -604,7 +604,12 @@ button:hover {
   }
   .home-page__menu-frame {
     padding: 0 30px;
-    gap: 50px;
+    gap: 40px;
+  }
+  .home-page__menu-frame__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
   .home-page__menu-actions {
     padding: 0 40px;
