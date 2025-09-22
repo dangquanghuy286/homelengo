@@ -2,6 +2,14 @@
 @use 'reset';
 
 /* ================Container================ */
+.container {
+    width: 100%;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ================Home Page================ */
 .home-page {
     display: flex;
     flex-direction: column;
@@ -11,13 +19,12 @@
 /* Header */
 .home-page__logo-title {
     font-weight: 800;
-    color: #1c1c1e;
+    color: var(--gray-dark);
     font-size: 20px;
 }
 
 .home-page__logo-subtitle {
     font-weight: 400;
-
     color: var(--text-light);
     font-family: var(--font-text);
     font-size: 12px;
@@ -278,7 +285,6 @@
     padding: 11px 20px;
     border-radius: 9999px;
     height: 54px;
-
     justify-content: center;
     gap: 8px;
     width: 100%;
@@ -299,7 +305,7 @@
     flex: 1;
 }
 
-/* Hide toggle  */
+/* Hide toggle */
 .toggle-mobile {
     display: none;
     align-items: center;
@@ -316,13 +322,6 @@
     padding: 50px 0px 30px;
     width: 100%;
     background-color: var(--text-dark);
-}
-
-.home-page__container {
-    width: 100%;
-    max-width: 1290px;
-    margin: 0 auto;
-    padding: 0px;
 }
 
 .home-page__footer-top {
@@ -343,7 +342,7 @@
     width: auto;
 }
 
-/* Social Icons  */
+/* Social Icons */
 .home-page__social-icons {
     display: flex;
     align-items: center;
@@ -357,7 +356,7 @@
     font-size: 14px;
 }
 
-/* ==============Base style  =================*/
+/* ==============Base style================= */
 .home-page__social-icon {
     width: 40px;
     height: 40px;
@@ -379,7 +378,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 .icon-Vector-1:before {
@@ -387,7 +385,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 .icon-Frame:before {
@@ -395,7 +392,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 .icon-Vector-2:before {
@@ -403,7 +399,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 .icon-Vector-3:before {
@@ -411,7 +406,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 .icon-Vector-4:before {
@@ -419,7 +413,6 @@
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
-
 }
 
 /* Footer Line */
@@ -529,9 +522,7 @@
 .home-page__link:hover {
     text-decoration: underline;
     color: var(--white);
-
 }
-
 
 .home-page__newsletter {
     display: flex;
@@ -632,22 +623,13 @@
     display: none;
 }
 
-
-
-
-// Section 1
+/* Section 1 */
 .featured-properties {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     flex: 0 0 auto;
-
-}
-
-.featured-properties__container {
-    margin: 0 auto;
-    width: 1290px;
 }
 
 .featured-properties__title-section {
@@ -656,7 +638,6 @@
     align-items: center;
     width: 100%;
     flex: 0 0 auto;
-
 }
 
 .featured-properties__title {
@@ -678,6 +659,7 @@
     margin: 0;
 }
 
+
 .featured-properties__title-subtext {
     color: var(--text-dark);
     font-size: 36px;
@@ -686,6 +668,8 @@
     white-space: nowrap;
     margin: 0;
 }
+
+// TAB
 
 .featured-properties__tab-menu {
     display: inline-flex;
@@ -714,7 +698,6 @@
 .featured-properties__tab-text {
     position: relative;
     width: fit-content;
-    margin-top: -1px;
     font-weight: 600;
     color: var(--gray-dark);
     font-size: 14px;
@@ -728,6 +711,9 @@
     color: var(--white);
 }
 
+
+
+// Card
 .featured-properties__list {
     display: flex;
     flex-wrap: wrap;
@@ -742,7 +728,7 @@
     box-sizing: border-box;
 }
 
-// Property card container
+/* Property card container */
 .featured-properties__item {
     display: inline-flex;
     flex-direction: column;
@@ -762,12 +748,17 @@
     overflow: hidden;
 }
 
-
 .featured-properties__image-overlay {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.featured-properties__item-image:hover .featured-properties__image-overlay {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .featured-properties__tags {
@@ -896,7 +887,7 @@
     width: fit-content;
     margin-top: -1px;
     font-weight: 400;
-    color: var(--text-lable);
+    color: var(--text-label);
     font-size: 14px;
     letter-spacing: 0;
     line-height: 20px;
@@ -969,8 +960,6 @@
     white-space: nowrap;
 }
 
-
-
 .featured-properties__footer {
     display: flex;
     justify-content: center;
@@ -1015,11 +1004,8 @@
     transition: all 0.3s ease;
 }
 
-/* Responsive cho header, footer, và các thành phần khác */
+/* Responsive */
 @media (max-width: 1440px) {
-
-
-
     .home-page__menu {
         padding: 15px 0;
     }
@@ -1055,7 +1041,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         width: 100%;
         max-width: 1200px;
         padding: 0 20px;
@@ -1083,9 +1069,7 @@
 @media (max-width: 1200px) {
     .home-page__menu-frame {
         padding: 0;
-
     }
-
 
     .home-page__menu-actions {
         padding: 0;
@@ -1130,7 +1114,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         max-width: 960px;
     }
 
@@ -1197,7 +1181,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         max-width: 960px;
         padding: 0 20px;
     }
@@ -1346,7 +1330,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         max-width: 720px;
         padding: 0 20px;
     }
@@ -1356,12 +1340,10 @@
         flex-wrap: wrap;
         gap: 20px;
         justify-content: space-between;
-        /* Căn đều hai cột */
     }
 
     .featured-properties__item {
         width: calc(50% - 10px);
-        /* 2 cột, trừ khoảng cách gap */
         max-width: 350px;
     }
 
@@ -1467,7 +1449,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         max-width: 540px;
         padding: 0 15px;
     }
@@ -1489,7 +1471,6 @@
 
     .featured-properties__list {
         flex-direction: column;
-        /* Chuyển về dạng cột dưới 768px */
         gap: 20px;
         margin-top: 40px;
         margin-bottom: 40px;
@@ -1562,7 +1543,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         padding: 0 15px;
     }
 
@@ -1721,7 +1702,7 @@
     }
 
     /* Featured Properties */
-    .featured-properties__container {
+    .container {
         padding: 0 10px;
     }
 
@@ -1745,11 +1726,6 @@
     .featured-properties__title-text {
         font-size: 10px;
         line-height: 16px;
-    }
-
-    .featured-properties__property-name {
-        font-size: 14px;
-        line-height: 20px;
     }
 
     .featured-properties__property-name {
