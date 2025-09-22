@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?oluf15');
-  src:  url('fonts/icomoon.eot?oluf15#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?oluf15') format('truetype'),
-    url('fonts/icomoon.woff?oluf15') format('woff'),
-    url('fonts/icomoon.svg?oluf15#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?973zhj');
+  src:  url('fonts/icomoon.eot?973zhj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?973zhj') format('truetype'),
+    url('fonts/icomoon.woff?973zhj') format('woff'),
+    url('fonts/icomoon.svg?973zhj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,87 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Frame:before {
+  content: "\e937";
+  color: #fff;
+}
+.icon-Vector-3:before {
+  content: "\e938";
+  color: #fff;
+}
+.icon-Vector-4:before {
+  content: "\e939";
+  color: #fff;
+}
+.icon-Vector-2:before {
+  content: "\e93a";
+  color: #fff;
+}
+.icon-Vector-1:before {
+  content: "\e93b";
+  color: #fff;
+}
+.icon-Vector:before {
+  content: "\e93c";
+  color: #fff;
+}
+.icon-XCircle:before {
+  content: "\e907";
+}
+.icon-ChatsCircle:before {
+  content: "\e905";
+}
+.icon-Eye:before {
+  content: "\e906";
+}
+.icon-MapPin:before {
+  content: "\e904";
+}
+.icon-TwitterLogo:before {
+  content: "\e903";
+}
+.icon-CheckCircle:before {
+  content: "\e902";
+}
+.icon-X:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e900";
+}
+.icon-CaretDown:before {
+  content: "\e927";
+}
+.icon-CaretUp:before {
+  content: "\e908";
+}
+.icon-CaretLeft:before {
+  content: "\e928";
+}
+.icon-CaretRight:before {
+  content: "\e929";
+}
+.icon-FacebookLogo:before {
+  content: "\e92a";
+}
+.icon-InstagramLogo:before {
+  content: "\e92b";
+}
+.icon-PaperPlaneTilt:before {
+  content: "\e92c";
+}
+.icon-PinterestLogo:before {
+  content: "\e92d";
+}
+.icon-XLogo:before {
+  content: "\e930";
+}
+.icon-check:before {
+  content: "\e90d";
+}
+.icon-play-filled:before {
+  content: "\e946";
+}
 .icon-cart:before {
   content: "\e90a";
 }
@@ -201,61 +282,4 @@
 }
 .icon-star:before {
   content: "\e933";
-}
-.icon-XCircle:before {
-  content: "\e907";
-}
-.icon-ChatsCircle:before {
-  content: "\e905";
-}
-.icon-Eye:before {
-  content: "\e906";
-}
-.icon-MapPin:before {
-  content: "\e904";
-}
-.icon-TwitterLogo:before {
-  content: "\e903";
-}
-.icon-CheckCircle:before {
-  content: "\e902";
-}
-.icon-X:before {
-  content: "\e901";
-}
-.icon-search:before {
-  content: "\e900";
-}
-.icon-CaretDown:before {
-  content: "\e927";
-}
-.icon-CaretUp:before {
-  content: "\e908";
-}
-.icon-CaretLeft:before {
-  content: "\e928";
-}
-.icon-CaretRight:before {
-  content: "\e929";
-}
-.icon-FacebookLogo:before {
-  content: "\e92a";
-}
-.icon-InstagramLogo:before {
-  content: "\e92b";
-}
-.icon-PaperPlaneTilt:before {
-  content: "\e92c";
-}
-.icon-PinterestLogo:before {
-  content: "\e92d";
-}
-.icon-XLogo:before {
-  content: "\e930";
-}
-.icon-check:before {
-  content: "\e90d";
-}
-.icon-play-filled:before {
-  content: "\e946";
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ===============Variable=============== */
 :root {
   --font-family: "Manrope", Helvetica;
@@ -101,10 +102,39 @@ button:hover {
   gap: 60px;
 }
 
-.home-page__nav-link {
-  font-weight: 600;
-  color: var(--text-dark);
+.nav-link {
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 2px 8px;
+  white-space: nowrap;
   font-size: 16px;
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link--active {
+  color: var(--primary-color);
 }
 
 .home-page__nav-link--dropdown {
@@ -114,8 +144,6 @@ button:hover {
 }
 
 .home-page__nav-text {
-  font-weight: 600;
-  color: var(--text-dark);
   font-size: 16px;
   line-height: 1;
 }
@@ -152,27 +180,51 @@ button:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+/* Nút Login */
 .home-page__btn--login {
   border: 1px solid var(--primary-color);
   width: 140px;
 }
 
+.home-page__btn--login:hover {
+  background-color: var(--primary-color);
+}
+
+.home-page__btn--login:hover .home-page__btn-text,
+.home-page__btn--login:hover .home-page__btn-icon,
+.home-page__btn--login:hover .icon-menu:before {
+  color: var(--white);
+}
+
+/* Icon chung */
 .home-page__btn-icon {
   width: 20px;
   height: 20px;
+  transition: color 0.3s ease;
 }
 
+/* Text chung */
 .home-page__btn-text {
   font-weight: 600;
   color: var(--text-dark);
   font-size: 16px;
+  transition: color 0.3s ease;
 }
 
+/* Nút Submit */
 .home-page__btn--submit {
   width: 206px;
   background-color: var(--primary-color);
+}
+
+.home-page__btn--submit:hover {
+  background-color: var(--white);
+  border: 1px solid var(--primary-color);
+  opacity: 0.9;
 }
 
 .home-page__btn-text--submit {
@@ -180,14 +232,23 @@ button:hover {
   color: var(--white);
   font-size: 16px;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
+.home-page__btn--submit:hover .home-page__btn-text--submit,
+.home-page__btn--submit:hover .home-page__btn-icon,
+.home-page__btn--submit:hover .icon-content_copy:before {
+  color: var(--primary-color);
+}
+
+/* Icon */
 .icon-content_copy:before {
   content: "\e919";
   font-family: "icomoon";
   line-height: 1;
   display: inline-block;
   color: var(--white);
+  transition: color 0.3s ease;
 }
 
 .icon-menu:before {
@@ -196,6 +257,7 @@ button:hover {
   line-height: 1;
   display: inline-block;
   color: var(--black);
+  transition: color 0.3s ease;
 }
 
 /* Mobile Menu */
@@ -233,14 +295,12 @@ button:hover {
   justify-content: space-between;
   padding: 12px 0;
   font-weight: 600;
-  color: var(--text-dark);
   font-size: 16px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .home-page__mobile-nav-text {
   font-weight: 600;
-  color: var(--text-dark);
   font-size: 16px;
 }
 
@@ -256,7 +316,6 @@ button:hover {
   padding: 11px 20px;
   border-radius: 9999px;
   height: 54px;
-  align-items: center;
   justify-content: center;
   gap: 8px;
   width: 100%;
@@ -296,13 +355,17 @@ button:hover {
   background-color: var(--text-dark);
 }
 
+.home-page__container {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .home-page__footer-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1290px;
-  width: 100%;
-  height: 48px;
 }
 
 .home-page__footer-logo {
@@ -344,52 +407,50 @@ button:hover {
   background-color: var(--gray-light);
 }
 
-.icon-FacebookLogo:before {
-  content: "\e92a";
-  font-family: "icomoon";
-  font-size: 16px;
-  line-height: 1;
-  color: var(--white);
+.home-page__social-icon:hover {
+  background-color: var(--primary-color);
 }
 
-.icon-linkedin:before {
-  content: "\eac9";
+.icon-Vector:before {
+  content: "\e93c";
   font-family: "icomoon";
   font-size: 16px;
   line-height: 1;
-  color: var(--white);
 }
 
-.icon-XLogo:before {
-  content: "\e930";
+.icon-Vector-1:before {
+  content: "\e93b";
   font-family: "icomoon";
   font-size: 16px;
   line-height: 1;
-  color: var(--white);
 }
 
-.icon-PinterestLogo:before {
-  content: "\e92d";
+.icon-Frame:before {
+  content: "\e937";
   font-family: "icomoon";
   font-size: 16px;
   line-height: 1;
-  color: var(--white);
 }
 
-.icon-InstagramLogo:before {
-  content: "\e92b";
+.icon-Vector-2:before {
+  content: "\e93a";
   font-family: "icomoon";
   font-size: 16px;
   line-height: 1;
-  color: var(--white);
 }
 
-.icon-youtube-play:before {
-  content: "\e931";
+.icon-Vector-3:before {
+  content: "\e938";
   font-family: "icomoon";
   font-size: 16px;
   line-height: 1;
-  color: var(--white);
+}
+
+.icon-Vector-4:before {
+  content: "\e939";
+  font-family: "icomoon";
+  font-size: 16px;
+  line-height: 1;
 }
 
 /* Footer Line */
@@ -492,6 +553,13 @@ button:hover {
   font-size: 14px;
   line-height: 22px;
   white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-page__link:hover {
+  text-decoration: underline;
+  color: var(--white);
 }
 
 .home-page__newsletter {
@@ -678,6 +746,7 @@ button:hover {
   }
 }
 @media (max-width: 992px) {
+  /* Header */
   .home-page__menu {
     justify-content: space-between;
     padding: 0 20px;
@@ -724,6 +793,7 @@ button:hover {
   .home-page__btn-text {
     font-size: 13px;
   }
+  /* Footer */
   .home-page__footer-top {
     gap: 20px;
     display: flex;
@@ -828,6 +898,7 @@ button:hover {
   }
 }
 @media (max-width: 576px) {
+  /* Header */
   .home-page__menu-frame__logo {
     height: 36px;
     gap: 6px;
@@ -864,6 +935,7 @@ button:hover {
   }
 }
 @media (max-width: 480px) {
+  /* Header */
   .home-page__menu-frame__logo {
     height: 30px;
     gap: 6px;
