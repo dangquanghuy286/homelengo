@@ -17,6 +17,7 @@
 
 .home-page__logo-subtitle {
     font-weight: 400;
+
     color: var(--text-light);
     font-family: var(--font-text);
     font-size: 12px;
@@ -29,7 +30,7 @@
 /* Header-Menu */
 .home-page__menu {
     width: 100%;
-    height: 78px;
+    padding: 15px 0;
     background-color: var(--white);
     display: flex;
     align-items: center;
@@ -137,7 +138,7 @@
     display: flex;
     padding: 11px 20px;
     border-radius: 9999px;
-    height: 54px;
+    height: 48px;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -321,7 +322,7 @@
     width: 100%;
     max-width: 1290px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0px;
 }
 
 .home-page__footer-top {
@@ -649,7 +650,7 @@
     width: 1290px;
 }
 
-.featured-properties__heading {
+.featured-properties__title-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -738,6 +739,7 @@
     flex: 0 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
+    box-sizing: border-box;
 }
 
 // Property card container
@@ -749,15 +751,15 @@
     background-color: var(--white);
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 0 1px var(--border-card);
-    box-sizing: border-box;
-
+    width: 410px;
+    border: 1px solid var(--border-card);
 }
 
 .featured-properties__item-image {
     position: relative;
-    width: 410px;
+    width: 100%;
     height: 270px;
+    overflow: hidden;
 }
 
 
@@ -765,6 +767,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .featured-properties__tags {
@@ -870,7 +873,7 @@
 }
 
 .featured-properties__property-link:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
 .featured-properties__description {
@@ -1015,18 +1018,14 @@
 /* Responsive cho header, footer, và các thành phần khác */
 @media (max-width: 1440px) {
 
-    .home-page__header,
-    .home-page__footer {
-        width: 100%;
-        max-width: 100%;
-    }
+
 
     .home-page__menu {
-        padding: 0;
+        padding: 15px 0;
     }
 
     .home-page__menu-frame {
-        padding: 0 30px;
+        padding: 0;
         gap: 40px;
     }
 
@@ -1037,7 +1036,7 @@
     }
 
     .home-page__menu-actions {
-        padding: 0 40px;
+        padding: 0 20px;
     }
 
     .home-page__footer-top {
@@ -1244,7 +1243,7 @@
     /* Header */
     .home-page__menu {
         justify-content: space-between;
-        padding: 0 20px;
+        padding: 15px 20px;
     }
 
     .home-page__menu-frame {
@@ -1393,7 +1392,7 @@
 @media (max-width: 768px) {
     .home-page__menu {
         height: 70px;
-        padding: 0 15px;
+        padding: 15px 15px;
     }
 
     .home-page__menu-frame {
