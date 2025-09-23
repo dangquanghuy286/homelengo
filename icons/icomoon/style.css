@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jdix3z');
-  src:  url('fonts/icomoon.eot?jdix3z#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?jdix3z') format('truetype'),
-    url('fonts/icomoon.woff?jdix3z') format('woff'),
-    url('fonts/icomoon.svg?jdix3z#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?eha404');
+  src:  url('fonts/icomoon.eot?eha404#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?eha404') format('truetype'),
+    url('fonts/icomoon.woff?eha404') format('woff'),
+    url('fonts/icomoon.svg?eha404#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Icon-3:before {
+  content: "\e943";
+  color: #fff;
+}
 .icon-Frame:before {
   content: "\e937";
   color: #fff;
@@ -36,6 +40,18 @@
 .icon-Vector-4:before {
   content: "\e939";
   color: #fff;
+}
+.icon-Icon-21:before {
+  content: "\e942";
+  color: #a3abb0;
+}
+.icon-Icon-11:before {
+  content: "\e941";
+  color: #a3abb0;
+}
+.icon-email1:before {
+  content: "\e940";
+  color: #a3abb0;
 }
 .icon-Icon-2:before {
   content: "\e93d";
