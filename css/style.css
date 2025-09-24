@@ -446,13 +446,12 @@ button:hover {
 
 .hero__tabs {
   display: flex;
-  width: 350px;
   gap: 10px;
 }
 
 .hero__tab-active,
 .hero__tab {
-  flex: 1;
+  width: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,6 +459,8 @@ button:hover {
   border-radius: 99px;
   transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .hero__tab-active {
@@ -548,31 +549,22 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   align-self: stretch;
   width: 100%;
-  flex: 0 0 auto;
-}
-
-.icon-CaretDown:before {
-  content: "\e927";
-  font-size: 12px;
+  gap: 10px;
 }
 
 .hero__select {
-  position: relative;
-  width: fit-content;
+  flex: 1;
   font-weight: 600;
   color: var(--text-dark);
   font-size: 16px;
-  letter-spacing: 0;
   line-height: 22px;
   background: none;
   border: none;
+  padding: 8px 0;
   outline: none;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 .icon-Crosshair:before {
@@ -1312,6 +1304,11 @@ button:hover {
   line-height: 30px;
 }
 
+.services__name:hover {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
 .services__description {
   align-self: stretch;
   font-weight: 400;
@@ -1853,7 +1850,7 @@ button:hover {
 }
 
 .partners__item:hover {
-  filter: invert(32%) sepia(97%);
+  filter: invert(13%) sepia(73%) saturate(6851%) hue-rotate(217deg) brightness(97%) contrast(106%);
   transform: scale(1.05);
 }
 
