@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="font/fonts.css" />
     <!-- Icon -->
     <link rel="stylesheet" href="icons/icomoon/style.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -105,16 +110,129 @@
           </div>
         </div>
       </header>
-      <div class="">
-        <img
-          class="heroBanner"
-          alt="Hero banner showcasing beautiful properties"
-          src="./images/logo/heroBanner.png"
-        />
-      </div>
 
       <!-- Main -->
       <main>
+        <section class="hero" role="main">
+          <div class="container">
+            <div class="hero__text">
+              <h1 id="hero-heading" class="hero__title">
+                Find Your Dream Home
+              </h1>
+              <p class="hero__subtitle">
+                We are a real estate agency that will help you find the best
+                residence you dream of,<br />let's discuss for your dream house?
+              </p>
+            </div>
+            <div class="hero__search" aria-label="Property search form">
+              <div
+                class="hero__tabs"
+                role="tablist"
+                aria-label="Property type selection"
+              >
+                <div class="hero__tab-active">
+                  <button class="hero__tab-button" role="tab" id="for-rent-tab">
+                    <span class="hero__tab-text">For rent</span>
+                  </button>
+                </div>
+                <button
+                  class="hero__tab"
+                  role="tab"
+                  aria-selected="false"
+                  id="for-sale-tab"
+                >
+                  <span class="hero__tab-text">For sale</span>
+                </button>
+              </div>
+              <div
+                class="hero__form"
+                role="search"
+                aria-labelledby="for-rent-tab"
+                id="search-form"
+              >
+                <div class="hero__form-content">
+                  <div class="hero__form-group">
+                    <label class="hero__label" for="property-type">Type</label>
+                    <div class="hero__input-group">
+                      <select
+                        class="hero__select"
+                        id="property-type"
+                        name="property-type"
+                        aria-label="Select property type"
+                      >
+                        <option value="">All type</option>
+                      </select>
+                      <span class="icon-CaretDown"></span>
+                    </div>
+                  </div>
+                  <div
+                    class="hero__separator"
+                    role="separator"
+                    aria-hidden="true"
+                  ></div>
+                  <div class="hero__form-group">
+                    <label class="hero__label" for="location-search"
+                      >Location</label
+                    >
+                    <div class="hero__input-group">
+                      <input
+                        class="hero__input"
+                        type="text"
+                        id="location-search"
+                        name="location"
+                        placeholder="Search Location"
+                        aria-label="Enter location to search"
+                      />
+                      <span class="icon-Crosshair"></span>
+                    </div>
+                  </div>
+                  <div
+                    class="hero__separator"
+                    role="separator"
+                    aria-hidden="true"
+                  ></div>
+                  <div class="hero__form-group">
+                    <label class="hero__label" for="keyword-search"
+                      >Keyword</label
+                    >
+                    <input
+                      class="hero__input"
+                      type="text"
+                      id="keyword-search"
+                      name="keyword"
+                      placeholder="Search Keyword"
+                      aria-label="Enter search keywords"
+                    />
+                  </div>
+                  <div class="hero__actions">
+                    <button
+                      type="button"
+                      class="hero__advanced-button"
+                      aria-label="Open advanced search options"
+                      aria-expanded="false"
+                    >
+                      <span class="hero__advanced-text">Search advanced</span>
+                      <img
+                        class="hero__advanced-icon"
+                        src="./images/logo/sort.png"
+                        alt=""
+                        aria-hidden="true"
+                      />
+                    </button>
+                    <button
+                      type="submit"
+                      class="hero__search-button"
+                      aria-label="Search properties"
+                    >
+                      <span class="hero__search-text">Search</span>
+                      <span class="icon-search"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section
           class="featured-properties"
           aria-labelledby="featured-properties-heading"
@@ -686,6 +804,177 @@
             </div>
           </div>
         </section>
+        <section
+          class="explore-cities"
+          aria-labelledby="explore-cities-heading"
+        >
+          <!-- Tiêu đề Section -->
+          <div class="featured-properties__title-section">
+            <div class="featured-properties__title">
+              <h2
+                id="featured-properties-title-section"
+                class="featured-properties__title-text"
+              >
+                EXPLORE CITIES
+              </h2>
+              <p class="featured-properties__title-subtext">
+                Our Location For You
+              </p>
+            </div>
+          </div>
+          <div
+            class="explore-cities__list"
+            role="list"
+            aria-label="Available cities"
+          >
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-20.png"
+                alt="Naperville city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Naperville</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon icon-arrow-right2"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-21.png"
+                alt="Pembroke Pines city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Pembroke Pines</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button icon-arrow-right2"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-22.png"
+                alt="Toledo city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Toledo</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button icon-arrow-right2"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-23.png"
+                alt="Orange city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Orange</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon icon-arrow-right2"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-24.png"
+                alt="Fairfield city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Fairfield</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button icon-arrow-right2"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+            <div class="explore-cities__item" role="listitem">
+              <img
+                src="./images/feature-item/feature-25.png"
+                alt="Austin city image"
+              />
+              <div class="explore-cities__content">
+                <div class="explore-cities__details">
+                  <span class="explore-cities__property-count"
+                    >321 Property</span
+                  >
+                  <h3 class="explore-cities__name">Austin</h3>
+                </div>
+                <button
+                  class="explore-cities__action-button icon-arrow-right2"
+                  aria-label="Explore properties in Austin"
+                >
+                  <span
+                    class="explore-cities__action-icon"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="explore-cities__dots">
+            <span class="explore-cities__dot active"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+          </div>
+        </section>
         <section class="services" aria-labelledby="services-heading">
           <div class="container">
             <!-- Tiêu đề Section -->
@@ -781,6 +1070,75 @@
                   <span class="services__button-text">Learn More</span>
                   <span class="icon-arrow-right2"></span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="benefits" aria-labelledby="benefits-heading">
+          <img
+            class="benefits__hero-image"
+            alt="Professional real estate team"
+            src="./images/feature-item/feature-19.png"
+          />
+          <div class="benefits__content">
+            <div class="benefits__header">
+              <div class="benefits__title-section">
+                <h2 id="benefits-heading" class="benefits__title">
+                  OUR BENEFITS
+                </h2>
+                <p class="benefits__subtitle">Why Choose HomeLengo</p>
+              </div>
+              <p class="benefits__intro">
+                Our seasoned team excels in real estate with years of successful
+                market navigation, offering informed decisions and optimal
+                results.
+              </p>
+            </div>
+            <div class="benefits__list" role="list" aria-label="Our benefits">
+              <div class="benefits__item" role="listitem">
+                <img
+                  class="benefits__icon"
+                  alt="Proven expertise icon"
+                  src="./images/logo/benefit-3.png"
+                />
+                <div class="benefits__details">
+                  <h3 class="benefits__name">Proven Expertise</h3>
+                  <p class="benefits__description">
+                    Our seasoned team excels in real estate with years of
+                    successful market navigation, offering informed decisions
+                    and optimal results.
+                  </p>
+                </div>
+              </div>
+              <div class="benefits__item" role="listitem">
+                <img
+                  class="benefits__icon"
+                  alt="Customized solutions icon"
+                  src="./images/logo/benefit-2.png"
+                />
+                <div class="benefits__details">
+                  <h3 class="benefits__name">Customized Solutions</h3>
+                  <p class="benefits__description">
+                    We pride ourselves on crafting personalized strategies to
+                    match your unique goals, ensuring a seamless real estate
+                    journey.
+                  </p>
+                </div>
+              </div>
+              <div class="benefits__item" role="listitem">
+                <img
+                  class="benefits__icon"
+                  alt="Transparent partnerships icon"
+                  src="./images/logo/benefit-1.png"
+                />
+                <div class="benefits__details">
+                  <h3 class="benefits__name">Transparent Partnerships</h3>
+                  <p class="benefits__description">
+                    Transparency is key in our client relationships. We
+                    prioritize clear communication and ethical practices,
+                    fostering trust and reliability throughout.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1301,7 +1659,204 @@
             </div>
           </div>
         </section>
-
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+          <div class="featured-properties__title-section">
+            <div class="featured-properties__title">
+              <h2
+                id="testimonials-heading"
+                class="featured-properties__title-text"
+              >
+                OUR TESTIMONIALS
+              </h2>
+              <p class="featured-properties__title-subtext">
+                What’s people say’s
+              </p>
+              <p class="featured-properties__description">
+                Our seasoned team excels in real estate with years of successful
+                market navigation, offering informed decisions and optimal
+                results.
+              </p>
+            </div>
+          </div>
+          <div class="testimonials__content">
+            <div
+              class="testimonials__list"
+              role="list"
+              aria-label="Customer testimonials"
+            >
+              <!-- <div class="testimonials__item" role="listitem">
+                <span class="testimonials__quote-icon icon-quotes-left"></span>
+                <div class="testimonials__details">
+                  <div class="testimonials__text">
+                    "I truly appreciate the professionalism and in-depth
+                    knowledge of the brokerage team. They not only helped me
+                    find the perfect home but also assisted with legal and
+                    financial aspects, making me feel confident and secure in my
+                    decision."
+                  </div>
+                  <div class="testimonials__avatar">
+                    <div class="testimonials__avatar-image">
+                      <img
+                        class="testimonials__avatar-image"
+                        alt="Courtney Henry profile picture"
+                        src="./images/user/user-17.png"
+                      />
+                    </div>
+                    <div class="testimonials__avatar-info">
+                      <div class="testimonials__avatar-details">
+                        <div class="testimonials__author">Cody Fisher</div>
+                        <span class="testimonials__title">CEO Themesflat</span>
+                      </div>
+                      <div class="testimonials__rating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="testimonials__item" role="listitem">
+                <span class="testimonials__quote-icon icon-quotes-left"></span>
+                <div class="testimonials__details">
+                  <div class="testimonials__text">
+                    "My experience with property management services has
+                    exceeded expectations. They efficiently manage properties
+                    with a professional and attentive approach in every
+                    situation. I feel reassured that any issue will be resolved
+                    promptly and effectively."
+                  </div>
+                  <div class="testimonials__avatar">
+                    <img
+                      class="testimonials__avatar-image"
+                      alt="Courtney Henry profile picture"
+                      src="./images/user/user-18.png"
+                    />
+                    <div class="testimonials__avatar-info">
+                      <div class="testimonials__avatar-details">
+                        <div class="testimonials__author">Courtney Henry</div>
+                        <span class="testimonials__title">CEO Themesflat</span>
+                      </div>
+                      <div class="testimonials__rating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item" role="listitem">
+                <span class="testimonials__quote-icon icon-quotes-left"></span>
+                <div class="testimonials__details">
+                  <div class="testimonials__text">
+                    "My experience with property management services has
+                    exceeded expectations. They efficiently manage properties
+                    with a professional and attentive approach in every
+                    situation. I feel reassured that any issue will be resolved
+                    promptly and effectively."
+                  </div>
+                  <div class="testimonials__avatar">
+                    <img
+                      class="testimonials__avatar-image"
+                      alt="Esther Howard profile picture"
+                      src="./images/user/user-19.png"
+                    />
+                    <div class="testimonials__avatar-info">
+                      <div class="testimonials__avatar-details">
+                        <div class="testimonials__author">Esther Howard</div>
+                        <span class="testimonials__title">CEO Themesflat</span>
+                      </div>
+                      <div class="testimonials__rating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item" role="listitem">
+                <span class="testimonials__quote-icon icon-quotes-left"></span>
+                <div class="testimonials__details">
+                  <div class="testimonials__text">
+                    "My experience with property management services has
+                    exceeded expectations. They efficiently manage properties
+                    with a professional and attentive approach in every
+                    situation. I feel reassured that any issue will be resolved
+                    promptly and effectively."
+                  </div>
+                  <div class="testimonials__avatar">
+                    <img
+                      class="testimonials__avatar-image"
+                      alt="Annette Black profile picture"
+                      src="./images/user/user-20.png"
+                    />
+                    <div class="testimonials__avatar-info">
+                      <div class="testimonials__avatar-details">
+                        <div class="testimonials__author">Annette Black</div>
+                        <span class="testimonials__title">CEO Themesflat</span>
+                      </div>
+                      <div class="testimonials__rating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item" role="listitem">
+                <span class="testimonials__quote-icon icon-quotes-left"></span>
+                <div class="testimonials__details">
+                  <div class="testimonials__text">
+                    "My experience with property management services has
+                    exceeded expectations. They efficiently manage properties
+                    with a professional and attentive approach in every
+                    situation. I feel reassured that any issue will be resolved
+                    promptly and effectively."
+                  </div>
+                  <div class="testimonials__avatar">
+                    <img
+                      class="testimonials__avatar-image"
+                      alt="Bessie Cooper profile picture"
+                      src="./images/user/user-21.png"
+                    />
+                    <div class="testimonials__avatar-info">
+                      <div class="testimonials__avatar-details">
+                        <div class="testimonials__author">Bessie Cooper</div>
+                        <span class="testimonials__title">CEO Themesflat</span>
+                      </div>
+                      <div class="testimonials__rating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="explore-cities__dots">
+            <span class="explore-cities__dot active"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+            <span class="explore-cities__dot"></span>
+          </div>
+        </section>
         <section class="team" aria-labelledby="team-heading">
           <div class="container">
             <div class="featured-properties__title-section">
@@ -1320,11 +1875,13 @@
             <div class="team__list" role="list" aria-label="Our team members">
               <div class="team__item" role="listitem">
                 <div class="team__image-container">
-                  <img
-                    class="team__image"
-                    alt="Chris Patt profile image"
-                    src="./images/user/user-13.png"
-                  />
+                  <a href="#teamdetail">
+                    <img
+                      class="team__image"
+                      alt="Chris Patt profile image"
+                      src="./images/user/user-13.png"
+                    />
+                  </a>
                   <div class="team__social-overlay">
                     <span class="team__social-icon icon-Vector"></span>
                     <span class="team__social-icon icon-Frame"></span>
@@ -1334,7 +1891,9 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <h3 class="team__name">Chris Patt</h3>
+                    <a href="teamDetail">
+                      <h3 class="team__name">Chris Patt</h3>
+                    </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
                   <div class="team__social-links">
@@ -1349,11 +1908,13 @@
               </div>
               <div class="team__item" role="listitem">
                 <div class="team__image-container">
-                  <img
-                    class="team__image"
-                    alt="Esther Howard profile image"
-                    src="./images/user/user-14.png"
-                  />
+                  <a href="#teamDetail">
+                    <img
+                      class="team__image"
+                      alt="Esther Howard profile image"
+                      src="./images/user/user-14.png"
+                    />
+                  </a>
                   <div class="team__social-overlay">
                     <span class="team__social-icon icon-Vector"></span>
                     <span class="team__social-icon icon-Frame"></span>
@@ -1363,7 +1924,9 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <h3 class="team__name">Esther Howard</h3>
+                    <a href="teamDetail">
+                      <h3 class="team__name">Esther Howard</h3>
+                    </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
                   <div class="team__social-links">
@@ -1378,11 +1941,13 @@
               </div>
               <div class="team__item" role="listitem">
                 <div class="team__image-container">
-                  <img
-                    class="team__image"
-                    alt="Darrell Steward profile image"
-                    src="./images/user/user-15.png"
-                  />
+                  <a href="#teamDetail">
+                    <img
+                      class="team__image"
+                      alt="Darrell Steward profile image"
+                      src="./images/user/user-15.png"
+                    />
+                  </a>
                   <div class="team__social-overlay">
                     <span class="team__social-icon icon-Vector"></span>
                     <span class="team__social-icon icon-Frame"></span>
@@ -1392,7 +1957,9 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <h3 class="team__name">Darrell Steward</h3>
+                    <a href="#teamDetail"
+                      ><h3 class="team__name">Darrell Steward</h3></a
+                    >
                     <p class="team__role">Administrative Staff</p>
                   </div>
                   <div class="team__social-links">
@@ -1407,11 +1974,13 @@
               </div>
               <div class="team__item" role="listitem">
                 <div class="team__image-container">
-                  <img
-                    class="team__image"
-                    alt="Robert Fox profile image"
-                    src="./images/user/user-16.png"
-                  />
+                  <a href="#teamDetail">
+                    <img
+                      class="team__image"
+                      alt="Robert Fox profile image"
+                      src="./images/user/user-16.png"
+                    />
+                  </a>
                   <div class="team__social-overlay">
                     <span class="team__social-icon icon-Vector"></span>
                     <span class="team__social-icon icon-Frame"></span>
@@ -1421,7 +1990,9 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <h3 class="team__name">Robert Fox</h3>
+                    <a href="">
+                      <h3 class="team__name">Robert Fox</h3>
+                    </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
                   <div class="team__social-links">
@@ -1451,37 +2022,37 @@
                 class="partners__item"
                 alt="Partner company logo 1"
                 role="listitem"
-                src="./images/logo/partner-1.png"
+                src="./images/logo/partner-1.svg"
               />
               <img
                 class="partners__item"
                 alt="Partner company logo 2"
                 role="listitem"
-                src="./images/logo/partner-2.png"
+                src="./images/logo/partner-2.svg"
               />
               <img
                 class="partners__item"
                 alt="Partner company logo 3"
                 role="listitem"
-                src="./images/logo/partner-3.png"
+                src="./images/logo/partner-3.svg"
               />
               <img
                 class="partners__item"
                 alt="Partner company logo 4"
                 role="listitem"
-                src="./images/logo/partner-4.png"
+                src="./images/logo/partner-4.svg"
               />
               <img
                 class="partners__item"
                 alt="Partner company logo 5"
                 role="listitem"
-                src="./images/logo/partner-5.png"
+                src="./images/logo/partner-5.svg"
               />
               <img
                 class="partners__item"
                 alt="Partner company logo 6"
                 role="listitem"
-                src="./images/logo/partner-6.png"
+                src="./images/logo/partner-6.svg"
               />
             </div>
           </div>
@@ -1506,11 +2077,13 @@
             >
               <div class="latest-news__item" role="listitem">
                 <div class="latest-news__image-container">
-                  <img
-                    class="latest-news__image"
-                    alt="Blog post illustration"
-                    src="./images/feature-item/feature-16.png"
-                  />
+                  <a href="#blog-detail">
+                    <img
+                      class="latest-news__image"
+                      alt="Blog post illustration"
+                      src="./images/feature-item/feature-16.png"
+                    />
+                  </a>
                   <div class="latest-news__date">
                     <span class="latest-news__date-text">January 28, 2024</span>
                   </div>
@@ -1537,11 +2110,13 @@
               </div>
               <div class="latest-news__item" role="listitem">
                 <div class="latest-news__image-container">
-                  <img
-                    class="latest-news__image"
-                    alt="Blog post illustration"
-                    src="./images/feature-item/feature-17.png"
-                  />
+                  <a href="#blog-detail">
+                    <img
+                      class="latest-news__image"
+                      alt="Blog post illustration"
+                      src="./images/feature-item/feature-17.png"
+                    />
+                  </a>
                   <div class="latest-news__date">
                     <span class="latest-news__date-text">January 28, 2024</span>
                   </div>
@@ -1568,11 +2143,13 @@
               </div>
               <div class="latest-news__item" role="listitem">
                 <div class="latest-news__image-container">
-                  <img
-                    class="latest-news__image"
-                    alt="Blog post illustration"
-                    src="./images/feature-item/feature-18.png"
-                  />
+                  <a href="#blog-detail">
+                    <img
+                      class="latest-news__image"
+                      alt="Blog post illustration"
+                      src="./images/feature-item/feature-18.png"
+                    />
+                  </a>
                   <div class="latest-news__date">
                     <span class="latest-news__date-text">January 28, 2024</span>
                   </div>
@@ -1716,5 +2293,7 @@
     </div>
 
     <script src="/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
