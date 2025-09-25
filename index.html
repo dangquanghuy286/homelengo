@@ -130,19 +130,26 @@
                 role="tablist"
                 aria-label="Property type selection"
               >
-                <div class="hero__tab-active">
-                  <button class="hero__tab-button" role="tab" id="for-rent-tab">
+                <div
+                  class="hero__tab hero__tab-active"
+                  role="tab"
+                  id="for-rent-tab"
+                  aria-selected="true"
+                >
+                  <button class="hero__tab-button">
                     <span class="hero__tab-text">For rent</span>
                   </button>
                 </div>
-                <button
+                <div
                   class="hero__tab"
                   role="tab"
                   aria-selected="false"
                   id="for-sale-tab"
                 >
-                  <span class="hero__tab-text">For sale</span>
-                </button>
+                  <button class="hero__tab-button">
+                    <span class="hero__tab-text">For sale</span>
+                  </button>
+                </div>
               </div>
               <div
                 class="hero__form"
@@ -240,15 +247,15 @@
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
-                <h2
+                <h4
                   id="featured-properties-title-section"
                   class="featured-properties__title-text"
                 >
                   FEATURED PROPERTIES
-                </h2>
-                <p class="featured-properties__title-subtext">
+                </h4>
+                <h3 class="featured-properties__title-subtext">
                   Recommended for you
-                </p>
+                </h3>
               </div>
 
               <div
@@ -340,11 +347,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -420,11 +427,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -500,11 +507,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -580,11 +587,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -660,11 +667,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -740,11 +747,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -811,15 +818,15 @@
           <!-- Tiêu đề Section -->
           <div class="featured-properties__title-section">
             <div class="featured-properties__title">
-              <h2
+              <h4
                 id="featured-properties-title-section"
                 class="featured-properties__title-text"
               >
                 EXPLORE CITIES
-              </h2>
-              <p class="featured-properties__title-subtext">
+              </h4>
+              <h3 class="featured-properties__title-subtext">
                 Our Location For You
-              </p>
+              </h3>
             </div>
           </div>
           <div
@@ -837,7 +844,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Naperville</h3>
+                  <h6 class="explore-cities__name">Naperville</h6>
                 </div>
                 <button
                   class="explore-cities__action-button"
@@ -860,7 +867,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Pembroke Pines</h3>
+                  <h6 class="explore-cities__name">Pembroke Pines</h6>
                 </div>
                 <button
                   class="explore-cities__action-button icon-arrow-right2"
@@ -883,7 +890,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Toledo</h3>
+                  <h6 class="explore-cities__name">Toledo</h6>
                 </div>
                 <button
                   class="explore-cities__action-button icon-arrow-right2"
@@ -906,7 +913,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Orange</h3>
+                  <h6 class="explore-cities__name">Orange</h6>
                 </div>
                 <button
                   class="explore-cities__action-button"
@@ -929,7 +936,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Fairfield</h3>
+                  <h6 class="explore-cities__name">Fairfield</h6>
                 </div>
                 <button
                   class="explore-cities__action-button icon-arrow-right2"
@@ -952,7 +959,7 @@
                   <span class="explore-cities__property-count"
                     >321 Property</span
                   >
-                  <h3 class="explore-cities__name">Austin</h3>
+                  <h6 class="explore-cities__name">Austin</h6>
                 </div>
                 <button
                   class="explore-cities__action-button icon-arrow-right2"
@@ -980,13 +987,13 @@
             <!-- Tiêu đề Section -->
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
-                <h2
+                <h4
                   id="featured-properties-title-section"
                   class="featured-properties__title-text"
                 >
                   OUR SERVICES
-                </h2>
-                <p class="featured-properties__title-subtext">What We Do?</p>
+                </h4>
+                <h3 class="featured-properties__title-subtext">What We Do?</h3>
               </div>
             </div>
 
@@ -1003,7 +1010,7 @@
                 </div>
                 <div class="services__content">
                   <a href="#serviceDetail"
-                    ><h3 class="services__name">Buy A New Home</h3></a
+                    ><h5 class="services__name">Buy A New Home</h5></a
                   >
                   <p class="services__description">
                     Discover your dream home effortlessly. Explore diverse
@@ -1032,7 +1039,7 @@
                 </div>
                 <div class="services__content">
                   <a href="#serviceDetail"
-                    ><h3 class="services__name">Sell A Home</h3></a
+                    ><h5 class="services__name">Sell A Home</h5></a
                   >
                   <p class="services__description">
                     Sell confidently with expert guidance and effective
@@ -1060,7 +1067,7 @@
                 </div>
                 <div class="services__content">
                   <a href="#serviceDetail"
-                    ><h3 class="services__name">Sell A Home</h3></a
+                    ><h5 class="services__name">Sell A Home</h5></a
                   >
                   <p class="services__description">
                     Sell confidently with expert guidance and effective
@@ -1089,10 +1096,10 @@
           <div class="benefits__content">
             <div class="benefits__header">
               <div class="benefits__title-section">
-                <h2 id="benefits-heading" class="benefits__title">
+                <h4 id="benefits-heading" class="benefits__title">
                   OUR BENEFITS
-                </h2>
-                <p class="benefits__subtitle">Why Choose HomeLengo</p>
+                </h4>
+                <h3 class="benefits__subtitle">Why Choose HomeLengo</h3>
               </div>
               <p class="benefits__intro">
                 Our seasoned team excels in real estate with years of successful
@@ -1108,7 +1115,7 @@
                   src="./images/logo/benefit-3.png"
                 />
                 <div class="benefits__details">
-                  <h3 class="benefits__name">Proven Expertise</h3>
+                  <h5 class="benefits__name">Proven Expertise</h5>
                   <p class="benefits__description">
                     Our seasoned team excels in real estate with years of
                     successful market navigation, offering informed decisions
@@ -1123,7 +1130,7 @@
                   src="./images/logo/benefit-2.png"
                 />
                 <div class="benefits__details">
-                  <h3 class="benefits__name">Customized Solutions</h3>
+                  <h5 class="benefits__name">Customized Solutions</h5>
                   <p class="benefits__description">
                     We pride ourselves on crafting personalized strategies to
                     match your unique goals, ensuring a seamless real estate
@@ -1138,7 +1145,7 @@
                   src="./images/logo/benefit-1.png"
                 />
                 <div class="benefits__details">
-                  <h3 class="benefits__name">Transparent Partnerships</h3>
+                  <h5 class="benefits__name">Transparent Partnerships</h5>
                   <p class="benefits__description">
                     Transparency is key in our client relationships. We
                     prioritize clear communication and ethical practices,
@@ -1156,15 +1163,15 @@
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
-                <h2
+                <h4
                   id="featured-properties-title-section"
                   class="featured-properties__title-text"
                 >
                   TOP PROPERTIES
-                </h2>
-                <p class="featured-properties__title-subtext">
+                </h4>
+                <h3 class="featured-properties__title-subtext">
                   Best Property Value
-                </p>
+                </h3>
               </div>
             </div>
             <div
@@ -1201,11 +1208,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1281,11 +1288,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1361,11 +1368,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1441,11 +1448,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1521,11 +1528,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1601,11 +1608,11 @@
                 </div>
                 <div class="featured-properties__content">
                   <div class="featured-properties__main">
-                    <h3 class="featured-properties__property-name">
+                    <h6 class="featured-properties__property-name">
                       <a href="#" class="featured-properties__property-link"
                         >Casa Lomas De Machalí Machas</a
                       >
-                    </h3>
+                    </h6>
                     <div class="featured-properties__description">
                       <div class="featured-properties__description-item">
                         <span class="icon-Icon-11"></span>
@@ -1668,15 +1675,15 @@
         <section class="testimonials" aria-labelledby="testimonials-heading">
           <div class="featured-properties__title-section">
             <div class="featured-properties__title">
-              <h2
+              <h4
                 id="testimonials-heading"
                 class="featured-properties__title-text"
               >
                 OUR TESTIMONIALS
-              </h2>
-              <p class="featured-properties__title-subtext">
+              </h4>
+              <h3 class="featured-properties__title-subtext">
                 What’s people say’s
-              </p>
+              </h3>
               <p class="featured-properties__description">
                 Our seasoned team excels in real estate with years of successful
                 market navigation, offering informed decisions and optimal
@@ -1742,7 +1749,7 @@
                     />
                     <div class="testimonials__avatar-info">
                       <div class="testimonials__avatar-details">
-                        <div class="testimonials__author">Courtney Henry</div>
+                        <h6 class="testimonials__author">Courtney Henry</h6>
                         <span class="testimonials__title">CEO Themesflat</span>
                       </div>
                       <div class="testimonials__rating">
@@ -1774,7 +1781,7 @@
                     />
                     <div class="testimonials__avatar-info">
                       <div class="testimonials__avatar-details">
-                        <div class="testimonials__author">Esther Howard</div>
+                        <h6 class="testimonials__author">Esther Howard</h6>
                         <span class="testimonials__title">CEO Themesflat</span>
                       </div>
                       <div class="testimonials__rating">
@@ -1806,7 +1813,7 @@
                     />
                     <div class="testimonials__avatar-info">
                       <div class="testimonials__avatar-details">
-                        <div class="testimonials__author">Annette Black</div>
+                        <h6 class="testimonials__author">Annette Black</h6>
                         <span class="testimonials__title">CEO Themesflat</span>
                       </div>
                       <div class="testimonials__rating">
@@ -1838,7 +1845,7 @@
                     />
                     <div class="testimonials__avatar-info">
                       <div class="testimonials__avatar-details">
-                        <div class="testimonials__author">Bessie Cooper</div>
+                        <h6 class="testimonials__author">Bessie Cooper</h6>
                         <span class="testimonials__title">CEO Themesflat</span>
                       </div>
                       <div class="testimonials__rating">
@@ -1867,15 +1874,15 @@
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
-                <h2
+                <h4
                   id="featured-properties-title-section"
                   class="featured-properties__title-text"
                 >
                   OUR TEAMS
-                </h2>
-                <p class="featured-properties__title-subtext">
+                </h4>
+                <h3 class="featured-properties__title-subtext">
                   Meet Our Agents
-                </p>
+                </h3>
               </div>
             </div>
             <div class="team__list" role="list" aria-label="Our team members">
@@ -1897,8 +1904,8 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <a href="teamDetail">
-                      <h3 class="team__name">Chris Patt</h3>
+                    <a href="#teamDetail">
+                      <h5 class="team__name">Chris Patt</h5>
                     </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
@@ -1930,8 +1937,8 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <a href="teamDetail">
-                      <h3 class="team__name">Esther Howard</h3>
+                    <a href="#teamDetail">
+                      <h5 class="team__name">Esther Howard</h5>
                     </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
@@ -1964,7 +1971,7 @@
                 <div class="team__content">
                   <div class="team__details">
                     <a href="#teamDetail"
-                      ><h3 class="team__name">Darrell Steward</h3></a
+                      ><h5 class="team__name">Darrell Steward</h5></a
                     >
                     <p class="team__role">Administrative Staff</p>
                   </div>
@@ -1996,8 +2003,8 @@
                 </div>
                 <div class="team__content">
                   <div class="team__details">
-                    <a href="">
-                      <h3 class="team__name">Robert Fox</h3>
+                    <a href="#teamDetail">
+                      <h5 class="team__name">Robert Fox</h5>
                     </a>
                     <p class="team__role">Administrative Staff</p>
                   </div>
@@ -2019,61 +2026,100 @@
             <h2 id="partners-heading" class="partners__title">
               Trusted By Over 150+ Major Companies
             </h2>
-            <div
-              class="partners__list"
-              role="list"
-              aria-label="Partner companies"
-            >
-              <img
-                class="partners__item"
-                alt="Partner company logo 1"
-                role="listitem"
-                src="./images/logo/partner-1.svg"
-              />
-              <img
-                class="partners__item"
-                alt="Partner company logo 2"
-                role="listitem"
-                src="./images/logo/partner-2.svg"
-              />
-              <img
-                class="partners__item"
-                alt="Partner company logo 3"
-                role="listitem"
-                src="./images/logo/partner-3.svg"
-              />
-              <img
-                class="partners__item"
-                alt="Partner company logo 4"
-                role="listitem"
-                src="./images/logo/partner-4.svg"
-              />
-              <img
-                class="partners__item"
-                alt="Partner company logo 5"
-                role="listitem"
-                src="./images/logo/partner-5.svg"
-              />
-              <img
-                class="partners__item"
-                alt="Partner company logo 6"
-                role="listitem"
-                src="./images/logo/partner-6.svg"
-              />
+
+            <!-- thêm wrapper -->
+            <div class="partners__wrapper">
+              <div
+                class="partners__list"
+                role="list"
+                aria-label="Partner companies"
+              >
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 1"
+                  role="listitem"
+                  src="./images/logo/partner-1.svg"
+                />
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 2"
+                  role="listitem"
+                  src="./images/logo/partner-2.svg"
+                />
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 3"
+                  role="listitem"
+                  src="./images/logo/partner-3.svg"
+                />
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 4"
+                  role="listitem"
+                  src="./images/logo/partner-4.svg"
+                />
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 5"
+                  role="listitem"
+                  src="./images/logo/partner-5.svg"
+                />
+                <img
+                  class="partners__item"
+                  alt="Partner company logo 6"
+                  role="listitem"
+                  src="./images/logo/partner-6.svg"
+                />
+
+                <!-- lặp lại để animation không bị trống -->
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-1.svg"
+                  alt="Partner 1"
+                />
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-2.svg"
+                  alt="Partner 2"
+                />
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-3.svg"
+                  alt="Partner 3"
+                />
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-4.svg"
+                  alt="Partner 4"
+                />
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-5.svg"
+                  alt="Partner 5"
+                />
+                <img
+                  class="partners__item"
+                  src="./images/logo/partner-6.svg"
+                  alt="Partner 6"
+                />
+              </div>
             </div>
           </div>
         </section>
+
         <section class="latest-news" aria-labelledby="latest-news-heading">
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
-                <h2
+                <h4
                   id="featured-properties-title-section"
                   class="featured-properties__title-text"
                 >
                   LATEST NEW
-                </h2>
-                <p class="featured-properties__title-subtext">From Our Blog</p>
+                </h4>
+                <h3 class="featured-properties__title-subtext">
+                  From Our Blog
+                </h3>
               </div>
             </div>
             <div
@@ -2103,10 +2149,10 @@
                         <span class="latest-news__category">Furniture</span>
                       </div>
                     </div>
-                    <h3 class="latest-news__name">
+                    <h5 class="latest-news__name">
                       Building Gains Into Housing Stocks And How To Trade The
                       Sector
-                    </h3>
+                    </h5>
                   </div>
                   <p class="latest-news__description">
                     The average contract interest rate for 30-year fixed-rate
@@ -2136,10 +2182,10 @@
                         <span class="latest-news__category">Furniture</span>
                       </div>
                     </div>
-                    <h3 class="latest-news__name">
+                    <h5 class="latest-news__name">
                       Building Gains Into Housing Stocks And How To Trade The
                       Sector
-                    </h3>
+                    </h5>
                   </div>
                   <p class="latest-news__description">
                     The average contract interest rate for 30-year fixed-rate
@@ -2169,10 +2215,10 @@
                         <span class="latest-news__category">Furniture</span>
                       </div>
                     </div>
-                    <h3 class="latest-news__name">
+                    <h5 class="latest-news__name">
                       Building Gains Into Housing Stocks And How To Trade The
                       Sector
-                    </h3>
+                    </h5>
                   </div>
                   <p class="latest-news__description">
                     The average contract interest rate for 30-year fixed-rate
