@@ -1969,24 +1969,13 @@ a:focus, a:hover {
   border: 1px solid var(--white);
 }
 
-/* Active  hơn */
+/* Active state */
 .hero__tab.hero__tab-active {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
-/* Hover active */
-.hero__tab.hero__tab-active:hover {
-  background-color: var(--white);
-  border: 1px solid var(--primary-color);
-}
-
-/* Hover không active */
-.hero__tab:not(.hero__tab-active):hover {
-  border-color: var(--primary-color);
-}
-
-/* Mũi tên chỉ khi active */
+/* Mũi tên  active */
 .hero__tab.hero__tab-active::after {
   content: "";
   position: absolute;
@@ -1996,9 +1985,10 @@ a:focus, a:hover {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid var(--primary-color);
+  transition: border-top-color 0.3s ease;
 }
 
-/* Nút bên trong */
+/* Button */
 .hero__tab-button {
   background: none;
   border: none;
@@ -2008,8 +1998,15 @@ a:focus, a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
+.hero__tab:not(.hero__tab-active):hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Text styling */
 .hero__tab-text {
   font-weight: 500;
   font-size: 16px;
@@ -2018,16 +2015,14 @@ a:focus, a:hover {
   transition: color 0.3s ease;
 }
 
-.hero__tab:hover .hero__tab-text {
-  color: var(--primary-color);
-}
-
-.hero__tab-active .hero__tab-text {
+/* Text active */
+.hero__tab.hero__tab-active .hero__tab-text {
   color: var(--white);
 }
 
-.hero__tab-active:hover .hero__tab-text {
-  color: var(--primary-color);
+/* Text color không active */
+.hero__tab:not(.hero__tab-active):hover .hero__tab-text {
+  color: var(--white);
 }
 
 .hero__form {
@@ -3626,6 +3621,7 @@ a:focus, a:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  min-height: 146px;
 }
 
 .home-page__section-title {
