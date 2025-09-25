@@ -22,6 +22,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 //==================== Explore =====================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreSwiper = new Swiper(".explore-cities__list", {
+    slidesPerView: 3,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".explore-cities__dots",
+      type: "bullets",
+      clickable: true,
+      bulletClass: "explore-cities__dot",
+      bulletActiveClass: "active",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 8,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 8,
+      },
+    },
+  });
+});
 //================= Testimonials ===================
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {

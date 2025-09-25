@@ -1022,66 +1022,76 @@
     background-color: var(--primary-color);
     border-radius: 9999px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.featured-properties__button-text {
-    font-weight: 600;
+
+.featured-properties__button-text,
+.featured-properties__button-icon {
     color: var(--white);
     font-size: 16px;
-    letter-spacing: 0;
+    font-weight: 600;
     line-height: 24px;
     white-space: nowrap;
-}
-
-.featured-properties__button-icon {
-    font-size: 16px;
-    color: var(--white);
     display: inline-flex;
     align-items: center;
 }
 
+
 .featured-properties__button:hover {
-    background-color: #003d99;
-    transition: all 0.3s ease;
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
 }
+
+.featured-properties__button:hover .featured-properties__button-text,
+.featured-properties__button:hover .featured-properties__button-icon {
+    color: var(--primary-color);
+}
+
 
 // ===============Explore======================
 .explore-cities {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-bottom: 100px;
 }
 
 .explore-cities__list {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
     height: 385px;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+.explore-cities__list .swiper-slide {
+    width: 310px !important;
 }
 
 .explore-cities__item {
     position: relative;
-    width: 310px;
-    height: 100%;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.explore-cities__item.active {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-    transition: box-shadow 0.3s ease;
+
+.explore-cities__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 3px 0;
+    margin-top: 50px;
 }
 
-.explore-cities__item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-position: 50% 50%;
+.explore-cities__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--border-card);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore-cities__dot.active {
+    background-color: var(--primary-color);
 }
 
 .explore-cities__content {
@@ -1150,32 +1160,6 @@
     border-color: var(--primary-color);
     color: var(--white);
 }
-
-// Dot
-.explore-cities__dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 3px 0;
-    margin-top: 50px;
-}
-
-
-.explore-cities__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: var(--border-card);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-// Dot Active
-.explore-cities__dot.active {
-    background-color: var(--primary-color);
-}
-
 
 // ===============SERVICE======================
 .services {
