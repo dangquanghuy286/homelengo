@@ -1058,7 +1058,7 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-
+    height: 385px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1066,7 +1066,7 @@
 .explore-cities__item {
     position: relative;
     width: 310px;
-    height: 385px;
+    height: 100%;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -1439,34 +1439,31 @@
     color: var(--text-label);
 }
 
-// =================== Testimonials================
 
+
+/* =================== Testimonials================ */
 
 .testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 0;
-
     background-color: var(--bg-three);
     overflow: hidden;
     margin-bottom: 100px;
 }
-
 
 .testimonials__content {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-
 }
 
 .testimonials__list {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -1477,7 +1474,6 @@
     max-width: 410px;
     align-items: flex-start;
     justify-content: center;
-    gap: 12px;
     padding: 30px;
     position: relative;
     background-color: var(--white);
@@ -1485,10 +1481,13 @@
 }
 
 .testimonials__quote-icon {
-    position: relative;
     width: 60px;
     height: 60px;
-    margin-top: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
 }
 
 .icon-quotes-left:before {
@@ -1505,7 +1504,6 @@
     gap: 24px;
     align-self: stretch;
     width: 100%;
-
     display: flex;
     position: relative;
 }
@@ -1531,6 +1529,12 @@
 .testimonials__avatar-image {
     width: 60px;
     background-color: var(--color-tab);
+    border-radius: 30px;
+}
+
+.testimonials__avatar-image img {
+    width: 100%;
+    height: auto;
     border-radius: 30px;
 }
 
@@ -1585,9 +1589,36 @@
     line-height: 14px !important;
     text-align: center;
     color: var(--star);
-
-
 }
+
+/* Swiper Custom Styles */
+.swiper-slide {
+    width: 410px !important;
+}
+
+.swiper-pagination {
+    --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 8px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+    --swiper-pagination-progressbar-size: 4px;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    margin-top: 50px !important;
+    position: relative !important;
+    bottom: auto !important;
+}
+
+
 
 
 // =================== TEAM========================

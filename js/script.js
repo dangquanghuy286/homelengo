@@ -4,7 +4,7 @@ document.querySelector(".toggle-mobile").addEventListener("click", function () {
   document.querySelector(".toggle-mobile").classList.toggle("active");
 });
 
-// JS: chỉ cho 1 nút active
+// Active
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".hero__tab");
   tabs.forEach((tab) => {
@@ -19,5 +19,33 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.classList.add("hero__tab-active");
       tab.setAttribute("aria-selected", "true");
     });
+  });
+});
+//==================== Explore =====================
+//================= Testimonials ===================
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".testimonials__list", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loopedSlides: 5,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
   });
 });
