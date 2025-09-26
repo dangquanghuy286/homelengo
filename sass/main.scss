@@ -1084,7 +1084,6 @@
     width: 100%;
     height: 385px;
     margin: 0;
-
     overflow: hidden;
 
     .swiper-wrapper {
@@ -1330,10 +1329,10 @@
 
 .benefits {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch; //Đồng bộ chiều cao
 
     margin-bottom: 100px;
-    height: 908px;
+    height: auto;
     border-radius: 16px;
     box-sizing: border-box;
     overflow: hidden;
@@ -1343,6 +1342,7 @@
     width: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    height: 100%
 }
 
 .benefits__content {
@@ -2373,14 +2373,14 @@
 
 .back-to-top:hover .back-to-top__icon {
     color: var(--primary-color);
+
 }
 
 
 /* Responsive */
 @media (max-width: 1440px) {
-
     // Header
-    .home-page__menu {}
+    // .home-page__menu {}
 
     .home-page__menu-frame {
         padding: 0 20px;
@@ -2413,11 +2413,62 @@
         display: block;
     }
 
+    // Explore
+    .explore-cities {
+        margin-bottom: 80px;
+    }
+
+    .explore-cities__list {
+        height: 360px;
+    }
+
+    .explore-cities__item {
+        border-radius: 14px;
+    }
+
+    .explore-cities__content {
+        padding: 12px;
+        width: 94%;
+        height: 20%;
+        top: 77%;
+        left: 3%;
+        border-radius: 10px;
+    }
+
+    .explore-cities__name {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .explore-cities__action-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 40px;
+        gap: 8px;
+    }
+
+    .explore-cities__dot {
+        width: 7px;
+        height: 7px;
+    }
+
     /* Featured Properties */
     .container {
         width: 100%;
         max-width: 1200px;
         padding: 0 20px;
+    }
+
+    .featured-properties__list {
+        gap: 10px;
     }
 
     .featured-properties__item {
@@ -2438,30 +2489,34 @@
         line-height: 40px;
     }
 
-    // Benefit
     .benefits {
         height: auto;
         margin-bottom: 80px;
-        border-radius: 12px;
+        flex-direction: column;
+        /* Giữ cấu trúc cột cho .benefits */
     }
 
     .benefits__hero-image {
-        width: 50%;
-        height: auto;
+        display: none;
+        /* Ẩn ảnh khi < 1400px */
     }
 
     .benefits__content {
-        padding: 80px 70px;
-        gap: 40px;
+        padding: 60px 50px;
+        gap: 30px;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
 
     .benefits__subtitle {
-        font-size: 32px;
-        line-height: 44px;
+        font-size: 30px;
+        line-height: 40px;
     }
 
     .benefits__intro {
-        max-width: 450px;
+        max-width: 400px;
     }
 
     .benefits__list {
@@ -2469,13 +2524,18 @@
     }
 
     .benefits__item {
-        padding: 25px;
-        gap: 25px;
+        padding: 20px;
+        gap: 20px;
     }
+
+
 
 }
 
 @media (max-width: 1200px) {
+    .home-page__menu {
+        justify-content: center;
+    }
 
     // Header
     .home-page__menu-frame {
@@ -2512,12 +2572,8 @@
 
     // Hero search
     .hero__form {
-
         gap: 15px;
-
     }
-
-
 
     .hero__label {
         font-size: 10px;
@@ -2551,6 +2607,69 @@
         height: 18px;
     }
 
+    // Explore
+    .explore-cities {
+        margin-bottom: 70px;
+    }
+
+    .explore-cities__list {
+        height: 340px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 280px !important;
+    }
+
+    .explore-cities__content {
+        padding: 10px;
+        width: 93.5%;
+        height: 19%;
+        top: 76.5%;
+        left: 3.25%;
+        border-radius: 8px;
+    }
+
+    .explore-cities__name {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .explore-cities__action-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 35px;
+        gap: 7px;
+    }
+
+    .explore-cities__dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    // Service
+    .services__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+        justify-items: center;
+    }
+
+    .services__item {
+        width: 100%;
+        max-width: 500px;
+    }
+
+
+
     // Footer
     .home-page__footer-top {
         padding: 0 30px;
@@ -2568,34 +2687,41 @@
 
     /* Featured Properties */
     .container {
-        max-width: 960px;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .featured-properties__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .featured-properties__item {
         width: 350px;
+
     }
 
     .featured-properties__item-image {
         width: 350px;
-        height: 230px;
+        height: 200px;
+
     }
 
     .featured-properties__content {
         width: 350px;
+
     }
 
-    .featured-properties__list {
-        gap: 25px;
-    }
 
     .featured-properties__title-subtext {
-        font-size: 30px;
-        line-height: 38px;
+        font-size: 28px;
+        line-height: 34px;
     }
 
     .featured-properties__title-text {
-        font-size: 13px;
-        line-height: 22px;
+        font-size: 12px;
+        line-height: 18px;
     }
 
     // Benefit
@@ -2606,6 +2732,12 @@
     .benefits__content {
         padding: 60px 50px;
         gap: 30px;
+        width: 100%;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
     }
 
     .benefits__subtitle {
@@ -2662,6 +2794,48 @@
     .home-page__menu-actions {
         gap: 5px;
         padding: 0;
+    }
+
+    // Explore
+    .explore-cities {
+        margin-bottom: 60px;
+    }
+
+    .explore-cities__list {
+        height: 320px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 260px !important;
+    }
+
+    .explore-cities__content {
+        padding: 8px;
+        width: 93%;
+        height: 18%;
+        top: 76%;
+        left: 3.5%;
+        border-radius: 8px;
+    }
+
+    .explore-cities__name {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .explore-cities__action-button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 30px;
+        gap: 6px;
     }
 
     // Footer
@@ -2729,11 +2903,6 @@
         margin-bottom: 50px;
     }
 
-    .benefits__hero-image {
-        width: 100%;
-        height: 300px;
-    }
-
     .benefits__content {
         padding: 50px 40px;
         width: 100%;
@@ -2755,7 +2924,6 @@
     .benefits__item {
         padding: 20px;
     }
-
 }
 
 @media (max-width: 992px) {
@@ -2820,6 +2988,12 @@
     }
 
     /* Hero form */
+    .hero__title {
+        white-space: normal;
+        font-size: 50px;
+        line-height: 60px;
+    }
+
     .hero__search {
         gap: 5px;
         top: 333px;
@@ -2900,6 +3074,56 @@
         background: transparent;
     }
 
+    // Explore
+    .explore-cities {
+        margin-bottom: 50px;
+    }
+
+    .explore-cities__list {
+        height: 300px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 240px !important;
+    }
+
+    .explore-cities__content {
+        padding: 6px;
+        width: 92.5%;
+        height: 17%;
+        top: 75.5%;
+        left: 3.75%;
+        border-radius: 6px;
+    }
+
+    .explore-cities__name {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .explore-cities__action-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 25px;
+        gap: 6px;
+    }
+
+    .explore-cities__dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    // Service
+    // (Giữ nguyên hoặc bổ sung nếu cần)
+
     /* Footer */
     .home-page__footer-top {
         gap: 20px;
@@ -2951,12 +3175,6 @@
         padding: 0 20px;
     }
 
-    .featured-properties__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-
-    }
 
 
     .featured-properties__item-image {
@@ -2990,6 +3208,8 @@
     .benefits__content {
         padding: 40px 30px;
         gap: 25px;
+        width: 100%;
+        /* Đảm bảo nội dung lấp đầy khi ảnh bị ẩn */
     }
 
     .benefits__subtitle {
@@ -3022,7 +3242,6 @@
 
     // Header
     .home-page__menu {
-        height: 70px;
         padding: 15px 15px;
     }
 
@@ -3051,6 +3270,56 @@
     .home-page__btn-text {
         font-size: 11px;
     }
+
+    // Explore
+    .explore-cities {
+        margin-bottom: 40px;
+    }
+
+    .explore-cities__list {
+        height: 280px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 220px !important;
+    }
+
+    .explore-cities__content {
+        padding: 5px;
+        width: 92%;
+        height: 16%;
+        top: 75%;
+        left: 4%;
+        border-radius: 6px;
+    }
+
+    .explore-cities__name {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .explore-cities__action-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 20px;
+        gap: 5px;
+    }
+
+    .explore-cities__dot {
+        width: 5px;
+        height: 5px;
+    }
+
+    // Service
+    // (Giữ nguyên hoặc bổ sung nếu cần)
 
     // Footer
     .home-page__footer-top {
@@ -3100,18 +3369,17 @@
 
     /* Featured Properties */
     .container {
-
         padding: 0 15px;
     }
 
     .featured-properties__item {
         width: 100%;
-
+        max-width: 100%;
     }
 
     .featured-properties__item-image {
         width: 100%;
-        height: 200px;
+        height: 400px;
     }
 
     .featured-properties__content {
@@ -3150,10 +3418,6 @@
     .benefits {
         margin-bottom: 40px;
         border-radius: 8px;
-    }
-
-    .benefits__hero-image {
-        height: 250px;
     }
 
     .benefits__content {
@@ -3204,7 +3468,6 @@
         font-size: 12px;
         line-height: 16px;
     }
-
 }
 
 @media (max-width: 576px) {
@@ -3218,6 +3481,53 @@
     .home-page__logo-img {
         height: 36px;
         width: auto;
+    }
+
+    // Explore
+    .explore-cities {
+        margin-bottom: 30px;
+    }
+
+    .explore-cities__list {
+        height: 260px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 200px !important;
+    }
+
+    .explore-cities__content {
+        padding: 4px;
+        width: 91.5%;
+        height: 15%;
+        top: 74.5%;
+        left: 4.25%;
+        border-radius: 4px;
+    }
+
+    .explore-cities__name {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .explore-cities__action-button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 20px;
+        gap: 4px;
+    }
+
+    .explore-cities__dot {
+        width: 5px;
+        height: 5px;
     }
 
     /* Footer */
@@ -3279,7 +3589,6 @@
         line-height: 18px;
     }
 
-
     .featured-properties__price {
         font-size: 16px;
         line-height: 22px;
@@ -3299,10 +3608,6 @@
     // Benefit
     .benefits {
         margin-bottom: 30px;
-    }
-
-    .benefits__hero-image {
-        height: 200px;
     }
 
     .benefits__content {
@@ -3349,6 +3654,8 @@
         line-height: 16px;
     }
 
+    //Team
+
 }
 
 @media (max-width: 480px) {
@@ -3380,6 +3687,53 @@
 
     .home-page__btn-text {
         font-size: 10px;
+    }
+
+    // Explore
+    .explore-cities {
+        margin-bottom: 20px;
+    }
+
+    .explore-cities__list {
+        height: 240px;
+    }
+
+    .explore-cities__list .swiper-slide {
+        width: 180px !important;
+    }
+
+    .explore-cities__content {
+        padding: 3px;
+        width: 91%;
+        height: 14%;
+        top: 74%;
+        left: 4.5%;
+        border-radius: 4px;
+    }
+
+    .explore-cities__name {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .explore-cities__property-count {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .explore-cities__action-button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .explore-cities__dots {
+        margin-top: 15px;
+        gap: 3px;
+    }
+
+    .explore-cities__dot {
+        width: 4px;
+        height: 4px;
     }
 
     /* Footer */
@@ -3528,10 +3882,6 @@
     .benefits {
         margin-bottom: 20px;
         border-radius: 6px;
-    }
-
-    .benefits__hero-image {
-        height: 180px;
     }
 
     .benefits__content {
