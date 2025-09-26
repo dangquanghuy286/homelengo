@@ -110,7 +110,6 @@
           </div>
         </div>
       </header>
-
       <!-- Main -->
       <main>
         <section class="hero" role="main">
@@ -214,14 +213,16 @@
                     <label class="hero__label" for="keyword-search"
                       >Keyword</label
                     >
-                    <input
-                      class="hero__input"
-                      type="text"
-                      id="keyword-search"
-                      name="keyword"
-                      placeholder="Search Keyword"
-                      aria-label="Enter search keywords"
-                    />
+                    <div class="hero__input-group">
+                      <input
+                        class="hero__input"
+                        type="text"
+                        id="keyword-search"
+                        name="keyword"
+                        placeholder="Search Keyword"
+                        aria-label="Enter search keywords"
+                      />
+                    </div>
                   </div>
                   <div class="hero__actions">
                     <button
@@ -823,6 +824,7 @@
             </div>
           </div>
         </section>
+        </section>
         <section
           class="explore-cities"
           aria-labelledby="explore-cities-heading"
@@ -847,144 +849,282 @@
             aria-label="Available cities"
           >
             <div class="swiper-wrapper">
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-20.png"
-                  alt="Naperville city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-20.png"
+                    alt="Naperville city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Naperville</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button"
+                      aria-label="Explore properties in Naperville"
                     >
-                    <h6 class="explore-cities__name">Naperville</h6>
+                      <span
+                        class="explore-cities__action-icon icon-arrow-right2"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button"
-                    aria-label="Explore properties in Naperville"
-                  >
-                    <span
-                      class="explore-cities__action-icon icon-arrow-right2"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-21.png"
-                  alt="Pembroke Pines city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-21.png"
+                    alt="Pembroke Pines city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Pembroke Pines</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Pembroke Pines"
                     >
-                    <h6 class="explore-cities__name">Pembroke Pines</h6>
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button icon-arrow-right2"
-                    aria-label="Explore properties in Pembroke Pines"
-                  >
-                    <span
-                      class="explore-cities__action-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-22.png"
-                  alt="Toledo city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-22.png"
+                    alt="Toledo city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Toledo</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Toledo"
                     >
-                    <h6 class="explore-cities__name">Toledo</h6>
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button icon-arrow-right2"
-                    aria-label="Explore properties in Toledo"
-                  >
-                    <span
-                      class="explore-cities__action-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-23.png"
-                  alt="Orange city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-23.png"
+                    alt="Orange city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Orange</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button"
+                      aria-label="Explore properties in Orange"
                     >
-                    <h6 class="explore-cities__name">Orange</h6>
+                      <span
+                        class="explore-cities__action-icon icon-arrow-right2"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button"
-                    aria-label="Explore properties in Orange"
-                  >
-                    <span
-                      class="explore-cities__action-icon icon-arrow-right2"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-24.png"
-                  alt="Fairfield city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-24.png"
+                    alt="Fairfield city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Fairfield</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Fairfield"
                     >
-                    <h6 class="explore-cities__name">Fairfield</h6>
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button icon-arrow-right2"
-                    aria-label="Explore properties in Fairfield"
-                  >
-                    <span
-                      class="explore-cities__action-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
-              <div class="explore-cities__item swiper-slide" role="listitem">
-                <img
-                  src="./images/feature-item/feature-25.png"
-                  alt="Austin city image"
-                />
-                <div class="explore-cities__content">
-                  <div class="explore-cities__details">
-                    <span class="explore-cities__property-count"
-                      >321 Property</span
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-25.png"
+                    alt="Austin city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Austin</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Austin"
                     >
-                    <h6 class="explore-cities__name">Austin</h6>
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
                   </div>
-                  <button
-                    class="explore-cities__action-button icon-arrow-right2"
-                    aria-label="Explore properties in Austin"
-                  >
-                    <span
-                      class="explore-cities__action-icon"
-                      aria-hidden="true"
-                    ></span>
-                  </button>
                 </div>
-              </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-20.png"
+                    alt="Naperville city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Naperville</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button"
+                      aria-label="Explore properties in Naperville"
+                    >
+                      <span
+                        class="explore-cities__action-icon icon-arrow-right2"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-21.png"
+                    alt="Pembroke Pines city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Pembroke Pines</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Pembroke Pines"
+                    >
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-22.png"
+                    alt="Toledo city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Toledo</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Toledo"
+                    >
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-23.png"
+                    alt="Orange city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Orange</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button"
+                      aria-label="Explore properties in Orange"
+                    >
+                      <span
+                        class="explore-cities__action-icon icon-arrow-right2"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-24.png"
+                    alt="Fairfield city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Fairfield</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Fairfield"
+                    >
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="explore-cities__item swiper-slide" role="listitem">
+                  <img
+                    src="./images/feature-item/feature-25.png"
+                    alt="Austin city image"
+                  />
+                  <div class="explore-cities__content">
+                    <div class="explore-cities__details">
+                      <span class="explore-cities__property-count"
+                        >321 Property</span
+                      >
+                      <h6 class="explore-cities__name">Austin</h6>
+                    </div>
+                    <button
+                      class="explore-cities__action-button icon-arrow-right2"
+                      aria-label="Explore properties in Austin"
+                    >
+                      <span
+                        class="explore-cities__action-icon"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
             </div>
           </div>
           <div class="explore-cities__dots"></div>
@@ -1095,7 +1235,7 @@
             </div>
           </div>
         </section>
-        <section class="benefits" aria-labelledby="benefits-heading">
+         <section class="benefits" aria-labelledby="benefits-heading">
           <img
             class="benefits__hero-image"
             alt="Professional real estate team"
@@ -2419,9 +2559,10 @@
         </div>
       </footer>
       <!-- Back to Top -->
-      <button class="back-to-top" aria-label="Back to top">
+      <!-- <button class="back-to-top" aria-label="Back to top">
         <span class="back-to-top__icon icon-arrow_upward"></span>
-      </button>
+      </button> -->
+      </main>
     </div>
 
     <script src="js/script.js"></script>

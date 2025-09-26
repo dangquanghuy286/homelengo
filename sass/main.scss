@@ -24,7 +24,7 @@
     width: 100%;
     z-index: 9999;
     background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
@@ -1081,7 +1081,16 @@
 }
 
 .explore-cities__list {
+    width: 100%;
     height: 385px;
+    margin: 0;
+
+    overflow: hidden;
+
+    .swiper-wrapper {
+        align-items: stretch;
+        padding: 0 10px;
+    }
 }
 
 .explore-cities__list .swiper-slide {
@@ -1092,6 +1101,7 @@
     position: relative;
     border-radius: 16px;
     overflow: hidden;
+    display: block;
 }
 
 
@@ -1471,6 +1481,7 @@
     align-items: flex-start;
     gap: 30px;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
 }
 
@@ -1598,7 +1609,7 @@
 }
 
 /* Swiper Custom Styles */
-.swiper-slide {
+.testimonials__item .swiper-slide {
     width: 410px !important;
 }
 
@@ -2369,13 +2380,11 @@
 @media (max-width: 1440px) {
 
     // Header
-    .home-page__menu {
-        padding: 15px 0;
-    }
+    .home-page__menu {}
 
     .home-page__menu-frame {
-        padding: 0;
-        gap: 40px;
+        padding: 0 20px;
+        gap: 25px;
     }
 
     .home-page__menu-frame__nav {
@@ -2499,6 +2508,47 @@
         display: flex;
         align-items: center;
         gap: 15px;
+    }
+
+    // Hero search
+    .hero__form {
+
+        gap: 15px;
+
+    }
+
+
+
+    .hero__label {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .hero__dropdown {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .hero__input {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .hero__advanced-button,
+    .hero__search-button {
+        padding: 8px 25px;
+    }
+
+    .hero__advanced-text,
+    .hero__search-text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .hero__advanced-icon,
+    .hero__input-icon {
+        width: 18px;
+        height: 18px;
     }
 
     // Footer
@@ -2769,6 +2819,87 @@
         font-size: 13px;
     }
 
+    /* Hero form */
+    .hero__search {
+        gap: 5px;
+        top: 333px;
+    }
+
+    .hero__form {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hero__form-content {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 100%;
+        gap: 15px;
+        padding: 0;
+    }
+
+    .hero__form-group {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hero__actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero__advanced-button,
+    .hero__search-button {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+    }
+
+    .hero__separator {
+        display: none;
+    }
+
+    .hero__input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 48px;
+        border: 1px solid var(--border-card);
+        border-radius: 8px;
+        padding: 0 12px;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero__input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background: transparent;
+    }
+
+    .hero__dropdown-selected {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        font-size: 14px;
+        cursor: pointer;
+        background: transparent;
+    }
+
     /* Footer */
     .home-page__footer-top {
         gap: 20px;
@@ -2817,7 +2948,6 @@
 
     /* Featured Properties */
     .container {
-        max-width: 720px;
         padding: 0 20px;
     }
 
@@ -2825,13 +2955,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        justify-content: space-between;
+
     }
 
-    .featured-properties__item {
-        width: calc(50% - 10px);
-        max-width: 350px;
-    }
 
     .featured-properties__item-image {
         width: 100%;
@@ -2974,13 +3100,13 @@
 
     /* Featured Properties */
     .container {
-        max-width: 540px;
+
         padding: 0 15px;
     }
 
     .featured-properties__item {
         width: 100%;
-        max-width: 500px;
+
     }
 
     .featured-properties__item-image {

@@ -1,9 +1,9 @@
-// Toggle MENU
+// ====================Toggle MENU==================
 document.querySelector(".toggle-mobile").addEventListener("click", function () {
   document.querySelector(".home-page__mobile-menu").classList.toggle("active");
   document.querySelector(".toggle-mobile").classList.toggle("active");
 });
-// Dropdown
+// ===================Dropdown=====================
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".hero__dropdown");
   const selected = dropdown.querySelector(".hero__dropdown-selected");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-// Active
+// ==================Active===========================
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".hero__tab");
   tabs.forEach((tab) => {
@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 //==================== Explore =====================
-
 document.addEventListener("DOMContentLoaded", () => {
   const exploreSwiper = new Swiper(".explore-cities__list", {
-    slidesPerView: 3,
+    slidesPerView: 6,
     spaceBetween: 8,
-    loopedSlides: 6,
-    loopFillGroupWithBlank: true,
+    slidesPerGroup: 2,
+    loop: false,
+    speed: 800,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -80,22 +80,24 @@ document.addEventListener("DOMContentLoaded", () => {
       bulletClass: "explore-cities__dot",
       bulletActiveClass: "active",
     },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 8,
+        slidesPerGroup: 1,
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 8,
+        slidesPerGroup: 1,
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 8,
+        slidesPerView: 6,
+        slidesPerGroup: 1,
       },
     },
   });
 });
+
 //================= Testimonials ===================
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {
@@ -126,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ======================Back-to-Top======================
 const backToTopBtn = document.querySelector(".back-to-top");
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     backToTopBtn.classList.add("back-to-top--show");
