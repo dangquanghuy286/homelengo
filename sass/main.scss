@@ -329,7 +329,6 @@
     z-index: 0;
 }
 
-
 .hero__text {
     position: absolute;
     top: 155px;
@@ -342,7 +341,6 @@
     gap: 20px;
     text-align: center;
 }
-
 
 .hero__title {
     font-weight: 800;
@@ -373,7 +371,6 @@
     width: 100%;
 }
 
-
 .hero__tabs {
     display: flex;
     gap: 10px;
@@ -402,8 +399,7 @@
     border: 1px solid var(--primary-color);
 }
 
-
-/* Mũi tên  active */
+/* Mũi tên active */
 .hero__tab.hero__tab-active::after {
     content: "";
     position: absolute;
@@ -416,8 +412,6 @@
     transition: border-top-color 0.3s ease;
 }
 
-
-
 /* Button */
 .hero__tab-button {
     background: none;
@@ -429,18 +423,12 @@
     align-items: center;
     justify-content: center;
     outline: none;
-
 }
-
 
 .hero__tab:not(.hero__tab-active):hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
-
-
-
-
 
 /* Text styling */
 .hero__tab-text {
@@ -460,8 +448,6 @@
 .hero__tab:not(.hero__tab-active):hover .hero__tab-text {
     color: var(--white);
 }
-
-
 
 .hero__form {
     width: 100%;
@@ -508,20 +494,63 @@
     justify-content: space-between;
     align-self: stretch;
     width: 100%;
-    gap: 10px
+    gap: 10px;
 }
 
-.hero__select {
+/* Dropdown styles */
+.hero__dropdown {
     flex: 1;
+    position: relative;
     font-weight: 600;
     color: var(--text-dark);
     font-size: 16px;
     line-height: 22px;
-    background: none;
-    border: none;
+    cursor: pointer;
+}
+
+.icon-CaretUp:before {
+    content: "\e908";
+    font-size: 12px;
+}
+
+.hero__dropdown-selected {
     padding: 8px 0;
-    outline: none;
-    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 0;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero__dropdown-menu.show {
+    display: block;
+}
+
+.hero__dropdown-item {
+    padding: 8px 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.hero__dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .icon-Crosshair:before {
@@ -568,7 +597,6 @@
     gap: 10px;
     position: relative;
     align-self: stretch;
-
 }
 
 .hero__advanced-button {
@@ -581,7 +609,6 @@
     gap: 8px;
     padding: 11px 40px;
     align-self: stretch;
-
     border-radius: 99px;
 }
 
@@ -610,7 +637,6 @@
     gap: 8px;
     padding: 11px 40px;
     align-self: stretch;
-
     border: 1px solid var(--primary-color);
     border-radius: 99px;
 }
@@ -637,12 +663,11 @@
     cursor: pointer;
 }
 
-// Hover cho nút Advanced 
+/* Hover cho nút Advanced */
 .hero__advanced-button:hover {
     background-color: var(--primary-color);
     color: var(--white);
     border-color: var(--primary-color);
-
 }
 
 .hero__advanced-button:hover .hero__advanced-text {
@@ -653,7 +678,7 @@
     filter: brightness(0) invert(1);
 }
 
-// Hover cho nút Search 
+/* Hover cho nút Search */
 .hero__search-button:hover {
     background-color: var(--white);
     border: 1px solid var(--primary-color);
@@ -661,13 +686,11 @@
 
 .hero__search-button:hover .hero__search-text {
     color: var(--text-dark);
-
 }
 
 .hero__search-button:hover .icon-search:before {
     color: var(--text-dark);
 }
-
 
 /* Section  */
 // ==============================Featured=====================================
@@ -1118,7 +1141,6 @@
     flex: 1;
     flex-grow: 1;
 }
-
 
 
 .explore-cities__property-count {
@@ -2297,6 +2319,51 @@
     font-weight: 400;
     font-size: 14px;
 }
+
+/* Block */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top--show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Element */
+.back-to-top__icon {
+    font-size: 24px;
+    color: var(--white);
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+
+.back-to-top:hover {
+    background-color: var(--white);
+    border: 1px solid var(--primary-color);
+}
+
+.back-to-top:hover .back-to-top__icon {
+    color: var(--primary-color);
+}
+
 
 /* Responsive */
 @media (max-width: 1440px) {

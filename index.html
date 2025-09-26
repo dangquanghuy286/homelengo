@@ -161,14 +161,26 @@
                   <div class="hero__form-group">
                     <label class="hero__label" for="property-type">Type</label>
                     <div class="hero__input-group">
-                      <select
-                        class="hero__select"
-                        id="property-type"
-                        name="property-type"
-                        aria-label="Select property type"
-                      >
-                        <option value="">All type</option>
-                      </select>
+                      <div class="hero__dropdown">
+                        <div class="hero__dropdown-selected">All type</div>
+                        <ul class="hero__dropdown-menu">
+                          <li class="hero__dropdown-item" data-value="">
+                            All type
+                          </li>
+                          <li
+                            class="hero__dropdown-item"
+                            data-value="apartment"
+                          >
+                            Apartment
+                          </li>
+                          <li class="hero__dropdown-item" data-value="house">
+                            House
+                          </li>
+                          <li class="hero__dropdown-item" data-value="condo">
+                            Condo
+                          </li>
+                        </ul>
+                      </div>
                       <span class="icon-CaretDown"></span>
                     </div>
                   </div>
@@ -2298,11 +2310,13 @@
         <div class="container">
           <div class="home-page__footer-top">
             <div class="home-page__footer-logo">
-              <img
-                class="home-page__logo-footer"
-                src="./images/logo/logoFooter.png"
-                alt="Home Lengo"
-              />
+              <a href="#">
+                <img
+                  class="home-page__logo-footer"
+                  src="./images/logo/logoFooter.png"
+                  alt="Home Lengo"
+                />
+              </a>
             </div>
             <div class="home-page__social-icons">
               <div class="home-page__social-text">Follow Us:</div>
@@ -2404,6 +2418,10 @@
           </div>
         </div>
       </footer>
+      <!-- Back to Top -->
+      <button class="back-to-top" aria-label="Back to top">
+        <span class="back-to-top__icon icon-arrow_upward"></span>
+      </button>
     </div>
 
     <script src="js/script.js"></script>
