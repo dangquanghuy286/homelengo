@@ -2626,7 +2626,7 @@
 
     // Explore
     .explore-cities {
-        margin-bottom: 60px;
+
 
         &__list {
             height: 320px;
@@ -2927,7 +2927,6 @@
 
     // Explore
     .explore-cities {
-        margin-bottom: 50px;
 
         &__list {
             height: 300px;
@@ -3414,10 +3413,11 @@
     // Featured Properties
     .featured-properties {
         &__item {
-            max-width: 400px;
+            width: 100%;
+            max-width: 100%;
 
             &-image {
-                height: 180px;
+                height: 250px;
             }
         }
 
