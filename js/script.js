@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       el: ".swiper-pagination",
       clickable: true,
     },
+    speed: 800,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
@@ -119,9 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       768: {
         slidesPerView: 2,
+        slidesPerGroup: 2,
       },
       1024: {
         slidesPerView: 3,
+        slidesPerGroup: 1,
       },
     },
   });
@@ -142,4 +145,47 @@ backToTopBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
+});
+
+// ================
+// Lấy các phần tử cần thiết
+const advancedBtn = document.querySelector(".hero__advanced-button");
+const advancedDropdown = document.querySelector(".hero__advanced-dropdown");
+
+advancedBtn.addEventListener("click", () => {
+  // Kiểm tra dropdown đang hiển thị hay ẩn
+  const isOpen = advancedDropdown.style.display === "block";
+
+  // Toggle hiển thị
+  advancedDropdown.style.display = isOpen ? "none" : "block";
+
+  // Cập nhật aria-expanded để accessibility
+  advancedBtn.setAttribute("aria-expanded", !isOpen);
+});
+// ================Load===================
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBar = document.getElementById("progressBar");
+  const percentage = document.getElementById("percentage");
+  const loading = document.getElementById("loading");
+
+  let progress = 0;
+
+  // Tăng progress từ 0 → 100%
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 5) + 1; // tăng 1-5%
+    if (progress > 100) progress = 100;
+
+    progressBar.style.width = progress + "%";
+    percentage.textContent = progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(interval);
+
+      // Ẩn loading mượt
+      loading.style.opacity = 0;
+      setTimeout(() => {
+        loading.style.display = "none";
+      }, 500);
+    }
+  }, 100); // cập nhật mỗi 100ms
 });
