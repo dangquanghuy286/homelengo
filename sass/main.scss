@@ -309,7 +309,6 @@
     display: none;
 }
 
-// ===============================MAIN===================================
 .hero {
     background: url("../images/logo/hero-banner.png") no-repeat center center;
     background-size: cover;
@@ -395,7 +394,6 @@
         background-color: transparent;
         border: 1px solid var(--white);
 
-        // Active state
         &.hero__tab-active {
             background-color: var(--primary-color);
             border: 1px solid var(--primary-color);
@@ -417,7 +415,6 @@
             }
         }
 
-        // Hover state
         &:not(.hero__tab-active):hover {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
@@ -663,7 +660,75 @@
         letter-spacing: 0;
         line-height: 24px;
     }
+
+    &__advanced-dropdown {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: var(--white);
+        border: 1px solid var(--border-card);
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 10000;
+        top: 180px;
+
+        &.show {
+            display: block;
+        }
+    }
 }
+
+// .advanced-form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 25px;
+//     color: var(--primary-color);
+
+//     &__row {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+//         gap: 20px 30px;
+//     }
+
+//     &__group {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 6px;
+//     }
+
+//     &__label {
+//         font-size: 14px;
+//         font-weight: 600;
+//         color: var(--text-dark);
+//     }
+
+//     &__checkboxes {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: 15px 30px;
+//         font-size: 14px;
+//         color: var(--text-dark);
+//     }
+
+//     /* Change color for range input thumb */
+//     input[type="range"]::-webkit-slider-thumb {
+//         background: var(--primary-color);
+//     }
+
+//     input[type="range"]::-moz-range-thumb {
+//         background: var(--primary-color);
+//     }
+
+//     /* Change color for checkbox */
+//     input[type="checkbox"] {
+//         border: 2px solid var(--primary-color);
+//     }
+
+//     input[type="checkbox"]:checked {
+//         background: var(--primary-color);
+//     }
+// }
 
 .icon-CaretUp:before {
     content: "\e908";
@@ -2295,15 +2360,38 @@
             padding: 60px 50px;
             gap: 30px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+
+        }
+
+        &__title-section {
+            margin: auto;
+        }
+
+        &__title {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            text-align: center;
+            width: 100%;
         }
 
         &__subtitle {
             font-size: 30px;
             line-height: 40px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
         }
 
         &__intro {
-            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         &__list {
@@ -2466,44 +2554,33 @@
 
     // Explore
     .explore-cities {
-        margin-bottom: 70px;
 
         &__list {
-            height: 340px;
+            height: 360px;
 
             .swiper-slide {
-                width: 280px !important;
+                width: 290px !important;
             }
         }
 
-        &__content {
-            padding: 10px;
-            width: 93.5%;
-            height: 19%;
-            top: 76.5%;
-            left: 3.25%;
-            border-radius: 8px;
-        }
+
 
         &__name {
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 18px;
         }
 
         &__property-count {
-            font-size: 12px;
-            line-height: 16px;
+            font-size: 10px;
+            line-height: 14px;
         }
 
         &__action-button {
-            width: 38px;
-            height: 38px;
+            width: 34px;
+            height: 34px;
         }
 
-        &__dots {
-            margin-top: 35px;
-            gap: 7px;
-        }
+
 
         &__dot {
             width: 6px;
@@ -2561,16 +2638,11 @@
     // Latest News
     .latest-news {
         &__list {
-
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
 
         }
 
-        &__item {
-            width: 350px;
-            max-width: 100%;
-        }
 
 
         &__content {
@@ -2629,10 +2701,10 @@
 
 
         &__list {
-            height: 320px;
+            height: 350px;
 
             .swiper-slide {
-                width: 260px !important;
+                width: 280px !important;
             }
         }
 
@@ -2758,6 +2830,7 @@
             gap: 20px;
             width: 100%;
             justify-items: center;
+            padding: 0 20px;
         }
 
         &__item {
@@ -2925,51 +2998,6 @@
         }
     }
 
-    // Explore
-    .explore-cities {
-
-        &__list {
-            height: 300px;
-
-            .swiper-slide {
-                width: 240px !important;
-            }
-        }
-
-        &__content {
-            padding: 6px;
-            width: 92.5%;
-            height: 17%;
-            top: 75.5%;
-            left: 3.75%;
-            border-radius: 6px;
-        }
-
-        &__name {
-            font-size: 13px;
-            line-height: 18px;
-        }
-
-        &__property-count {
-            font-size: 10px;
-            line-height: 14px;
-        }
-
-        &__action-button {
-            width: 34px;
-            height: 34px;
-        }
-
-        &__dots {
-            margin-top: 25px;
-            gap: 6px;
-        }
-
-        &__dot {
-            width: 6px;
-            height: 6px;
-        }
-    }
 
     // Footer
     .home-page {
@@ -3084,12 +3112,23 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
 
-    // Header
+    // .hero {
+    //     &__advanced-dropdown {
+    //         top: 465px;
+
+
+    //     }
+    // }
+
+
+
+    // Header styles
     .home-page {
         &__menu {
             padding: 15px 15px;
@@ -3124,25 +3163,14 @@
         }
     }
 
-    // Explore
+    // Explore Cities
     .explore-cities {
-        margin-bottom: 40px;
-
         &__list {
-            height: 280px;
+            height: 330px;
 
             .swiper-slide {
-                width: 220px !important;
+                width: 260px !important;
             }
-        }
-
-        &__content {
-            padding: 5px;
-            width: 92%;
-            height: 16%;
-            top: 75%;
-            left: 4%;
-            border-radius: 6px;
         }
 
         &__name {
@@ -3171,7 +3199,7 @@
         }
     }
 
-    // Service
+    // Services
     .services {
         &__list {
             display: grid;
@@ -3232,12 +3260,8 @@
         }
     }
 
-    // Featured Properties
-
-
     // Benefits
     .benefits {
-        margin-bottom: 40px;
         border-radius: 8px;
 
         &__content {
@@ -3289,9 +3313,6 @@
             line-height: 16px;
         }
     }
-
-    // Latest News
-
 }
 
 @media (max-width: 576px) {
@@ -3358,31 +3379,23 @@
         }
 
         &__subtitle {
-            font-size: 11px;
+            font-size: 10px;
             line-height: 14px;
         }
     }
 
     // Explore
     .explore-cities {
-        margin-bottom: 30px;
 
         &__list {
-            height: 260px;
+            height: 300px;
 
             .swiper-slide {
-                width: 200px !important;
+                width: 230px !important;
             }
         }
 
-        &__content {
-            padding: 4px;
-            width: 91.5%;
-            height: 15%;
-            top: 74.5%;
-            left: 4.25%;
-            border-radius: 4px;
-        }
+
 
         &__name {
             font-size: 11px;
@@ -3417,7 +3430,7 @@
             max-width: 100%;
 
             &-image {
-                height: 250px;
+                height: 200px;
             }
         }
 
@@ -3517,7 +3530,7 @@
 
         &__image-container {
             width: 100%;
-            height: 250px;
+            height: 210px;
         }
 
         &__content {
@@ -3646,27 +3659,18 @@
 
     // Explore
     .explore-cities {
-        margin-bottom: 20px;
 
         &__list {
-            height: 240px;
+            height: 300px;
 
             .swiper-slide {
-                width: 180px !important;
+                width: 250px !important;
             }
         }
 
-        &__content {
-            padding: 3px;
-            width: 91%;
-            height: 14%;
-            top: 74%;
-            left: 4.5%;
-            border-radius: 4px;
-        }
 
         &__name {
-            font-size: 10px;
+            font-size: 12px;
             line-height: 12px;
         }
 

@@ -2194,6 +2194,21 @@ a:focus, a:hover {
   letter-spacing: 0;
   line-height: 24px;
 }
+.hero__advanced-dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 10000;
+  top: 180px;
+}
+.hero__advanced-dropdown.show {
+  display: block;
+}
 
 .icon-CaretUp:before {
   content: "\e908";
@@ -3639,13 +3654,32 @@ a:focus, a:hover {
     padding: 60px 50px;
     gap: 30px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .benefits__title-section {
+    margin: auto;
+  }
+  .benefits__title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-align: center;
+    width: 100%;
   }
   .benefits__subtitle {
     font-size: 30px;
     line-height: 40px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
   }
   .benefits__intro {
-    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
   }
   .benefits__list {
     display: grid;
@@ -3752,38 +3786,23 @@ a:focus, a:hover {
     width: 18px;
     height: 18px;
   }
-  .explore-cities {
-    margin-bottom: 70px;
-  }
   .explore-cities__list {
-    height: 340px;
+    height: 360px;
   }
   .explore-cities__list .swiper-slide {
-    width: 280px !important;
-  }
-  .explore-cities__content {
-    padding: 10px;
-    width: 93.5%;
-    height: 19%;
-    top: 76.5%;
-    left: 3.25%;
-    border-radius: 8px;
+    width: 290px !important;
   }
   .explore-cities__name {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 18px;
   }
   .explore-cities__property-count {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 10px;
+    line-height: 14px;
   }
   .explore-cities__action-button {
-    width: 38px;
-    height: 38px;
-  }
-  .explore-cities__dots {
-    margin-top: 35px;
-    gap: 7px;
+    width: 34px;
+    height: 34px;
   }
   .explore-cities__dot {
     width: 6px;
@@ -3824,11 +3843,7 @@ a:focus, a:hover {
   }
   .latest-news__list {
     flex-wrap: wrap;
-    gap: 10px;
-  }
-  .latest-news__item {
-    width: 350px;
-    max-width: 100%;
+    gap: 20px;
   }
   .latest-news__content {
     width: 100%;
@@ -3868,10 +3883,10 @@ a:focus, a:hover {
     margin-top: 10px;
   }
   .explore-cities__list {
-    height: 320px;
+    height: 350px;
   }
   .explore-cities__list .swiper-slide {
-    width: 260px !important;
+    width: 280px !important;
   }
   .explore-cities__content {
     padding: 8px;
@@ -3967,6 +3982,7 @@ a:focus, a:hover {
     gap: 20px;
     width: 100%;
     justify-items: center;
+    padding: 0 20px;
   }
   .latest-news__item {
     width: 100%;
@@ -4099,40 +4115,6 @@ a:focus, a:hover {
     cursor: pointer;
     background: transparent;
   }
-  .explore-cities__list {
-    height: 300px;
-  }
-  .explore-cities__list .swiper-slide {
-    width: 240px !important;
-  }
-  .explore-cities__content {
-    padding: 6px;
-    width: 92.5%;
-    height: 17%;
-    top: 75.5%;
-    left: 3.75%;
-    border-radius: 6px;
-  }
-  .explore-cities__name {
-    font-size: 13px;
-    line-height: 18px;
-  }
-  .explore-cities__property-count {
-    font-size: 10px;
-    line-height: 14px;
-  }
-  .explore-cities__action-button {
-    width: 34px;
-    height: 34px;
-  }
-  .explore-cities__dots {
-    margin-top: 25px;
-    gap: 6px;
-  }
-  .explore-cities__dot {
-    width: 6px;
-    height: 6px;
-  }
   .home-page__footer-top {
     gap: 20px;
     padding: 0 20px;
@@ -4244,22 +4226,11 @@ a:focus, a:hover {
   .home-page__btn-text {
     font-size: 11px;
   }
-  .explore-cities {
-    margin-bottom: 40px;
-  }
   .explore-cities__list {
-    height: 280px;
+    height: 330px;
   }
   .explore-cities__list .swiper-slide {
-    width: 220px !important;
-  }
-  .explore-cities__content {
-    padding: 5px;
-    width: 92%;
-    height: 16%;
-    top: 75%;
-    left: 4%;
-    border-radius: 6px;
+    width: 260px !important;
   }
   .explore-cities__name {
     font-size: 12px;
@@ -4326,7 +4297,6 @@ a:focus, a:hover {
     margin-top: 10px;
   }
   .benefits {
-    margin-bottom: 40px;
     border-radius: 8px;
   }
   .benefits__content {
@@ -4415,25 +4385,14 @@ a:focus, a:hover {
     top: 360px;
   }
   .hero__subtitle {
-    font-size: 11px;
+    font-size: 10px;
     line-height: 14px;
   }
-  .explore-cities {
-    margin-bottom: 30px;
-  }
   .explore-cities__list {
-    height: 260px;
+    height: 300px;
   }
   .explore-cities__list .swiper-slide {
-    width: 200px !important;
-  }
-  .explore-cities__content {
-    padding: 4px;
-    width: 91.5%;
-    height: 15%;
-    top: 74.5%;
-    left: 4.25%;
-    border-radius: 4px;
+    width: 230px !important;
   }
   .explore-cities__name {
     font-size: 11px;
@@ -4460,7 +4419,7 @@ a:focus, a:hover {
     max-width: 100%;
   }
   .featured-properties__item-image {
-    height: 250px;
+    height: 200px;
   }
   .featured-properties__content {
     padding: 12px;
@@ -4537,7 +4496,7 @@ a:focus, a:hover {
   }
   .latest-news__image-container {
     width: 100%;
-    height: 250px;
+    height: 210px;
   }
   .latest-news__content {
     width: 100%;
@@ -4628,25 +4587,14 @@ a:focus, a:hover {
   .home-page__social-text {
     font-size: 12px;
   }
-  .explore-cities {
-    margin-bottom: 20px;
-  }
   .explore-cities__list {
-    height: 240px;
+    height: 300px;
   }
   .explore-cities__list .swiper-slide {
-    width: 180px !important;
-  }
-  .explore-cities__content {
-    padding: 3px;
-    width: 91%;
-    height: 14%;
-    top: 74%;
-    left: 4.5%;
-    border-radius: 4px;
+    width: 250px !important;
   }
   .explore-cities__name {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 12px;
   }
   .explore-cities__property-count {
