@@ -863,9 +863,12 @@
             height: 270px;
             overflow: hidden;
 
+
             &:hover .featured-properties__image-overlay {
                 transform: scale(1.1);
                 cursor: pointer;
+                transition: transform 0.3s ease;
+                filter: brightness(60%);
             }
         }
 
@@ -1117,6 +1120,20 @@
         border-radius: 16px;
         overflow: hidden;
         display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            filter: brightness(70%);
+        }
     }
 
     &__dots {
@@ -1619,6 +1636,16 @@
         height: 300px;
         overflow: hidden;
 
+        img {
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            filter: brightness(60%);
+        }
+
+
         &:hover .team__social-overlay {
             opacity: 1;
             visibility: visible;
@@ -1816,9 +1843,14 @@
         width: 100%;
         height: 270px;
         overflow: hidden;
+        border-radius: 16px;
+        cursor: pointer;
+
+
 
         &:hover .latest-news__image {
             transform: scale(1.1);
+            filter: brightness(60%);
         }
     }
 
@@ -1826,7 +1858,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 16px;
+
         transition: transform 0.3s ease;
         cursor: pointer;
         overflow: hidden;
