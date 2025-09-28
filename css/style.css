@@ -3666,6 +3666,9 @@ a:focus, a:hover {
     align-items: center;
     text-align: center;
   }
+  .benefits__header {
+    margin-bottom: 20px;
+  }
   .benefits__title-section {
     margin: auto;
   }
@@ -4455,44 +4458,6 @@ a:focus, a:hover {
     font-size: 14px;
     line-height: 20px;
   }
-  .benefits {
-    margin-bottom: 30px;
-  }
-  .benefits__content {
-    padding: 20px 15px;
-    gap: 15px;
-  }
-  .benefits__header {
-    gap: 10px;
-  }
-  .benefits__title {
-    font-size: 11px;
-    line-height: 16px;
-  }
-  .benefits__subtitle {
-    font-size: 22px;
-    line-height: 30px;
-  }
-  .benefits__intro {
-    font-size: 11px;
-    line-height: 16px;
-  }
-  .benefits__item {
-    padding: 12px;
-    gap: 8px;
-  }
-  .benefits__icon {
-    width: 35px;
-    height: 35px;
-  }
-  .benefits__name {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  .benefits__description {
-    font-size: 11px;
-    line-height: 16px;
-  }
   .latest-news__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -4659,48 +4624,6 @@ a:focus, a:hover {
   .featured-properties__content {
     width: 100%;
     padding: 14px;
-  }
-  .benefits {
-    margin-bottom: 20px;
-    border-radius: 6px;
-  }
-  .benefits__content {
-    padding: 15px 10px;
-    gap: 10px;
-  }
-  .benefits__header {
-    gap: 8px;
-  }
-  .benefits__title {
-    font-size: 10px;
-    line-height: 14px;
-  }
-  .benefits__subtitle {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  .benefits__intro {
-    font-size: 10px;
-    line-height: 14px;
-  }
-  .benefits__list {
-    gap: 10px;
-  }
-  .benefits__item {
-    padding: 10px;
-    gap: 6px;
-  }
-  .benefits__icon {
-    width: 30px;
-    height: 30px;
-  }
-  .benefits__name {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .benefits__description {
-    font-size: 10px;
-    line-height: 14px;
   }
 }
 

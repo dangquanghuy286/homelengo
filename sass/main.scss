@@ -2390,6 +2390,7 @@
 
     // Benefits
     .benefits {
+
         &__hero-image {
             display: none;
         }
@@ -2404,6 +2405,10 @@
 
             text-align: center;
 
+        }
+
+        &__header {
+            margin-bottom: 20px;
         }
 
         &__title-section {
@@ -3121,6 +3126,8 @@
     .benefits {
         border-radius: 10px;
 
+
+
         &__content {
             padding: 40px 30px;
             gap: 25px;
@@ -3504,54 +3511,54 @@
         }
     }
 
-    // Benefits
-    .benefits {
-        margin-bottom: 30px;
+    // // Benefits
+    // .benefits {
+    //     margin-bottom: 30px;
 
-        &__content {
-            padding: 20px 15px;
-            gap: 15px;
-        }
+    //     &__content {
+    //         padding: 20px 15px;
+    //         gap: 15px;
+    //     }
 
-        &__header {
-            gap: 10px;
-        }
+    //     &__header {
+    //         gap: 10px;
+    //     }
 
-        &__title {
-            font-size: 11px;
-            line-height: 16px;
-        }
+    //     &__title {
+    //         font-size: 11px;
+    //         line-height: 16px;
+    //     }
 
-        &__subtitle {
-            font-size: 22px;
-            line-height: 30px;
-        }
+    //     &__subtitle {
+    //         font-size: 22px;
+    //         line-height: 30px;
+    //     }
 
-        &__intro {
-            font-size: 11px;
-            line-height: 16px;
-        }
+    //     &__intro {
+    //         font-size: 11px;
+    //         line-height: 16px;
+    //     }
 
-        &__item {
-            padding: 12px;
-            gap: 8px;
-        }
+    //     &__item {
+    //         padding: 12px;
+    //         gap: 8px;
+    //     }
 
-        &__icon {
-            width: 35px;
-            height: 35px;
-        }
+    //     &__icon {
+    //         width: 35px;
+    //         height: 35px;
+    //     }
 
-        &__name {
-            font-size: 16px;
-            line-height: 22px;
-        }
+    //     &__name {
+    //         font-size: 16px;
+    //         line-height: 22px;
+    //     }
 
-        &__description {
-            font-size: 11px;
-            line-height: 16px;
-        }
-    }
+    //     &__description {
+    //         font-size: 11px;
+    //         line-height: 16px;
+    //     }
+    // }
 
     .latest-news {
         &__list {
@@ -3787,57 +3794,57 @@
         }
     }
 
-    // Benefits
-    .benefits {
-        margin-bottom: 20px;
-        border-radius: 6px;
+    // // Benefits
+    // .benefits {
+    //     margin-bottom: 20px;
+    //     border-radius: 6px;
 
-        &__content {
-            padding: 15px 10px;
-            gap: 10px;
-        }
+    //     &__content {
+    //         padding: 15px 10px;
+    //         gap: 10px;
+    //     }
 
-        &__header {
-            gap: 8px;
-        }
+    //     &__header {
+    //         gap: 8px;
+    //     }
 
-        &__title {
-            font-size: 10px;
-            line-height: 14px;
-        }
+    //     &__title {
+    //         font-size: 10px;
+    //         line-height: 14px;
+    //     }
 
-        &__subtitle {
-            font-size: 20px;
-            line-height: 28px;
-        }
+    //     &__subtitle {
+    //         font-size: 20px;
+    //         line-height: 28px;
+    //     }
 
-        &__intro {
-            font-size: 10px;
-            line-height: 14px;
-        }
+    //     &__intro {
+    //         font-size: 10px;
+    //         line-height: 14px;
+    //     }
 
-        &__list {
-            gap: 10px;
-        }
+    //     &__list {
+    //         gap: 10px;
+    //     }
 
-        &__item {
-            padding: 10px;
-            gap: 6px;
-        }
+    //     &__item {
+    //         padding: 10px;
+    //         gap: 6px;
+    //     }
 
-        &__icon {
-            width: 30px;
-            height: 30px;
-        }
+    //     &__icon {
+    //         width: 30px;
+    //         height: 30px;
+    //     }
 
-        &__name {
-            font-size: 14px;
-            line-height: 20px;
-        }
+    //     &__name {
+    //         font-size: 14px;
+    //         line-height: 20px;
+    //     }
 
-        &__description {
-            font-size: 10px;
-            line-height: 14px;
-        }
-    }
+    //     &__description {
+    //         font-size: 10px;
+    //         line-height: 14px;
+    //     }
+    // }
 }
