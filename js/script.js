@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       768: {
         slidesPerView: 3,
-        slidesPerGroup: 2,
+        slidesPerGroup: 3,
       },
       1024: {
         slidesPerView: 3,
@@ -109,9 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
 //================= Testimonials ===================
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {
-    slidesPerView: 3,
+    slidesPerView: "auto",
     spaceBetween: 30,
-    loopedSlides: 5,
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -125,18 +125,39 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        spaceBetween: 25,
       },
       1024: {
         slidesPerView: 3,
+        slidesPerGroup: 5,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 4,
         slidesPerGroup: 1,
+        spaceBetween: 30,
+      },
+      1440: {
+        slidesPerView: 4,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
       },
     },
+    watchOverflow: true,
   });
 });
+
 // ======================Back-to-Top======================
 const backToTopBtn = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {

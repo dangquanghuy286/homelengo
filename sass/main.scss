@@ -1435,6 +1435,7 @@
     margin-bottom: 100px;
     overflow: hidden;
 
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -1442,12 +1443,12 @@
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
+
         width: 100%;
         align-items: flex-start;
         justify-content: center;
         gap: 30px;
+        padding: 20px 0;
     }
 
     &__item {
@@ -1458,10 +1459,10 @@
         padding: 30px;
         background-color: var(--white);
         border-radius: 20px;
-
-        .swiper-slide {
-            width: 410px !important;
-        }
+        overflow: visible;
+        box-sizing: border-box; // .swiper-slide {
+        //     width: 410px !important;
+        // }
     }
 
     &__quote-icon {

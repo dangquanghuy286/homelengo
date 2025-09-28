@@ -2816,12 +2816,11 @@ a:focus, a:hover {
   align-items: center;
 }
 .testimonials__list {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   align-items: flex-start;
   justify-content: center;
   gap: 30px;
+  padding: 20px 0;
 }
 .testimonials__item {
   display: flex;
@@ -2831,9 +2830,8 @@ a:focus, a:hover {
   padding: 30px;
   background-color: var(--white);
   border-radius: 20px;
-}
-.testimonials__item .swiper-slide {
-  width: 410px !important;
+  overflow: visible;
+  box-sizing: border-box;
 }
 .testimonials__quote-icon {
   width: 60px;
