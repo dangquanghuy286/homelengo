@@ -87,20 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerGroup: 2,
       },
       480: {
-        slidesPerView: 2,
-        slidesPerGroup: 3,
+        slidesPerView: 1,
+        slidesPerGroup: 6,
       },
       768: {
         slidesPerView: 3,
-        slidesPerGroup: 1,
+        slidesPerGroup: 2,
       },
       1024: {
         slidesPerView: 3,
         slidesPerGroup: 4,
       },
       1200: {
-        slidesPerView: 4,
-        slidesPerGroup: 3,
+        slidesPerView: 5,
+        slidesPerGroup: 4,
       },
     },
   });

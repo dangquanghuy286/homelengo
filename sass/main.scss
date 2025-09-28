@@ -316,8 +316,8 @@
     min-height: 830px;
     position: relative;
     margin-top: 78px;
-    overflow: hidden;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
 
     &::before {
@@ -592,6 +592,7 @@
         gap: 8px;
         padding: 11px 40px;
         align-self: stretch;
+        cursor: pointer;
         border-radius: 99px;
 
         &:hover {
@@ -636,6 +637,7 @@
         align-self: stretch;
         border: 1px solid var(--primary-color);
         border-radius: 99px;
+        cursor: pointer;
 
         &:hover {
             background-color: var(--white);
@@ -661,22 +663,22 @@
         line-height: 24px;
     }
 
-    &__advanced-dropdown {
-        display: none;
-        position: absolute;
-        width: 100%;
-        background: var(--white);
-        border: 1px solid var(--border-card);
-        border-radius: 16px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        z-index: 10000;
-        top: 180px;
+    // &__advanced-dropdown {
+    //     display: none;
+    //     position: absolute;
+    //     width: 100%;
+    //     background: var(--white);
+    //     border: 1px solid var(--border-card);
+    //     border-radius: 16px;
+    //     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    //     padding: 20px;
+    //     z-index: 10000;
+    //     top: 180px;
 
-        &.show {
-            display: block;
-        }
-    }
+    //     &.show {
+    //         display: block;
+    //     }
+    // }
 }
 
 // .advanced-form {
@@ -2996,6 +2998,10 @@
             cursor: pointer;
             background: transparent;
         }
+
+        // &__advanced-dropdown {
+        //     top: 465px;
+        // }
     }
 
 
@@ -3118,13 +3124,6 @@
         padding: 0 15px;
     }
 
-    // .hero {
-    //     &__advanced-dropdown {
-    //         top: 465px;
-
-
-    //     }
-    // }
 
 
 
@@ -3160,6 +3159,10 @@
             &-text {
                 font-size: 11px;
             }
+        }
+
+        &__mobile-btn--submit {
+            padding: 20px;
         }
     }
 
@@ -3379,7 +3382,7 @@
         }
 
         &__subtitle {
-            font-size: 10px;
+            font-size: 9px;
             line-height: 14px;
         }
     }
@@ -3547,17 +3550,7 @@
 
     // Header
     .home-page {
-        &__menu-frame {
-            &__logo {
-                height: 30px;
-                gap: 6px;
-            }
-        }
 
-        &__logo-img {
-            height: 30px;
-            width: auto;
-        }
 
         &__btn {
             &--login {
@@ -3633,15 +3626,9 @@
             font-size: 11px;
         }
 
-        &__footer-logo {
-            height: 30px;
-            gap: 6px;
-        }
 
-        &__logo-footer {
-            height: 30px;
-            width: auto;
-        }
+
+
 
         &__social-icons {
             gap: 8px;

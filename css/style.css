@@ -1890,8 +1890,8 @@ a:focus, a:hover {
   min-height: 830px;
   position: relative;
   margin-top: 78px;
-  overflow: hidden;
   align-items: center;
+  overflow: hidden;
   justify-content: center;
 }
 .hero::before {
@@ -2136,6 +2136,7 @@ a:focus, a:hover {
   gap: 8px;
   padding: 11px 40px;
   align-self: stretch;
+  cursor: pointer;
   border-radius: 99px;
 }
 .hero__advanced-button:hover {
@@ -2174,6 +2175,7 @@ a:focus, a:hover {
   align-self: stretch;
   border: 1px solid var(--primary-color);
   border-radius: 99px;
+  cursor: pointer;
 }
 .hero__search-button:hover {
   background-color: var(--white);
@@ -2193,21 +2195,6 @@ a:focus, a:hover {
   text-align: center;
   letter-spacing: 0;
   line-height: 24px;
-}
-.hero__advanced-dropdown {
-  display: none;
-  position: absolute;
-  width: 100%;
-  background: var(--white);
-  border: 1px solid var(--border-card);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  z-index: 10000;
-  top: 180px;
-}
-.hero__advanced-dropdown.show {
-  display: block;
 }
 
 .icon-CaretUp:before {
@@ -4226,6 +4213,9 @@ a:focus, a:hover {
   .home-page__btn-text {
     font-size: 11px;
   }
+  .home-page__mobile-btn--submit {
+    padding: 20px;
+  }
   .explore-cities__list {
     height: 330px;
   }
@@ -4385,7 +4375,7 @@ a:focus, a:hover {
     top: 360px;
   }
   .hero__subtitle {
-    font-size: 10px;
+    font-size: 9px;
     line-height: 14px;
   }
   .explore-cities__list {
@@ -4507,14 +4497,6 @@ a:focus, a:hover {
   .container {
     padding: 0 10px;
   }
-  .home-page__menu-frame__logo {
-    height: 30px;
-    gap: 6px;
-  }
-  .home-page__logo-img {
-    height: 30px;
-    width: auto;
-  }
   .home-page__btn--login {
     width: 90px;
   }
@@ -4568,14 +4550,6 @@ a:focus, a:hover {
   }
   .home-page__copyright, .home-page__terms-text, .home-page__terms-separator {
     font-size: 11px;
-  }
-  .home-page__footer-logo {
-    height: 30px;
-    gap: 6px;
-  }
-  .home-page__logo-footer {
-    height: 30px;
-    width: auto;
   }
   .home-page__social-icons {
     gap: 8px;
