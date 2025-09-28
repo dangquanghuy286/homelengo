@@ -2088,8 +2088,7 @@ a:focus, a:hover {
   line-height: 22px;
 }
 .hero__dropdown-item:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+  color: var(--primary-color);
 }
 .hero__separator {
   position: relative;
