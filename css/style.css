@@ -2489,10 +2489,10 @@ a:focus, a:hover {
   border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border: 1px solid var(--primary-color);
 }
 .featured-properties__button:hover {
   background-color: var(--white);
-  border: 1px solid var(--primary-color);
 }
 .featured-properties__button:hover .featured-properties__button-text,
 .featured-properties__button:hover .featured-properties__button-icon {

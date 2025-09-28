@@ -1065,10 +1065,11 @@
         border-radius: 9999px;
         cursor: pointer;
         transition: all 0.3s ease;
+        border: 1px solid var(--primary-color);
 
         &:hover {
             background-color: var(--white);
-            border: 1px solid var(--primary-color);
+
 
             .featured-properties__button-text,
             .featured-properties__button-icon {
@@ -1460,9 +1461,8 @@
         background-color: var(--white);
         border-radius: 20px;
         overflow: visible;
-        box-sizing: border-box; // .swiper-slide {
-        //     width: 410px !important;
-        // }
+        box-sizing: border-box;
+
     }
 
     &__quote-icon {
