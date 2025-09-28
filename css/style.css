@@ -2142,6 +2142,7 @@ a:focus, a:hover {
   background-color: var(--primary-color);
   color: var(--white);
   border-color: var(--primary-color);
+  transition: transform 0.3s ease;
 }
 .hero__advanced-button:hover .hero__advanced-text {
   color: var(--white);
@@ -2178,7 +2179,6 @@ a:focus, a:hover {
 }
 .hero__search-button:hover {
   background-color: var(--white);
-  border: 1px solid var(--primary-color);
 }
 .hero__search-button:hover .hero__search-text {
   color: var(--text-dark);
