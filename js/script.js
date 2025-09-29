@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
         centeredSlides: false,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 25,
         centeredSlides: false,

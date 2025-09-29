@@ -4501,10 +4501,6 @@ input[type=range]::-moz-range-thumb {
     margin-top: 20px;
     gap: 5px;
   }
-  .explore-cities__dot {
-    width: 5px;
-    height: 5px;
-  }
   .services__list {
     display: grid;
     grid-template-columns: 1fr;
