@@ -165,14 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 20,
-        centeredSlides: false,
+        spaceBetween: 16,
+        centeredSlides: true,
       },
       576: {
-        slidesPerView: 1.5,
+        slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 20,
-        centeredSlides: false,
+        centeredSlides: true,
       },
       768: {
         slidesPerView: 3,

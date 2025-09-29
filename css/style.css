@@ -3795,6 +3795,11 @@ input[type=range]::-moz-range-thumb {
   font-size: 14px;
 }
 
+.home-page__terms-text:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 .home-page__terms-separator {
   color: var(--border-color);
   line-height: 22px;
