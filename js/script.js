@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //================= Testimonials ===================
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: false,
 
@@ -165,14 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 16,
-        centeredSlides: true,
+        spaceBetween: 20,
       },
       576: {
         slidesPerView: 1,
-        slidesPerGroup: 1,
+        slidesPerGroup: 5,
         spaceBetween: 20,
-        centeredSlides: true,
+        centeredSlides: false,
       },
       768: {
         slidesPerView: 3,
