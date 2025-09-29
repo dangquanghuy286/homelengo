@@ -2271,12 +2271,12 @@ a:focus, a:hover {
   display: flex;
   gap: 24px;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* ================= Advanced Groups ================= */
 .advanced__group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   flex: 1;
 }
 
@@ -2285,7 +2285,7 @@ a:focus, a:hover {
   font-weight: 600;
   color: var(--text-dark);
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .advanced__group label span {
