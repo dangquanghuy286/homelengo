@@ -60,6 +60,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// ==================TAB-Active===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".featured-properties__tab");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Xóa active cũ
+      tabs.forEach((t) => {
+        t.classList.remove("featured-properties__tab--active");
+        t.setAttribute("aria-selected", "false");
+        t.setAttribute("tabindex", "-1");
+      });
+
+      // Thêm active cho tab được click
+      tab.classList.add("featured-properties__tab--active");
+      tab.setAttribute("aria-selected", "true");
+      tab.setAttribute("tabindex", "0");
+    });
+  });
+});
+
 //==================== Explore =====================
 document.addEventListener("DOMContentLoaded", () => {
   const exploreSwiper = new Swiper(".explore-cities__list", {
@@ -83,81 +104,105 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       320: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 6,
       },
       480: {
-        slidesPerView: 1,
-        slidesPerGroup: 6,
-      },
-      768: {
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 6,
+      },
+      768: {
+        slidesPerView: 4,
+        slidesPerGroup: 2,
+        spaceBetween: 8,
       },
       1024: {
-        slidesPerView: 3,
-        slidesPerGroup: 4,
+        slidesPerView: 5,
+        slidesPerGroup: 2,
+        spaceBetween: 8,
       },
       1200: {
-        slidesPerView: 5,
-        slidesPerGroup: 4,
+        slidesPerView: 6,
+        slidesPerGroup: 1,
+        spaceBetween: 8,
+      },
+      1440: {
+        slidesPerView: 6,
+        slidesPerGroup: 6,
+        spaceBetween: 8,
       },
     },
+
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
   });
 });
 
 //================= Testimonials ===================
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {
-    slidesPerView: "auto",
+    slidesPerView: 4,
     spaceBetween: 30,
+    centeredSlides: false,
 
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
+
     speed: 800,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
+
     breakpoints: {
       320: {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 20,
+        centeredSlides: false,
       },
       576: {
-        slidesPerView: 2,
+        slidesPerView: 1.5,
         slidesPerGroup: 1,
         spaceBetween: 20,
+        centeredSlides: false,
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
         slidesPerGroup: 1,
         spaceBetween: 25,
+        centeredSlides: false,
       },
       1024: {
         slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 20,
+        centeredSlides: false,
       },
       1200: {
         slidesPerView: 4,
         slidesPerGroup: 1,
         spaceBetween: 30,
+        centeredSlides: false,
       },
       1440: {
         slidesPerView: 4,
         slidesPerGroup: 1,
         spaceBetween: 30,
+        centeredSlides: false,
       },
     },
     watchOverflow: true,
+    watchSlidesProgress: true,
   });
 });
-
 // ======================Back-to-Top======================
 const backToTopBtn = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {

@@ -113,9 +113,9 @@
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
-    min-width: 200px;
+    min-width: 222px;
     background: var(--white);
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 6px;
     padding: 10px 0;
     opacity: 0;
@@ -127,12 +127,13 @@
 
 .home-page__dropdown-item {
     display: block;
-    padding: 10px 16px;
+    padding: 15px 24px;
     color: var(--text-dark);
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
+
     border-bottom: 1px solid var(--border-card);
 }
 
@@ -1115,7 +1116,8 @@
         }
 
         .swiper-slide {
-            width: 310px !important;
+            width: auto !important;
+            flex-shrink: 0;
         }
     }
 
@@ -1124,6 +1126,7 @@
         border-radius: 16px;
         overflow: hidden;
         display: block;
+        height: 100%;
 
         img {
             width: 100%;
@@ -1456,21 +1459,21 @@
     background-color: var(--bg-three);
     margin-bottom: 100px;
     overflow: hidden;
-
+    justify-content: center;
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     &__list {
-
-        width: 100%;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 30px;
         padding: 20px 0;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
     }
 
     &__item {
@@ -1483,6 +1486,7 @@
         border-radius: 20px;
         overflow: visible;
         box-sizing: border-box;
+        flex-shrink: 0;
 
     }
 
@@ -1501,6 +1505,7 @@
         align-items: flex-start;
         gap: 24px;
         align-self: stretch;
+        flex: 1;
     }
 
     &__text {
@@ -1576,6 +1581,7 @@
             color: var(--star);
         }
     }
+
 }
 
 .icon-quotes-left:before {
@@ -1587,6 +1593,10 @@
 }
 
 .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     --swiper-pagination-color: var(--swiper-theme-color);
     --swiper-pagination-left: auto;
     --swiper-pagination-right: 8px;
@@ -1603,9 +1613,12 @@
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
+    text-align: center !important;
+    justify-content: center !important;
     margin-top: 50px !important;
     position: relative !important;
     bottom: auto !important;
+    width: 100% !important;
 }
 
 

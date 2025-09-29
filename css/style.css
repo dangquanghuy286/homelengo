@@ -1687,9 +1687,9 @@ a:focus, a:hover {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
-  min-width: 200px;
+  min-width: 222px;
   background: var(--white);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 6px;
   padding: 10px 0;
   opacity: 0;
@@ -1701,7 +1701,7 @@ a:focus, a:hover {
 
 .home-page__dropdown-item {
   display: block;
-  padding: 10px 16px;
+  padding: 15px 24px;
   color: var(--text-dark);
   font-size: 15px;
   font-weight: 500;
@@ -2580,13 +2580,15 @@ a:focus, a:hover {
   padding: 0 10px;
 }
 .explore-cities__list .swiper-slide {
-  width: 310px !important;
+  width: auto !important;
+  flex-shrink: 0;
 }
 .explore-cities__item {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
   display: block;
+  height: 100%;
 }
 .explore-cities__item img {
   width: 100%;
@@ -2877,18 +2879,19 @@ a:focus, a:hover {
   background-color: var(--bg-three);
   margin-bottom: 100px;
   overflow: hidden;
+  justify-content: center;
 }
 .testimonials__content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .testimonials__list {
-  width: 100%;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 30px;
   padding: 20px 0;
+}
+.testimonials__list .swiper-wrapper {
+  align-items: stretch;
 }
 .testimonials__item {
   display: flex;
@@ -2900,6 +2903,7 @@ a:focus, a:hover {
   border-radius: 20px;
   overflow: visible;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 .testimonials__quote-icon {
   width: 60px;
@@ -2915,6 +2919,7 @@ a:focus, a:hover {
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
+  flex: 1;
 }
 .testimonials__text {
   align-self: stretch;
@@ -2990,6 +2995,9 @@ a:focus, a:hover {
 }
 
 .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   --swiper-pagination-color: var(--swiper-theme-color);
   --swiper-pagination-left: auto;
   --swiper-pagination-right: 8px;
@@ -3006,9 +3014,12 @@ a:focus, a:hover {
   --swiper-pagination-bullet-opacity: 1;
   --swiper-pagination-bullet-horizontal-gap: 4px;
   --swiper-pagination-bullet-vertical-gap: 6px;
+  text-align: center !important;
+  justify-content: center !important;
   margin-top: 50px !important;
   position: relative !important;
   bottom: auto !important;
+  width: 100% !important;
 }
 
 .team {
