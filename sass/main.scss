@@ -541,7 +541,7 @@
         justify-content: space-between;
         align-self: stretch;
         width: 100%;
-        gap: 10px;
+
     }
 
     &__dropdown {
@@ -554,7 +554,6 @@
         cursor: pointer;
 
         &-selected {
-            padding: 8px 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -627,15 +626,14 @@
     }
 
     &__actions {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         gap: 10px;
         position: relative;
         align-self: stretch;
-        height: 52px;
         margin: 22px 0;
 
-
+        height: 52px;
     }
 
     &__advanced-button {
@@ -652,6 +650,7 @@
         border-radius: 99px;
         box-sizing: border-box;
         overflow: hidden;
+        height: 100%;
 
 
         &:hover {
@@ -670,9 +669,9 @@
         }
     }
 
+
     &__advanced-text {
         text-align: center;
-        width: fit-content;
         font-weight: 600;
         color: var(--black);
         font-size: 16px;
@@ -724,6 +723,180 @@
     }
 
 
+}
+
+/* ================= Advanced Dropdown Styles ================= */
+.hero__advanced-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 24px;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: all 0.3s ease;
+}
+
+.hero__advanced-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ================= Flex container ================= */
+.advanced__flex-container {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+/* ================= Advanced Groups ================= */
+.advanced__group {
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.advanced__group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.advanced__group label span {
+    font-weight: 400;
+    color: var(--text-light);
+    margin-left: 8px;
+}
+
+.advanced__group .range-wrapper {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: var(--border-card);
+    border-radius: 3px;
+}
+
+.range-progress {
+    position: absolute;
+    height: 6px;
+    background: var(--secondary-color);
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.range-wrapper input[type="range"] {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: none;
+    outline: none;
+    appearance: none;
+    pointer-events: none;
+}
+
+.range-wrapper .range-min,
+.range-wrapper .range-max {
+    z-index: 2;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+/* ================= Advanced Row for Select Fields ================= */
+.advanced__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.advanced__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.advanced__field label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.advanced__field select {
+    padding: 12px 16px;
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    background-color: var(--white);
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.advanced__field select:focus {
+    border-color: var(--primary-color);
+}
+
+/* ================= Amenities Grid ================= */
+.advanced__amenities {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px 12px;
+}
+
+.advanced__amenities label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.advanced__amenities input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-card);
+    border-radius: 4px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
 }
 
 
@@ -3010,12 +3183,12 @@
             flex-direction: column;
             gap: 10px;
             width: 100%;
+            height: 100%;
         }
 
         &__advanced-button,
         &__search-button {
             width: 100%;
-            height: 48px;
             border-radius: 8px;
         }
 
@@ -3055,10 +3228,6 @@
             cursor: pointer;
             background: transparent;
         }
-
-        // &__advanced-dropdown {
-        //     top: 465px;
-        // }
     }
 
 
@@ -3187,58 +3356,9 @@
 
 
 
-    .hero {
 
 
-        &__form {
-            width: calc(100% - 30px);
-            max-width: 100%;
-            margin: 0 15px;
-        }
 
-        &__advanced-dropdown {
-            width: calc(100% - 30px);
-            left: 15px;
-            right: 15px;
-            top: 460px;
-        }
-    }
-
-    // Advanced Groups - Sửa cho range slider
-    .advanced__flex-container {
-        flex-direction: column; // THÊM để xếp dọc
-        gap: 20px;
-    }
-
-    .advanced__group {
-        width: 100%; // THÊM
-
-        label {
-            font-size: 13px;
-
-            span {
-                display: block; // THÊM để xuống dòng
-                margin-left: 0;
-                margin-top: 4px;
-            }
-        }
-    }
-
-    // Advanced Row
-    .advanced__row {
-        grid-template-columns: repeat(2, 1fr); // ĐỔI từ 4 thành 2
-        gap: 12px;
-    }
-
-    // Amenities
-    .advanced__amenities {
-        grid-template-columns: repeat(2, 1fr); // ĐỔI từ 6 thành 2
-        gap: 12px;
-
-        label {
-            font-size: 13px;
-        }
-    }
 
 
 
@@ -3487,6 +3607,8 @@
 
     // Hero
     .hero {
+        overflow: hidden;
+
         &__title {
             white-space: normal;
             font-size: 40px;
@@ -3513,7 +3635,10 @@
             left: 10px;
             right: 10px;
             padding: 20px 15px;
+
         }
+
+
     }
 
     .advanced__row {
@@ -3605,54 +3730,6 @@
         }
     }
 
-    // // Benefits
-    // .benefits {
-    //     margin-bottom: 30px;
-
-    //     &__content {
-    //         padding: 20px 15px;
-    //         gap: 15px;
-    //     }
-
-    //     &__header {
-    //         gap: 10px;
-    //     }
-
-    //     &__title {
-    //         font-size: 11px;
-    //         line-height: 16px;
-    //     }
-
-    //     &__subtitle {
-    //         font-size: 22px;
-    //         line-height: 30px;
-    //     }
-
-    //     &__intro {
-    //         font-size: 11px;
-    //         line-height: 16px;
-    //     }
-
-    //     &__item {
-    //         padding: 12px;
-    //         gap: 8px;
-    //     }
-
-    //     &__icon {
-    //         width: 35px;
-    //         height: 35px;
-    //     }
-
-    //     &__name {
-    //         font-size: 16px;
-    //         line-height: 22px;
-    //     }
-
-    //     &__description {
-    //         font-size: 11px;
-    //         line-height: 16px;
-    //     }
-    // }
 
     .latest-news {
         &__list {
@@ -3685,17 +3762,7 @@
         padding: 0 10px;
     }
 
-    .hero {
-        &__form {
-            width: calc(100% - 20px);
-            padding: 12px;
-        }
 
-        &__advanced-dropdown {
-            width: calc(100% - 20px);
-            padding: 15px 10px;
-        }
-    }
 
     // Header
     .home-page {
