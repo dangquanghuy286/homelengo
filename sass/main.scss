@@ -317,7 +317,7 @@
     position: relative;
     margin-top: 78px;
     align-items: center;
-    overflow: hidden;
+    // overflow: hidden;
     justify-content: center;
 
     &::before {
@@ -580,6 +580,10 @@
         gap: 10px;
         position: relative;
         align-self: stretch;
+        height: 52px;
+        margin: 22px 0;
+
+
     }
 
     &__advanced-button {
@@ -594,6 +598,8 @@
         align-self: stretch;
         cursor: pointer;
         border-radius: 99px;
+        box-sizing: border-box;
+        overflow: hidden;
 
 
         &:hover {
@@ -631,7 +637,7 @@
         all: unset;
         box-sizing: border-box;
         background-color: var(--primary-color);
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -667,6 +673,7 @@
 
 
 }
+
 
 
 .icon-CaretUp:before {
@@ -751,8 +758,17 @@
         background-color: var(--color-tab);
         border-radius: 999px;
         border: 1px solid var(--white);
+        cursor: pointer;
 
         &--active {
+            background-color: var(--primary-color);
+
+            .featured-properties__tab-text {
+                color: var(--white);
+            }
+        }
+
+        &:hover {
             background-color: var(--primary-color);
 
             .featured-properties__tab-text {
@@ -770,6 +786,7 @@
             white-space: nowrap;
         }
     }
+
 
     // Card
     &__list {
@@ -995,12 +1012,11 @@
     &__button {
         all: unset;
         display: flex;
-        width: 244px;
-        height: 54px;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        padding: 11px 20px;
+        width: 244px;
+        height: 54px;
         background-color: var(--primary-color);
         border-radius: 9999px;
         cursor: pointer;
@@ -1241,10 +1257,10 @@
     &__button {
         all: unset;
         display: inline-flex;
-        padding: 11px 40px;
+        width: 244px;
+        height: 54px;
         border-radius: 99px;
         border: 1px solid var(--primary-color);
-        height: 54px;
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -1572,6 +1588,7 @@
         width: 100%;
         height: 300px;
         overflow: hidden;
+        border-radius: 12px;
 
         img {
             transition: transform 0.4s ease, filter 0.4s ease;

@@ -1891,7 +1891,6 @@ a:focus, a:hover {
   position: relative;
   margin-top: 78px;
   align-items: center;
-  overflow: hidden;
   justify-content: center;
 }
 .hero::before {
@@ -2124,6 +2123,8 @@ a:focus, a:hover {
   gap: 10px;
   position: relative;
   align-self: stretch;
+  height: 52px;
+  margin: 22px 0;
 }
 .hero__advanced-button {
   all: unset;
@@ -2137,6 +2138,8 @@ a:focus, a:hover {
   align-self: stretch;
   cursor: pointer;
   border-radius: 99px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .hero__advanced-button:hover {
   background-color: var(--primary-color);
@@ -2167,7 +2170,7 @@ a:focus, a:hover {
   all: unset;
   box-sizing: border-box;
   background-color: var(--primary-color);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -2269,11 +2272,18 @@ a:focus, a:hover {
   background-color: var(--color-tab);
   border-radius: 999px;
   border: 1px solid var(--white);
+  cursor: pointer;
 }
 .featured-properties__tab--active {
   background-color: var(--primary-color);
 }
 .featured-properties__tab--active .featured-properties__tab-text {
+  color: var(--white);
+}
+.featured-properties__tab:hover {
+  background-color: var(--primary-color);
+}
+.featured-properties__tab:hover .featured-properties__tab-text {
   color: var(--white);
 }
 .featured-properties__tab-text {
@@ -2480,12 +2490,11 @@ a:focus, a:hover {
 .featured-properties__button {
   all: unset;
   display: flex;
-  width: 244px;
-  height: 54px;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 20px;
+  width: 244px;
+  height: 54px;
   background-color: var(--primary-color);
   border-radius: 9999px;
   cursor: pointer;
@@ -2693,10 +2702,10 @@ a:focus, a:hover {
 .services__button {
   all: unset;
   display: inline-flex;
-  padding: 11px 40px;
+  width: 244px;
+  height: 54px;
   border-radius: 99px;
   border: 1px solid var(--primary-color);
-  height: 54px;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -2982,6 +2991,7 @@ a:focus, a:hover {
   width: 100%;
   height: 300px;
   overflow: hidden;
+  border-radius: 12px;
 }
 .team__image-container img {
   transition: transform 0.4s ease, filter 0.4s ease;
