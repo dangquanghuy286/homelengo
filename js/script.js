@@ -177,13 +177,80 @@ backToTopBtn.addEventListener("click", () => {
 });
 
 // ================
-// document.addEventListener("DOMContentLoaded", () => {
-//   const advancedBtn = document.querySelector(".hero__advanced-button");
-//   const dropdown = document.getElementById("advancedDropdown");
+const advancedBtn = document.querySelector(".hero__advanced-button");
+const dropdown = document.querySelector("#advancedDropdown");
 
-//   advancedBtn.addEventListener("click", () => {
-//     dropdown.classList.toggle("show");
-//     const expanded = advancedBtn.getAttribute("aria-expanded") === "true";
-//     advancedBtn.setAttribute("aria-expanded", !expanded);
-//   });
-// });
+advancedBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("show");
+});
+
+// ===================Range=============================
+const priceMin = document.getElementById("priceMin");
+const priceMax = document.getElementById("priceMax");
+const priceText = document.getElementById("priceRangeText");
+
+const sizeMin = document.getElementById("sizeMin");
+const sizeMax = document.getElementById("sizeMax");
+const sizeText = document.getElementById("sizeRangeText");
+
+function updateRange(
+  minInput,
+  maxInput,
+  textElement,
+  progressElement,
+  isPrice = true
+) {
+  return function () {
+    let min = Math.min(+minInput.value, +maxInput.value);
+    let max = Math.max(+minInput.value, +maxInput.value);
+
+    if (+minInput.value > +maxInput.value) {
+      maxInput.value = minInput.value;
+    } else if (+maxInput.value < +minInput.value) {
+      minInput.value = maxInput.value;
+    }
+
+    // Progress bar
+    const rangeMin = +minInput.min;
+    const rangeMax = +minInput.max;
+    const percentMin = ((min - rangeMin) / (rangeMax - rangeMin)) * 100;
+    const percentMax = ((max - rangeMin) / (rangeMax - rangeMin)) * 100;
+
+    progressElement.style.left = percentMin + "%";
+    progressElement.style.width = percentMax - percentMin + "%";
+
+    textElement.textContent = `from ${
+      isPrice ? "$" + min.toLocaleString() : min
+    } ${isPrice ? "to $" + max.toLocaleString() : "to " + max} ${
+      isPrice ? "" : "SqFt"
+    }`;
+  };
+}
+
+const priceProgress = document.getElementById("priceProgress");
+const sizeProgress = document.getElementById("sizeProgress");
+
+priceMax.addEventListener("mousedown", () => (priceMax.style.zIndex = "10"));
+priceMin.addEventListener("mousedown", () => (priceMax.style.zIndex = "1"));
+sizeMax.addEventListener("mousedown", () => (sizeMax.style.zIndex = "10"));
+sizeMin.addEventListener("mousedown", () => (sizeMax.style.zIndex = "1"));
+
+priceMin.addEventListener(
+  "input",
+  updateRange(priceMin, priceMax, priceText, priceProgress, true)
+);
+priceMax.addEventListener(
+  "input",
+  updateRange(priceMin, priceMax, priceText, priceProgress, true)
+);
+sizeMin.addEventListener(
+  "input",
+  updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
+);
+sizeMax.addEventListener(
+  "input",
+  updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
+);
+
+updateRange(priceMin, priceMax, priceText, priceProgress, true)();
+updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
