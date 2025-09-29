@@ -317,7 +317,7 @@
     position: relative;
     margin-top: 78px;
     align-items: center;
-    // overflow: hidden;
+    overflow: hidden;
     justify-content: center;
 
     &::before {
@@ -668,187 +668,6 @@
 
 }
 
-/* Advanced Dropdown Styles */
-.hero__advanced-dropdown {
-    display: none;
-    position: absolute;
-    width: 100%;
-    background: var(--white);
-    border: 1px solid var(--border-card);
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    padding: 24px;
-    z-index: 10000;
-    top: 175px;
-    left: 0;
-
-    &.show {
-        display: block;
-    }
-}
-
-.advanced__flex-container {
-    display: flex;
-    gap: 24px;
-    justify-content: space-between;
-    margin-bottom: 24px;
-}
-
-/* Advanced Groups */
-.advanced__group {
-    margin-bottom: 24px;
-    flex: 1;
-
-    label {
-        display: block;
-        font-weight: 600;
-        color: var(--text-dark);
-        font-size: 14px;
-        margin-bottom: 12px;
-
-        span {
-            font-weight: 400;
-            color: var(--text-light);
-            margin-left: 8px;
-        }
-    }
-
-    .range-wrapper {
-        position: relative;
-        width: 100%;
-        height: 6px;
-        background: var(--border-card);
-        border-radius: 3px;
-
-        .range-progress {
-            position: absolute;
-            height: 6px;
-            background: var(--secondary-color);
-            border-radius: 3px;
-            pointer-events: none;
-        }
-    }
-
-    .range-wrapper input[type="range"] {
-        position: absolute;
-        width: 100%;
-        height: 6px;
-        background: none;
-        outline: none;
-        appearance: none;
-        pointer-events: none;
-    }
-
-    .range-wrapper .range-min {
-        z-index: 2;
-    }
-
-    .range-wrapper .range-max {
-        z-index: 2;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-        appearance: none;
-        width: 20px;
-        height: 20px;
-        background: var(--primary-color);
-        border-radius: 50%;
-        cursor: pointer;
-        position: relative;
-        z-index: 3;
-        pointer-events: auto;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-        width: 20px;
-        height: 20px;
-        background: var(--primary-color);
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
-        position: relative;
-        z-index: 3;
-        pointer-events: auto;
-    }
-
-    // /* Điều chỉnh vị trí thumb để tránh chồng lấn */
-    .range-wrapper .range-min::-webkit-slider-thumb {
-        margin-left: -10px;
-    }
-
-    .range-wrapper .range-max::-webkit-slider-thumb {
-        margin-left: 10px;
-    }
-}
-
-/* Advanced Row for Select Fields */
-.advanced__row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.advanced__field {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    label {
-        font-weight: 600;
-        color: var(--text-dark);
-        font-size: 12px;
-        line-height: 16px;
-    }
-
-    select {
-        padding: 12px 16px;
-        border: 1px solid var(--border-card);
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--text-dark);
-        background-color: var(--white);
-        outline: none;
-        cursor: pointer;
-        appearance: none;
-
-        background-position: right 12px center;
-        background-repeat: no-repeat;
-        background-size: 16px;
-
-        &:focus {
-            border-color: var(--primary-color);
-        }
-    }
-}
-
-/* Amenities Grid */
-.advanced__amenities {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 16px 12px;
-
-    label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--text-dark);
-        cursor: pointer;
-        margin-bottom: 0;
-
-        input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            border: 2px solid var(--border-card);
-            border-radius: 4px;
-            cursor: pointer;
-            accent-color: var(--primary-color);
-        }
-    }
-}
 
 .icon-CaretUp:before {
     content: "\e908";
@@ -3281,6 +3100,63 @@
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
+        max-width: 100%;
+
+    }
+
+
+
+    .hero {
+
+
+        &__form {
+            width: calc(100% - 30px);
+            max-width: 100%;
+            margin: 0 15px;
+        }
+
+        &__advanced-dropdown {
+            width: calc(100% - 30px);
+            left: 15px;
+            right: 15px;
+            top: 460px;
+        }
+    }
+
+    // Advanced Groups - Sửa cho range slider
+    .advanced__flex-container {
+        flex-direction: column; // THÊM để xếp dọc
+        gap: 20px;
+    }
+
+    .advanced__group {
+        width: 100%; // THÊM
+
+        label {
+            font-size: 13px;
+
+            span {
+                display: block; // THÊM để xuống dòng
+                margin-left: 0;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    // Advanced Row
+    .advanced__row {
+        grid-template-columns: repeat(2, 1fr); // ĐỔI từ 4 thành 2
+        gap: 12px;
+    }
+
+    // Amenities
+    .advanced__amenities {
+        grid-template-columns: repeat(2, 1fr); // ĐỔI từ 6 thành 2
+        gap: 12px;
+
+        label {
+            font-size: 13px;
+        }
     }
 
 
@@ -3544,6 +3420,27 @@
             font-size: 9px;
             line-height: 14px;
         }
+
+        &__form {
+            width: calc(100% - 20px);
+            margin: 0 10px;
+            padding: 15px;
+        }
+
+        &__advanced-dropdown {
+            width: calc(100% - 20px);
+            left: 10px;
+            right: 10px;
+            padding: 20px 15px;
+        }
+    }
+
+    .advanced__row {
+        grid-template-columns: 1fr;
+    }
+
+    .advanced__amenities {
+        grid-template-columns: 1fr;
     }
 
     // Explore
@@ -3705,6 +3602,18 @@
 @media (max-width: 480px) {
     .container {
         padding: 0 10px;
+    }
+
+    .hero {
+        &__form {
+            width: calc(100% - 20px);
+            padding: 12px;
+        }
+
+        &__advanced-dropdown {
+            width: calc(100% - 20px);
+            padding: 15px 10px;
+        }
     }
 
     // Header
