@@ -1586,7 +1586,6 @@ a:focus, a:hover {
   max-width: 1290px;
   margin: auto;
   padding: 0;
-  overflow: visible;
 }
 
 /* ================Home Page================ */
@@ -1626,7 +1625,6 @@ a:focus, a:hover {
 
 .home-page__menu-frame__logo {
   display: block;
-  align-items: center;
   height: 48px;
   width: auto;
 }
@@ -1962,8 +1960,6 @@ a:focus, a:hover {
   min-height: 830px;
   position: relative;
   margin-top: 78px;
-  align-items: center;
-  justify-content: center;
 }
 .hero::before {
   content: "";
@@ -2090,7 +2086,6 @@ a:focus, a:hover {
 .hero__form-content {
   align-items: center;
   gap: 20px;
-  padding: 0 20px;
   flex: 1;
   display: flex;
 }
@@ -2099,8 +2094,8 @@ a:focus, a:hover {
   align-items: flex-start;
   gap: 6px;
   flex: 1;
-  flex-grow: 1;
   display: flex;
+  padding: 0 20px;
 }
 .hero__label {
   font-weight: 600;
