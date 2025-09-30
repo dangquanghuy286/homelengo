@@ -387,10 +387,6 @@
     display: none;
 }
 
-
-
-
-
 // ====================Hero===================================================
 .hero {
     background: url("../images/logo/hero-banner.png") no-repeat center center;
@@ -550,7 +546,7 @@
         gap: 6px;
         flex: 1;
         display: flex;
-        padding: 0 20px;
+        padding-left: 20px;
     }
 
     &__label {
@@ -945,7 +941,6 @@ input[type="range"]::-moz-range-thumb {
     color: var(--white);
     font-size: 20px;
 }
-
 
 // ==============================Featured=====================================
 .featured-properties {
@@ -2042,7 +2037,6 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
     margin: 100px 0;
 
     &__title-section {
@@ -2067,8 +2061,6 @@ input[type="range"]::-moz-range-thumb {
         font-weight: 800;
         white-space: nowrap;
     }
-
-
 
     &__item {
         display: flex;
@@ -2096,7 +2088,7 @@ input[type="range"]::-moz-range-thumb {
         width: 100%;
         min-width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         display: block;
         transition: transform 0.3s ease;
     }
@@ -2117,14 +2109,12 @@ input[type="range"]::-moz-range-thumb {
         font-weight: 600;
         color: var(--white);
         font-size: 12px;
-        line-height: normal;
         white-space: nowrap;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
-        max-width: 410px;
         align-items: flex-start;
         gap: 12px;
     }
@@ -2570,7 +2560,6 @@ input[type="range"]::-moz-range-thumb {
     // Header
     .home-page {
         &__menu-frame {
-            padding: 0 20px;
             gap: 25px;
 
             &__nav {
@@ -2717,8 +2706,8 @@ input[type="range"]::-moz-range-thumb {
     // Header
     .home-page {
         &__menu {
-            justify-content: center;
-            padding: 15px 0;
+            justify-content: space-between;
+            padding: 15px 30px;
         }
 
         &__menu-frame {
@@ -2857,7 +2846,7 @@ input[type="range"]::-moz-range-thumb {
     .home-page {
         &__menu-frame {
             display: flex;
-            gap: 10px;
+            gap: 15px;
 
             &__nav {
                 display: flex;
@@ -2867,7 +2856,7 @@ input[type="range"]::-moz-range-thumb {
         }
 
         &__menu-actions {
-            gap: 5px;
+            gap: 10px;
             padding: 0;
         }
 
@@ -3004,7 +2993,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 992px) {
-
 
     // Header
     .home-page {
@@ -3154,7 +3142,6 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-
     // Footer
     .home-page {
         &__footer-top {
@@ -3263,7 +3250,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 768px) {
-
 
     // Header styles
     .home-page {
@@ -3455,7 +3441,6 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 576px) {
 
-
     // Header
     .home-page {
         overflow: hidden;
@@ -3552,7 +3537,6 @@ input[type="range"]::-moz-range-thumb {
         margin-bottom: 10px;
     }
 
-
     .advanced__row {
         grid-template-columns: 1fr;
     }
@@ -3642,8 +3626,6 @@ input[type="range"]::-moz-range-thumb {
             }
         }
     }
-
-
 
 }
 
