@@ -4625,7 +4625,7 @@ input[type=range]::-moz-range-thumb {
     width: auto;
   }
   .home-page__social-icons {
-    gap: 8px;
+    gap: 10px;
   }
   .home-page__social-icon {
     width: 20px;
@@ -4799,9 +4799,6 @@ input[type=range]::-moz-range-thumb {
   .home-page__copyright, .home-page__terms-text, .home-page__terms-separator {
     font-size: 11px;
   }
-  .home-page__social-icons {
-    gap: 8px;
-  }
   .home-page__social-icon {
     width: 14px;
     height: 14px;
@@ -4814,7 +4811,7 @@ input[type=range]::-moz-range-thumb {
   }
   .explore-cities__list .swiper-slide {
     width: 85% !important;
-    max-width: 200px;
+    max-width: 250px;
   }
   .explore-cities__name {
     font-size: 12px;

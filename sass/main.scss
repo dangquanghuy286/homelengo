@@ -3589,7 +3589,7 @@ input[type="range"]::-moz-range-thumb {
         }
 
         &__social-icons {
-            gap: 8px;
+            gap: 10px;
         }
 
         &__social-icon {
@@ -3632,7 +3632,10 @@ input[type="range"]::-moz-range-thumb {
             left: 10px;
             right: 10px;
             padding: 20px 15px;
+
         }
+
+
     }
 
     .advanced__row {
@@ -3645,6 +3648,7 @@ input[type="range"]::-moz-range-thumb {
 
     // Explore
     .explore-cities {
+
         &__list {
             height: 300px;
 
@@ -3653,6 +3657,8 @@ input[type="range"]::-moz-range-thumb {
                 max-width: 230px;
             }
         }
+
+
 
         &__name {
             font-size: 11px;
@@ -3722,6 +3728,7 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
+
     .latest-news {
         &__list {
             display: grid;
@@ -3753,8 +3760,12 @@ input[type="range"]::-moz-range-thumb {
         padding: 0 10px;
     }
 
+
+
     // Header
     .home-page {
+
+
         &__btn {
             &--login {
                 width: 90px;
@@ -3829,9 +3840,11 @@ input[type="range"]::-moz-range-thumb {
             font-size: 11px;
         }
 
-        &__social-icons {
-            gap: 8px;
-        }
+
+
+
+
+
 
         &__social-icon {
             width: 14px;
@@ -3845,14 +3858,16 @@ input[type="range"]::-moz-range-thumb {
 
     // Explore
     .explore-cities {
+
         &__list {
             height: 300px;
 
             .swiper-slide {
-                width: 85% !important; // linh động hơn
-                max-width: 200px; // an toàn hơn cho màn hình nhỏ
+                width: 85% !important;
+                max-width: 250px;
             }
         }
+
 
         &__name {
             font-size: 12px;
@@ -3939,6 +3954,7 @@ input[type="range"]::-moz-range-thumb {
 
             &-image {
                 width: 100%;
+
             }
         }
 
@@ -3947,4 +3963,6 @@ input[type="range"]::-moz-range-thumb {
             padding: 14px;
         }
     }
+
+
 }
