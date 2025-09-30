@@ -4401,6 +4401,7 @@ input[type=range]::-moz-range-thumb {
   .hero__form-group {
     width: 100%;
     margin: 0;
+    padding: 0;
   }
   .hero__actions {
     flex-direction: column;
