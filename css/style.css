@@ -3429,6 +3429,11 @@ input[type=range]::-moz-range-thumb {
   opacity: 1;
   visibility: visible;
 }
+.team__image-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .team__image {
   width: 100%;
   height: 100%;
