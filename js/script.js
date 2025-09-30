@@ -305,3 +305,27 @@ sizeMax.addEventListener(
 
 updateRange(priceMin, priceMax, priceText, priceProgress, true)();
 updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
+// =====================SUBMENU=================================
+document
+  .querySelectorAll(".home-page__mobile-nav-link--dropdown")
+  .forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault(); // ngăn link mặc định nếu có
+      const parent = e.currentTarget.parentElement;
+      const subMenu = parent.querySelector(".home-page__mobile-sub-menu");
+
+      if (subMenu) {
+        // Đóng tất cả sub-menu khác
+        document
+          .querySelectorAll(".home-page__mobile-sub-menu.active")
+          .forEach((menu) => {
+            if (menu !== subMenu) {
+              menu.classList.remove("active");
+            }
+          });
+
+        // Mở/đóng sub-menu hiện tại
+        subMenu.classList.toggle("active");
+      }
+    });
+  });

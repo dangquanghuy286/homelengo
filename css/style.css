@@ -1918,6 +1918,31 @@ a:focus, a:hover {
   flex: 1;
 }
 
+.home-page__mobile-sub-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 15px;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.home-page__mobile-sub-menu.active {
+  display: flex;
+}
+
+.home-page__mobile-sub-link {
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.home-page__mobile-sub-link:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 /* Hide toggle */
 .toggle-mobile {
   display: none;
