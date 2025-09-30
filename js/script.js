@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerGroup: 2,
     loop: false,
     speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
+    // },
     pagination: {
       el: ".explore-cities__dots",
       type: "bullets",
@@ -155,11 +155,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    //   pauseOnMouseEnter: true,
+    // },
 
     breakpoints: {
       320: {
