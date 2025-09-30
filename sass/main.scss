@@ -2786,10 +2786,7 @@ input[type="range"]::-moz-range-thumb {
             line-height: 18px;
         }
 
-        &__advanced-button,
-        &__search-button {
-            padding: 8px 25px;
-        }
+
 
         &__advanced-text,
         &__search-text {
@@ -3190,7 +3187,7 @@ input[type="range"]::-moz-range-thumb {
             flex-direction: column;
             align-items: stretch;
             width: 100%;
-            gap: 15px;
+            gap: 10px;
             padding: 0;
         }
 
