@@ -2257,6 +2257,7 @@ a:focus, a:hover {
   gap: 6px;
   flex: 1;
   display: flex;
+  padding-left: 20px;
 }
 .hero__label {
   font-weight: 600;
