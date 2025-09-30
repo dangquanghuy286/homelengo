@@ -3649,6 +3649,10 @@ input[type="range"]::-moz-range-thumb {
 
         }
 
+        &__dropdown-menu {
+            top: calc(100% + 10px);
+        }
+
 
     }
 
