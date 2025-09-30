@@ -2257,7 +2257,6 @@ a:focus, a:hover {
   gap: 6px;
   flex: 1;
   display: flex;
-  padding-left: 20px;
 }
 .hero__label {
   font-weight: 600;
@@ -4720,7 +4719,7 @@ input[type=range]::-moz-range-thumb {
     line-height: 50px;
   }
   .hero__search {
-    top: 360px;
+    top: 333px;
   }
   .hero__subtitle {
     font-size: 9px;
