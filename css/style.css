@@ -2056,7 +2056,7 @@ a:focus, a:hover {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 0 0 0 20px;
+  padding: 0 20px;
   background-color: var(--white);
   border-radius: 999px;
   display: flex;
@@ -2248,6 +2248,7 @@ a:focus, a:hover {
   position: absolute;
   top: calc(100% + 5px);
   left: 0;
+  right: 0;
   width: 100%;
   background: var(--white);
   border: 1px solid var(--border-card);
@@ -4597,6 +4598,9 @@ input[type=range]::-moz-range-thumb {
   .container {
     padding: 0 15px;
   }
+  .home-page {
+    overflow: hidden;
+  }
   .home-page__menu-frame__logo {
     height: 36px;
     gap: 6px;
@@ -4629,9 +4633,6 @@ input[type=range]::-moz-range-thumb {
   }
   .home-page__social-text {
     font-size: 11px;
-  }
-  .hero {
-    overflow: hidden;
   }
   .hero__title {
     white-space: normal;
@@ -4666,7 +4667,8 @@ input[type=range]::-moz-range-thumb {
     height: 300px;
   }
   .explore-cities__list .swiper-slide {
-    width: 230px !important;
+    width: 80% !important;
+    max-width: 230px;
   }
   .explore-cities__name {
     font-size: 11px;
@@ -4811,7 +4813,8 @@ input[type=range]::-moz-range-thumb {
     height: 300px;
   }
   .explore-cities__list .swiper-slide {
-    width: 250px !important;
+    width: 85% !important;
+    max-width: 200px;
   }
   .explore-cities__name {
     font-size: 12px;

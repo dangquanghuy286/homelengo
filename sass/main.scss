@@ -503,7 +503,7 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
-        padding: 0 0 0 20px;
+        padding: 0 20px;
         background-color: var(--white);
         border-radius: 999px;
         display: flex;
@@ -730,6 +730,7 @@
     position: absolute;
     top: calc(100% + 5px);
     left: 0;
+    right: 0;
     width: 100%;
     background: var(--white);
     border: 1px solid var(--border-card);
@@ -3555,6 +3556,8 @@ input[type="range"]::-moz-range-thumb {
 
     // Header
     .home-page {
+        overflow: hidden;
+
         &__menu-frame {
             &__logo {
                 height: 36px;
@@ -3601,7 +3604,7 @@ input[type="range"]::-moz-range-thumb {
 
     // Hero
     .hero {
-        overflow: hidden;
+
 
         &__title {
             white-space: normal;
@@ -3629,10 +3632,7 @@ input[type="range"]::-moz-range-thumb {
             left: 10px;
             right: 10px;
             padding: 20px 15px;
-
         }
-
-
     }
 
     .advanced__row {
@@ -3645,16 +3645,14 @@ input[type="range"]::-moz-range-thumb {
 
     // Explore
     .explore-cities {
-
         &__list {
             height: 300px;
 
             .swiper-slide {
-                width: 230px !important;
+                width: 80% !important;
+                max-width: 230px;
             }
         }
-
-
 
         &__name {
             font-size: 11px;
@@ -3724,7 +3722,6 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-
     .latest-news {
         &__list {
             display: grid;
@@ -3756,12 +3753,8 @@ input[type="range"]::-moz-range-thumb {
         padding: 0 10px;
     }
 
-
-
     // Header
     .home-page {
-
-
         &__btn {
             &--login {
                 width: 90px;
@@ -3836,10 +3829,6 @@ input[type="range"]::-moz-range-thumb {
             font-size: 11px;
         }
 
-
-
-
-
         &__social-icons {
             gap: 8px;
         }
@@ -3856,15 +3845,14 @@ input[type="range"]::-moz-range-thumb {
 
     // Explore
     .explore-cities {
-
         &__list {
             height: 300px;
 
             .swiper-slide {
-                width: 250px !important;
+                width: 85% !important; // linh động hơn
+                max-width: 200px; // an toàn hơn cho màn hình nhỏ
             }
         }
-
 
         &__name {
             font-size: 12px;
@@ -3951,7 +3939,6 @@ input[type="range"]::-moz-range-thumb {
 
             &-image {
                 width: 100%;
-
             }
         }
 
@@ -3960,58 +3947,4 @@ input[type="range"]::-moz-range-thumb {
             padding: 14px;
         }
     }
-
-    // // Benefits
-    // .benefits {
-    //     margin-bottom: 20px;
-    //     border-radius: 6px;
-
-    //     &__content {
-    //         padding: 15px 10px;
-    //         gap: 10px;
-    //     }
-
-    //     &__header {
-    //         gap: 8px;
-    //     }
-
-    //     &__title {
-    //         font-size: 10px;
-    //         line-height: 14px;
-    //     }
-
-    //     &__subtitle {
-    //         font-size: 20px;
-    //         line-height: 28px;
-    //     }
-
-    //     &__intro {
-    //         font-size: 10px;
-    //         line-height: 14px;
-    //     }
-
-    //     &__list {
-    //         gap: 10px;
-    //     }
-
-    //     &__item {
-    //         padding: 10px;
-    //         gap: 6px;
-    //     }
-
-    //     &__icon {
-    //         width: 30px;
-    //         height: 30px;
-    //     }
-
-    //     &__name {
-    //         font-size: 14px;
-    //         line-height: 20px;
-    //     }
-
-    //     &__description {
-    //         font-size: 10px;
-    //         line-height: 14px;
-    //     }
-    // }
 }
