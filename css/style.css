@@ -1628,11 +1628,12 @@ a:focus, a:hover {
   display: block;
   align-items: center;
   height: 48px;
+  width: auto;
 }
 
 .home-page__logo-img {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .home-page__menu-frame__nav {
@@ -2573,9 +2574,14 @@ input[type=range]::-moz-range-thumb {
   padding: 0 8px;
   background-color: var(--primary-color);
   border-radius: 99px;
+  cursor: pointer;
+  transition: 0.3s all ease;
 }
 .featured-properties__tag--sale {
   background-color: var(--color-tag);
+}
+.featured-properties__tag--sale:hover {
+  background-color: var(--primary-color);
 }
 .featured-properties__tag-text {
   width: fit-content;
@@ -2585,6 +2591,9 @@ input[type=range]::-moz-range-thumb {
   text-align: center;
   line-height: normal;
   white-space: nowrap;
+}
+.featured-properties__tag:hover {
+  background-color: var(--color-tag);
 }
 .featured-properties__location {
   display: inline-flex;
@@ -4656,6 +4665,13 @@ input[type=range]::-moz-range-thumb {
     left: 10px;
     right: 10px;
     padding: 20px 15px;
+  }
+  .advanced__flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    margin-bottom: 10px;
   }
   .advanced__row {
     grid-template-columns: 1fr;
