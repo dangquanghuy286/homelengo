@@ -997,7 +997,7 @@ input[type="range"]::-moz-range-thumb {
         line-height: 20px;
     }
 
-    // TAB
+    /* TAB */
     &__tab-menu {
         display: inline-flex;
         align-items: flex-start;
@@ -1042,13 +1042,11 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-
-    // Card
+    /* Card */
     &__list {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
         width: 100%;
-        align-items: center;
         justify-content: center;
         gap: 30px;
         margin-bottom: 50px;
@@ -1059,36 +1057,32 @@ input[type="range"]::-moz-range-thumb {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        max-width: 410px;
-        width: 100%;
         border-radius: 16px;
         overflow: hidden;
         border: 1px solid var(--border-card);
-        box-sizing: border-box;
+    }
 
-        &-image {
-            position: relative;
-            width: 100%;
-            height: 270px;
-            overflow: hidden;
+    &__item-image {
+        position: relative;
+        width: 100%;
+        height: 270px;
+        overflow: hidden;
 
-
-            &:hover .featured-properties__image-overlay {
-                transform: scale(1.1);
-                cursor: pointer;
-                transition: transform 0.3s ease;
-                filter: brightness(60%);
-            }
-        }
-
-        &-image-overlay {
-            width: 100%;
-            min-width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        &:hover .featured-properties__image-overlay {
+            transform: scale(1.1);
+            cursor: pointer;
             transition: transform 0.3s ease;
+            filter: brightness(60%);
         }
+    }
+
+    &__image-overlay {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
     }
 
     &__tags {
@@ -1121,7 +1115,6 @@ input[type="range"]::-moz-range-thumb {
             }
         }
 
-
         &-text {
             width: fit-content;
             font-weight: 600;
@@ -1131,11 +1124,9 @@ input[type="range"]::-moz-range-thumb {
             line-height: normal;
             white-space: nowrap;
         }
-
     }
 
     &__tag:hover {
-
         background-color: var(--color-tag);
     }
 
@@ -1293,7 +1284,6 @@ input[type="range"]::-moz-range-thumb {
 
         &:hover {
             background-color: var(--white);
-
 
             .featured-properties__button-text,
             .featured-properties__button-icon {
