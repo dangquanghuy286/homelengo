@@ -2257,6 +2257,7 @@ a:focus, a:hover {
   gap: 6px;
   flex: 1;
   display: flex;
+  padding-left: 20px;
 }
 .hero__label {
   font-weight: 600;
@@ -3593,7 +3594,7 @@ input[type=range]::-moz-range-thumb {
   flex-direction: column;
   align-items: flex-start;
   gap: 26px;
-  overflow: hidden;
+  width: 100%;
 }
 .latest-news__image-container {
   position: relative;
@@ -3609,9 +3610,8 @@ input[type=range]::-moz-range-thumb {
 }
 .latest-news__image {
   width: 100%;
-  min-width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -4078,13 +4078,6 @@ input[type=range]::-moz-range-thumb {
     padding: 0 20px;
     gap: 40px;
   }
-  .featured-properties__content {
-    width: 100%;
-  }
-  .featured-properties__title-subtext {
-    font-size: 32px;
-    line-height: 40px;
-  }
   .benefits__hero-image {
     display: none;
   }
@@ -4294,33 +4287,6 @@ input[type=range]::-moz-range-thumb {
   .explore-cities__dots {
     margin-top: 30px;
     gap: 6px;
-  }
-  .featured-properties__title-section {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .featured-properties__title-subtext {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  .featured-properties__description {
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .featured-properties__tab-menu {
-    gap: 8px;
-    margin-top: 24px;
-  }
-  .featured-properties__tab {
-    padding: 6px 20px;
-  }
-  .featured-properties__tab-text {
-    font-size: 13px;
-    line-height: 18px;
-  }
-  .featured-properties__content {
-    width: 100%;
-    padding: 16px;
   }
   .benefits__list {
     display: flex;
@@ -4542,7 +4508,7 @@ input[type=range]::-moz-range-thumb {
 }
 @media (max-width: 768px) {
   .home-page__menu {
-    padding: 15px 15px;
+    padding: 15px 5px;
   }
   .home-page__menu-frame {
     gap: 10px;
@@ -4685,7 +4651,7 @@ input[type=range]::-moz-range-thumb {
     gap: 6px;
   }
   .home-page__logo-img {
-    height: 36px;
+    height: 40px;
     width: auto;
   }
   .home-page__footer-bottom {
@@ -4698,13 +4664,13 @@ input[type=range]::-moz-range-thumb {
   .home-page__footer-logo {
     height: 36px;
     gap: 6px;
-  }
-  .home-page__logo-footer {
-    height: 36px;
-    width: auto;
+    margin: 0;
+    justify-content: flex-start;
   }
   .home-page__social-icons {
     gap: 10px;
+    justify-content: flex-start;
+    margin: 0;
   }
   .home-page__social-icon {
     width: 20px;
@@ -4783,9 +4749,6 @@ input[type=range]::-moz-range-thumb {
     width: 100%;
     max-width: 100%;
   }
-  .featured-properties__item-image {
-    height: 200px;
-  }
   .featured-properties__content {
     padding: 12px;
   }
@@ -4810,6 +4773,10 @@ input[type=range]::-moz-range-thumb {
     font-size: 14px;
     line-height: 20px;
   }
+  .latest-news__item {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .home-page__btn--login {
@@ -4825,6 +4792,13 @@ input[type=range]::-moz-range-thumb {
   }
   .home-page__btn-text {
     font-size: 10px;
+  }
+  .home-page__footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px 10px;
+    text-align: left;
   }
   .home-page__footer-main {
     flex-direction: column;
@@ -4867,11 +4841,11 @@ input[type=range]::-moz-range-thumb {
     font-size: 11px;
   }
   .home-page__social-icon {
-    width: 14px;
-    height: 14px;
+    width: 25px;
+    height: 25px;
   }
   .home-page__social-text {
-    font-size: 12px;
+    font-size: 13px;
   }
   .explore-cities__list {
     height: 300px;
