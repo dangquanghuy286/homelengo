@@ -305,13 +305,13 @@ sizeMax.addEventListener(
 
 updateRange(priceMin, priceMax, priceText, priceProgress, true)();
 updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
-// =====================SUBMENU=================================
+// =====================SUBMENU=================================//
 document
   .querySelectorAll(".home-page__mobile-nav-link--dropdown")
   .forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault(); // ngăn link mặc định nếu có
-      const parent = e.currentTarget.parentElement;
+      const parent = e.currentTarget.parentElement; //Lấy cha trực tiếp
       const subMenu = parent.querySelector(".home-page__mobile-sub-menu");
 
       if (subMenu) {

@@ -542,7 +542,6 @@
     &__form-content {
         align-items: center;
         gap: 20px;
-        padding: 0 20px;
         flex: 1;
         display: flex;
     }
@@ -554,6 +553,7 @@
         flex: 1;
         flex-grow: 1;
         display: flex;
+        padding: 0 20px;
     }
 
     &__label {
