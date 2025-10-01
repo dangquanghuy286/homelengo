@@ -259,6 +259,8 @@
     display: inline-block;
     color: var(--white);
     transition: color 0.3s ease;
+
+
 }
 
 .icon-menu:before {
@@ -268,6 +270,7 @@
     display: inline-block;
     color: var(--black);
     transition: color 0.3s ease;
+    font-size: 28px;
 }
 
 /* Mobile Menu */
@@ -926,6 +929,8 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
     accent-color: var(--primary-color);
 }
+
+
 
 .icon-CaretUp:before {
     content: "\e908";
@@ -1664,6 +1669,13 @@ input[type="range"]::-moz-range-thumb {
     overflow: hidden;
     justify-content: center;
 
+    .swiper-slide {
+        width: auto !important;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -1687,7 +1699,6 @@ input[type="range"]::-moz-range-thumb {
         padding: 30px;
         background-color: var(--white);
         border-radius: 20px;
-        overflow: visible;
         box-sizing: border-box;
         flex-shrink: 0;
 
@@ -1707,12 +1718,10 @@ input[type="range"]::-moz-range-thumb {
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        align-self: stretch;
         flex: 1;
     }
 
     &__text {
-        align-self: stretch;
         font-weight: 400;
         color: var(--text-dark);
         font-size: 16px;
@@ -1723,7 +1732,6 @@ input[type="range"]::-moz-range-thumb {
         display: flex;
         align-items: flex-start;
         gap: 12px;
-        align-self: stretch;
     }
 
     &__avatar-image {
@@ -2788,41 +2796,7 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-    // Explore
-    .explore-cities {
 
-        &__list {
-            height: 360px;
-
-            .swiper-slide {
-                width: 290px !important;
-            }
-        }
-
-
-
-        &__name {
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-        &__property-count {
-            font-size: 10px;
-            line-height: 14px;
-        }
-
-        &__action-button {
-            width: 34px;
-            height: 34px;
-        }
-
-
-
-        &__dot {
-            width: 6px;
-            height: 6px;
-        }
-    }
 
     // Service
     .services {
@@ -2882,47 +2856,6 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-    // Explore
-    .explore-cities {
-
-
-        &__list {
-            height: 350px;
-
-            .swiper-slide {
-                width: 280px !important;
-            }
-        }
-
-        &__content {
-            padding: 8px;
-            width: 93%;
-            height: 18%;
-            top: 76%;
-            left: 3.5%;
-            border-radius: 8px;
-        }
-
-        &__name {
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-        &__property-count {
-            font-size: 11px;
-            line-height: 16px;
-        }
-
-        &__action-button {
-            width: 36px;
-            height: 36px;
-        }
-
-        &__dots {
-            margin-top: 30px;
-            gap: 6px;
-        }
-    }
 
 
     // Benefits
@@ -3228,9 +3161,7 @@ input[type="range"]::-moz-range-thumb {
         }
 
         &__btn {
-            &--login {
-                width: 100px;
-            }
+
 
             &--submit {
                 width: 140px;
@@ -3252,38 +3183,6 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
-    // Explore Cities
-    .explore-cities {
-        &__list {
-            height: 330px;
-
-            .swiper-slide {
-                width: 260px !important;
-            }
-        }
-
-        &__name {
-            font-size: 12px;
-            line-height: 16px;
-        }
-
-        &__property-count {
-            font-size: 10px;
-            line-height: 14px;
-        }
-
-        &__action-button {
-            width: 32px;
-            height: 32px;
-        }
-
-        &__dots {
-            margin-top: 20px;
-            gap: 5px;
-        }
-
-
-    }
 
     // Services
     .services {
@@ -3291,7 +3190,6 @@ input[type="range"]::-moz-range-thumb {
             display: grid;
             grid-template-columns: 1fr;
             gap: 20px;
-            padding: 0 15px;
             justify-items: stretch;
         }
 
@@ -3505,45 +3403,7 @@ input[type="range"]::-moz-range-thumb {
         grid-template-columns: 1fr;
     }
 
-    // Explore
-    .explore-cities {
 
-        &__list {
-            height: 300px;
-
-            .swiper-slide {
-                width: 80% !important;
-                max-width: 230px;
-            }
-        }
-
-
-
-        &__name {
-            font-size: 11px;
-            line-height: 14px;
-        }
-
-        &__property-count {
-            font-size: 9px;
-            line-height: 12px;
-        }
-
-        &__action-button {
-            width: 30px;
-            height: 30px;
-        }
-
-        &__dots {
-            margin-top: 20px;
-            gap: 4px;
-        }
-
-        &__dot {
-            width: 5px;
-            height: 5px;
-        }
-    }
 
     // Featured Properties
     .featured-properties {
@@ -3594,7 +3454,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 480px) {
-
 
     // Header
     .home-page {
@@ -3690,45 +3549,6 @@ input[type="range"]::-moz-range-thumb {
 
         &__social-text {
             font-size: 13px;
-        }
-    }
-
-    // Explore
-    .explore-cities {
-
-        &__list {
-            height: 300px;
-
-            .swiper-slide {
-                width: 85% !important;
-                max-width: 250px;
-            }
-        }
-
-
-        &__name {
-            font-size: 12px;
-            line-height: 12px;
-        }
-
-        &__property-count {
-            font-size: 8px;
-            line-height: 10px;
-        }
-
-        &__action-button {
-            width: 28px;
-            height: 28px;
-        }
-
-        &__dots {
-            margin-top: 15px;
-            gap: 3px;
-        }
-
-        &__dot {
-            width: 4px;
-            height: 4px;
         }
     }
 
