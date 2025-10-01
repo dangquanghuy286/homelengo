@@ -3183,6 +3183,10 @@ input[type="range"]::-moz-range-thumb {
         }
     }
 
+    // Hero
+    .hero {
+        padding: 200px 0;
+    }
 
     // Services
     .services {
@@ -3351,7 +3355,7 @@ input[type="range"]::-moz-range-thumb {
     // Hero
     .hero {
         &__content {
-            gap: 50px;
+            gap: 80px;
         }
 
         &__title {
@@ -3461,7 +3465,7 @@ input[type="range"]::-moz-range-thumb {
 
         &__btn {
             &--login {
-                width: 90px;
+                width: 100px;
             }
 
             &--submit {

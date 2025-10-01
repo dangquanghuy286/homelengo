@@ -4343,6 +4343,9 @@ input[type=range]::-moz-range-thumb {
   .home-page__mobile-btn--submit {
     padding: 20px;
   }
+  .hero {
+    padding: 200px 0;
+  }
   .services__list {
     display: grid;
     grid-template-columns: 1fr;
@@ -4467,7 +4470,7 @@ input[type=range]::-moz-range-thumb {
     font-size: 11px;
   }
   .hero__content {
-    gap: 50px;
+    gap: 80px;
   }
   .hero__title {
     white-space: normal;
@@ -4540,7 +4543,7 @@ input[type=range]::-moz-range-thumb {
 }
 @media (max-width: 480px) {
   .home-page__btn--login {
-    width: 90px;
+    width: 100px;
   }
   .home-page__btn--submit {
     width: 120px;
