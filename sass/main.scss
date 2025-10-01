@@ -1100,9 +1100,8 @@ input[type="range"]::-moz-range-thumb {
         height: 28px;
         align-items: center;
         justify-content: center;
-        gap: 8px;
         padding: 0 8px;
-        background-color: var(--primary-color);
+        background-color: var(--color-tag);
         border-radius: 99px;
         cursor: pointer;
         transition: 0.3s all ease;
@@ -1116,7 +1115,6 @@ input[type="range"]::-moz-range-thumb {
         }
 
         &-text {
-            width: fit-content;
             font-weight: 600;
             color: var(--white);
             font-size: 12px;
@@ -1124,11 +1122,16 @@ input[type="range"]::-moz-range-thumb {
             line-height: normal;
             white-space: nowrap;
         }
+
+        &.active {
+            background-color: var(--primary-color);
+        }
     }
 
     &__tag:hover {
         background-color: var(--color-tag);
     }
+
 
     &__location {
         display: inline-flex;
@@ -3461,8 +3464,6 @@ input[type="range"]::-moz-range-thumb {
 
     // Header
     .home-page {
-
-
         &__btn {
             &--login {
                 width: 100px;

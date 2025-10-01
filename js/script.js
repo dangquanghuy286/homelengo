@@ -43,8 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 // ==================Active===========================
 document.addEventListener("DOMContentLoaded", () => {
+  // ===== Tabs =====
   const tabs = document.querySelectorAll(".hero__tab");
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -59,7 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
       tab.setAttribute("aria-selected", "true");
     });
   });
+
+  // ===== Featured Tags =====
+  const tags = document.querySelectorAll(".featured-properties__tag");
+  tags.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      tags.forEach((t) => t.classList.remove("active"));
+      tag.classList.add("active");
+    });
+  });
 });
+
 // ==================TAB-Active===========================
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".featured-properties__tab");
@@ -326,3 +338,186 @@ document
       }
     });
   });
+document.addEventListener("DOMContentLoaded", () => {
+  // ================= Hero animations =================
+  gsap.from("#hero-heading", {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".hero__subtitle", {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out",
+  });
+
+  gsap.from(".hero__form", {
+    y: 100,
+    opacity: 0,
+    duration: 1.2,
+    delay: 0.6,
+    ease: "power3.out",
+  });
+
+  gsap.from(".hero__advanced-dropdown", {
+    scrollTrigger: {
+      trigger: ".hero__advanced-dropdown",
+      start: "top 80%",
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // ================= Featured Properties  =================
+  gsap.from("#featured-properties-title-section", {
+    scrollTrigger: {
+      trigger: "#featured-properties-title-section",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".featured-properties__title-subtext", {
+    scrollTrigger: {
+      trigger: ".featured-properties__title-subtext",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  gsap.from(".featured-properties__tab", {
+    scrollTrigger: {
+      trigger: ".featured-properties__tab-menu",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "power3.out",
+  });
+  // Property cards
+  gsap.from(".featured-properties__item", {
+    scrollTrigger: {
+      trigger: ".featured-properties__list",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.25,
+  });
+
+  // City cards
+  gsap.from(".explore-cities__item", {
+    scrollTrigger: {
+      trigger: ".explore-cities__list",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.2,
+  });
+  // ================= Benefits animations =================
+  // Title
+  gsap.from("#benefits-heading", {
+    scrollTrigger: {
+      trigger: "#benefits-heading",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  // Subtitle
+  gsap.from(".benefits__subtitle", {
+    scrollTrigger: {
+      trigger: "#benefits-heading",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: "power3.out",
+  });
+
+  // Intro paragraph
+  gsap.from(".benefits__intro", {
+    scrollTrigger: {
+      trigger: ".benefits__intro",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    delay: 0.3,
+    ease: "power3.out",
+  });
+
+  // Benefit items
+  gsap.from(".benefits__item", {
+    scrollTrigger: {
+      trigger: ".benefits__list",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.25,
+  });
+
+  // Hero image
+  gsap.from(".benefits__hero-image", {
+    scrollTrigger: {
+      trigger: ".benefits__hero-image",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    x: -80,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+  });
+
+  //====================LATEST=============================
+  gsap.from(".latest-news__item", {
+    scrollTrigger: {
+      trigger: ".latest-news__list",
+      start: "top 80%",
+      toggleActions: "play none none reserve",
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3,
+  });
+});
