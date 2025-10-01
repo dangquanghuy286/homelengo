@@ -2968,7 +2968,7 @@ input[type=range]::-moz-range-thumb {
   transform: scale(1.05);
   filter: brightness(70%);
 }
-.explore-cities__item__content {
+.explore-cities__content {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2983,14 +2983,14 @@ input[type=range]::-moz-range-thumb {
   overflow: hidden;
   justify-content: space-between;
 }
-.explore-cities__item__details {
+.explore-cities__details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
   flex: 1;
 }
-.explore-cities__item__property-count {
+.explore-cities__property-count {
   width: fit-content;
   font-weight: 600;
   color: var(--text-dark);
@@ -2999,14 +2999,14 @@ input[type=range]::-moz-range-thumb {
   line-height: 20px;
   text-transform: capitalize;
 }
-.explore-cities__item__name {
+.explore-cities__name {
   width: fit-content;
   font-weight: 600;
   color: var(--text-dark);
   line-height: 25.2px;
   white-space: nowrap;
 }
-.explore-cities__item__action-button {
+.explore-cities__action-button {
   all: unset;
   display: flex;
   align-items: center;
@@ -3019,7 +3019,7 @@ input[type=range]::-moz-range-thumb {
   border: 1px solid var(--border-card);
   color: var(--text-color);
 }
-.explore-cities__item__action-button:hover {
+.explore-cities__action-button:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: var(--white);
