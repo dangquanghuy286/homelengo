@@ -1866,7 +1866,7 @@ a:focus, a:hover {
 /* Dropdown menu */
 .home-page__dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 15px);
   left: 0;
   min-width: 222px;
   background: var(--white);
