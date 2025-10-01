@@ -1007,6 +1007,7 @@ input[type="range"]::-moz-range-thumb {
         align-items: flex-start;
         gap: 12px;
         margin-top: 32px;
+        flex-wrap: wrap;
     }
 
     &__tab {
@@ -2797,6 +2798,7 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 992px) {
 
+
     // Header
     .home-page {
         &__menu {
@@ -2852,6 +2854,18 @@ input[type="range"]::-moz-range-thumb {
         display: flex;
         align-items: center;
         cursor: pointer;
+    }
+
+    .featured-properties {
+        &__tab-menu {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        &__tab {
+            padding: 6px 18px;
+            font-size: 13px;
+        }
     }
 
     // Hero
@@ -3040,6 +3054,23 @@ input[type="range"]::-moz-range-thumb {
         padding: 200px 0;
     }
 
+    .featured-properties {
+        &__tab-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__tab {
+            justify-content: center;
+            padding: 8px 12px;
+        }
+
+        &__tab-text {
+            font-size: 12px;
+        }
+    }
+
     // Footer
     .home-page {
 
@@ -3181,7 +3212,7 @@ input[type="range"]::-moz-range-thumb {
 
 
         &__subtitle {
-            font-size: 10px;
+            font-size: 9px;
             line-height: 14px;
         }
 
@@ -3314,4 +3345,6 @@ input[type="range"]::-moz-range-thumb {
             font-size: 13px;
         }
     }
+
+
 }
