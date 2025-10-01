@@ -137,13 +137,12 @@
     min-width: 222px;
     background: var(--white);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 6px;
-    padding: 10px 0;
+    border-radius: 0 0 6px 6px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(12px);
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .home-page__dropdown-item {
@@ -154,7 +153,6 @@
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
-
     border-bottom: 1px solid var(--border-card);
 }
 
@@ -392,9 +390,10 @@
     background: url("../images/logo/hero-banner.png") no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-height: 830px;
+    padding: 233px 0 246px 0;
+    display: flex;
+    justify-content: center;
     position: relative;
-    margin-top: 78px;
 
     &::before {
         content: '';
@@ -407,11 +406,18 @@
         z-index: 0;
     }
 
+    &__content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 108px;
+    }
+
     &__text {
-        position: absolute;
-        top: 155px;
-        left: 50%;
-        transform: translateX(-50%);
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -445,7 +451,6 @@
         align-items: center;
         gap: 18px;
         position: relative;
-        top: 415px;
         width: 100%;
     }
 
@@ -465,10 +470,10 @@
         border-radius: 99px;
         transition: all 0.3s ease;
         cursor: pointer;
-        position: relative;
         flex-shrink: 0;
         background-color: transparent;
         border: 1px solid var(--white);
+        position: relative;
 
         &.hero__tab-active {
             background-color: var(--primary-color);
@@ -511,6 +516,7 @@
         align-items: center;
         justify-content: center;
         outline: none;
+
     }
 
     &__tab-text {
@@ -603,14 +609,14 @@
         }
 
         &-item {
-            padding: 8px 12px;
+            padding: 8px 15px;
             font-weight: 600;
             color: var(--text-dark);
             font-size: 16px;
             line-height: 22px;
+            text-align: left;
 
             &:hover {
-
                 color: var(--primary-color);
             }
         }
@@ -748,6 +754,7 @@
 
 }
 
+
 /* ================= Advanced Dropdown Styles ================= */
 .hero__advanced-dropdown {
     position: absolute;
@@ -776,7 +783,6 @@
 .advanced__flex-container {
     display: flex;
     gap: 24px;
-    justify-content: space-between;
     margin-bottom: 10px;
 }
 
@@ -838,7 +844,6 @@ input[type="range"]::-webkit-slider-thumb {
     background: var(--primary-color);
     border-radius: 50%;
     cursor: pointer;
-    position: relative;
     z-index: 3;
     pointer-events: auto;
 }
@@ -850,7 +855,6 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    position: relative;
     z-index: 3;
     pointer-events: auto;
 }
@@ -922,8 +926,6 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
     accent-color: var(--primary-color);
 }
-
-
 
 .icon-CaretUp:before {
     content: "\e908";
@@ -1436,11 +1438,6 @@ input[type="range"]::-moz-range-thumb {
     align-items: center;
     gap: 50px;
     margin-bottom: 100px;
-
-    .container {
-        padding: 0;
-    }
-
 
     &__list {
         display: flex;
@@ -3027,14 +3024,10 @@ input[type="range"]::-moz-range-thumb {
     .hero {
         &__title {
             white-space: normal;
-            font-size: 50px;
+            font-size: 60px;
             line-height: 60px;
         }
 
-        &__search {
-            gap: 5px;
-            top: 333px;
-        }
 
         &__form {
             flex-direction: column;
@@ -3459,18 +3452,19 @@ input[type="range"]::-moz-range-thumb {
 
     // Hero
     .hero {
+        &__content {
+            gap: 50px;
+        }
+
         &__title {
             white-space: normal;
-            font-size: 40px;
-            line-height: 50px;
+            font-size: 35px;
+            line-height: 40px;
         }
 
-        &__search {
-            top: 333px;
-        }
 
         &__subtitle {
-            font-size: 9px;
+            font-size: 10px;
             line-height: 14px;
         }
 
