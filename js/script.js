@@ -318,14 +318,16 @@ sizeMax.addEventListener(
 
 updateRange(priceMin, priceMax, priceText, priceProgress, true)();
 updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
+
 // =====================SUBMENU=================================//
 document
   .querySelectorAll(".home-page__mobile-nav-link--dropdown")
   .forEach((item) => {
     item.addEventListener("click", (e) => {
-      e.preventDefault(); // ngăn link mặc định nếu có
-      const parent = e.currentTarget.parentElement; //Lấy cha trực tiếp
+      e.preventDefault();
+      const parent = e.currentTarget.parentElement; // Lấy cha trực tiếp
       const subMenu = parent.querySelector(".home-page__mobile-sub-menu");
+      const icon = parent.querySelector(".home-page__mobile-nav-icon");
 
       if (subMenu) {
         // Đóng tất cả sub-menu khác
@@ -334,14 +336,32 @@ document
           .forEach((menu) => {
             if (menu !== subMenu) {
               menu.classList.remove("active");
+
+              const otherIcon = menu.parentElement.querySelector(
+                ".home-page__mobile-nav-icon"
+              );
+              if (otherIcon) {
+                otherIcon.classList.remove("icon-CaretUp");
+                otherIcon.classList.add("icon-CaretDown");
+              }
             }
           });
 
-        // Mở/đóng sub-menu hiện tại
-        subMenu.classList.toggle("active");
+        const isActive = subMenu.classList.toggle("active");
+
+        if (icon) {
+          if (isActive) {
+            icon.classList.remove("icon-CaretDown");
+            icon.classList.add("icon-CaretUp");
+          } else {
+            icon.classList.remove("icon-CaretUp");
+            icon.classList.add("icon-CaretDown");
+          }
+        }
       }
     });
   });
+// ===========GSAP=======================
 document.addEventListener("DOMContentLoaded", () => {
   // ================= Hero animations =================
   gsap.from("#hero-heading", {
