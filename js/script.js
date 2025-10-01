@@ -43,12 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// ==================Active===========================
+// ==================Active Controls===========================
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Tabs =====
-  const tabs = document.querySelectorAll(".hero__tab");
-  tabs.forEach((tab) => {
+  // ===== Hero Tabs =====
+  const heroTabs = document.querySelectorAll(".hero__tab");
+  heroTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       document
         .querySelector(".hero__tab-active")
@@ -63,29 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== Featured Tags =====
-  const tags = document.querySelectorAll(".featured-properties__tag");
-  tags.forEach((tag) => {
+  const featureTags = document.querySelectorAll(".featured-properties__tag");
+  featureTags.forEach((tag) => {
     tag.addEventListener("click", () => {
-      tags.forEach((t) => t.classList.remove("active"));
+      featureTags.forEach((t) => t.classList.remove("active"));
       tag.classList.add("active");
     });
   });
-});
 
-// ==================TAB-Active===========================
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".featured-properties__tab");
-
-  tabs.forEach((tab) => {
+  // ===== Featured Properties Tabs =====
+  const propertyTabs = document.querySelectorAll(".featured-properties__tab");
+  propertyTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      // Xóa active cũ
-      tabs.forEach((t) => {
+      propertyTabs.forEach((t) => {
         t.classList.remove("featured-properties__tab--active");
         t.setAttribute("aria-selected", "false");
         t.setAttribute("tabindex", "-1");
       });
 
-      // Thêm active cho tab được click
       tab.classList.add("featured-properties__tab--active");
       tab.setAttribute("aria-selected", "true");
       tab.setAttribute("tabindex", "0");
@@ -228,22 +222,32 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
 // ====================DROPDOWN===================
-const advancedBtn = document.querySelector(".hero__advanced-button");
-const advancedDropdown = document.getElementById("advancedDropdown");
+document.addEventListener("DOMContentLoaded", () => {
+  const advancedBtn = document.querySelector(".hero__advanced-button");
+  const advancedDropdown = document.getElementById("advancedDropdown");
 
-advancedBtn.addEventListener("click", () => {
-  const isOpen = advancedDropdown.classList.toggle("active");
-  advancedBtn.setAttribute("aria-expanded", isOpen);
-});
+  if (advancedBtn && advancedDropdown) {
+    advancedBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // chặn lan ra ngoài
+      const isOpen = advancedDropdown.classList.toggle("active");
+      advancedBtn.setAttribute("aria-expanded", isOpen);
+    });
 
-//ẨN khi click ngoài
-document.addEventListener("click", (e) => {
-  if (!advancedDropdown.contains(e.target) && !advancedBtn.contains(e.target)) {
-    advancedDropdown.classList.remove("active");
-    advancedBtn.setAttribute("aria-expanded", false);
+    // Ẩn khi click ngoài
+    document.addEventListener("click", (e) => {
+      if (
+        !advancedDropdown.contains(e.target) &&
+        !advancedBtn.contains(e.target)
+      ) {
+        advancedDropdown.classList.remove("active");
+        advancedBtn.setAttribute("aria-expanded", false);
+      }
+    });
   }
 });
+
 // ===================Range=============================
 const priceMin = document.getElementById("priceMin");
 const priceMax = document.getElementById("priceMax");
@@ -360,17 +364,6 @@ document.addEventListener("DOMContentLoaded", () => {
     opacity: 0,
     duration: 1.2,
     delay: 0.6,
-    ease: "power3.out",
-  });
-
-  gsap.from(".hero__advanced-dropdown", {
-    scrollTrigger: {
-      trigger: ".hero__advanced-dropdown",
-      start: "top 80%",
-    },
-    y: 100,
-    opacity: 0,
-    duration: 1,
     ease: "power3.out",
   });
 
