@@ -4314,9 +4314,6 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media (max-width: 576px) {
-  .header {
-    overflow: hidden;
-  }
   .header__menu-frame__logo {
     height: 36px;
     gap: 6px;
