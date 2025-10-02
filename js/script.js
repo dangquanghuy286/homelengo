@@ -1,6 +1,6 @@
 // ====================Toggle MENU==================
 document.querySelector(".toggle-mobile").addEventListener("click", function () {
-  document.querySelector(".home-page__mobile-menu").classList.toggle("active");
+  document.querySelector(".header__mobile-menu").classList.toggle("active");
   document.querySelector(".toggle-mobile").classList.toggle("active");
 });
 // ===================Dropdown=====================
@@ -283,11 +283,9 @@ function updateRange(
     progressElement.style.left = percentMin + "%";
     progressElement.style.width = percentMax - percentMin + "%";
 
-    textElement.textContent = `from ${
-      isPrice ? "$" + min.toLocaleString() : min
-    } ${isPrice ? "to $" + max.toLocaleString() : "to " + max} ${
-      isPrice ? "" : "SqFt"
-    }`;
+    textElement.textContent = `from ${isPrice ? "$" + min.toLocaleString() : min
+      } ${isPrice ? "to $" + max.toLocaleString() : "to " + max} ${isPrice ? "" : "SqFt"
+      }`;
   };
 }
 
@@ -321,24 +319,24 @@ updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
 
 // =====================SUBMENU=================================//
 document
-  .querySelectorAll(".home-page__mobile-nav-link--dropdown")
+  .querySelectorAll(".header__mobile-nav-link--dropdown ")
   .forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
       const parent = e.currentTarget.parentElement; // Lấy cha trực tiếp
-      const subMenu = parent.querySelector(".home-page__mobile-sub-menu");
-      const icon = parent.querySelector(".home-page__mobile-nav-icon");
+      const subMenu = parent.querySelector(".header__mobile-sub-menu");
+      const icon = parent.querySelector(".header__mobile-nav-icon");
 
       if (subMenu) {
         // Đóng tất cả sub-menu khác
         document
-          .querySelectorAll(".home-page__mobile-sub-menu.active")
+          .querySelectorAll(".header__mobile-sub-menu.active")
           .forEach((menu) => {
             if (menu !== subMenu) {
               menu.classList.remove("active");
 
               const otherIcon = menu.parentElement.querySelector(
-                ".home-page__mobile-nav-icon"
+                ".header__mobile-nav-icon"
               );
               if (otherIcon) {
                 otherIcon.classList.remove("icon-CaretUp");
