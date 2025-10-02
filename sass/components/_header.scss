@@ -135,10 +135,13 @@
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
+}
+
+.header__dropdown-menu li {
     border-bottom: 1px solid var(--border-card);
 }
 
-.header__dropdown-item:last-child {
+.header__dropdown-menu li:last-child {
     border-bottom: none;
 }
 
