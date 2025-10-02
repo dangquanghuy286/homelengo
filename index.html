@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,7 @@
                 <img
                   class="home-page__logo-img"
                   src="./images/logo/logoHeader.png"
+                  alt="HomeLengo-Logo"
                 />
               </a>
             </div>
@@ -235,11 +236,12 @@
           <div class="home-page__menu-actions">
             <button class="home-page__btn home-page__btn--login">
               <span class="home-page__btn-icon icon-user"></span>
-              <div class="home-page__btn-text">Sign in</div>
+              <span class="home-page__btn-text">Sign in</span>
             </button>
+
             <button class="home-page__btn home-page__btn--submit">
               <span class="home-page__btn-icon icon-content_copy"></span>
-              <div class="home-page__btn-text--submit">Submit Property</div>
+              <span class="home-page__btn-text--submit">Submit Property</span>
             </button>
           </div>
           <div class="toggle-mobile">
@@ -482,9 +484,9 @@
                 <span
                   class="home-page__mobile-btn-icon icon-content_copy"
                 ></span>
-                <div class="home-page__mobile-btn-text--submit">
+                <span class="home-page__mobile-btn-text--submit">
                   Submit Property
-                </div>
+                </span>
               </button>
             </div>
           </div>
@@ -505,7 +507,7 @@
                   house?
                 </p>
               </div>
-              <div class="hero__search" aria-label="Property search form">
+              <form class="hero__search" aria-label="Property search form">
                 <div
                   class="hero__tabs"
                   role="tablist"
@@ -540,7 +542,7 @@
                 >
                   <div class="hero__form-content">
                     <div class="hero__form-group">
-                      <label class="hero__label" for="property-type"
+                      <label class="hero__label" id="property-type-label"
                         >Type</label
                       >
                       <div class="hero__input-group">
@@ -937,19 +939,19 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
         <section
           class="featured-properties"
-          aria-labelledby="featured-properties-heading"
+          aria-labelledby="featured-properties-title-section-1"
         >
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
                 <h4
-                  id="featured-properties-title-section"
+                  id="featured-properties-title-section-1"
                   class="featured-properties__title-text"
                 >
                   FEATURED PROPERTIES
@@ -1533,13 +1535,13 @@
         </section>
         <section
           class="explore-cities"
-          aria-labelledby="explore-cities-heading"
+          aria-labelledby="featured-properties-title-section-2"
         >
           <!-- Tiêu đề Section -->
           <div class="featured-properties__title-section">
             <div class="featured-properties__title">
               <h4
-                id="featured-properties-title-section"
+                id="featured-properties-title-section-2"
                 class="featured-properties__title-text"
               >
                 EXPLORE CITIES
@@ -1859,13 +1861,16 @@
           </div>
           <div class="explore-cities__dots"></div>
         </section>
-        <section class="services" aria-labelledby="services-heading">
+        <section
+          class="services"
+          aria-labelledby="featured-properties-title-section-3"
+        >
           <div class="container">
             <!-- Tiêu đề Section -->
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
                 <h4
-                  id="featured-properties-title-section"
+                  id="featured-properties-title-section-3"
                   class="featured-properties__title-text"
                 >
                   OUR SERVICES
@@ -1966,7 +1971,10 @@
             </div>
           </div>
         </section>
-        <section class="benefits" aria-labelledby="benefits-heading">
+        <section
+          class="benefits"
+          aria-labelledby="featured-properties-title-section-4"
+        >
           <img
             class="benefits__hero-image"
             alt="Professional real estate team"
@@ -1975,7 +1983,10 @@
           <div class="benefits__content">
             <div class="benefits__header">
               <div class="benefits__title-section">
-                <h4 id="benefits-heading" class="benefits__title">
+                <h4
+                  id="featured-properties-title-section-4"
+                  class="benefits__title"
+                >
                   OUR BENEFITS
                 </h4>
                 <h3 class="benefits__subtitle">Why Choose HomeLengo</h3>
@@ -2037,13 +2048,13 @@
         </section>
         <section
           class="featured-properties"
-          aria-labelledby="featured-properties-heading"
+          aria-labelledby="featured-properties-title-section-6"
         >
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
                 <h4
-                  id="featured-properties-title-section"
+                  id="featured-properties-title-section-6"
                   class="featured-properties__title-text"
                 >
                   TOP PROPERTIES
@@ -2788,12 +2799,15 @@
             <div class="swiper-pagination"></div>
           </div>
         </section>
-        <section class="team" aria-labelledby="team-heading">
+        <section
+          class="team"
+          aria-labelledby="featured-properties-title-section-5"
+        >
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
                 <h4
-                  id="featured-properties-title-section"
+                  id="featured-properties-title-section-5"
                   class="featured-properties__title-text"
                 >
                   OUR TEAMS
@@ -2956,12 +2970,7 @@
                 role="list"
                 aria-label="Partner companies"
               >
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-1.svg"
@@ -2969,12 +2978,7 @@
                   />
                 </a>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-2.svg"
@@ -2982,12 +2986,7 @@
                   />
                 </a>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-3.svg"
@@ -2995,12 +2994,7 @@
                   />
                 </a>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-4.svg"
@@ -3008,12 +3002,7 @@
                   />
                 </a>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-5.svg"
@@ -3021,12 +3010,7 @@
                   />
                 </a>
 
-                <a
-                  href="#"
-                  target="_blank"
-                  class="partners__item-link"
-                  role="listitem"
-                >
+                <a href="#" target="_blank" class="partners__item-link">
                   <img
                     class="partners__item"
                     src="./images/logo/partner-6.svg"
@@ -3081,12 +3065,15 @@
             </div>
           </div>
         </section>
-        <section class="latest-news" aria-labelledby="latest-news-heading">
+        <section
+          class="latest-news"
+          aria-labelledby="featured-properties-title-section-7"
+        >
           <div class="container">
             <div class="featured-properties__title-section">
               <div class="featured-properties__title">
                 <h4
-                  id="featured-properties-title-section"
+                  id="featured-properties-title-section-7"
                   class="featured-properties__title-text"
                 >
                   LATEST NEW
