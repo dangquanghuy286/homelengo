@@ -41,7 +41,6 @@
 .home-page__menu-frame {
     display: flex;
     align-items: center;
-
     gap: 100px;
     height: 48px;
 }
@@ -143,6 +142,9 @@
     transform: translateY(12px);
     transition: all 0.3s ease;
     z-index: 9999;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .home-page__dropdown-item {
@@ -171,14 +173,11 @@
     transform: translateY(0);
 }
 
-
-
 /* Action */
 .home-page__menu-actions {
     display: flex;
     align-items: center;
     gap: 16px;
-
 }
 
 .home-page__btn {
@@ -259,8 +258,6 @@
     display: inline-block;
     color: var(--white);
     transition: color 0.3s ease;
-
-
 }
 
 .icon-menu:before {
@@ -355,6 +352,7 @@
     padding-left: 15px;
     margin-top: 5px;
     gap: 5px;
+    list-style: none;
 }
 
 .home-page__mobile-sub-menu.active {
@@ -367,8 +365,6 @@
     font-weight: 500;
     color: var(--text-dark);
     transition: all 0.3s ease;
-
-
 }
 
 .home-page__mobile-sub-link:hover {

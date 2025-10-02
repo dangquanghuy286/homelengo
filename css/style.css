@@ -1727,6 +1727,9 @@ a:focus, a:hover {
   transform: translateY(12px);
   transition: all 0.3s ease;
   z-index: 9999;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .home-page__dropdown-item {
@@ -1934,6 +1937,7 @@ a:focus, a:hover {
   padding-left: 15px;
   margin-top: 5px;
   gap: 5px;
+  list-style: none;
 }
 
 .home-page__mobile-sub-menu.active {
