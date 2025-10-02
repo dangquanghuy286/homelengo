@@ -1,0 +1,130 @@
+// ===============Explore======================
+.explore-cities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    &__list {
+        width: 100%;
+        height: 385px;
+        overflow: hidden;
+
+        .swiper-wrapper {
+            align-items: stretch;
+            padding: 0 10px;
+        }
+    }
+
+    .swiper-slide {
+        width: auto !important;
+        flex-shrink: 0;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        display: block;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+            filter: brightness(70%);
+        }
+    }
+
+    // Sửa lại: tách ra ngoài thay vì nested trong &__item
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px;
+        position: absolute;
+        width: 94.84%;
+        height: 21.04%;
+        top: 76.88%;
+        left: 2.58%;
+        background-color: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        flex: 1;
+    }
+
+    &__property-count {
+        width: fit-content;
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        text-transform: capitalize;
+    }
+
+    &__name {
+        width: fit-content;
+        font-weight: 600;
+        color: var(--text-dark);
+        line-height: 25.2px;
+        white-space: nowrap;
+    }
+
+    &__action-button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 50%;
+        border: 1px solid var(--border-card);
+        color: var(--text-color);
+
+        &:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white);
+        }
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 3px 0;
+        margin-top: 50px;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--border-card);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &.active {
+            background-color: var(--primary-color);
+        }
+    }
+}

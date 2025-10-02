@@ -388,29 +388,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ================= Featured Properties  =================
-  gsap.from("#featured-properties-title-section", {
-    scrollTrigger: {
-      trigger: "#featured-properties-title-section",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
-
-  gsap.from(".featured-properties__title-subtext", {
-    scrollTrigger: {
-      trigger: ".featured-properties__title-subtext",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
+  for (let i = 1; i <= 8; i++) {
+    gsap.from(`#featured-properties-title-section-${i}`, {
+      scrollTrigger: {
+        trigger: `#featured-properties-title-section-${i}`,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
+  }
 
   gsap.from(".featured-properties__tab", {
     scrollTrigger: {
@@ -452,23 +442,11 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.2,
   });
   // ================= Benefits animations =================
-  // Title
-  gsap.from("#benefits-heading", {
-    scrollTrigger: {
-      trigger: "#benefits-heading",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
 
   // Subtitle
   gsap.from(".benefits__subtitle", {
     scrollTrigger: {
-      trigger: "#benefits-heading",
+      trigger: "#featured-properties-title-section-4",
       start: "top 80%",
       toggleActions: "play none none reverse",
     },
