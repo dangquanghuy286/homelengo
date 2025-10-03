@@ -25,7 +25,7 @@
         display: flex;
         gap: 30px;
         width: max-content;
-        animation: scroll 20s linear infinite;
+        animation: scroll 25s linear infinite;
 
         &:hover {
             animation-play-state: paused;

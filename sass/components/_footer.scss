@@ -237,7 +237,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 25px;
+    gap: 22px;
     width: 100%;
     max-width: 340px;
 }
@@ -245,7 +245,7 @@
 .footer__newsletter-text {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 15px;
     flex-direction: column;
 }
 
@@ -309,6 +309,8 @@
     color: var(--text-light);
     font-size: 14px;
     line-height: 14px;
+    display: flex;
+    text-align: center;
 }
 
 .footer__terms {

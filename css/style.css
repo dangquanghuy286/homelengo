@@ -1442,7 +1442,7 @@ a:focus, a:hover {
   width: 100%;
   z-index: 9999;
   background-color: var(--white);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 /* Header-Menu */
@@ -1551,13 +1551,13 @@ a:focus, a:hover {
   left: 0;
   min-width: 222px;
   background: var(--white);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border-radius: 0 0 6px 6px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
   transition: all 0.3s ease;
-  z-index: 9999;
+  z-index: 999;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -3248,7 +3248,7 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   gap: 30px;
   width: max-content;
-  animation: scroll 20s linear infinite;
+  animation: scroll 25s linear infinite;
 }
 .partners__list:hover {
   animation-play-state: paused;
@@ -3641,7 +3641,7 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 25px;
+  gap: 22px;
   width: 100%;
   max-width: 340px;
 }
@@ -3649,7 +3649,7 @@ input[type=range]::-moz-range-thumb {
 .footer__newsletter-text {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 15px;
   flex-direction: column;
 }
 
@@ -3713,6 +3713,8 @@ input[type=range]::-moz-range-thumb {
   color: var(--text-light);
   font-size: 14px;
   line-height: 14px;
+  display: flex;
+  text-align: center;
 }
 
 .footer__terms {

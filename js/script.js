@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 8,
     slidesPerGroup: 2,
     loop: false,
-    speed: 800,
+    speed: 1000,
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
@@ -110,24 +110,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     breakpoints: {
       320: {
-        slidesPerView: 1,
-        slidesPerGroup: 2,
-        spaceBetween: 6,
-      },
-      480: {
-        slidesPerView: 3,
+        slidesPerView: 1.5,
         slidesPerGroup: 3,
         spaceBetween: 6,
       },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 7,
+      480: {
+        slidesPerView: 2.5,
+        slidesPerGroup: 3.5,
         spaceBetween: 6,
       },
-      1024: {
+      768: {
         slidesPerView: 3,
-        slidesPerGroup: 6,
-        spaceBetween: 8,
+        slidesPerGroup: 7,
+        spaceBetween: 6,
       },
       1200: {
         slidesPerView: 4,
@@ -153,15 +148,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".testimonials__list", {
     slidesPerView: "auto",
     spaceBetween: 30,
-    centeredSlides: false,
-    centeredSlides: true,
+
 
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
 
-    speed: 800,
+    speed: 1000,
     // autoplay: {
     //   delay: 3000,
     //   disableOnInteraction: false,
@@ -169,29 +163,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // },
 
     breakpoints: {
-      320: {
-        slidesPerView: 1.15,
-        centeredSlides: true,
-      },
       576: {
-        slidesPerView: 1.2,
-        spaceBetween: 20,
-        centeredSlides: true,
+        slidesPerView: 2,
       },
       768: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-      1024: {
         slidesPerView: 2,
         slidesPerGroup: 1,
-        spaceBetween: 30,
-        centeredSlides: false,
-      },
-      1200: {
-        slidesPerView: 3,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
         centeredSlides: false,
       },
       1440: {
