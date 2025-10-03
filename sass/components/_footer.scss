@@ -313,8 +313,16 @@
 
 .footer__terms {
     display: flex;
-    gap: 16px;
-    list-style: none;
+
+    li {
+        padding: 0 8px 0 8px;
+        border-right: 1px solid var(--border-color);
+
+        &:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+    }
 }
 
 .footer__terms-text {
@@ -322,16 +330,11 @@
     line-height: 22px;
     font-weight: 400;
     font-size: 14px;
-}
+    text-decoration: none;
+    transition: color 0.3s;
 
-.footer__terms-text:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-.footer__terms-separator {
-    color: var(--border-color);
-    line-height: 22px;
-    font-weight: 400;
-    font-size: 14px;
+    &:hover {
+        color: var(--white);
+        text-decoration: underline;
+    }
 }
