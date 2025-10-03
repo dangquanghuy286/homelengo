@@ -464,19 +464,6 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.25,
   });
 
-  // Hero image
-  gsap.from(".benefits__hero-image", {
-    scrollTrigger: {
-      trigger: ".benefits__hero-image",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    x: -80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  });
-
   //====================LATEST=============================
   gsap.from(".latest-news__item", {
     scrollTrigger: {
