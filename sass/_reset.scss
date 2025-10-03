@@ -320,10 +320,10 @@ pre {
     height: auto;
 }
 
-svg,
-svg path {
-    @include transition3();
-}
+// svg,
+// svg path {
+//     @include transition3();
+// }
 
 /* Elements
 -------------------------------------------------------------- */
@@ -662,150 +662,150 @@ h6,
     line-height: 16px;
 }
 
-@include res(xl) {
+// @include res(xl) {
 
-    h1,
-    .h1 {
-        font-size: 46px;
-        line-height: 110%;
-    }
+//     h1,
+//     .h1 {
+//         font-size: 46px;
+//         line-height: 110%;
+//     }
 
-    h2,
-    .h2 {
-        font-size: 36px;
-        line-height: 110%;
-    }
+//     h2,
+//     .h2 {
+//         font-size: 36px;
+//         line-height: 110%;
+//     }
 
-    h3,
-    .h3 {
-        font-size: 30px;
-        line-height: 110%;
-    }
+//     h3,
+//     .h3 {
+//         font-size: 30px;
+//         line-height: 110%;
+//     }
 
-    h4,
-    .h4 {
-        font-size: 27px;
-        line-height: 110%;
-    }
+//     h4,
+//     .h4 {
+//         font-size: 27px;
+//         line-height: 110%;
+//     }
 
-    .text-display-1 {
-        font-size: 66px;
-        line-height: 110%;
-    }
+//     .text-display-1 {
+//         font-size: 66px;
+//         line-height: 110%;
+//     }
 
-    .text-display-2 {
-        font-size: 36px;
-        line-height: 110%;
-    }
-}
+//     .text-display-2 {
+//         font-size: 36px;
+//         line-height: 110%;
+//     }
+// }
 
-@include res(lg) {
+// @include res(lg) {
 
-    h1,
-    .h1 {
-        font-size: 38px;
-    }
+//     h1,
+//     .h1 {
+//         font-size: 38px;
+//     }
 
-    h2,
-    .h2 {
-        font-size: 30px;
-    }
+//     h2,
+//     .h2 {
+//         font-size: 30px;
+//     }
 
-    h3,
-    .h3 {
-        font-size: 27px;
-    }
+//     h3,
+//     .h3 {
+//         font-size: 27px;
+//     }
 
-    h4,
-    .h4 {
-        font-size: 23px;
-    }
+//     h4,
+//     .h4 {
+//         font-size: 23px;
+//     }
 
-    h5,
-    .h5 {
-        font-size: 20px;
-        line-height: 110%;
-    }
+//     h5,
+//     .h5 {
+//         font-size: 20px;
+//         line-height: 110%;
+//     }
 
-    .text-display-1 {
-        font-size: 55px;
-    }
+//     .text-display-1 {
+//         font-size: 55px;
+//     }
 
-    .text-display-2 {
-        font-size: 30px;
-    }
-}
+//     .text-display-2 {
+//         font-size: 30px;
+//     }
+// }
 
-@include res(md) {
+// @include res(md) {
 
-    h1,
-    .h1 {
-        font-size: 31px;
-    }
+//     h1,
+//     .h1 {
+//         font-size: 31px;
+//     }
 
-    h2,
-    .h2 {
-        font-size: 25px;
-    }
+//     h2,
+//     .h2 {
+//         font-size: 25px;
+//     }
 
-    h3,
-    .h3 {
-        font-size: 23px;
-    }
+//     h3,
+//     .h3 {
+//         font-size: 23px;
+//     }
 
-    h4,
-    .h4 {
-        font-size: 20px;
-    }
+//     h4,
+//     .h4 {
+//         font-size: 20px;
+//     }
 
-    h5,
-    .h5 {
-        font-size: 18px;
-    }
+//     h5,
+//     .h5 {
+//         font-size: 18px;
+//     }
 
-    h6,
-    .h6 {
-        font-size: 15px;
-        line-height: 23px;
-    }
+//     h6,
+//     .h6 {
+//         font-size: 15px;
+//         line-height: 23px;
+//     }
 
-    .text-display-1 {
-        font-size: 45px;
-    }
+//     .text-display-1 {
+//         font-size: 45px;
+//     }
 
-    .text-display-2 {
-        font-size: 30px;
-    }
+//     .text-display-2 {
+//         font-size: 30px;
+//     }
 
-    .text-body-1 {
-        font-size: 13px;
-        line-height: 21px;
-    }
+//     .text-body-1 {
+//         font-size: 13px;
+//         line-height: 21px;
+//     }
 
-    .text-body-2 {
-        font-size: 15px;
-        line-height: 23px;
-    }
+//     .text-body-2 {
+//         font-size: 15px;
+//         line-height: 23px;
+//     }
 
-    .text-body-3 {
-        font-size: 18px;
-        line-height: 26px;
-    }
-}
+//     .text-body-3 {
+//         font-size: 18px;
+//         line-height: 26px;
+//     }
+// }
 
-@include res(sm) {
+// @include res(sm) {
 
-    h6,
-    .h6 {
-        font-size: 13px;
-        line-height: 21px;
-    }
+//     h6,
+//     .h6 {
+//         font-size: 13px;
+//         line-height: 21px;
+//     }
 
-    .text-title {
-        font-size: 14px;
-        line-height: 22px;
-    }
-}
+//     .text-title {
+//         font-size: 14px;
+//         line-height: 22px;
+//     }
+// }
 
 // font-weight
 .fw-3 {
@@ -1221,18 +1221,18 @@ a {
     padding-bottom: 57px;
 }
 
-@include res(md) {
+// @include res(md) {
 
-    .tf-spacing-1,
-    .tf-spacing-2,
-    .tf-spacing-3,
-    .tf-spacing-4,
-    .tf-spacing-5,
-    .tf-spacing-6 {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
+//     .tf-spacing-1,
+//     .tf-spacing-2,
+//     .tf-spacing-3,
+//     .tf-spacing-4,
+//     .tf-spacing-5,
+//     .tf-spacing-6 {
+//         padding-top: 50px;
+//         padding-bottom: 50px;
+//     }
+// }
 
 /* backgroub color
 -------------------------------------------------------------- */
@@ -1343,18 +1343,18 @@ a {
         }
     }
 
-    @include res(md, min) {
-        margin-top: 38px;
+    // @include res(md, min) {
+    //     margin-top: 38px;
 
-        a {
-            height: 48px;
-            width: 48px;
+    //     a {
+    //         height: 48px;
+    //         width: 48px;
 
-            i {
-                font-size: 24px;
-            }
-        }
-    }
+    //         i {
+    //             font-size: 24px;
+    //         }
+    //     }
+    // }
 }
 
 .tf-social {
@@ -1394,13 +1394,13 @@ a {
     z-index: 1;
 }
 
-.site-logo {
-    @include res(md) {
-        img {
-            width: 132px;
-        }
-    }
-}
+// .site-logo {
+//     @include res(md) {
+//         img {
+//             width: 132px;
+//         }
+//     }
+// }
 
 .progress-wrap {
     position: fixed;
