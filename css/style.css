@@ -3128,11 +3128,8 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
   transition: background 0.3s ease;
 }
-.team__social-list a:hover {
-  background: var(--primary-color);
-}
 .team__social-list a:hover span:before {
-  color: var(--white);
+  color: var(--primary-color);
 }
 .team__social-icon {
   font-size: 16px;

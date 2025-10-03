@@ -87,10 +87,8 @@
             transition: background 0.3s ease;
 
             &:hover {
-                background: var(--primary-color);
-
                 span:before {
-                    color: var(--white);
+                    color: var(--primary-color);
                 }
             }
         }
