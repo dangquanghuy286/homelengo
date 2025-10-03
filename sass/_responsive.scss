@@ -215,17 +215,6 @@
         }
     }
 
-    .footer {
-        &__footer-bottom {
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        &__terms {
-            margin-top: 10px;
-        }
-    }
 }
 
 @media (max-width: 992px) {
@@ -403,9 +392,6 @@
             max-width: 340px;
         }
 
-        &__terms {
-            margin-top: 10px;
-        }
     }
 
     // Benefits

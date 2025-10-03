@@ -3731,8 +3731,7 @@ input[type=range]::-moz-range-thumb {
 .footer__section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 146px;
+  gap: 15px;
 }
 
 .footer__section-title {
@@ -3773,7 +3772,7 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 22px;
+  gap: 25px;
   width: 100%;
   max-width: 340px;
 }
@@ -4056,14 +4055,6 @@ input[type=range]::-moz-range-thumb {
     flex-grow: 1;
     text-align: left;
   }
-  .footer__footer-bottom {
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-  .footer__terms {
-    margin-top: 10px;
-  }
 }
 @media (max-width: 992px) {
   .header__menu {
@@ -4197,9 +4188,6 @@ input[type=range]::-moz-range-thumb {
   .footer__newsletter-input {
     width: 100%;
     max-width: 340px;
-  }
-  .footer__terms {
-    margin-top: 10px;
   }
   .benefits {
     border-radius: 10px;

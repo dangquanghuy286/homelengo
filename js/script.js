@@ -377,13 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power3.out",
   });
 
-  gsap.from(".hero__form", {
-    y: 100,
-    opacity: 0,
-    duration: 1.2,
-    delay: 0.6,
-    ease: "power3.out",
-  });
 
   // ================= Featured Properties  =================
   for (let i = 1; i <= 8; i++) {
@@ -426,19 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.25,
   });
 
-  // City cards
-  gsap.from(".explore-cities__item", {
-    scrollTrigger: {
-      trigger: ".explore-cities__list",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 60,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.2,
-  });
+
   // ================= Benefits animations =================
 
   // Subtitle
