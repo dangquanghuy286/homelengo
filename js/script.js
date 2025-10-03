@@ -370,6 +370,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  for (let i = 1; i <= 8; i++) {
+    gsap.from(`#featured-subtitle-${i}`, {
+      scrollTrigger: {
+        trigger: `#featured-properties-title-section-${i}`,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+      delay: 0.3
+    });
+  }
+
   gsap.from(".featured-properties__tab", {
     scrollTrigger: {
       trigger: ".featured-properties__tab-menu",
