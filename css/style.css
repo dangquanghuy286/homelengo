@@ -4356,13 +4356,14 @@ input[type=range]::-moz-range-thumb {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    padding: 15px 10px;
     text-align: left;
+  }
+  .footer__terms li {
+    padding: 0 10px 0 0;
   }
   .footer__logo {
     height: 36px;
     gap: 6px;
-    margin: 0;
     justify-content: flex-start;
   }
 }
@@ -4383,39 +4384,6 @@ input[type=range]::-moz-range-thumb {
   }
   .footer__social-list {
     gap: 5px;
-  }
-  .footer__main {
-    gap: 20px;
-  }
-  .footer__description {
-    font-size: 12px;
-    line-height: 1.4;
-  }
-  .footer__contact-text {
-    font-size: 12px;
-  }
-  .footer__section-title {
-    font-size: 13px;
-    font-weight: 600;
-  }
-  .footer__link {
-    font-size: 12px;
-  }
-  .footer__newsletter-description {
-    font-size: 12px;
-  }
-  .footer__email-input {
-    font-size: 12px;
-    padding: 6px 8px;
-  }
-  .footer__send-icon {
-    font-size: 14px;
-  }
-  .footer__bottom {
-    font-size: 11px;
-  }
-  .footer__copyright, .footer__terms-text, .footer__terms-separator {
-    font-size: 11px;
   }
 }
 /* =============== Loading Screen =============== */

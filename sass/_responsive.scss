@@ -641,14 +641,17 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 8px;
-            padding: 15px 10px;
             text-align: left;
+        }
+
+        &__terms li {
+            padding: 0 10px 0 0;
+
         }
 
         &__logo {
             height: 36px;
             gap: 6px;
-            margin: 0;
             justify-content: flex-start;
         }
 
@@ -685,51 +688,5 @@
         &__social-list {
             gap: 5px;
         }
-
-        &__main {
-            gap: 20px;
-        }
-
-        &__description {
-            font-size: 12px;
-            line-height: 1.4;
-        }
-
-        &__contact-text {
-            font-size: 12px;
-        }
-
-        &__section-title {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        &__link {
-            font-size: 12px;
-        }
-
-        &__newsletter-description {
-            font-size: 12px;
-        }
-
-        &__email-input {
-            font-size: 12px;
-            padding: 6px 8px;
-        }
-
-        &__send-icon {
-            font-size: 14px;
-        }
-
-        &__bottom {
-            font-size: 11px;
-        }
-
-        &__copyright,
-        &__terms-text,
-        &__terms-separator {
-            font-size: 11px;
-        }
-
     }
 }
