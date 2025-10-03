@@ -1,6 +1,7 @@
 @use 'abstracts';
 @use 'reset';
 @use 'components/index' as *;
+@use 'responsive';
 /* =============== Loading Screen =============== */
 
 /* ================Container================ */
@@ -13,8 +14,6 @@
 
 /* ================Home Page================ */
 .home-page {
-    display: flex;
-    flex-direction: column;
     background-color: var(--white);
     overflow: hidden;
 }
