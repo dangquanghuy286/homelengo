@@ -46,7 +46,6 @@
         object-fit: cover;
     }
 
-    /* overlay căn giữa card, không fix pixel */
     &__social-overlay {
         position: absolute;
         bottom: 20px;
@@ -121,8 +120,6 @@
         align-items: flex-start;
 
         a {
-            text-decoration: none;
-
             &:hover .team__name {
                 color: var(--primary-color);
             }

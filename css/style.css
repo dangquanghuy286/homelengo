@@ -3090,9 +3090,6 @@ input[type=range]::-moz-range-thumb {
   height: 100%;
   object-fit: cover;
 }
-.team {
-  /* overlay căn giữa card, không fix pixel */
-}
 .team__social-overlay {
   position: absolute;
   bottom: 20px;
@@ -3156,9 +3153,6 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.team__details a {
-  text-decoration: none;
 }
 .team__details a:hover .team__name {
   color: var(--primary-color);
