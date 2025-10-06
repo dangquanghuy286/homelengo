@@ -343,14 +343,15 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.from("#hero-heading", {
     y: 20,
     opacity: 0,
-    duration: 1.6,
-    ease: "power3.out",
+    duration: 2,
+    stagger: 0.05,
+    ease: "power1.out",
   });
 
   gsap.from(".hero__subtitle", {
     y: 12,
     opacity: 0,
-    duration: 1.4,
+    duration: 2,
     delay: 0.3,
     ease: "power3.out",
   });
@@ -365,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       y: 15,
       opacity: 0,
-      duration: 1.6,
+      duration: 2,
       ease: "power3.out",
     });
   }
@@ -379,7 +380,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       y: 13,
       opacity: 0,
-      duration: 1,
+      duration: 2,
       ease: "power3.out",
       delay: 0.3,
     });
@@ -393,7 +394,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     opacity: 0,
     y: 7,
-    duration: 1,
+    duration: 2,
     stagger: 0.15,
     ease: "power3.out",
   });
@@ -406,9 +407,23 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 15,
     opacity: 0,
-    duration: 1,
+    duration: 2,
     ease: "power3.out",
     stagger: 0.25,
+  });
+  // ================= Explore Cities animations =================
+  gsap.from(".explore-cities__item", {
+    scrollTrigger: {
+      trigger: ".explore-cities__list",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 20,
+    scale: 0.95,
+    duration: 2,
+    stagger: 0.2,
+    ease: "power2.out",
   });
 
   // ================= Benefits animations =================
@@ -422,7 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 10,
     opacity: 0,
-    duration: 1.6,
+    duration: 2,
     delay: 0.2,
     ease: "power3.out",
   });
@@ -436,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 7,
     opacity: 0,
-    duration: 1.6,
+    duration: 2,
     delay: 0.3,
     ease: "power3.out",
   });
@@ -450,7 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 12,
     opacity: 0,
-    duration: 1.6,
+    duration: 2,
     ease: "power3.out",
     stagger: 0.25,
   });
@@ -464,8 +479,22 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 15,
     opacity: 0,
-    duration: 1.6,
+    duration: 2,
     ease: "power3.out",
     stagger: 0.3,
+  });
+  // ====================TEAM=============================
+  gsap.from(".team__item", {
+    scrollTrigger: {
+      trigger: ".team__list",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 10,
+    opacity: 0,
+    scale: 0.9,
+    duration: 2,
+    stagger: 0.2,
+    ease: "power2.out",
   });
 });
