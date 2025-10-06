@@ -2344,7 +2344,6 @@ input[type=range]::-moz-range-thumb {
 }
 .featured-properties__description {
   align-self: stretch;
-  font-weight: 400;
   color: var(--text-label);
   font-size: 14px;
   text-align: center;
@@ -2870,7 +2869,6 @@ input[type=range]::-moz-range-thumb {
   white-space: nowrap;
 }
 .benefits__intro {
-  font-weight: 400;
   color: var(--text-label);
   font-size: 14px;
   line-height: 20px;
