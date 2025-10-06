@@ -149,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: "auto",
     spaceBetween: 30,
 
-
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -260,9 +259,11 @@ function updateRange(
     progressElement.style.left = percentMin + "%";
     progressElement.style.width = percentMax - percentMin + "%";
 
-    textElement.textContent = `from ${isPrice ? "$" + min.toLocaleString() : min
-      } ${isPrice ? "to $" + max.toLocaleString() : "to " + max} ${isPrice ? "" : "SqFt"
-      }`;
+    textElement.textContent = `from ${
+      isPrice ? "$" + min.toLocaleString() : min
+    } ${isPrice ? "to $" + max.toLocaleString() : "to " + max} ${
+      isPrice ? "" : "SqFt"
+    }`;
   };
 }
 
@@ -340,20 +341,19 @@ document
 document.addEventListener("DOMContentLoaded", () => {
   // ================= Hero animations =================
   gsap.from("#hero-heading", {
-    y: 80,
+    y: 20,
     opacity: 0,
     duration: 1,
     ease: "power3.out",
   });
 
   gsap.from(".hero__subtitle", {
-    y: 50,
+    y: 12,
     opacity: 0,
     duration: 1,
     delay: 0.3,
     ease: "power3.out",
   });
-
 
   // ================= Featured Properties  =================
   for (let i = 1; i <= 8; i++) {
@@ -363,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "top 85%",
         toggleActions: "play none none reverse",
       },
-      y: 60,
+      y: 15,
       opacity: 0,
       duration: 1,
       ease: "power3.out",
@@ -377,11 +377,11 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "top 85%",
         toggleActions: "play none none reverse",
       },
-      y: 50,
+      y: 13,
       opacity: 0,
       duration: 0.8,
       ease: "power3.out",
-      delay: 0.3
+      delay: 0.3,
     });
   }
 
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleActions: "play none none reverse",
     },
     opacity: 0,
-    y: 30,
+    y: 7,
     duration: 0.6,
     stagger: 0.15,
     ease: "power3.out",
@@ -404,13 +404,12 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 60,
+    y: 15,
     opacity: 0,
     duration: 0.8,
     ease: "power3.out",
     stagger: 0.25,
   });
-
 
   // ================= Benefits animations =================
 
@@ -421,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 80%",
       toggleActions: "play none none reverse",
     },
-    y: 40,
+    y: 10,
     opacity: 0,
     duration: 1,
     delay: 0.2,
@@ -435,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 30,
+    y: 7,
     opacity: 0,
     duration: 1,
     delay: 0.3,
@@ -449,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 50,
+    y: 12,
     opacity: 0,
     duration: 1,
     ease: "power3.out",
@@ -463,7 +462,7 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 80%",
       toggleActions: "play none none reserve",
     },
-    y: 60,
+    y: 15,
     opacity: 0,
     duration: 1,
     ease: "power3.out",

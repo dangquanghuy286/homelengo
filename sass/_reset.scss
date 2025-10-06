@@ -987,7 +987,7 @@ a {
 /* backgroud
 -------------------------------------------------------------- */
 .bg-surface-color {
-    background-color: var(--Surface-light);
+    background-color: var(--white);
 }
 
 .bg-surface2-color {
@@ -1179,6 +1179,14 @@ a {
 
 .mb_40 {
     margin-bottom: 40px;
+}
+
+.mb_50 {
+    margin: 0 auto 50px;
+}
+
+.mb_100 {
+    margin: 100px 0;
 }
 
 /* padding

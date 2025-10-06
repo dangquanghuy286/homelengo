@@ -3,38 +3,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px 0;
     position: relative;
 
     &__title-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 auto 50px;
-    }
-
-    &__title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 4px;
-
-        &-text {
-            color: var(--primary-color);
-            font-size: 14px;
-            letter-spacing: 1.55px;
-            line-height: 24px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        &-subtext {
-            color: var(--text-dark);
-            line-height: 44px;
-            font-weight: 800;
-            white-space: nowrap;
-        }
     }
+
+    &__title-text {
+        color: var(--primary-color);
+        font-size: 14px;
+        letter-spacing: 1.55px;
+        line-height: 24px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    &__title-subtext {
+        color: var(--text-dark);
+        line-height: 44px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
 
     &__description {
         align-self: stretch;

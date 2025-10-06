@@ -27,7 +27,6 @@
 
 .header__menu-frame__logo {
     display: block;
-    height: 48px;
     width: auto;
 }
 
@@ -357,12 +356,7 @@
 
 /* Hide toggle */
 .toggle-mobile {
-    display: none;
     align-items: center;
     cursor: pointer;
     padding: 0 20px;
-}
-
-.header__mobile-menu {
-    display: none;
 }
