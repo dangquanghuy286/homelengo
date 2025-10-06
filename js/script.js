@@ -343,14 +343,14 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.from("#hero-heading", {
     y: 20,
     opacity: 0,
-    duration: 1,
+    duration: 1.6,
     ease: "power3.out",
   });
 
   gsap.from(".hero__subtitle", {
     y: 12,
     opacity: 0,
-    duration: 1,
+    duration: 1.4,
     delay: 0.3,
     ease: "power3.out",
   });
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       y: 15,
       opacity: 0,
-      duration: 1,
+      duration: 1.6,
       ease: "power3.out",
     });
   }
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       y: 13,
       opacity: 0,
-      duration: 0.8,
+      duration: 1,
       ease: "power3.out",
       delay: 0.3,
     });
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     opacity: 0,
     y: 7,
-    duration: 0.6,
+    duration: 1,
     stagger: 0.15,
     ease: "power3.out",
   });
@@ -406,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 15,
     opacity: 0,
-    duration: 0.8,
+    duration: 1,
     ease: "power3.out",
     stagger: 0.25,
   });
@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 10,
     opacity: 0,
-    duration: 1,
+    duration: 1.6,
     delay: 0.2,
     ease: "power3.out",
   });
@@ -436,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 7,
     opacity: 0,
-    duration: 1,
+    duration: 1.6,
     delay: 0.3,
     ease: "power3.out",
   });
@@ -450,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 12,
     opacity: 0,
-    duration: 1,
+    duration: 1.6,
     ease: "power3.out",
     stagger: 0.25,
   });
@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     y: 15,
     opacity: 0,
-    duration: 1,
+    duration: 1.6,
     ease: "power3.out",
     stagger: 0.3,
   });

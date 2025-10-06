@@ -3649,13 +3649,24 @@ input[type=range]::-moz-range-thumb {
 
 .footer__newsletter-input {
   display: flex;
-  height: 44px;
   align-items: center;
-  justify-content: space-between;
+  height: 44px;
   padding: 10px 16px;
   background-color: var(--gray-light);
   border-radius: 999px;
   width: 340px;
+}
+
+.footer__email-input {
+  flex: 1;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: var(--text-light);
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
 }
 
 .footer__email-input::placeholder {
@@ -3663,23 +3674,20 @@ input[type=range]::-moz-range-thumb {
   opacity: 1;
 }
 
-.footer__email-input {
-  font-weight: 400;
-  color: var(--text-light);
-  font-size: 14px;
-  line-height: 140%;
-  background: transparent;
+.footer__send-icon {
+  background: none;
   border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  flex: 1;
-  width: 100%;
-  outline: none;
 }
 
-.icon-send:before {
+.footer__send-icon:before {
   content: "\e917";
   font-family: "icomoon";
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1;
   color: var(--primary-color);
 }
