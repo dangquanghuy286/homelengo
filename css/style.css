@@ -2696,6 +2696,9 @@ input[type=range]::-moz-range-thumb {
   line-height: 25.2px;
   white-space: nowrap;
 }
+.explore-cities__name:hover {
+  color: var(--primary-color);
+}
 .explore-cities__action-button {
   all: unset;
   display: flex;

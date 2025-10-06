@@ -42,7 +42,6 @@
         }
     }
 
-    // Sửa lại: tách ra ngoài thay vì nested trong &__item
     &__content {
         display: flex;
         align-items: center;
@@ -83,6 +82,10 @@
         color: var(--text-dark);
         line-height: 25.2px;
         white-space: nowrap;
+
+        &:hover {
+            color: var(--primary-color);
+        }
     }
 
     &__action-button {
