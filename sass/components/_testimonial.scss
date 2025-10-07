@@ -1,13 +1,10 @@
 // ===================TESTIMONIALS================
 .testimonials {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 100px 0;
     background-color: var(--bg-three);
     overflow: hidden;
     justify-content: center;
-
+    flex-direction: column;
 
     .swiper-slide {
         width: auto !important;
