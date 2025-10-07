@@ -29,8 +29,8 @@
     <div class="home-page split-text bg-surface-color">
       <!-- Header -->
       <header class="header">
-        <div class="header__menu">
-          <div class="header__menu-frame">
+        <div class="header__menu d-flex">
+          <div class="header__menu-frame d-flex">
             <div class="header__menu-frame__logo">
               <a href="#">
                 <img
@@ -40,9 +40,9 @@
                 />
               </a>
             </div>
-            <div class="header__menu-frame__nav">
+            <div class="header__menu-frame__nav d-flex">
               <!-- Home -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Home</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -80,7 +80,7 @@
               </div>
 
               <!-- Listing -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Listing</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -118,7 +118,7 @@
               </div>
 
               <!-- Properties -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Properties</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -146,7 +146,7 @@
               </div>
 
               <!-- Pages -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Pages</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -169,7 +169,7 @@
               </div>
 
               <!-- Blog -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Blog</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -188,7 +188,7 @@
               </div>
 
               <!-- Dashboard -->
-              <div class="header__nav-link--dropdown nav-link">
+              <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Dashboard</span>
                 <span class="header__nav-icon icon-CaretDown"></span>
                 <ul class="header__dropdown-menu">
@@ -215,7 +215,7 @@
               </div>
             </div>
           </div>
-          <div class="header__menu-actions">
+          <div class="header__menu-actions d-flex">
             <button class="header__btn header__btn--login">
               <span class="header__btn-icon icon-user"></span>
               <span class="header__btn-text">Sign in</span>
@@ -416,8 +416,8 @@
       <!-- Hero -->
       <section class="hero" role="main">
         <div class="container">
-          <div class="hero__content">
-            <div class="hero__text">
+          <div class="hero__content d-flex">
+            <div class="hero__text d-flex">
               <h1 id="hero-heading" class="hero__title">
                 Find Your Dream Home
               </h1>
@@ -426,14 +426,14 @@
                 residence you dream of,<br />let's discuss for your dream house?
               </p>
             </div>
-            <form class="hero__search" aria-label="Property search form">
+            <form class="hero__search d-flex" aria-label="Property search form">
               <div
                 class="hero__tabs"
                 role="tablist"
                 aria-label="Property type selection"
               >
                 <div
-                  class="hero__tab hero__tab-active"
+                  class="hero__tab hero__tab-active d-flex"
                   role="tab"
                   id="for-rent-tab"
                   aria-selected="true"
@@ -443,7 +443,7 @@
                   </button>
                 </div>
                 <div
-                  class="hero__tab"
+                  class="hero__tab d-flex"
                   role="tab"
                   aria-selected="false"
                   id="for-sale-tab"
@@ -464,7 +464,7 @@
                     <label class="hero__label" id="property-type-label"
                       >Type</label
                     >
-                    <div class="hero__input-group">
+                    <div class="hero__input-group d-flex">
                       <div class="hero__dropdown">
                         <div class="hero__dropdown-selected">All type</div>
                         <ul class="hero__dropdown-menu">
@@ -497,7 +497,7 @@
                     <label class="hero__label" for="location-search"
                       >Location</label
                     >
-                    <div class="hero__input-group">
+                    <div class="hero__input-group d-flex">
                       <input
                         class="hero__input"
                         type="text"
@@ -518,7 +518,7 @@
                     <label class="hero__label" for="keyword-search"
                       >Keyword</label
                     >
-                    <div class="hero__input-group">
+                    <div class="hero__input-group d-flex">
                       <input
                         class="hero__input"
                         type="text"
@@ -3173,11 +3173,11 @@
         </div>
       </section>
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer d-flex">
         <!-- Footer Top -->
         <div class="container">
-          <div class="footer__top">
-            <div class="footer__logo">
+          <div class="footer__top d-flex">
+            <div class="footer__logo d-flex">
               <a href="#">
                 <img
                   class="footer__logo-img"
@@ -3186,37 +3186,45 @@
                 />
               </a>
             </div>
-            <div class="footer__social-icons">
+            <div class="footer__social-icons d-flex">
               <div class="footer__social-text">Follow Us:</div>
-              <ul class="footer__social-list">
+              <ul class="footer__social-list d-flex">
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Vector"></span>
+                    <span class="footer__social-icon icon-Vector d-flex"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Vector-1"></span>
+                    <span
+                      class="footer__social-icon icon-Vector-1 d-flex"
+                    ></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Frame"></span>
+                    <span class="footer__social-icon icon-Frame d-flex"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Vector-2"></span>
+                    <span
+                      class="footer__social-icon icon-Vector-2 d-flex"
+                    ></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Vector-3"></span>
+                    <span
+                      class="footer__social-icon icon-Vector-3 d-flex"
+                    ></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="footer__social-icon icon-Vector-4"></span>
+                    <span
+                      class="footer__social-icon icon-Vector-4 d-flex"
+                    ></span>
                   </a>
                 </li>
               </ul>
@@ -3235,17 +3243,17 @@
                   Specializes in providing high-class tours for those in need.
                   Contact Us
                 </p>
-                <div class="footer__contact">
+                <div class="footer__contact d-flex">
                   <span class="footer__contact-icon icon-MapPin"></span>
                   <p class="footer__contact-text">
                     101 E 129th St, East Chicago, IN 46312, US
                   </p>
                 </div>
-                <div class="footer__contact">
+                <div class="footer__contact d-flex">
                   <span class="footer__contact-icon icon-phone"></span>
                   <div class="footer__contact-text">1-333-345-6868</div>
                 </div>
-                <div class="footer__contact">
+                <div class="footer__contact d-flex">
                   <span class="footer__contact-icon icon-envelope-o"></span>
                   <div class="footer__contact-text">themesflat@gmail.com</div>
                 </div>
@@ -3286,7 +3294,7 @@
                   Your Weekly/Monthly Dose of Knowledge and Inspiration
                 </p>
               </div>
-              <div class="footer__newsletter-input">
+              <div class="footer__newsletter-input d-flex">
                 <input
                   class="footer__email-input"
                   placeholder="Your email address"
@@ -3294,7 +3302,7 @@
                 />
                 <button
                   type="submit"
-                  class="footer__send-icon icon-send"
+                  class="footer__send-icon icon-send d-flex"
                 ></button>
               </div>
             </div>

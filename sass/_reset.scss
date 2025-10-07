@@ -1394,6 +1394,11 @@ a {
     overflow: hidden;
 }
 
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
 .overlay-link {
     position: absolute;
     inset: 0;
@@ -1410,66 +1415,66 @@ a {
 //     }
 // }
 
-.progress-wrap {
-    position: fixed;
-    bottom: 40px;
-    right: 15px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 999px;
-    z-index: 98;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-    -webkit-transition: all 400ms linear;
-    -o-transition: all 400ms linear;
-    transition: all 400ms linear;
-    background: var(--White-light);
-    border: 1px solid var(--Line);
+// .progress-wrap {
+//     position: fixed;
+//     bottom: 40px;
+//     right: 15px;
+//     height: 40px;
+//     width: 40px;
+//     cursor: pointer;
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 999px;
+//     z-index: 98;
+//     opacity: 0;
+//     visibility: hidden;
+//     -webkit-transform: translateY(20px);
+//     -ms-transform: translateY(20px);
+//     transform: translateY(20px);
+//     -webkit-transition: all 400ms linear;
+//     -o-transition: all 400ms linear;
+//     transition: all 400ms linear;
+//     background: var(--White-light);
+//     border: 1px solid var(--Line);
 
-    &::after {
-        position: absolute;
-        content: "\e908";
-        font-family: $fontIcon;
-        text-align: center;
-        line-height: 40px;
-        font-size: 20px;
-        color: var(--On-surface);
-        height: 40px;
-        width: 40px;
-        cursor: pointer;
-        z-index: 1;
-        -webkit-transition: all 400ms linear;
-        -o-transition: all 400ms linear;
-        transition: all 400ms linear;
-    }
+//     &::after {
+//         position: absolute;
+//         content: "\e908";
+//         font-family: $fontIcon;
+//         text-align: center;
+//         line-height: 40px;
+//         font-size: 20px;
+//         color: var(--On-surface);
+//         height: 40px;
+//         width: 40px;
+//         cursor: pointer;
+//         z-index: 1;
+//         -webkit-transition: all 400ms linear;
+//         -o-transition: all 400ms linear;
+//         transition: all 400ms linear;
+//     }
 
-    &.active-progress {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
+//     &.active-progress {
+//         opacity: 1;
+//         visibility: visible;
+//         -webkit-transform: translateY(0);
+//         -ms-transform: translateY(0);
+//         transform: translateY(0);
+//     }
 
-    svg path {
-        fill: none;
-    }
+//     svg path {
+//         fill: none;
+//     }
 
-    svg.progress-circle path {
-        box-sizing: border-box;
-        stroke: var(--On-surface);
-        stroke-width: 4;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-        transition-duration: 0.4s;
-        transition-timing-function: linear;
-    }
-}
+//     svg.progress-circle path {
+//         box-sizing: border-box;
+//         stroke: var(--On-surface);
+//         stroke-width: 4;
+//         transition-property: all;
+//         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//         transition-duration: 150ms;
+//         transition-duration: 0.4s;
+//         transition-timing-function: linear;
+//     }
+// }

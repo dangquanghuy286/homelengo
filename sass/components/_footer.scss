@@ -1,9 +1,7 @@
 // =========================FOOTER================================
 /* Footer */
 .footer {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 50px;
     padding: 50px 0px 30px;
     width: 100%;
@@ -11,16 +9,12 @@
 }
 
 .footer__top {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
 
 .footer__logo {
-    display: flex;
-    align-items: center;
     gap: 8px;
     height: 48px;
 }
@@ -32,8 +26,6 @@
 
 /* Social Icons */
 .footer__social-icons {
-    display: flex;
-    align-items: center;
     gap: 12px;
     flex-shrink: 0;
 }
@@ -45,10 +37,7 @@
 }
 
 .footer__social-list {
-    display: flex;
-    align-items: center;
     gap: 12px;
-
 }
 
 .footer__social-list li a {
@@ -62,8 +51,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -156,8 +143,6 @@
 }
 
 .footer__contact {
-    display: flex;
-    align-items: center;
     gap: 8px;
 }
 
@@ -258,8 +243,6 @@
 }
 
 .footer__newsletter-input {
-    display: flex;
-    align-items: center;
     height: 44px;
     padding: 10px 16px;
     background-color: var(--gray-light);
@@ -288,8 +271,6 @@
     background: none;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0;
 }

@@ -341,22 +341,22 @@ document
 document.addEventListener("DOMContentLoaded", () => {
   // ================= Hero animations =================
   gsap.from("#hero-heading", {
-    y: 20,
+    y: 40,
     opacity: 0,
-    duration: 2,
-    stagger: 0.05,
-    ease: "power1.out",
+    duration: 2.8,
+    stagger: 0.08,
+    ease: "power2.out",
   });
 
   gsap.from(".hero__subtitle", {
-    y: 12,
+    y: 25,
     opacity: 0,
-    duration: 2,
-    delay: 0.3,
-    ease: "power3.out",
+    duration: 2.8,
+    delay: 0.4,
+    ease: "power2.out",
   });
 
-  // ================= Featured Properties  =================
+  // ================= Featured Properties =================
   for (let i = 1; i <= 8; i++) {
     gsap.from(`#featured-properties-title-section-${i}`, {
       scrollTrigger: {
@@ -364,10 +364,10 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "top 85%",
         toggleActions: "play none none reverse",
       },
-      y: 15,
+      y: 25,
       opacity: 0,
-      duration: 2,
-      ease: "power3.out",
+      duration: 2.8,
+      ease: "power2.out",
     });
   }
 
@@ -378,10 +378,10 @@ document.addEventListener("DOMContentLoaded", () => {
         start: "top 85%",
         toggleActions: "play none none reverse",
       },
-      y: 13,
+      y: 20,
       opacity: 0,
-      duration: 2,
-      ease: "power3.out",
+      duration: 2.8,
+      ease: "power2.out",
       delay: 0.3,
     });
   }
@@ -393,24 +393,25 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleActions: "play none none reverse",
     },
     opacity: 0,
-    y: 7,
-    duration: 2,
-    stagger: 0.15,
-    ease: "power3.out",
+    y: 20,
+    duration: 2.5,
+    stagger: 0.2,
+    ease: "power2.out",
   });
-  // Property cards
+
   gsap.from(".featured-properties__item", {
     scrollTrigger: {
       trigger: ".featured-properties__list",
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 15,
+    y: 25,
     opacity: 0,
-    duration: 2,
-    ease: "power3.out",
-    stagger: 0.25,
+    duration: 2.8,
+    ease: "power2.out",
+    stagger: 0.3,
   });
+
   // ================= Explore Cities animations =================
   gsap.from(".explore-cities__item", {
     scrollTrigger: {
@@ -419,82 +420,79 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleActions: "play none none reverse",
     },
     opacity: 0,
-    y: 20,
+    y: 25,
     scale: 0.95,
-    duration: 2,
-    stagger: 0.2,
+    duration: 2.8,
+    stagger: 0.25,
     ease: "power2.out",
   });
 
   // ================= Benefits animations =================
-
-  // Subtitle
   gsap.from(".benefits__subtitle", {
     scrollTrigger: {
       trigger: "#featured-properties-title-section-4",
       start: "top 80%",
       toggleActions: "play none none reverse",
     },
-    y: 10,
+    y: 15,
     opacity: 0,
-    duration: 2,
-    delay: 0.2,
-    ease: "power3.out",
+    duration: 2.6,
+    delay: 0.3,
+    ease: "power2.out",
   });
 
-  // Intro paragraph
   gsap.from(".benefits__intro", {
     scrollTrigger: {
       trigger: ".benefits__intro",
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 7,
+    y: 15,
     opacity: 0,
-    duration: 2,
-    delay: 0.3,
-    ease: "power3.out",
+    duration: 2.6,
+    delay: 0.4,
+    ease: "power2.out",
   });
 
-  // Benefit items
   gsap.from(".benefits__item", {
     scrollTrigger: {
       trigger: ".benefits__list",
       start: "top 85%",
       toggleActions: "play none none reverse",
     },
-    y: 12,
+    y: 20,
     opacity: 0,
-    duration: 2,
-    ease: "power3.out",
-    stagger: 0.25,
+    duration: 2.8,
+    ease: "power2.out",
+    stagger: 0.3,
   });
 
-  //====================LATEST=============================
+  // ================= Latest =================
   gsap.from(".latest-news__item", {
     scrollTrigger: {
       trigger: ".latest-news__list",
       start: "top 80%",
-      toggleActions: "play none none reserve",
+      toggleActions: "play none none reverse",
     },
-    y: 15,
+    y: 20,
     opacity: 0,
-    duration: 2,
-    ease: "power3.out",
+    duration: 2.8,
+    ease: "power2.out",
     stagger: 0.3,
   });
-  // ====================TEAM=============================
+
+  // ================= Team =================
   gsap.from(".team__item", {
     scrollTrigger: {
       trigger: ".team__list",
       start: "top 80%",
       toggleActions: "play none none reverse",
     },
-    y: 10,
+    y: 20,
     opacity: 0,
-    scale: 0.9,
-    duration: 2,
-    stagger: 0.2,
+    scale: 0.92,
+    duration: 2.8,
+    stagger: 0.25,
     ease: "power2.out",
   });
 });
