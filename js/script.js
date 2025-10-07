@@ -386,6 +386,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  gsap.utils.toArray(".featured-properties__description").forEach((desc) => {
+    gsap.from(desc, {
+      scrollTrigger: {
+        trigger: desc,
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+      y: 20,
+      opacity: 0,
+      duration: 2.6,
+      ease: "power2.out",
+      delay: 0.4,
+    });
+  });
   gsap.from(".featured-properties__tab", {
     scrollTrigger: {
       trigger: ".featured-properties__tab-menu",
@@ -399,17 +413,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power2.out",
   });
 
-  gsap.from(".featured-properties__item", {
-    scrollTrigger: {
-      trigger: ".featured-properties__list",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 25,
-    opacity: 0,
-    duration: 2.8,
-    ease: "power2.out",
-    stagger: 0.3,
+  gsap.utils.toArray(".featured-properties").forEach((section) => {
+    gsap.from(section.querySelectorAll(".featured-properties__item"), {
+      scrollTrigger: {
+        trigger: section.querySelector(".featured-properties__list"),
+        start: "top 85%",
+        toggleActions: "play none none reverse",
+      },
+      y: 25,
+      opacity: 0,
+      duration: 2.8,
+      ease: "power2.out",
+      stagger: 0.3,
+    });
   });
 
   // ================= Explore Cities animations =================
@@ -465,6 +481,20 @@ document.addEventListener("DOMContentLoaded", () => {
     duration: 2.8,
     ease: "power2.out",
     stagger: 0.3,
+  });
+  // ================= Testimonials =================
+  gsap.from(".testimonials__item", {
+    scrollTrigger: {
+      trigger: ".testimonials",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1.5,
+    stagger: 0.3,
+    delay: 0.5,
+    ease: "power2.out",
   });
 
   // ================= Latest =================
