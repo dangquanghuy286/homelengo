@@ -4083,9 +4083,6 @@ input[type=range]::-moz-range-thumb {
   .header__btn-text {
     font-size: 11px;
   }
-  .header__mobile-btn--submit {
-    padding: 20px;
-  }
   .hero {
     padding: 200px 0;
   }
