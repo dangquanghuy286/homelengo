@@ -4239,4 +4239,9 @@ input[type=range]::-moz-range-thumb {
   padding: 0 15px;
 }
 
+.wow {
+  visibility: hidden;
+  will-change: transform, opacity;
+}
+
 /*# sourceMappingURL=style.css.map */

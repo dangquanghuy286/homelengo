@@ -347,192 +347,205 @@ document
       }
     });
   });
-// ===========GSAP=======================
+// // ===========GSAP=======================
+// document.addEventListener("DOMContentLoaded", () => {
+//   // ================= Hero animations =================
+//   gsap.from("#hero-heading", {
+//     y: 20,
+//     opacity: 0,
+//     duration: 1,
+//     stagger: 0.05,
+//     ease: "power3.out",
+//   });
+
+//   gsap.from(".hero__subtitle", {
+//     y: 15,
+//     opacity: 0,
+//     duration: 1,
+//     delay: 0.2,
+//     ease: "power3.out",
+//   });
+
+//   // ================= Featured Properties =================
+//   for (let i = 1; i <= 8; i++) {
+//     gsap.from(`#featured-properties-title-section-${i}`, {
+//       scrollTrigger: {
+//         trigger: `#featured-properties-title-section-${i}`,
+//         start: "top 85%",
+//         toggleActions: "play none none reverse",
+//       },
+//       y: 15,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out",
+//     });
+
+//     gsap.from(`#featured-subtitle-${i}`, {
+//       scrollTrigger: {
+//         trigger: `#featured-properties-title-section-${i}`,
+//         start: "top 85%",
+//         toggleActions: "play none none reverse",
+//       },
+//       y: 10,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out",
+//       delay: 0.2,
+//     });
+//   }
+
+//   gsap.utils.toArray(".featured-properties__description").forEach((desc) => {
+//     gsap.from(desc, {
+//       scrollTrigger: {
+//         trigger: desc,
+//         start: "top 85%",
+//         toggleActions: "play none none reverse",
+//       },
+//       y: 10,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out",
+//     });
+//   });
+
+//   gsap.from(".featured-properties__tab", {
+//     scrollTrigger: {
+//       trigger: ".featured-properties__tab-menu",
+//       start: "top 85%",
+//       toggleActions: "play none none reverse",
+//     },
+//     opacity: 0,
+//     y: 10,
+//     duration: 1,
+//     stagger: 0.15,
+//     ease: "power3.out",
+//   });
+
+//   gsap.utils.toArray(".featured-properties").forEach((section) => {
+//     gsap.from(section.querySelectorAll(".featured-properties__item"), {
+//       scrollTrigger: {
+//         trigger: section.querySelector(".featured-properties__list"),
+//         start: "top 85%",
+//         toggleActions: "play none none reverse",
+//       },
+//       y: 15,
+//       opacity: 0,
+//       duration: 1,
+//       ease: "power3.out",
+//       stagger: 0.2,
+//     });
+//   });
+
+//   // ================= Explore Cities =================
+//   gsap.from(".explore-cities__item", {
+//     scrollTrigger: {
+//       trigger: ".explore-cities__list",
+//       start: "top 80%",
+//       toggleActions: "play none none reverse",
+//     },
+//     opacity: 0,
+//     y: 15,
+//     scale: 0.97,
+//     duration: 1,
+//     stagger: 0.2,
+//     ease: "power3.out",
+//   });
+
+//   // ================= Benefits =================
+//   gsap.from(".benefits__subtitle", {
+//     scrollTrigger: {
+//       trigger: "#featured-properties-title-section-4",
+//       start: "top 80%",
+//       toggleActions: "play none none reverse",
+//     },
+//     y: 10,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//   });
+
+//   gsap.from(".benefits__intro", {
+//     scrollTrigger: {
+//       trigger: ".benefits__intro",
+//       start: "top 85%",
+//       toggleActions: "play none none reverse",
+//     },
+//     y: 10,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//   });
+
+//   gsap.from(".benefits__item", {
+//     scrollTrigger: {
+//       trigger: ".benefits__list",
+//       start: "top 85%",
+//       toggleActions: "play none none reverse",
+//     },
+//     y: 15,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//     stagger: 0.2,
+//   });
+
+//   // ================= Testimonials =================
+//   gsap.from(".testimonials__item", {
+//     scrollTrigger: {
+//       trigger: ".testimonials",
+//       start: "top 85%",
+//       toggleActions: "play none none reverse",
+//     },
+//     opacity: 0,
+//     y: 25,
+//     duration: 1,
+//     stagger: 0.2,
+//     ease: "power3.out",
+//   });
+
+//   // ================= Latest =================
+//   gsap.from(".latest-news__item", {
+//     scrollTrigger: {
+//       trigger: ".latest-news__list",
+//       start: "top 80%",
+//       toggleActions: "play none none reverse",
+//     },
+//     y: 15,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//     stagger: 0.2,
+//   });
+
+//   // ================= Team =================
+//   gsap.from(".team__item", {
+//     scrollTrigger: {
+//       trigger: ".team__list",
+//       start: "top 80%",
+//       toggleActions: "play none none reverse",
+//     },
+//     y: 15,
+//     opacity: 0,
+//     scale: 0.96,
+//     duration: 1,
+//     stagger: 0.2,
+//     ease: "power3.out",
+//   });
+// });
+// =================== WOW.js ==================
 document.addEventListener("DOMContentLoaded", () => {
-  // ================= Hero animations =================
-  gsap.from("#hero-heading", {
-    y: 40,
-    opacity: 0,
-    duration: 2.8,
-    stagger: 0.08,
-    ease: "power2.out",
-  });
-
-  gsap.from(".hero__subtitle", {
-    y: 25,
-    opacity: 0,
-    duration: 2.8,
-    delay: 0.4,
-    ease: "power2.out",
-  });
-
-  // ================= Featured Properties =================
   for (let i = 1; i <= 8; i++) {
-    gsap.from(`#featured-properties-title-section-${i}`, {
-      scrollTrigger: {
-        trigger: `#featured-properties-title-section-${i}`,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-      y: 25,
-      opacity: 0,
-      duration: 2.8,
-      ease: "power2.out",
-    });
+    document
+      .getElementById(`featured-properties-title-section-${i}`)
+      ?.classList.add("wow", "animate__animated", "animate__fadeInUp");
+    document
+      .getElementById(`featured-subtitle-${i}`)
+      ?.classList.add("wow", "animate__animated", "animate__fadeInUp");
+
+    document
+      .getElementById(`featured-subtitle-${i}`)
+      ?.setAttribute("data-wow-delay", "0.2s");
   }
 
-  for (let i = 1; i <= 8; i++) {
-    gsap.from(`#featured-subtitle-${i}`, {
-      scrollTrigger: {
-        trigger: `#featured-properties-title-section-${i}`,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-      y: 20,
-      opacity: 0,
-      duration: 2.8,
-      ease: "power2.out",
-      delay: 0.3,
-    });
-  }
-
-  gsap.utils.toArray(".featured-properties__description").forEach((desc) => {
-    gsap.from(desc, {
-      scrollTrigger: {
-        trigger: desc,
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-      y: 20,
-      opacity: 0,
-      duration: 2.6,
-      ease: "power2.out",
-      delay: 0.4,
-    });
-  });
-  gsap.from(".featured-properties__tab", {
-    scrollTrigger: {
-      trigger: ".featured-properties__tab-menu",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    y: 20,
-    duration: 2.5,
-    stagger: 0.2,
-    ease: "power2.out",
-  });
-
-  gsap.utils.toArray(".featured-properties").forEach((section) => {
-    gsap.from(section.querySelectorAll(".featured-properties__item"), {
-      scrollTrigger: {
-        trigger: section.querySelector(".featured-properties__list"),
-        start: "top 85%",
-        toggleActions: "play none none reverse",
-      },
-      y: 25,
-      opacity: 0,
-      duration: 2.8,
-      ease: "power2.out",
-      stagger: 0.3,
-    });
-  });
-
-  // ================= Explore Cities animations =================
-  gsap.from(".explore-cities__item", {
-    scrollTrigger: {
-      trigger: ".explore-cities__list",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    y: 25,
-    scale: 0.95,
-    duration: 2.8,
-    stagger: 0.25,
-    ease: "power2.out",
-  });
-
-  // ================= Benefits animations =================
-  gsap.from(".benefits__subtitle", {
-    scrollTrigger: {
-      trigger: "#featured-properties-title-section-4",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    y: 15,
-    opacity: 0,
-    duration: 2.6,
-    delay: 0.3,
-    ease: "power2.out",
-  });
-
-  gsap.from(".benefits__intro", {
-    scrollTrigger: {
-      trigger: ".benefits__intro",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 15,
-    opacity: 0,
-    duration: 2.6,
-    delay: 0.4,
-    ease: "power2.out",
-  });
-
-  gsap.from(".benefits__item", {
-    scrollTrigger: {
-      trigger: ".benefits__list",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    y: 20,
-    opacity: 0,
-    duration: 2.8,
-    ease: "power2.out",
-    stagger: 0.3,
-  });
-  // ================= Testimonials =================
-  gsap.from(".testimonials__item", {
-    scrollTrigger: {
-      trigger: ".testimonials",
-      start: "top 85%",
-      toggleActions: "play none none reverse",
-    },
-    opacity: 0,
-    y: 50,
-    duration: 1.5,
-    stagger: 0.3,
-    delay: 0.5,
-    ease: "power2.out",
-  });
-
-  // ================= Latest =================
-  gsap.from(".latest-news__item", {
-    scrollTrigger: {
-      trigger: ".latest-news__list",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    y: 20,
-    opacity: 0,
-    duration: 2.8,
-    ease: "power2.out",
-    stagger: 0.3,
-  });
-
-  // ================= Team =================
-  gsap.from(".team__item", {
-    scrollTrigger: {
-      trigger: ".team__list",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-    y: 20,
-    opacity: 0,
-    scale: 0.92,
-    duration: 2.8,
-    stagger: 0.25,
-    ease: "power2.out",
-  });
+  new WOW().init();
 });

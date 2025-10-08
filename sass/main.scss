@@ -11,3 +11,9 @@
     margin: auto;
     padding: 0 15px;
 }
+
+// ================ WOW.JS ================//
+.wow {
+    visibility: hidden;
+    will-change: transform, opacity;
+}
