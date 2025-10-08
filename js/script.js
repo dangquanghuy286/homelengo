@@ -1,8 +1,25 @@
-// ====================Toggle MENU==================
-document.querySelector(".toggle-mobile").addEventListener("click", function () {
-  document.querySelector(".header__mobile-menu").classList.toggle("active");
-  document.querySelector(".toggle-mobile").classList.toggle("active");
+// ==================== Toggle MENU ===================
+const toggleBtn = document.querySelector(".toggle-mobile");
+const menu = document.querySelector(".header__mobile-menu");
+const overlay = document.querySelector(".header__mobile-overlay");
+const closeBtn = document.querySelector(".header__mobile-close-btn");
+
+// Khi click vào nút mở menu
+toggleBtn.addEventListener("click", () => {
+  menu.classList.add("active");
+  overlay.classList.add("active");
+  closeBtn.classList.add("active");
 });
+
+// Khi click overlay hoặc nút đóng thì đóng menu
+[overlay, closeBtn].forEach((el) => {
+  el.addEventListener("click", () => {
+    menu.classList.remove("active");
+    overlay.classList.remove("active");
+    closeBtn.classList.remove("active");
+  });
+});
+
 // ===================Dropdown=====================
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".hero__dropdown");
@@ -289,23 +306,23 @@ updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
 
 // =====================SUBMENU=================================//
 document
-  .querySelectorAll(".header__mobile-nav-link--dropdown ")
+  .querySelectorAll(".header__mobile-nav-link--dropdown") // Bỏ space thừa ở cuối selector cho sạch
   .forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const parent = e.currentTarget.parentElement; // Lấy cha trực tiếp
+      const parent = e.currentTarget.parentElement; // .header__mobile-nav-item
       const subMenu = parent.querySelector(".header__mobile-sub-menu");
       const icon = parent.querySelector(".header__mobile-nav-icon");
 
       if (subMenu) {
-        // Đóng tất cả sub-menu khác
+        // Đóng tất cả sub-menu khác (toggle trên parent)
         document
-          .querySelectorAll(".header__mobile-sub-menu.active")
-          .forEach((menu) => {
-            if (menu !== subMenu) {
-              menu.classList.remove("active");
+          .querySelectorAll(".header__mobile-nav-item.active")
+          .forEach((otherItem) => {
+            if (otherItem !== parent) {
+              otherItem.classList.remove("active");
 
-              const otherIcon = menu.parentElement.querySelector(
+              const otherIcon = otherItem.querySelector(
                 ".header__mobile-nav-icon"
               );
               if (otherIcon) {
@@ -315,7 +332,8 @@ document
             }
           });
 
-        const isActive = subMenu.classList.toggle("active");
+        // Toggle trên parent thay vì subMenu
+        const isActive = parent.classList.toggle("active");
 
         if (icon) {
           if (isActive) {
