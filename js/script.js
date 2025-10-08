@@ -517,21 +517,6 @@ document
 //     stagger: 0.2,
 //   });
 
-//   // ================= Team =================
-//   gsap.from(".team__item", {
-//     scrollTrigger: {
-//       trigger: ".team__list",
-//       start: "top 80%",
-//       toggleActions: "play none none reverse",
-//     },
-//     y: 15,
-//     opacity: 0,
-//     scale: 0.96,
-//     duration: 1,
-//     stagger: 0.2,
-//     ease: "power3.out",
-//   });
-// });
 // =================== WOW.js ==================
 document.addEventListener("DOMContentLoaded", () => {
   for (let i = 1; i <= 8; i++) {
