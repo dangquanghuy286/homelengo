@@ -23,6 +23,7 @@ toggleBtn.addEventListener("click", () => {
 // ===================Dropdown=====================
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".hero__dropdown");
+  if (!dropdown) return;
   const selected = dropdown.querySelector(".hero__dropdown-selected");
   const menu = dropdown.querySelector(".hero__dropdown-menu");
   const items = dropdown.querySelectorAll(".hero__dropdown-item");
@@ -238,7 +239,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 // ===================Range=============================
 const priceMin = document.getElementById("priceMin");
 const priceMax = document.getElementById("priceMax");
@@ -285,43 +285,49 @@ function updateRange(
 const priceProgress = document.getElementById("priceProgress");
 const sizeProgress = document.getElementById("sizeProgress");
 
-priceMax.addEventListener("mousedown", () => (priceMax.style.zIndex = "10"));
-priceMin.addEventListener("mousedown", () => (priceMax.style.zIndex = "1"));
-sizeMax.addEventListener("mousedown", () => (sizeMax.style.zIndex = "10"));
-sizeMin.addEventListener("mousedown", () => (sizeMax.style.zIndex = "1"));
+if (priceMin && priceMax && priceText && priceProgress) {
+  priceMax.addEventListener("mousedown", () => (priceMax.style.zIndex = "10"));
+  priceMin.addEventListener("mousedown", () => (priceMax.style.zIndex = "1"));
 
-priceMin.addEventListener(
-  "input",
-  updateRange(priceMin, priceMax, priceText, priceProgress, true)
-);
-priceMax.addEventListener(
-  "input",
-  updateRange(priceMin, priceMax, priceText, priceProgress, true)
-);
-sizeMin.addEventListener(
-  "input",
-  updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
-);
-sizeMax.addEventListener(
-  "input",
-  updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
-);
+  priceMin.addEventListener(
+    "input",
+    updateRange(priceMin, priceMax, priceText, priceProgress, true)
+  );
+  priceMax.addEventListener(
+    "input",
+    updateRange(priceMin, priceMax, priceText, priceProgress, true)
+  );
 
-updateRange(priceMin, priceMax, priceText, priceProgress, true)();
-updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
+  updateRange(priceMin, priceMax, priceText, priceProgress, true)();
+}
+
+if (sizeMin && sizeMax && sizeText && sizeProgress) {
+  sizeMax.addEventListener("mousedown", () => (sizeMax.style.zIndex = "10"));
+  sizeMin.addEventListener("mousedown", () => (sizeMax.style.zIndex = "1"));
+
+  sizeMin.addEventListener(
+    "input",
+    updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
+  );
+  sizeMax.addEventListener(
+    "input",
+    updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)
+  );
+
+  updateRange(sizeMin, sizeMax, sizeText, sizeProgress, false)();
+}
 
 // =====================SUBMENU=================================//
 document
-  .querySelectorAll(".header__mobile-nav-link--dropdown") // Bỏ space thừa ở cuối selector cho sạch
+  .querySelectorAll(".header__mobile-nav-link--dropdown")
   .forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const parent = e.currentTarget.parentElement; // .header__mobile-nav-item
+      const parent = e.currentTarget.parentElement;
       const subMenu = parent.querySelector(".header__mobile-sub-menu");
       const icon = parent.querySelector(".header__mobile-nav-icon");
 
       if (subMenu) {
-        // Đóng tất cả sub-menu khác (toggle trên parent)
         document
           .querySelectorAll(".header__mobile-nav-item.active")
           .forEach((otherItem) => {
