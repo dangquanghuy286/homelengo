@@ -46,7 +46,6 @@
     color: var(--white);
 }
 
-/* ========== Hover Effect ========== */
 .pagination__page:hover,
 .pagination__prev-icon:hover,
 .pagination__next-icon:hover {
@@ -54,11 +53,4 @@
     color: var(--white);
     border-color: var(--primary-color);
     cursor: pointer;
-}
-
-
-.pagination__page.active:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    cursor: default;
 }
