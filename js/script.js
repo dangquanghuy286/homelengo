@@ -107,6 +107,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //==================== Explore =====================
 document.addEventListener("DOMContentLoaded", () => {
   const exploreSwiper = new Swiper(".explore-cities__list", {
+    on: {
+      slideChange: function () {
+        new WOW().init(); // Gọi lại WOW khi chuyển slide
+      },
+    },
     slidesPerView: 6,
     spaceBetween: 8,
     slidesPerGroup: 2,
@@ -117,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //   disableOnInteraction: false,
     //   pauseOnMouseEnter: true,
     // },
+
     pagination: {
       el: ".explore-cities__dots",
       type: "bullets",
@@ -519,7 +525,7 @@ document
 
 // =================== WOW.js ==================
 document.addEventListener("DOMContentLoaded", () => {
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 9; i++) {
     document
       .getElementById(`featured-properties-title-section-${i}`)
       ?.classList.add("wow", "animate__animated", "animate__fadeInUp");
