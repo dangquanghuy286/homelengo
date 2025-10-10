@@ -55,7 +55,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     background-color: var(--gray-light);
-    color: var(--text-dark);
+    color: var(--white);
 }
 
 .footer__social-icon:hover {
@@ -65,6 +65,13 @@
 
 .icon-Vector:before {
     content: "\e93c";
+    font-family: "icomoon";
+    font-size: 16px;
+    line-height: 1;
+}
+
+.icon-TwitterLogo:before {
+    content: "\e903";
     font-family: "icomoon";
     font-size: 16px;
     line-height: 1;
