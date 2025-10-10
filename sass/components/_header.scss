@@ -145,11 +145,13 @@
     transform: translateY(0);
 }
 
+
 /* Action */
 .header__menu-actions {
     gap: 16px;
 }
 
+/* Button chung */
 .header__btn {
     all: unset;
     box-sizing: border-box;
@@ -163,72 +165,73 @@
     cursor: pointer;
 }
 
-/* Nút Login */
+/* Icon chung */
+.header__btn-icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+/* Text chung */
+.header__btn-text,
+.header__btn-text--submit {
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* ===== Nút Login ===== */
 .header__btn--login {
     border: 1px solid var(--primary-color);
     width: 140px;
 }
 
+.header__btn--login .header__btn-text {
+    color: var(--text-dark);
+}
+
+
+/* Hover đổi màu */
 .header__btn--login:hover {
     background-color: var(--primary-color);
 }
 
-.header__btn--login:hover .header__btn-text,
-.header__btn--login:hover .header__btn-icon,
-.header__btn--login:hover .icon-menu:before {
+.header__btn--login:hover .header__btn-text {
     color: var(--white);
 }
 
-/* Icon chung */
-.header__btn-icon {
-    width: 20px;
-    height: 20px;
-    transition: color 0.3s ease;
+.header__btn--login:hover .header__btn-icon {
+    filter: brightness(0) invert(1);
 }
 
-/* Text chung */
-.header__btn-text {
-    font-weight: 600;
-    color: var(--text-dark);
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-/* Nút Submit */
+/* ===== Nút Submit ===== */
 .header__btn--submit {
     width: 206px;
     background-color: var(--primary-color);
+    border: 1px solid transparent;
 }
 
+
+.header__btn-text--submit {
+    color: var(--white);
+}
+
+/* Hover đổi màu */
 .header__btn--submit:hover {
     background-color: var(--white);
-    border: 1px solid var(--primary-color);
+    border-color: var(--primary-color);
     opacity: 0.9;
 }
 
-.header__btn-text--submit {
-    font-weight: 600;
-    color: var(--white);
-    font-size: 16px;
-    text-align: center;
-    transition: color 0.3s ease;
-}
-
-.header__btn--submit:hover .header__btn-text--submit,
-.header__btn--submit:hover .header__btn-icon,
-.header__btn--submit:hover .icon-content_copy:before {
+.header__btn--submit:hover .header__btn-text--submit {
     color: var(--black);
 }
 
-/* Icon */
-.icon-content_copy:before {
-    content: "\e919";
-    font-family: "icomoon";
-    line-height: 1;
-    display: inline-block;
-    color: var(--white);
-    transition: color 0.3s ease;
+.header__btn--submit:hover .header__btn-icon {
+    filter: brightness(0) invert(0);
 }
+
+
 
 .icon-menu:before {
     content: "\e936";
@@ -410,24 +413,47 @@
     transition: all 0.3s ease;
 }
 
-/* Nút login */
+/* Icon chung */
+.header__mobile-btn-icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+/* ===== Nút login ===== */
 .header__mobile-btn--login {
     background-color: var(--white);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
 
+
+.header__mobile-btn--login .header__mobile-btn-icon {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
+}
+
+/* Hover — trắng */
 .header__mobile-btn--login:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
 
-/* Nút submit */
+.header__mobile-btn--login:hover .header__mobile-btn-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ===== Nút submit ===== */
 .header__mobile-btn--submit {
     background-color: var(--primary-color);
     color: var(--white);
     border: 1px solid var(--primary-color);
 }
+
+
+.header__mobile-btn--submit .header__mobile-btn-icon {
+    filter: brightness(0) invert(1);
+}
+
 
 .header__mobile-btn--submit:hover {
     background-color: var(--white);
@@ -435,9 +461,8 @@
     border: 1px solid var(--primary-color);
 }
 
-/* Icon chung */
-.header__mobile-btn-icon {
-    font-size: 18px;
+.header__mobile-btn--submit:hover .header__mobile-btn-icon {
+    filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
 }
 
 /* Contact info */
