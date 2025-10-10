@@ -3735,7 +3735,6 @@ input[type=range]::-moz-range-thumb {
 }
 .footer__terms li {
   padding: 0 8px 0 8px;
-  border-right: 1px solid var(--border-color);
 }
 .footer__terms li:last-child {
   border-right: none;
