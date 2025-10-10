@@ -4608,13 +4608,15 @@ input[type=range]::-moz-range-thumb {
   color: var(--primary-color);
 }
 
-.breadcrumb span.separator {
+/* Dấu phân cách “/” */
+.breadcrumb .dot span {
   opacity: 0.6;
   user-select: none;
   color: var(--white);
 }
 
-.breadcrumb > span:not(.separator) {
+/* Trang hiện tại */
+.breadcrumb .current {
   color: var(--white);
   opacity: 1;
   font-weight: 500;
