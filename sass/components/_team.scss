@@ -9,7 +9,6 @@
         gap: 30px;
         background-color: var(--white);
 
-        // Hover vào toàn bộ item => nút social đổi màu
         &:hover {
             .team__btnSocial {
                 background-color: var(--primary-color);

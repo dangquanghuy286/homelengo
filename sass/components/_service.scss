@@ -28,6 +28,10 @@
                     color: var(--white);
                 }
             }
+
+            .services__image-overlay {
+                transform: rotateY(360deg);
+            }
         }
     }
 
@@ -36,15 +40,13 @@
         height: 182px;
         overflow: hidden;
 
-        &:hover .services__image-overlay {
-            transform: rotateY(360deg);
-        }
+
 
         &-overlay {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
+            transition: transform 1s ease;
             cursor: pointer;
         }
     }
