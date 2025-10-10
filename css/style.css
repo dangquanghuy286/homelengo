@@ -1859,6 +1859,7 @@ a:focus, a:hover {
   display: flex;
   justify-content: center;
   position: relative;
+  background-attachment: fixed;
 }
 .hero::before {
   content: "";
