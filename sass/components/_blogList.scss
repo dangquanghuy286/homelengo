@@ -22,10 +22,7 @@
     border-radius: 30px;
 }
 
-.title-blog {
-    font-size: 56px;
-    line-height: 68px;
-}
+
 
 .list__hero {
     background: url("../images/feature-item/bg-blog-list.png") no-repeat center center;
@@ -264,7 +261,6 @@
 
 .featured-post__link:hover {
     color: var(--primary-color);
-    transition: all 0.2s ease;
     text-decoration: underline;
 }
 
@@ -488,7 +484,6 @@
     border-color: var(--primary-color);
     color: var(--primary-color);
     font-size: 14px;
-    width: 100%;
 
 }
 
