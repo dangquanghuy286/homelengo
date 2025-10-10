@@ -3846,6 +3846,8 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: row;
   gap: 40px;
+  position: relative;
+  align-items: flex-start;
 }
 
 .blog__list {
@@ -3870,6 +3872,8 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: sticky;
+  top: 100px;
 }
 
 .sidebar__search {
