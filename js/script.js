@@ -19,6 +19,7 @@ toggleBtn.addEventListener("click", () => {
     closeBtn.classList.remove("active");
   });
 });
+// ===================Text========================
 
 // ===================Dropdown=====================
 document.addEventListener("DOMContentLoaded", () => {

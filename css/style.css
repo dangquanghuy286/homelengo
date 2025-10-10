@@ -2765,6 +2765,12 @@ input[type=range]::-moz-range-thumb {
   background-color: var(--primary-color);
 }
 
+.explore-cities__item:hover .explore-cities__action-button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
 .services {
   display: flex;
   flex-direction: column;
@@ -2785,19 +2791,27 @@ input[type=range]::-moz-range-thumb {
 .services__item:hover {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
 }
+.services__item:hover .services__button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.services__item:hover .services__button .services__button-text,
+.services__item:hover .services__button .icon-arrow-right2 {
+  color: var(--white);
+}
 .services__image {
   width: 204px;
   height: 182px;
   overflow: hidden;
 }
 .services__image:hover .services__image-overlay {
-  transform: scale(1.1);
+  transform: rotateY(360deg);
 }
 .services__image-overlay {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.8s ease;
   cursor: pointer;
 }
 .services__content {
@@ -3078,6 +3092,13 @@ input[type=range]::-moz-range-thumb {
   gap: 30px;
   background-color: var(--white);
 }
+.team__item:hover .team__btnSocial {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.team__item:hover .team__btnSocial span:before {
+  color: var(--white);
+}
 .team__image-container {
   position: relative;
   width: 100%;
@@ -3123,6 +3144,7 @@ input[type=range]::-moz-range-thumb {
   visibility: hidden;
   transition: opacity 0.3s ease;
   z-index: 2;
+  color: var(--white);
 }
 .team__social-list {
   display: flex;
@@ -3767,7 +3789,6 @@ input[type=range]::-moz-range-thumb {
 }
 
 .hero-section {
-  background-size: cover;
   width: 1720px;
   padding: 0 15px;
   margin: 128px auto 0;
@@ -3808,10 +3829,8 @@ input[type=range]::-moz-range-thumb {
 }
 
 .blog__title {
-  display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
   z-index: 1;
   gap: 16px;
 }
@@ -4021,7 +4040,6 @@ input[type=range]::-moz-range-thumb {
 
 .featured-post__link:hover {
   color: var(--primary-color);
-  transition: all 0.2s ease;
   text-decoration: underline;
 }
 
@@ -4236,7 +4254,6 @@ input[type=range]::-moz-range-thumb {
   border-color: var(--primary-color);
   color: var(--primary-color);
   font-size: 14px;
-  width: 100%;
 }
 
 .blog-post__quote-highlight {
@@ -5160,13 +5177,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .wow {
-  visibility: visible !important;
-  will-change: transform, opacity;
-}
-
-.wow.animate__animated {
-  opacity: 1;
-  transition: opacity 0.6s ease;
+  visibility: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

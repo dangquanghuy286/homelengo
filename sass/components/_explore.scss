@@ -130,3 +130,11 @@
         }
     }
 }
+
+.explore-cities__item:hover {
+    .explore-cities__action-button {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--white);
+    }
+}

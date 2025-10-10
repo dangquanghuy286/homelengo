@@ -1,6 +1,5 @@
 // ===================TEAM========================
 .team {
-
     flex-direction: column;
 
     &__item {
@@ -9,6 +8,18 @@
         align-items: flex-start;
         gap: 30px;
         background-color: var(--white);
+
+        // Hover vào toàn bộ item => nút social đổi màu
+        &:hover {
+            .team__btnSocial {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+
+                span:before {
+                    color: var(--white);
+                }
+            }
+        }
     }
 
     &__image-container {
@@ -62,6 +73,7 @@
         visibility: hidden;
         transition: opacity 0.3s ease;
         z-index: 2;
+        color: var(--white);
     }
 
     &__social-list {
