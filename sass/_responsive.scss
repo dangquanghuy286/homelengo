@@ -167,11 +167,11 @@
         }
     }
 
-    .footer {
-        &__bottom {
-            padding: 30px 30px 0;
-        }
-    }
+    // .footer {
+    //     &__bottom {
+    //         padding: 30px 30px 0;
+    //     }
+    // }
 }
 
 @media (max-width: 1024px) {
@@ -371,6 +371,26 @@
             cursor: pointer;
             background: transparent;
         }
+    }
+
+    // ==================== BLOG RESPONSIVE ====================
+    .blog__content {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .blog__list,
+    .blog__sidebar {
+        width: 100%;
+        flex: none;
+    }
+
+    .blog__sidebar {
+        position: relative;
+        top: 0;
+        padding: 0;
     }
 
     // Footer
@@ -683,6 +703,10 @@
     .footer {
         &__social-list {
             gap: 5px;
+        }
+
+        &__social-text {
+            display: none;
         }
     }
 }

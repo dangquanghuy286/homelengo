@@ -1279,6 +1279,9 @@ a:focus, a:hover {
   }
 }
 @media (max-width: 1200px) {
+  .tf-grid-layout.xl-col-1 {
+    grid-template-columns: 1fr;
+  }
   .tf-grid-layout.xl-col-2 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3815,12 +3818,12 @@ input[type=range]::-moz-range-thumb {
 }
 
 .hero-section {
-  width: 1720px;
-  padding: 0 15px;
+  width: 1750px;
+  max-width: 100%;
   margin: 128px auto 0;
   justify-content: center;
-  position: relative;
   display: flex;
+  position: relative;
   height: 350px;
   border-radius: 30px;
 }
@@ -4187,9 +4190,9 @@ input[type=range]::-moz-range-thumb {
 }
 
 .blog-post__meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-card);
 }
 
 .blog-post__meta-item {
@@ -4229,7 +4232,7 @@ input[type=range]::-moz-range-thumb {
 
 .blog-post__featured-image {
   width: 100%;
-  height: 473px;
+  height: 100%;
   border-radius: 30px;
 }
 
@@ -4296,19 +4299,13 @@ input[type=range]::-moz-range-thumb {
 }
 
 .blog-post__gallery {
-  display: flex;
-  align-items: center;
   gap: 10px;
   width: 100%;
 }
 
-.blog-post__meta {
-  gap: 30px;
-  display: flex;
-  justify-content: space-between;
+.blog-post__image {
   width: 100%;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-card);
+  height: 100%;
 }
 
 .blog-post__tags {
@@ -4838,9 +4835,6 @@ input[type=range]::-moz-range-thumb {
     width: 18px;
     height: 18px;
   }
-  .footer__bottom {
-    padding: 30px 30px 0;
-  }
 }
 @media (max-width: 1024px) {
   .header__menu-frame {
@@ -4989,6 +4983,22 @@ input[type=range]::-moz-range-thumb {
     font-size: 14px;
     cursor: pointer;
     background: transparent;
+  }
+  .blog__content {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 30px;
+  }
+  .blog__list,
+  .blog__sidebar {
+    width: 100%;
+    flex: none;
+  }
+  .blog__sidebar {
+    position: relative;
+    top: 0;
+    padding: 0;
   }
   .footer__social-icons {
     width: auto;
@@ -5195,6 +5205,9 @@ input[type=range]::-moz-range-thumb {
   }
   .footer__social-list {
     gap: 5px;
+  }
+  .footer__social-text {
+    display: none;
   }
 }
 /* =============== Loading Screen =============== */

@@ -69,6 +69,11 @@
 
     // xl
     .tf-grid-layout {
+
+        &.xl-col-1 {
+            grid-template-columns: 1fr;
+        }
+
         &.xl-col-2 {
             grid-template-columns: repeat(2, 1fr);
         }
