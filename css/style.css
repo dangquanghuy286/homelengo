@@ -4520,7 +4520,6 @@ input[type=range]::-moz-range-thumb {
   color: var(--text-label);
   font-size: 14px;
   line-height: 1.4;
-  white-space: nowrap;
 }
 
 .blog-post__comment-form-fields {
