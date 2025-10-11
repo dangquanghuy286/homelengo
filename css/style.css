@@ -2108,7 +2108,6 @@ a:focus, a:hover {
   height: 52px;
 }
 .hero__advanced-button {
-  all: unset;
   box-sizing: border-box;
   border: 1px solid var(--primary-color);
   justify-content: center;
@@ -2146,7 +2145,6 @@ a:focus, a:hover {
   height: 22px;
 }
 .hero__search-button {
-  all: unset;
   box-sizing: border-box;
   background-color: var(--primary-color);
   justify-content: center;
@@ -3826,6 +3824,7 @@ input[type=range]::-moz-range-thumb {
   position: relative;
   height: 350px;
   border-radius: 30px;
+  background-attachment: fixed;
 }
 
 .hero-section::before {
@@ -4945,10 +4944,6 @@ input[type=range]::-moz-range-thumb {
     gap: 10px;
     width: 100%;
     height: 100%;
-  }
-  .hero__advanced-button, .hero__search-button {
-    width: 100%;
-    border-radius: 8px;
   }
   .hero__separator {
     display: none;

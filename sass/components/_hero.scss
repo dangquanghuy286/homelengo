@@ -270,7 +270,6 @@
     }
 
     &__advanced-button {
-        all: unset;
         box-sizing: border-box;
         border: 1px solid var(--primary-color);
         justify-content: center;
@@ -316,7 +315,6 @@
     }
 
     &__search-button {
-        all: unset;
         box-sizing: border-box;
         background-color: var(--primary-color);
         justify-content: center;
