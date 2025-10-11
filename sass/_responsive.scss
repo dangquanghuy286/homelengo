@@ -22,11 +22,7 @@
 
     }
 
-    .footer {
-        &__main {
-            gap: 40px;
-        }
-    }
+
 
     // Benefits
     .benefits {
@@ -167,11 +163,11 @@
         }
     }
 
-    // .footer {
-    //     &__bottom {
-    //         padding: 30px 30px 0;
-    //     }
-    // }
+    .footer {
+        &__main {
+            gap: 30px;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -397,10 +393,7 @@
             gap: 10px;
         }
 
-        &__main {
-            flex-direction: row;
-            gap: 30px;
-        }
+
 
 
         &__newsletter-input {
@@ -697,9 +690,6 @@
     }
 
     .footer {
-        &__social-list {
-            gap: 5px;
-        }
 
         &__social-text {
             display: none;

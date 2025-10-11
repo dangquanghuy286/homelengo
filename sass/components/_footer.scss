@@ -30,6 +30,10 @@
     flex-shrink: 0;
 }
 
+.footer__main {
+    gap: 138.67px
+}
+
 .footer__social-text {
     font-weight: 600;
     color: var(--white);
@@ -120,16 +124,9 @@
 }
 
 /* Footer_Inner */
-.footer__main {
-    display: flex;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-}
 
 .footer__info {
     display: flex;
-    width: 330px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -231,7 +228,6 @@
     align-items: flex-start;
     gap: 22px;
     width: 100%;
-    max-width: 340px;
 }
 
 .footer__newsletter-text {
