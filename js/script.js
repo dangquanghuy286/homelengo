@@ -1,3 +1,14 @@
+// =====================Preload=========================
+window.addEventListener("load", function () {
+  const preload = document.querySelector(".preload");
+  // Đợi 1s trước khi bắt đầu mờ dần
+  setTimeout(() => {
+    preload.style.transition = "opacity 1s ease"; // mờ trong
+    preload.style.opacity = "0";
+    setTimeout(() => preload.remove(), 1000); // xóa
+  }, 1000);
+});
+
 // ==================== Toggle MENU ===================
 const toggleBtn = document.querySelector(".toggle-mobile");
 const menu = document.querySelector(".header__mobile-menu");
