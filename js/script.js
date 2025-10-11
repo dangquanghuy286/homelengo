@@ -8,6 +8,31 @@ window.addEventListener("load", function () {
     setTimeout(() => preload.remove(), 1000); // xóa
   }, 1000);
 });
+// ==================== Hidden Text===================
+window.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector(".cd-words-wrapper");
+  if (!wrapper) return;
+
+  const words = wrapper.querySelectorAll(".item-text");
+  let currentIndex = 0;
+  const delay = 3000; // 3s đổi chữ một lần
+
+  function showNextWord() {
+    // Ẩn chữ hiện tại
+    words[currentIndex].classList.remove("is-visible");
+    words[currentIndex].classList.add("is-hidden");
+
+    // Tính chữ kế tiếp
+    currentIndex = (currentIndex + 1) % words.length;
+
+    // Hiện chữ kế tiếp
+    words[currentIndex].classList.remove("is-hidden");
+    words[currentIndex].classList.add("is-visible");
+  }
+
+  // Chạy liên tục
+  setInterval(showNextWord, delay);
+});
 
 // ==================== Toggle MENU ===================
 const toggleBtn = document.querySelector(".toggle-mobile");

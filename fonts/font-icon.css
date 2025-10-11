@@ -33,7 +33,6 @@
 }
 .icon-Icon-3:before {
   content: "\e943";
-  color: #fff;
 }
 .icon-Crosshair:before {
   content: "\e945";
@@ -41,15 +40,12 @@
 }
 .icon-Frame:before {
   content: "\e937";
-  color: #fff;
 }
 .icon-Vector-3:before {
   content: "\e938";
-  color: #fff;
 }
 .icon-Vector-4:before {
   content: "\e939";
-  color: #fff;
 }
 .icon-Icon-21:before {
   content: "\e942";
@@ -77,15 +73,12 @@
 }
 .icon-Vector-2:before {
   content: "\e93a";
-  color: #fff;
 }
 .icon-Vector-1:before {
   content: "\e93b";
-  color: #fff;
 }
 .icon-Vector:before {
   content: "\e93c";
-  color: #fff;
 }
 .icon-XCircle:before {
   content: "\e907";
