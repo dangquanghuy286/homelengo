@@ -137,6 +137,10 @@
             gap: 15px;
         }
 
+        &__subtitle {
+            padding: 0 100px;
+        }
+
         &__label {
             font-size: 10px;
             line-height: 14px;
@@ -475,6 +479,10 @@
     // Hero
     .hero {
         padding: 200px 0;
+
+        &__subtitle {
+            padding: 0;
+        }
     }
 
     .featured-properties {

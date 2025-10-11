@@ -8,6 +8,8 @@
         flex-direction: column;
         align-items: center;
         gap: 4px;
+        text-align: center;
+        max-width: 645px;
     }
 
     &__title-text {
@@ -17,13 +19,14 @@
         line-height: 24px;
         font-weight: 600;
         white-space: nowrap;
+        width: 100%;
     }
 
     &__title-subtext {
         color: var(--text-dark);
         line-height: 44px;
         font-weight: 800;
-        white-space: nowrap;
+        width: 100%;
     }
 
 

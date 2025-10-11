@@ -11,7 +11,7 @@
   --color-tab: #f7f7f7;
   --gray-dark: #1c1c1e;
   --gray-light: #2d3442;
-  --border-color: #ffffff1a;
+  --border-color: #ffffff12;
   --border-card: #e4e4e4;
   --color-tag: #0b213266;
   --bg-social: #00000033;
@@ -1912,15 +1912,14 @@ a:focus, a:hover {
   text-align: center;
   letter-spacing: 0;
   line-height: 88px;
-  white-space: nowrap;
 }
 .hero__subtitle {
-  width: 720px;
+  width: 100%;
+  padding: 0 330px;
   color: var(--white);
   font-size: 16px;
-  text-align: center;
   letter-spacing: 0;
-  line-height: 22px;
+  line-height: 22.4px;
 }
 .hero__search {
   flex-direction: column;
@@ -2119,6 +2118,7 @@ a:focus, a:hover {
   box-sizing: border-box;
   overflow: hidden;
   height: 100%;
+  background-color: var(--white);
 }
 .hero__advanced-button:hover {
   background-color: var(--primary-color);
@@ -2374,6 +2374,8 @@ input[type=range]::-moz-range-thumb {
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  text-align: center;
+  max-width: 645px;
 }
 .featured-properties__title-text {
   color: var(--primary-color);
@@ -2382,12 +2384,13 @@ input[type=range]::-moz-range-thumb {
   line-height: 24px;
   font-weight: 600;
   white-space: nowrap;
+  width: 100%;
 }
 .featured-properties__title-subtext {
   color: var(--text-dark);
   line-height: 44px;
   font-weight: 800;
-  white-space: nowrap;
+  width: 100%;
 }
 .featured-properties__description {
   align-self: stretch;
@@ -3689,6 +3692,7 @@ input[type=range]::-moz-range-thumb {
   border: 1px solid var(--border-color);
   border-radius: 999px;
   width: 340px;
+  background-color: var(--border-color);
 }
 
 .footer__email-input {
@@ -4851,6 +4855,9 @@ input[type=range]::-moz-range-thumb {
   .hero__form {
     gap: 15px;
   }
+  .hero__subtitle {
+    padding: 0 100px;
+  }
   .hero__label {
     font-size: 10px;
     line-height: 14px;
@@ -5089,6 +5096,9 @@ input[type=range]::-moz-range-thumb {
   }
   .hero {
     padding: 200px 0;
+  }
+  .hero__subtitle {
+    padding: 0;
   }
   .featured-properties__tab-menu {
     display: flex;

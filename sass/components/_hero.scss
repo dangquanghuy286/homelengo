@@ -43,16 +43,15 @@
         text-align: center;
         letter-spacing: 0;
         line-height: 88px;
-        white-space: nowrap;
     }
 
     &__subtitle {
-        width: 720px;
+        width: 100%;
+        padding: 0 330px;
         color: var(--white);
         font-size: 16px;
-        text-align: center;
         letter-spacing: 0;
-        line-height: 22px;
+        line-height: 22.4px;
     }
 
     &__search {
@@ -281,6 +280,7 @@
         box-sizing: border-box;
         overflow: hidden;
         height: 100%;
+        background-color: var(--white);
 
 
         &:hover {
