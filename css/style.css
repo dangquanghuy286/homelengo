@@ -2462,8 +2462,9 @@ input[type=range]::-moz-range-thumb {
 .featured-properties__item-image {
   position: relative;
   width: 100%;
-  height: auto;
   overflow: hidden;
+  aspect-ratio: 3/2;
+  line-height: 0;
 }
 .featured-properties__item-image:hover .featured-properties__image-overlay {
   transform: scale(1.1);
@@ -2473,7 +2474,6 @@ input[type=range]::-moz-range-thumb {
 }
 .featured-properties__image-overlay {
   width: 100%;
-  min-width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
@@ -3135,6 +3135,7 @@ input[type=range]::-moz-range-thumb {
   width: 100%;
   overflow: hidden;
   border-radius: 12px;
+  aspect-ratio: 1/1;
 }
 .team__image-container img {
   transition: transform 0.4s ease, filter 0.4s ease;
@@ -3342,12 +3343,13 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 26px;
+  gap: 23px;
   width: 100%;
 }
 .latest-news__image-container {
   position: relative;
   width: 100%;
+  aspect-ratio: 3/2;
   overflow: hidden;
   border-radius: 16px;
   cursor: pointer;
@@ -3362,7 +3364,7 @@ input[type=range]::-moz-range-thumb {
 }
 .latest-news__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
@@ -3877,6 +3879,10 @@ input[type=range]::-moz-range-thumb {
   align-items: flex-start;
 }
 
+.blog__content .latest-news__image-container {
+  aspect-ratio: 16/9;
+}
+
 .blog__list {
   flex: 1;
   display: flex;
@@ -4193,6 +4199,12 @@ input[type=range]::-moz-range-thumb {
   border-top: 1px solid var(--border-card);
 }
 
+.social {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .blog-post__meta-item {
   display: flex;
   align-items: center;
@@ -4221,7 +4233,6 @@ input[type=range]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-right: 110px;
   font-weight: 600;
   color: var(--black);
   font-size: 14px;
@@ -5209,6 +5220,9 @@ input[type=range]::-moz-range-thumb {
   }
   .advanced__amenities {
     grid-template-columns: 1fr;
+  }
+  .social {
+    flex-direction: column;
   }
   .footer__bottom {
     flex-direction: column;

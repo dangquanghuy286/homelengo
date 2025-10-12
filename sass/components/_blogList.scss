@@ -65,6 +65,10 @@
 
 }
 
+.blog__content .latest-news__image-container {
+    aspect-ratio: 16/9;
+}
+
 .blog__list {
     flex: 1;
     display: flex;
@@ -396,6 +400,12 @@
     border-top: 1px solid var(--border-card);
 }
 
+.social {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+
 .blog-post__meta-item {
     display: flex;
     align-items: center;
@@ -426,7 +436,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding-right: 110px;
     font-weight: 600;
     color: var(--black);
     font-size: 14px;

@@ -648,6 +648,10 @@
         grid-template-columns: 1fr;
     }
 
+    .social {
+        flex-direction: column;
+    }
+
     //Footer
     .footer {
         &__bottom {
