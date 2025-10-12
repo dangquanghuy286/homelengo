@@ -179,4 +179,18 @@
             }
         }
     }
+
+    &__text-bottom {
+        color: var(--text-three);
+        margin-top: 50px;
+
+        a {
+            color: var(--primary-color);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
 }

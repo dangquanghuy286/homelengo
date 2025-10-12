@@ -142,93 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//==================== Explore =====================
-document.addEventListener("DOMContentLoaded", () => {
-  const exploreSwiper = new Swiper(".explore-cities__list", {
-    slidesPerView: 6,
-    spaceBetween: 8,
-    slidesPerGroup: 2,
-    loop: false,
-    speed: 1000,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
-
-    pagination: {
-      el: ".explore-cities__dots",
-      type: "bullets",
-      clickable: true,
-      bulletClass: "explore-cities__dot",
-      bulletActiveClass: "active",
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 4,
-        spaceBetween: 6,
-      },
-
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 7,
-        spaceBetween: 6,
-      },
-
-      1440: {
-        slidesPerView: 6,
-        slidesPerGroup: 6,
-        spaceBetween: 8,
-      },
-    },
-
-    observer: true,
-    observeParents: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-  });
-});
-
-//================= Testimonials ===================
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".testimonials__list", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-
-    speed: 1000,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
-
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 1,
-        centeredSlides: false,
-      },
-      1440: {
-        slidesPerView: 4,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
-        centeredSlides: false,
-      },
-    },
-    watchOverflow: true,
-    watchSlidesProgress: true,
-  });
-});
 // ======================Back-to-Top======================
 const backToTopBtn = document.querySelector(".back-to-top");
 window.addEventListener("scroll", () => {
@@ -563,7 +476,7 @@ document
 
 // =================== WOW.js ==================
 document.addEventListener("DOMContentLoaded", () => {
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 10; i++) {
     document
       .getElementById(`featured-properties-title-section-${i}`)
       ?.classList.add("wow", "animate__animated", "animate__fadeInUp");

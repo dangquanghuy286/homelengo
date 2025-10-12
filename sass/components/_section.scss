@@ -1,0 +1,117 @@
+.flat-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.flat-section-benefit-v2 {
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+
+    .content-left {
+        width: 51%;
+    }
+
+    .content-right {
+        width: 49%;
+
+    }
+}
+
+.gallery-img {
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 12%;
+}
+
+.tf-image-wrap {
+    position: relative;
+    border-radius: 30px;
+
+    .img-style {
+        overflow: hidden;
+        border-radius: 30px;
+    }
+
+    &.item-2 {
+        left: 14%;
+        width: 71.67%;
+
+        .tag-item-1 {
+            top: 35%;
+            left: -15%;
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+        .tag-item-2 {
+            top: 55%;
+            right: -20%;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+
+    &.item-3,
+    &.item-1 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        width: 51%;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        height: max-content;
+    }
+
+    &.item-1 {
+        right: 0;
+        top: 0;
+        width: 44%;
+
+        .tag-item {
+            bottom: 20%;
+            left: -50%;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+
+    &.item-3 {
+        left: 0;
+        bottom: 0;
+        width: 33.5%;
+        border-radius: 30px;
+
+        .tag-item {
+            bottom: 20%;
+            right: -80%;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+
+    .tag-item {
+        position: absolute;
+        z-index: 4;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--white);
+        border-radius: 999px;
+
+        .icon {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        span {
+            font-weight: 600;
+        }
+    }
+}

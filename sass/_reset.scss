@@ -244,8 +244,6 @@ img {
 
 p {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
 
     @include res(md) {
         font-size: 16px;
@@ -582,8 +580,8 @@ h6,
     font-family: $font-main;
     margin: 0;
     text-rendering: optimizeLegibility;
-    color: var(--On-surface);
-    font-weight: 700;
+    color: var(--Black);
+    font-weight: 600;
 }
 
 h1,
@@ -619,7 +617,7 @@ h5,
 h6,
 .h6 {
     font-size: 18px;
-    line-height: 24px;
+    line-height: 25.2px;
 }
 
 .text-display-1 {
@@ -643,8 +641,9 @@ h6,
 }
 
 .text-body-2 {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
 }
 
 .text-body-3 {
@@ -660,6 +659,10 @@ h6,
 .text-caption-2 {
     font-size: 12px;
     line-height: 16px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 // @include res(xl) {
@@ -837,7 +840,7 @@ h6,
 }
 
 .text_on-surface-color {
-    color: var(--On-surface);
+    color: var(--text-label);
 }
 
 .text_secodary-color {
@@ -851,12 +854,12 @@ h6,
 /* link style
 -------------------------------------------------------------- */
 .link {
-    @include transition3;
+
     color: inherit;
+    transition: all 0.3s ease;
 
     &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
+        color: var(--primary-color)
     }
 }
 
@@ -994,7 +997,9 @@ a {
     background-color: var(--Surface-2-light);
 }
 
-
+.bg-color-2 {
+    background-color: var(--bg-three);
+}
 
 
 // Rounded
@@ -1111,6 +1116,10 @@ a {
 -------------------------------------------------------------- */
 .mt_22 {
     margin-top: 22px;
+}
+
+.mt_4 {
+    margin-top: 4px;
 }
 
 .mb_2 {

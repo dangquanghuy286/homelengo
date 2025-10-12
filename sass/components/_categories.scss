@@ -1,0 +1,42 @@
+.categories {
+    &__item {
+        padding: 30px 24px 24px 24px;
+        background-color: var(--white);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 27px;
+        position: relative;
+        z-index: 1;
+        transition: all 0.4s ease;
+        border: 1px solid var(--border-card);
+
+        // hiệu ứng hover toàn card
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+            h6 {
+                color: var(--primary-color);
+            }
+
+            .icon-box img {
+                filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
+                transform: scale(1.05);
+            }
+
+        }
+
+
+    }
+
+    .icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            transition: all 0.4s ease;
+        }
+    }
+}
