@@ -42,53 +42,67 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//==================== Explore =====================
+// =================== Explore Swiper ===================
 document.addEventListener("DOMContentLoaded", () => {
-  const exploreSwiper = new Swiper(".explore-cities__list", {
-    slidesPerView: 6,
-    spaceBetween: 8,
-    slidesPerGroup: 2,
-    loop: false,
-    speed: 1000,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
+  const swiperEl = document.querySelector(".tf-sw-location");
+  let swiperInstance;
 
-    pagination: {
-      el: ".explore-cities__dots",
-      type: "bullets",
-      clickable: true,
-      bulletClass: "explore-cities__dot",
-      bulletActiveClass: "active",
-    },
+  // Hàm khởi tạo Swiper
+  function initSwiper() {
+    if (!swiperEl) return;
 
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        slidesPerGroup: 4,
-        spaceBetween: 6,
+    // Lấy các dataset (từ HTML)
+    const preview = parseInt(swiperEl.dataset.preview);
+    const tablet = parseInt(swiperEl.dataset.tablet);
+    const mobile = parseInt(swiperEl.dataset.mobile);
+    const mobileSm = parseInt(swiperEl.dataset.mobileSm);
+    const spacing = parseInt(swiperEl.dataset.space);
+    const spacingMd = parseInt(swiperEl.dataset.spaceMd);
+    const spacingLg = parseInt(swiperEl.dataset.spaceLg);
+    const perGroup = parseInt(swiperEl.dataset.paginationSm);
+    const perGroupSm = parseInt(swiperEl.dataset.pagination);
+    const perGroupMd = parseInt(swiperEl.dataset.paginationMd);
+    const perGroupLg = parseInt(swiperEl.dataset.paginationLg);
+
+    // Nếu Swiper đã tồn tại, xóa trước khi tạo lại
+    if (swiperInstance) swiperInstance.destroy(true, true);
+
+    // Khởi tạo mới
+    swiperInstance = new Swiper(".tf-sw-location", {
+      slidesPerView: mobile,
+      spaceBetween: spacing,
+      pagination: {
+        el: ".sw-pagination-location",
+        clickable: true,
       },
-
-      768: {
-        slidesPerView: 3,
-        slidesPerGroup: 7,
-        spaceBetween: 6,
+      slidesPerGroup: perGroup,
+      navigation: {
+        clickable: true,
+        nextEl: ".nav-prev-location",
+        prevEl: ".nav-next-location",
       },
-
-      1440: {
-        slidesPerView: 6,
-        slidesPerGroup: 6,
-        spaceBetween: 8,
+      breakpoints: {
+        575: {
+          slidesPerView: mobileSm,
+          spaceBetween: spacing,
+          slidesPerGroup: perGroupSm,
+        },
+        768: {
+          slidesPerView: tablet,
+          spaceBetween: spacingMd,
+          slidesPerGroup: perGroupMd,
+        },
+        1200: {
+          slidesPerView: preview,
+          spaceBetween: spacingLg,
+          slidesPerGroup: perGroupLg,
+        },
       },
-    },
+    });
+  }
 
-    observer: true,
-    observeParents: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-  });
+  // Gọi lần đầu khi trang load
+  initSwiper();
 });
 
 //================= Testimonials ===================
