@@ -593,6 +593,18 @@
         }
     }
 
+    .home-box {
+        &.list-style-1 {
+            display: block;
+        }
+
+
+    }
+
+    .archive-top {
+        width: 100% !important;
+    }
+
     // Hero
     .hero {
         &__content {
