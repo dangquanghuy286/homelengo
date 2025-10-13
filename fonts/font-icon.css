@@ -117,6 +117,8 @@
 }
 .icon-CheckCircle:before {
   content: "\e902";
+  font-size: 30px;
+  color: #1563df;
 }
 .icon-X:before {
   content: "\e901";
