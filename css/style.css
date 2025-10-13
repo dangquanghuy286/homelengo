@@ -2487,6 +2487,7 @@ input[type=range]::-moz-range-thumb {
   font-size: 14px;
   text-align: center;
   line-height: 20px;
+  margin-top: 14px;
 }
 .featured-properties {
   /* TAB */
