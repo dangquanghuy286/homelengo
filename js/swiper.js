@@ -105,41 +105,50 @@ document.addEventListener("DOMContentLoaded", () => {
   initSwiper();
 });
 
-//================= Testimonials ===================
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".testimonials__list", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
+// ================ Testimonials ====================
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialEl = document.querySelector(".tf-sw-testimonial");
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+  if (testimonialEl) {
+    const mobile = testimonialEl.dataset.mobile;
+    const mobileSm = testimonialEl.dataset.mobileSm;
+    const tablet = testimonialEl.dataset.tablet;
+    const preview = testimonialEl.dataset.preview;
+    const spacing = testimonialEl.dataset.space;
+    const spacingMd = testimonialEl.dataset.spaceMd;
+    const spacingLg = testimonialEl.dataset.spaceLg;
+    const centered = testimonialEl.dataset.centered === "true";
+    const loop = testimonialEl.dataset.loop === "true";
 
-    speed: 1000,
-    // autoplay: {
-    //   delay: 3000,
-    //   disableOnInteraction: false,
-    //   pauseOnMouseEnter: true,
-    // },
-
-    breakpoints: {
-      576: {
-        slidesPerView: 2,
+    const swTestimonial = new Swiper(".tf-sw-testimonial", {
+      slidesPerView: parseInt(mobile),
+      spaceBetween: parseInt(spacing),
+      navigation: {
+        clickable: true,
+        nextEl: ".nav-prev-testimonial",
+        prevEl: ".nav-next-testimonial",
       },
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 1,
-        centeredSlides: false,
+      pagination: {
+        el: ".sw-pagination-testimonial",
+        clickable: true,
       },
-      1440: {
-        slidesPerView: 4,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
-        centeredSlides: false,
+      loop: loop,
+      breakpoints: {
+        575: {
+          slidesPerView: parseInt(mobileSm),
+          spaceBetween: parseInt(spacing),
+        },
+        768: {
+          slidesPerView: parseInt(tablet),
+          spaceBetween: parseInt(spacingMd),
+          centeredSlides: false,
+        },
+        1440: {
+          slidesPerView: parseInt(preview),
+          spaceBetween: parseInt(spacingLg),
+          centeredSlides: centered,
+        },
       },
-    },
-    watchOverflow: true,
-    watchSlidesProgress: true,
-  });
+    });
+  }
 });

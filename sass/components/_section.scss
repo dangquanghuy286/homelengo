@@ -335,6 +335,45 @@
     }
 }
 
+.flat-testimonial-v2 {
+    .content-left {
+        position: relative;
+
+        .content-text {
+            position: absolute;
+            bottom: 14%;
+            left: 6%;
+            right: 8%;
+
+            p {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .content-right {
+        .archive-top {
+            max-width: 675px;
+        }
+    }
+
+    .box-tes-item {
+        padding: 0;
+        background-color: transparent;
+
+        .list-star {
+            margin-top: 0;
+        }
+    }
+
+    .archive-bottom {
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+
 // ---------- explore---------------
 
 // widget location
@@ -457,5 +496,48 @@
         }
 
 
+    }
+}
+
+.list-star {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 24px;
+        color: var(--star);
+    }
+}
+
+// Testimonial
+.box-testimonial-item {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--white);
+
+    .icon-quote1 {
+        font-size: 60px;
+        color: var(--primary-color);
+    }
+
+    .note {
+        margin-top: 12px;
+    }
+
+    .box-avt {
+        margin-top: 24px;
+    }
+
+    .list-star {
+        margin-top: 12px;
+        gap: 4px;
+
+        .icon {
+            font-size: 14px;
+        }
+    }
+
+    &.style-2 {
+        border: 1px solid var(--border-card);
     }
 }

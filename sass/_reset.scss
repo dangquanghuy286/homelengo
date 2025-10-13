@@ -243,7 +243,6 @@ img {
 }
 
 p {
-    font-weight: 400;
 
     @include res(md) {
         font-size: 16px;
@@ -1279,6 +1278,11 @@ a {
 
 /* backgroub color
 -------------------------------------------------------------- */
+
+// Text
+.text-label {
+    color: var(--text-label);
+}
 
 /* Extra classes
 -------------------------------------------------------------- */
