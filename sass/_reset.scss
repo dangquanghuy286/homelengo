@@ -836,6 +836,10 @@ h6,
     font-weight: 700 !important;
 }
 
+.fw-8 {
+    font-weight: 800 !important;
+}
+
 // letter-spacing
 
 /* text-color
@@ -965,6 +969,11 @@ a {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
+}
+
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%
 }
 
 .tf-container {
@@ -1212,6 +1221,10 @@ a {
 
 .px_10 {
     padding: 0 10px !important;
+}
+
+.pl_0 {
+    padding-left: 0 !important;
 }
 
 /* spacing-section

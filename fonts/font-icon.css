@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.eot?1b18vh");
-  src: url("icomoon.eot?1b18vh#iefix") format("embedded-opentype"),
-    url("icomoon.ttf?1b18vh") format("truetype"),
-    url("icomoon.woff?1b18vh") format("woff"),
-    url("icomoon.svg?1b18vh#icomoon") format("svg");
+  src: url("icomoon.eot?8rwdt3");
+  src: url("icomoon.eot?8rwdt3#iefix") format("embedded-opentype"),
+    url("icomoon.ttf?8rwdt3") format("truetype"),
+    url("icomoon.woff?8rwdt3") format("woff"),
+    url("icomoon.svg?8rwdt3#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,10 +26,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-category-4:before {
+  content: "\e948";
+  color: #1563df;
+}
+.icon-category-3:before {
+  content: "\e949";
+  color: #1563df;
+}
+.icon-category-2:before {
+  content: "\e94a";
+  color: #1563df;
+}
+.icon-category-1:before {
+  content: "\e94b";
+  color: #1563df;
+}
 .icon-homeassistant:before {
   content: "\e947";
-  color: var(--primary-color);
-  font-size: 40px;
+  color: #1563df;
+  font-size: 30px;
 }
 .icon-Icon-3:before {
   content: "\e943";
@@ -97,8 +113,6 @@
 }
 .icon-CheckCircle:before {
   content: "\e902";
-  font-size: 30px;
-  color: var(--primary-color);
 }
 .icon-X:before {
   content: "\e901";

@@ -1,0 +1,104 @@
+.flat-tab-form {
+    .nav-tab-form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+
+        .nav-link-item {
+            padding: 14px 55px;
+            border-radius: 99px;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            font-weight: 600;
+            background-color: transparent;
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+        &.style-1 {
+            .nav-link-item {
+                position: relative;
+
+                &.active,
+                &:hover {
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
+
+                    &::after {
+                        display: block;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid var(--primary-color);
+                    display: none;
+                }
+            }
+        }
+
+        &.style-2 {
+            margin-bottom: 0;
+            gap: 4px;
+
+            .nav-link-item {
+                background-color: var(--border-card);
+                color: var(--black);
+                border-radius: 8px 8px 0 0;
+                border-color: transparent;
+                padding: 14px 26px;
+                text-transform: uppercase;
+                letter-spacing: 0.8px;
+                line-height: 26px;
+
+                &.active,
+                &:hover {
+                    background-color: var(--primary-color);
+                    color: var(--white);
+                }
+            }
+        }
+
+        &.style-3 {
+            gap: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: inline-flex;
+            overflow: hidden;
+
+            .nav-link-item {
+                min-width: 115px;
+                padding: 7px 10px;
+                border-radius: 0;
+
+            }
+        }
+
+        // &.style-4 {
+        //     padding: 11px 0px;
+        //     gap: 40px;
+
+        //     .nav-link-item {
+        //         background-color: transparent;
+        //         border-bottom: 2px solid transparent;
+
+        //         color: $variant-2;
+        //         padding: 2px 0px;
+
+        //         &.active,
+        //         &:hover {
+        //             color: $on-surface;
+        //             border-color: $on-surface;
+        //         }
+        //     }
+        // }
+    }
+}
