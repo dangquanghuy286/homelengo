@@ -39,48 +39,46 @@ window.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.querySelector(".cd-words-wrapper");
   if (!wrapper) return;
 
-  const words = wrapper.querySelectorAll(".item-text");
+  const words = wrapper.querySelectorAll(".item-text-1");
   let currentIndex = 0;
-  const delay = 3000; // thời gian giữ chữ
-  const minWidth = 2; // width khi thu hẹp
+  const delay = 3000;
+  const minWidth = 2;
 
-  // Khởi tạo: chỉ hiện chữ đầu tiên
+  wrapper.style.minWidth = "0"; // Cho phép thu hẹp
+  wrapper.style.transition = "width 1s cubic-bezier(0.16, 1, 0.3, 1)";
+  wrapper.style.overflow = "hidden";
+
+  // Khởi tạo
   words.forEach((w, i) => {
     w.classList.toggle("is-visible", i === 0);
     w.classList.toggle("is-hidden", i !== 0);
   });
 
   wrapper.style.width = words[0].offsetWidth + "px";
-  wrapper.style.overflow = "hidden"; // ẩn chữ khi thu hẹp
 
   function showNextWord() {
     const currentWord = words[currentIndex];
     const nextIndex = (currentIndex + 1) % words.length;
     const nextWord = words[nextIndex];
 
-    // Thu hẹp wrapper xuống minWidth
+    // Thu hẹp wrapper
     wrapper.style.width = minWidth + "px";
 
-    // Sau 0.6s (ví dụ) đổi chữ và mở rộng width mới
     setTimeout(() => {
-      // Ẩn chữ hiện tại, hiển thị chữ tiếp theo
       currentWord.classList.remove("is-visible");
       currentWord.classList.add("is-hidden");
       nextWord.classList.remove("is-hidden");
       nextWord.classList.add("is-visible");
 
-      // Mở rộng wrapper ra width chữ mới
+      // Mở rộng wrapper
       wrapper.style.width = nextWord.offsetWidth + "px";
 
-      // Cập nhật index và lặp lại
       currentIndex = nextIndex;
     }, 600);
   }
 
-  // Chạy liên tục
   setInterval(showNextWord, delay);
 });
-
 // =================== WOW.js ==================
 document.addEventListener("DOMContentLoaded", () => {
   for (let i = 1; i <= 10; i++) {
