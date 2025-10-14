@@ -1040,12 +1040,12 @@
             </h3>
           </div>
           <div
-            class="categories__list wow animate__animated animate__fadeInUp"
+            class="wrap-categories-sw wow animate__animated animate__fadeInUp"
             data-wow-duration="1s"
             data-wow-delay="0.6s"
           >
             <div
-              class="swiper tf-sw-categories swiper-horizontal swiper-backface-hidden"
+              class="swiper tf-sw-categories sw-over swiper-horizontal swiper-backface-hidden"
               data-preview="6"
               data-tablet="4"
               data-mobile-sm="3"
@@ -1057,84 +1057,84 @@
             >
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Apartment</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories-1.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Villa</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories-2.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Studio</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories-3.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Office</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories-4.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Townhouse</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="" class="categories__item">
+                  <a href="" class="categories-item">
                     <div class="icon-box">
                       <img
                         src="./images/logo/categories-5.svg"
                         alt="categories-1"
                       />
                     </div>
-                    <div class="categories__content text-center">
+                    <div class="content text-center">
                       <h6>Commercial</h6>
                       <p class="mt_4 text_on-surface-color">234 Property</p>
                     </div>
@@ -1996,7 +1996,7 @@
             >
               <div class="archive-top">
                 <a href="" class="images-group">
-                  <div class="images-style">
+                  <div class="images-style hover-img">
                     <img
                       src="./images/feature-item/feature-7.png"
                       alt="image"
@@ -2069,7 +2069,7 @@
             >
               <div class="archive-top">
                 <a href="" class="images-group">
-                  <div class="images-style">
+                  <div class="images-style hover-img">
                     <img
                       src="./images/feature-item/feature-8.png"
                       alt="image"
@@ -2141,7 +2141,7 @@
               data-wow-duration="1s"
             >
               <div class="archive-top">
-                <a href="" class="images-group">
+                <a href="" class="images-group hover-img">
                   <div class="images-style">
                     <img
                       src="./images/feature-item/feature-9.png"
@@ -2215,7 +2215,7 @@
             >
               <div class="archive-top">
                 <a href="" class="images-group">
-                  <div class="images-style">
+                  <div class="images-style hover-img">
                     <img
                       src="./images/feature-item/feature-10.png"
                       alt="image"
@@ -3203,18 +3203,19 @@
         <span class="back-to-top__icon icon-arrow_upward"></span>
       </button>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/swiper.js"></script>
-    <script src="js/animate.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
-    <!-- WOW.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-      new WOW({ live: true, mobile: true, offset: 0 }).init();
+    <!-- Load thư viện TRƯỚC -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Load code của bạn SAU -->
+<script src="js/swiper.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/script.js"></script>
+
+<!-- WOW.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  new WOW({ live: true, mobile: true, offset: 0 }).init();
+</script>
     </script>
   </body>
 </html>

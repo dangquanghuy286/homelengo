@@ -44,13 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // =================== Explore Swiper ===================
 document.addEventListener("DOMContentLoaded", () => {
-  const swiperEl = document.querySelector(".tf-sw-location");
-  let swiperInstance;
+  const swiperElements = document.querySelectorAll(".tf-sw-location");
 
-  // Hàm khởi tạo Swiper
-  function initSwiper() {
-    if (!swiperEl) return;
-
+  swiperElements.forEach((swiperEl, index) => {
     // Lấy các dataset (từ HTML)
     const preview = parseInt(swiperEl.dataset.preview);
     const tablet = parseInt(swiperEl.dataset.tablet);
@@ -64,22 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const perGroupMd = parseInt(swiperEl.dataset.paginationMd);
     const perGroupLg = parseInt(swiperEl.dataset.paginationLg);
 
-    // Nếu Swiper đã tồn tại, xóa trước khi tạo lại
-    if (swiperInstance) swiperInstance.destroy(true, true);
+    // Gán ID duy nhất cho từng pagination & nav
+    const paginationEl = swiperEl.querySelector(".sw-pagination-location");
+    const nextEl = swiperEl.querySelector(".nav-next-location");
+    const prevEl = swiperEl.querySelector(".nav-prev-location");
 
-    // Khởi tạo mới
-    swiperInstance = new Swiper(".tf-sw-location", {
+    // Khởi tạo Swiper riêng cho từng section
+    new Swiper(swiperEl, {
       slidesPerView: mobile,
       spaceBetween: spacing,
       pagination: {
-        el: ".sw-pagination-location",
+        el: paginationEl,
         clickable: true,
       },
       slidesPerGroup: perGroup,
       navigation: {
         clickable: true,
-        nextEl: ".nav-prev-location",
-        prevEl: ".nav-next-location",
+        nextEl: nextEl,
+        prevEl: prevEl,
       },
       breakpoints: {
         575: {
@@ -99,10 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
     });
-  }
-
-  // Gọi lần đầu khi trang load
-  initSwiper();
+  });
 });
 
 // ================ Testimonials ====================

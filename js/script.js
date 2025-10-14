@@ -272,7 +272,7 @@ document
 // ===================BreadCrumb=============
 document.addEventListener("DOMContentLoaded", () => {
   const breadcrumbContainer = document.getElementById("breadcrumb");
-
+  if (!breadcrumbContainer) return;
   const path = window.location.pathname;
   const parts = path.split("/").filter(Boolean);
 
