@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper(".tf-sw-categories", {
       slidesPerView: parseInt(mobile),
       spaceBetween: parseInt(spacing),
+      speed: 1000,
       navigation: {
         clickable: true,
         nextEl: ".nav-prev-category",
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new Swiper(swiperEl, {
       slidesPerView: mobile,
       spaceBetween: spacing,
+      speed: 1000,
       pagination: {
         el: paginationEl,
         clickable: true,
@@ -118,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swTestimonial = new Swiper(".tf-sw-testimonial", {
       slidesPerView: parseInt(mobile),
       spaceBetween: parseInt(spacing),
+      speed: 1000,
       navigation: {
         clickable: true,
         nextEl: ".nav-prev-testimonial",
