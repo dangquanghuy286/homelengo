@@ -22,7 +22,11 @@
 
     }
 
-
+    .flat-testimonial-v2 {
+        .content-right {
+            padding: 100px 30px 100px 100px;
+        }
+    }
 
     // Benefits
     .benefits {
@@ -198,7 +202,17 @@
 
     }
 
+    .flat-testimonial-v2 {
+        .content-right {
+            padding: 50px 20px 50px 50px;
+        }
+    }
+
+
+
+
     // Benefits
+
     .benefits {
         &__list {
             margin: 0 auto;
@@ -281,6 +295,15 @@
         display: none;
     }
 
+    .flat-img {
+        flex-direction: column;
+
+        .content-left,
+        .content-right {
+            width: 100%;
+        }
+    }
+
     .flat-slider {
         &.home-1 {
             .slider-content {
@@ -323,6 +346,10 @@
 
     .col-10 {
         width: 100%;
+    }
+
+    .tf-swiper-mobile-1 .swiper-wrapper {
+        display: flex !important;
     }
 
     .toggle-mobile {
@@ -667,6 +694,32 @@
             display: block;
         }
 
+
+    }
+
+    .flat-testimonial-v2 {
+        .content-right {
+            padding: 50px 15px;
+        }
+    }
+
+    .box-agent.style-list {
+        flex-direction: column !important;
+    }
+
+    .box-agent.style-list .box-img {
+        width: 100% !important;
+    }
+
+    .box-agent.style-list .archive-content {
+        padding: 15px !important;
+    }
+
+    .box-testimonial-item .note {
+
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
 
     }
 

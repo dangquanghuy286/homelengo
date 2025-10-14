@@ -844,7 +844,7 @@ h6,
 /* text-color
 -------------------------------------------------------------- */
 .text_white {
-    color: var(--White);
+    color: var(--white);
 }
 
 .text_on-surface-color {
@@ -857,6 +857,18 @@ h6,
 
 .text_secodary2-color {
     color: var(--Secondary2);
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+
+.text-body-30 {
+    text-transform: capitalize;
+    margin-top: 40px;
+    font-size: 30px;
+    line-height: 42px;
 }
 
 /* link style
@@ -1140,6 +1152,10 @@ a {
     margin-top: 4px;
 }
 
+.mt_30 {
+    margin-top: 30px;
+}
+
 .mb_2 {
     margin-bottom: 2px;
 }
@@ -1265,6 +1281,10 @@ a {
 .tf-spacing-8 {
     padding-top: 81px;
     padding-bottom: 57px;
+}
+
+.tw {
+    color: var(--white);
 }
 
 // @include res(md) {

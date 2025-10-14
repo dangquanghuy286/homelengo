@@ -150,3 +150,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// ================Card Mobile =====================
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperEl = document.querySelector(".tf-swiper-mobile-1");
+
+  if (swiperEl) {
+    let swiperMb;
+    const screenWidth = parseInt(swiperEl.dataset.screen);
+
+    function initSwiperMb() {
+      if (window.matchMedia(`(max-width: ${screenWidth}px)`).matches) {
+        if (!swiperMb) {
+          const preview = parseInt(swiperEl.dataset.preview);
+          const spacing = parseInt(swiperEl.dataset.space);
+
+          swiperMb = new Swiper(".tf-swiper-mobile-1", {
+            slidesPerView: preview,
+            spaceBetween: 15,
+            speed: 1000,
+            pagination: {
+              el: ".sw-pagination-mb-1",
+              clickable: true,
+            },
+            navigation: {
+              clickable: true,
+              nextEl: ".nav-prev-mb-1",
+              prevEl: ".nav-next-mb-1",
+            },
+          });
+        }
+      } else {
+        if (swiperMb) {
+          swiperMb.destroy(true, true);
+          swiperMb = null;
+
+          // Xóa inline style do Swiper thêm
+          const wrapper = swiperEl.querySelector(".swiper-wrapper");
+          const slides = swiperEl.querySelectorAll(".swiper-slide");
+          if (wrapper) wrapper.removeAttribute("style");
+          slides.forEach((slide) => slide.removeAttribute("style"));
+        }
+      }
+    }
+
+    initSwiperMb();
+
+    window.addEventListener("resize", () => {
+      initSwiperMb();
+    });
+  }
+});

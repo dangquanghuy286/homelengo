@@ -1,5 +1,5 @@
 .tf-grid-layout {
-    display: grid;
+    display: grid !important;
     gap: 30px;
 
     &.tf-col-2 {
@@ -194,6 +194,11 @@
 
     // lg
     .tf-grid-layout {
+
+        &.lg-col-1 {
+            grid-template-columns: 1fr;
+        }
+
         &.lg-col-2 {
             grid-template-columns: repeat(2, 1fr);
         }
