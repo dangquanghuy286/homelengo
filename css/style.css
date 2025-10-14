@@ -5567,6 +5567,12 @@ input[type=range]::-moz-range-thumb {
   width: 100%;
 }
 
+.tf-grid-2 {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 .box-agent {
   display: flex;
   flex-direction: row;
@@ -6318,6 +6324,7 @@ input[type=range]::-moz-range-thumb {
   }
   .tf-swiper-mobile-1 .swiper-wrapper {
     display: flex !important;
+    gap: 0;
   }
   .toggle-mobile {
     display: flex;

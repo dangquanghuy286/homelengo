@@ -867,6 +867,12 @@
     }
 }
 
+.tf-grid-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
 .box-agent {
     display: flex;
     flex-direction: row;

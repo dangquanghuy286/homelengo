@@ -151,22 +151,22 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 // ================Card Mobile =====================
-document.addEventListener("DOMContentLoaded", () => {
-  const swiperEl = document.querySelector(".tf-swiper-mobile-1");
-
-  if (swiperEl) {
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".tf-swiper-mobile-1")) {
     let swiperMb;
-    const screenWidth = parseInt(swiperEl.dataset.screen);
-
+    let screenWidth = document.querySelector(".tf-swiper-mobile-1").dataset
+      .screen;
     function initSwiperMb() {
-      if (window.matchMedia(`(max-width: ${screenWidth}px)`).matches) {
+      if (matchMedia(`(max-width: ${screenWidth}px)`).matches) {
         if (!swiperMb) {
-          const preview = parseInt(swiperEl.dataset.preview);
-          const spacing = parseInt(swiperEl.dataset.space);
+          let preview = document.querySelector(".tf-swiper-mobile-1").dataset
+            .preview;
+          let spacing = document.querySelector(".tf-swiper-mobile-1").dataset
+            .space;
 
           swiperMb = new Swiper(".tf-swiper-mobile-1", {
             slidesPerView: preview,
-            spaceBetween: 15,
+            spaceBetween: spacing,
             speed: 1000,
             pagination: {
               el: ".sw-pagination-mb-1",
@@ -183,19 +183,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (swiperMb) {
           swiperMb.destroy(true, true);
           swiperMb = null;
-
-          // Xóa inline style do Swiper thêm
-          const wrapper = swiperEl.querySelector(".swiper-wrapper");
-          const slides = swiperEl.querySelectorAll(".swiper-slide");
-          if (wrapper) wrapper.removeAttribute("style");
+          document
+            .querySelector(".tf-swiper-mobile-1 .swiper-wrapper")
+            .removeAttribute("style");
+          const slides = document.querySelectorAll(
+            ".tf-swiper-mobile-1 .swiper-slide"
+          );
           slides.forEach((slide) => slide.removeAttribute("style"));
         }
       }
     }
 
     initSwiperMb();
-
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function () {
       initSwiperMb();
     });
   }
