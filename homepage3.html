@@ -506,6 +506,501 @@
       </header>
       <!-- Main -->
       <!-- Hero -->
+      <section class="flat-slider home-3">
+        <div class="container pos-rev z-1">
+          <div class="row pos-rev">
+            <div class="col-xl-8">
+              <div class="slider-content">
+                <div class="heading">
+                  <h1 class="title-large title text_white animationtext clip">
+                    Indulge in Your
+                    <br />
+                    <span class="tf-text s1 cd-words-wrapper">
+                      <span class="item-text-1 is-hidden">Sanctuary</span>
+                      <span class="item-text-1 is-visible">Safe House</span>
+                    </span>
+                  </h1>
+                  <p
+                    class="subtitle text_white text-body-2 wow animate__animated animate__fadeInUp"
+                  >
+                    Discover your private oasis at Homelengo, where every
+                    corner, from the spacious garden to the relaxing pool, is
+                    crafted for your comfort and enjoyment.
+                  </p>
+                </div>
+                <a href="">
+                  <button class="featured-properties__button bg-transparent">
+                    <span class="featured-properties__button-text"
+                      >Contact Us</span
+                    >
+                    <span
+                      class="featured-properties__button-icon icon-arrow-right2"
+                    ></span>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="flat-tab flat-tab-form">
+                <ul class="nav-tab-form style-2 style-3" role="tablist">
+                  <li class="nav-tab-item" role="presentation">
+                    <a
+                      href="#forRent"
+                      class="nav-link-item active"
+                      data-bs-toggle="tab"
+                      >Rent</a
+                    >
+                  </li>
+                  <li class="nav-tab-item" role="presentation">
+                    <a
+                      href="#forSale"
+                      class="nav-link-item"
+                      data-bs-toggle="tab"
+                      >Sale</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade active show" role="tabpanel">
+                    <div class="form-sl flat-filter-form">
+                      <form method="post">
+                        <div class="wd-filter-select">
+                          <div class="inner-group">
+                            <div class="form-group-1 form-style">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Search Keyword."
+                                value=""
+                                name="s"
+                                title="Search for"
+                                required=""
+                              />
+                            </div>
+                            <div class="form-group-2 form-style">
+                              <div class="group-ip ip-icon">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Search Location"
+                                  value=""
+                                  name="s"
+                                  title="Search for"
+                                  required=""
+                                />
+                                <span class="icon-right icon-Crosshair"></span>
+                              </div>
+                            </div>
+                            <div class="hero__input-group d-flex mt_12">
+                              <div class="hero__dropdown">
+                                <div class="hero__dropdown-selected">
+                                  Property Type
+                                </div>
+                                <ul class="hero__dropdown-menu mt_15">
+                                  <li class="hero__dropdown-item" data-value="">
+                                    Property Type
+                                  </li>
+                                  <li
+                                    class="hero__dropdown-item"
+                                    data-value="villa"
+                                  >
+                                    Villa
+                                  </li>
+                                  <li
+                                    class="hero__dropdown-item"
+                                    data-value="studio"
+                                  >
+                                    Studio
+                                  </li>
+                                  <li
+                                    class="hero__dropdown-item"
+                                    data-value="office"
+                                  >
+                                    Office
+                                  </li>
+                                  <li
+                                    class="hero__dropdown-item"
+                                    data-value="house"
+                                  >
+                                    House
+                                  </li>
+                                </ul>
+                              </div>
+                              <span class="icon-CaretDown"></span>
+                            </div>
+                            <div class="hero__actions d-flex">
+                              <button
+                                type="button"
+                                class="hero__advanced-button d-flex"
+                                aria-label="Open advanced search options"
+                                aria-expanded="false"
+                              >
+                                <span class="hero__advanced-text">Filters</span>
+                                <img
+                                  class="hero__advanced-icon"
+                                  src="./images/logo/sort.png"
+                                  alt=""
+                                  aria-hidden="true"
+                                />
+                              </button>
+                              <button
+                                type="submit"
+                                class="hero__search-button d-flex"
+                                aria-label="Search properties"
+                              >
+                                <span class="hero__search-text">Search</span>
+                                <span class="icon-search"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="hero__advanced-dropdown"
+                          id="advancedDropdown"
+                        >
+                          <!-- Price Range -->
+                          <div class="advanced__flex-container">
+                            <div class="advanced__group">
+                              <label
+                                >Price Range
+                                <span id="priceRangeText"
+                                  >from $100 to $650000</span
+                                ></label
+                              >
+                              <div class="range-wrapper">
+                                <div
+                                  class="range-progress"
+                                  id="priceProgress"
+                                ></div>
+                                <input
+                                  type="range"
+                                  id="priceMin"
+                                  class="range-min"
+                                  min="100"
+                                  max="650000"
+                                  value="100"
+                                />
+                                <input
+                                  type="range"
+                                  id="priceMax"
+                                  class="range-max"
+                                  min="100"
+                                  max="650000"
+                                  value="650000"
+                                />
+                              </div>
+                            </div>
+                            <div class="advanced__group">
+                              <label
+                                >Size Range
+                                <span id="sizeRangeText"
+                                  >from 20 SqFt to 2,000 SqFt</span
+                                ></label
+                              >
+                              <div class="range-wrapper">
+                                <div
+                                  class="range-progress"
+                                  id="sizeProgress"
+                                ></div>
+                                <input
+                                  type="range"
+                                  id="sizeMin"
+                                  class="range-min"
+                                  min="20"
+                                  max="2000"
+                                  value="20"
+                                />
+                                <input
+                                  type="range"
+                                  id="sizeMax"
+                                  class="range-max"
+                                  min="20"
+                                  max="2000"
+                                  value="2000"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Select Boxes -->
+                          <div class="advanced__row">
+                            <div class="advanced__field">
+                              <label for="rooms">Rooms</label>
+                              <select id="rooms">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                              </select>
+                            </div>
+                            <div class="advanced__field">
+                              <label for="bathrooms">Bathrooms</label>
+                              <select id="bathrooms">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                              </select>
+                            </div>
+                            <div class="advanced__field">
+                              <label for="bedrooms">Bedrooms</label>
+                              <select id="bedrooms">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                              </select>
+                            </div>
+                            <div class="advanced__field">
+                              <label for="type">Type</label>
+                              <select id="type">
+                                <option>1</option>
+                                <option selected>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- Amenities -->
+                          <div class="advanced__group">
+                            <label>Amenities:</label>
+                            <div class="advanced__amenities">
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="air_condition"
+                                  checked
+                                />
+                                Air Condition
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="disabled_access"
+                                />
+                                Disabled Access
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="floor"
+                                  checked
+                                />
+                                Floor
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="heating"
+                                />
+                                Heating
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="renovation"
+                                />
+                                Renovation
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="window_type"
+                                />
+                                Window Type
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="cable_tv"
+                                />
+                                Cable TV
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="elevator"
+                                  checked
+                                />
+                                Elevator
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="furnishing"
+                                />
+                                Furnishing
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="intercom"
+                                />
+                                Intercom
+                              </label>
+                              <label>
+                                <input
+                                  checked
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="security"
+                                />
+                                Security
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="search_property"
+                                />
+                                Search property
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="ceiling_height"
+                                />
+                                Ceiling Height
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="fence"
+                                />
+                                Fence
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="garage"
+                                  checked
+                                />
+                                Garage
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="parking"
+                                />
+                                Parking
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="swimming_pool"
+                                />
+                                Swimming Pool
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="construction_year"
+                                />
+                                Construction Year
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="fireplace"
+                                />
+                                Fireplace
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="garden"
+                                />
+                                Garden
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="pet_friendly"
+                                />
+                                Pet Friendly
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="amenities"
+                                  value="wifi"
+                                />
+                                WiFi
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrap-search-link">
+                <div class="categories-list-3">
+                  <a href="#">
+                    <span class="icon-category-1 text_white"></span>
+                    Houses
+                  </a>
+                  <a href="#">
+                    <span class="icon-category-2 text_white"></span>
+                    Villa
+                  </a>
+                  <a href="#">
+                    <span class="icon-category-3 text_white"></span>
+                    Office
+                  </a>
+                  <a href="#">
+                    <span class="icon-category-4 text_white"></span>
+                    Apartments
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Explore -->
       <section class="flat-section">
         <div class="container">
