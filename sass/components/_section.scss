@@ -284,6 +284,35 @@
 
 }
 
+
+.wrap-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+
+    .box-left {
+        padding: 60px 20px 60px 80px;
+
+        .box-title {
+            margin-bottom: 30px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .box-right {
+        flex-shrink: 0;
+
+
+        img {
+            margin-top: -60px;
+            aspect-ratio: 748/380;
+            object-fit: cover;
+        }
+    }
+}
+
 // ---------- widget ---------------
 .flag-tag {
     font-weight: 600;
