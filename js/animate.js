@@ -15,10 +15,14 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!wrapper) return;
 
   const words = wrapper.querySelectorAll(".item-text");
+  if (!words.length) return;
+
   let currentIndex = 0;
   const delay = 3000; // 3s đổi chữ một lần
 
   function showNextWord() {
+    if (!words[currentIndex]) return;
+
     // Ẩn chữ hiện tại
     words[currentIndex].classList.remove("is-visible");
     words[currentIndex].classList.add("is-hidden");
@@ -40,6 +44,8 @@ window.addEventListener("DOMContentLoaded", () => {
   if (!wrapper) return;
 
   const words = wrapper.querySelectorAll(".item-text-1");
+  if (!words.length) return;
+
   let currentIndex = 0;
   const delay = 3000;
   const minWidth = 2;
@@ -54,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
     w.classList.toggle("is-hidden", i !== 0);
   });
 
-  wrapper.style.width = words[0].offsetWidth + "px";
+  if (words[0]) wrapper.style.width = words[0].offsetWidth + "px";
 
   function showNextWord() {
     const currentWord = words[currentIndex];

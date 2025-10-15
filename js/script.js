@@ -19,7 +19,6 @@ toggleBtn.addEventListener("click", () => {
     closeBtn.classList.remove("active");
   });
 });
-// ===================Text========================
 
 // ===================Dropdown=====================
 document.addEventListener("DOMContentLoaded", () => {
@@ -81,25 +80,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===== Featured Tags =====
-  const featureTags = document.querySelectorAll(".featured-properties__tag");
+  const featureTags = document.querySelectorAll(".property-tags .tag");
+
   featureTags.forEach((tag) => {
     tag.addEventListener("click", () => {
-      featureTags.forEach((t) => t.classList.remove("active"));
+      const allTags = tag.parentElement.querySelectorAll(".tag");
+      allTags.forEach((t) => t.classList.remove("active"));
       tag.classList.add("active");
     });
   });
 
   // ===== Featured Properties Tabs =====
-  const propertyTabs = document.querySelectorAll(".featured-properties__tab");
-  propertyTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      propertyTabs.forEach((t) => {
-        t.classList.remove("featured-properties__tab--active");
+  const tabLinks = document.querySelectorAll(
+    ".nav-tab-recommended .nav-link-item"
+  );
+
+  tabLinks.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault(); // tránh nhảy lên đầu trang do thẻ <a>
+
+      // Xóa active khỏi tất cả tab
+      tabLinks.forEach((t) => {
+        t.classList.remove("active");
         t.setAttribute("aria-selected", "false");
         t.setAttribute("tabindex", "-1");
       });
 
-      tab.classList.add("featured-properties__tab--active");
+      // Thêm active vào tab được click
+      tab.classList.add("active");
       tab.setAttribute("aria-selected", "true");
       tab.setAttribute("tabindex", "0");
     });

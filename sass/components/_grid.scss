@@ -158,37 +158,6 @@
         }
     }
 
-    @media (max-width: 1024px) {
-        .tf-grid-layout {
-            &.lgp-col-1 {
-                grid-template-columns: 1fr;
-            }
-
-            &.lgp-col-2 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            &.lgp-col-3 {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            &.lgp-col-4 {
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            &.lgp-col-5 {
-                grid-template-columns: repeat(5, 1fr);
-            }
-
-            &.lgp-col-6 {
-                grid-template-columns: repeat(6, 1fr);
-            }
-
-            &.lgp-col-7 {
-                grid-template-columns: repeat(7, 1fr);
-            }
-        }
-    }
 
     @media (max-width: 992px) {
 

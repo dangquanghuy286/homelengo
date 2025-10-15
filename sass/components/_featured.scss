@@ -1,354 +1,152 @@
-// ==============================Featured=====================================
-.featured-properties {
-    position: relative;
+.property-card {
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    overflow: hidden;
 
-    &__title-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        text-align: center;
-        max-width: 645px;
-    }
-
-    &__title-text {
-        color: var(--primary-color);
-        font-size: 14px;
-        letter-spacing: 1.55px;
-        line-height: 24px;
-        font-weight: 600;
-        white-space: nowrap;
-        width: 100%;
-        text-transform: uppercase;
-    }
-
-    &__title-subtext {
-        color: var(--text-dark);
-        line-height: 44px;
-        font-weight: 800;
-        width: 100%;
-    }
-
-
-    &__description {
-        align-self: stretch;
-        color: var(--text-label);
-        font-size: 14px;
-        text-align: center;
-        line-height: 20px;
-        margin-top: 14px;
-    }
-
-    /* TAB */
-    &__tab-menu {
-        display: inline-flex;
-        align-items: flex-start;
-        gap: 12px;
-        margin-top: 32px;
-        flex-wrap: wrap;
-    }
-
-    &__tab {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        padding: 8px 24px;
-        background-color: var(--color-tab);
-        border-radius: 999px;
-        border: 1px solid var(--white);
-
-        &--active {
-            background-color: var(--primary-color);
-
-            .featured-properties__tab-text {
-                color: var(--white);
-            }
-        }
-
-        &:hover {
-            background-color: var(--primary-color);
-
-            .featured-properties__tab-text {
-                color: var(--white);
-            }
-        }
-
-        &-text {
-            width: fit-content;
-            font-weight: 600;
-            color: var(--gray-dark);
-            font-size: 14px;
-            text-align: center;
-            line-height: 20px;
-            white-space: nowrap;
-        }
-    }
-
-    /* Card */
-    &__list {
-        justify-content: center;
-
-    }
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid var(--border-card);
-    }
-
-    &__item a {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__item-image {
+    .property-image {
         position: relative;
         width: 100%;
-        overflow: hidden;
         aspect-ratio: 3/2;
+        overflow: hidden;
         line-height: 0;
 
-        &:hover .featured-properties__image-overlay {
-            transform: scale(1.1);
-            cursor: pointer;
+        .image-overlay {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: transform 0.3s ease;
-            filter: brightness(60%);
         }
-    }
 
-    &__image-overlay {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition: transform 0.3s ease;
-    }
+        &:hover .image-overlay {
+            transform: scale(1.1);
+            filter: brightness(60%);
+            cursor: pointer;
+        }
 
-    &__tags {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
+        .property-tags {
+            display: flex;
+            gap: 6px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
 
-    &__tag {
-        display: flex;
-        width: 72px;
-        height: 28px;
-        align-items: center;
-        justify-content: center;
-        padding: 0 8px;
-        background-color: var(--color-tag);
-        border-radius: 99px;
-        cursor: pointer;
-        transition: 0.3s all ease;
-
-        &--sale {
+        .tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8px;
+            height: 28px;
+            border-radius: 99px;
             background-color: var(--color-tag);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
 
-            &:hover {
+            &.active {
+                background-color: var(--primary-color);
+            }
+
+            &.tag-sale:hover {
                 background-color: var(--primary-color);
             }
         }
 
-        &-text {
-            font-weight: 600;
-            color: var(--white);
-            font-size: 12px;
-            text-align: center;
-            line-height: normal;
-            white-space: nowrap;
-        }
-
-        &.active {
-            background-color: var(--primary-color);
-        }
-    }
-
-    &__tag:hover {
-        background-color: var(--color-tag);
-    }
-
-
-    &__location {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        position: absolute;
-        left: 20px;
-        bottom: 12px;
-
-        &-text {
-            margin: 0;
-            font-weight: 400;
-            color: var(--white);
-            font-size: 14px;
-            line-height: 20px;
-        }
-    }
-
-    &__icon::before {
-        content: "\e904";
-        font-family: "icomoon";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        font-size: 16px;
-        line-height: 1;
-        color: var(--white);
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        gap: 24px;
-        padding: 20px;
-    }
-
-    &__main {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
-    }
-
-    &__property-name {
-        align-self: stretch;
-        font-weight: 600;
-        color: var(--text-dark);
-    }
-
-    &__property-link:hover {
-        color: var(--primary-color);
-    }
-
-    &__description {
-        display: flex;
-        align-items: flex-start;
-        gap: 16px;
-        align-self: stretch;
-
-        &-item {
+        .property-location {
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
+            gap: 6px;
+            position: absolute;
+            left: 20px;
+            bottom: 12px;
 
-        &-label {
-            width: fit-content;
-            font-weight: 400;
-            color: var(--text-label);
-            line-height: 20px;
-            white-space: nowrap;
-        }
+            .icon-location::before {
+                content: "\e904";
+                font-family: "icomoon";
+                color: var(--white);
+                font-size: 16px;
+            }
 
-        &-value {
-            width: fit-content;
+            .location-text {
+                color: var(--white);
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+    }
+
+    .property-content {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .property-name {
             font-weight: 600;
             color: var(--text-dark);
-            line-height: 20px;
-            white-space: nowrap;
-        }
-    }
 
-    &__divider {
-        align-self: stretch;
-        width: 100%;
-        height: 1px;
-        background-color: var(--border-card);
-        border: none;
-        margin: 0;
-    }
-
-    &__info {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__user {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex: 1;
-
-        &-image {
-            width: 34px;
-            height: 34px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        &-name {
-            width: fit-content;
-            font-weight: 400;
-            color: var(--text-dark);
-            font-size: 14px;
-            line-height: 20px;
-            white-space: nowrap;
-        }
-    }
-
-    &__price {
-        width: fit-content;
-        font-weight: 600;
-        color: var(--text-dark);
-        font-size: 18px;
-        line-height: 24px;
-        white-space: nowrap;
-    }
-
-    &__footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    &__button {
-        all: unset;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        width: 244px;
-        height: 54px;
-        background-color: var(--primary-color);
-        border-radius: 9999px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: 1px solid var(--primary-color);
-
-        &:hover {
-            background-color: var(--white);
-
-            .featured-properties__button-text,
-            .featured-properties__button-icon {
+            .property-link:hover {
                 color: var(--primary-color);
             }
         }
 
-        &-text,
-        &-icon {
-            color: var(--white);
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 24px;
-            white-space: nowrap;
-            display: inline-flex;
+        .property-description {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-card);
+
+            .desc-item {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                .desc-label {
+                    color: var(--text-label);
+                }
+
+                .desc-value {
+                    font-weight: 600;
+                    color: var(--text-dark);
+                }
+            }
+        }
+
+        .property-info {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                .user-img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .user-name {
+                    color: var(--text-dark);
+                    font-size: 14px;
+                }
+            }
+
+            .price {
+                font-weight: 600;
+                color: var(--text-dark);
+                font-size: 18px;
+            }
         }
     }
 }

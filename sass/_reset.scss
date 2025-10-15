@@ -1301,6 +1301,10 @@ a {
     padding: 0 15px !important;
 }
 
+.fl-col {
+    flex-direction: column !important;
+}
+
 /* spacing-section
 -------------------------------------------------------------- */
 .tf-spacing-1 {
@@ -1511,6 +1515,10 @@ a {
     }
 }
 
+.mt_50 {
+    margin-top: 50px;
+}
+
 .avatar {
     border-radius: 50%;
     overflow: hidden;
@@ -1528,6 +1536,12 @@ a {
 .flex-wrap {
     flex-wrap: wrap !important;
 }
+
+.justify-content-center {
+    justify-content: center
+}
+
+
 
 .overlay-link {
     position: absolute;
