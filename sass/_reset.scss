@@ -1041,6 +1041,11 @@ a {
     max-width: 100% !important;
 }
 
+.mx-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* backgroud
 -------------------------------------------------------------- */
 .bg-surface-color {
@@ -1500,6 +1505,10 @@ a {
 .d-flex {
     display: flex;
     align-items: center;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
 }
 
 .flex-wrap {

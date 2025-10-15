@@ -889,6 +889,11 @@ a:focus, a:hover {
   max-width: 100% !important;
 }
 
+.mx-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* backgroud
 -------------------------------------------------------------- */
 .bg-surface-color {
@@ -1315,6 +1320,10 @@ a:focus, a:hover {
 .d-flex {
   display: flex;
   align-items: center;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
 }
 
 .flex-wrap {
@@ -5549,17 +5558,44 @@ input[type=range]::-moz-range-thumb {
 .flat-img .box-title .desc {
   margin-top: 20px;
 }
+.flat-img.style-2 .content-left {
+  width: 52.5%;
+  padding-left: 35px;
+  aspect-ratio: 945/657;
+}
 .flat-img.style-2 .content-left img {
   border-radius: 15px;
 }
-.flat-img.style-3 {
+.flat-img.style-2 .content-right {
+  width: 47.5%;
+  padding-right: 295px;
+  padding-top: 78px;
+  padding-bottom: 78px;
+  padding-left: 95px;
+}
+.flat-img.style-2 .content-right .box-title {
+  margin-left: 0;
+  margin-right: 0;
+}
+.flat-img.style-2 .content-right .box-title .text-subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.flat-img.style-2 .content-right .box-title .title {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.flat-img.style-2.style-3 {
   border-radius: 15px;
   overflow: hidden;
 }
-.flat-img .img-wrap {
+.flat-img.style-2 .img-wrap {
   position: relative;
 }
-.flat-img .box-count {
+.flat-img.style-2 .box-count {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -5568,7 +5604,7 @@ input[type=range]::-moz-range-thumb {
   left: 0;
   right: 0;
 }
-.flat-img .box-count .count-item {
+.flat-img.style-2 .box-count .count-item {
   display: flex;
   align-items: center;
   gap: 8px;
