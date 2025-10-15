@@ -3,10 +3,89 @@
     padding-bottom: 100px;
 }
 
+
+.flat-section-benefit {
+    display: flex;
+    flex-direction: row;
+
+    .content-right {
+        padding: 100px 305px 100px 95px;
+        width: 50.262%;
+    }
+
+    .content-left {
+        width: 49.738%;
+        aspect-ratio: 950/908;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .box-title {
+        margin-left: 0;
+        margin-right: 0;
+
+        .desc {
+            margin-top: 20px;
+
+        }
+    }
+
+    &.style-2 {
+        .content-left {
+            img {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &.style-3 {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .img-wrap {
+        position: relative;
+    }
+
+    .box-count {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: -47px;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        .count-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--white);
+            padding: 16px 20px;
+            border-radius: 999px;
+        }
+    }
+}
+
 .flat-section-benefit-v2 {
     display: flex;
     flex-direction: row;
     gap: 110px;
+
+    .box-title {
+        margin-left: 0;
+        margin-right: 0;
+
+        .desc {
+            margin-top: 20px;
+        }
+    }
 
     .content-left {
         width: 51%;
@@ -15,6 +94,100 @@
     .content-right {
         width: 49%;
 
+    }
+}
+
+.flat-benefit {
+    .box-benefit {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.box-benefit {
+    display: flex;
+    border-radius: 16px;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--white);
+
+    .icon-box {
+        flex-shrink: 0;
+
+        .icon {
+            font-size: 60px;
+            transition: all 0.8s ease;
+            display: inline-block;
+            color: var(--text-label);
+        }
+    }
+
+    .content {
+        .description {
+            margin-top: 12px;
+            color: var(--text-label);
+        }
+
+        .btn-view {
+            margin-top: 12px;
+        }
+    }
+
+    &:hover {
+        .icon-box {
+            .icon {
+                transform: rotateY(360deg);
+            }
+        }
+
+        transform: scale(1.05);
+    }
+}
+
+.flat-recommended {
+    .homelengo-box {
+        margin-bottom: 30px;
+    }
+
+    .tf-btn {
+        margin-top: 10px;
+    }
+
+    .box-title {
+        margin-bottom: 32px;
+    }
+}
+
+// box title
+.box-title {
+    margin-bottom: 50px;
+    max-width: 645px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.style-1 {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    &.style-2 {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.style-3 {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        text-transform: capitalize;
+        font-weight: 800;
+    }
+
+    .desc {
+        margin-top: 20px;
     }
 }
 
@@ -116,6 +289,7 @@
     }
 }
 
+// Hero
 .home-box {
     display: block;
     border-radius: 16px;
@@ -284,7 +458,7 @@
 
 }
 
-
+// Become Partners
 .wrap-banner {
     display: flex;
     justify-content: space-between;
@@ -591,16 +765,6 @@
 }
 
 
-.list-star {
-    display: flex;
-    align-items: center;
-
-    .icon {
-        font-size: 24px;
-        color: var(--star);
-    }
-}
-
 // Testimonial
 .box-testimonial-item {
     padding: 30px;
@@ -629,6 +793,16 @@
 
     &.style-2 {
         border: 1px solid var(--border-card);
+    }
+}
+
+.list-star {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 24px;
+        color: var(--star);
     }
 }
 
@@ -1130,10 +1304,6 @@
         }
     }
 }
-
-
-
-
 
 .form-control {
     border: 1px solid var(--border-card);

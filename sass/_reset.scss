@@ -243,6 +243,8 @@ img {
 }
 
 p {
+    line-height: 19.6px;
+    font-size: 14px;
 
     @include res(md) {
         font-size: 16px;
@@ -598,7 +600,7 @@ h2,
 h3,
 .h3 {
     font-size: 36px;
-    line-height: 48px;
+    line-height: 44px;
 }
 
 h4,
@@ -881,6 +883,9 @@ h6,
     color: var(--primary-color);
 }
 
+.text-black-2 {
+    color: #000000;
+}
 
 .text-body-30 {
     text-transform: capitalize;
@@ -1044,6 +1049,11 @@ a {
 .mx-10 {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.mx-5 {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
 
 /* backgroud
@@ -1287,6 +1297,10 @@ a {
     padding-left: 0 !important;
 }
 
+.px-15 {
+    padding: 0 15px !important;
+}
+
 /* spacing-section
 -------------------------------------------------------------- */
 .tf-spacing-1 {
@@ -1507,8 +1521,8 @@ a {
     align-items: center;
 }
 
-.d-inline-flex {
-    display: inline-flex !important;
+.d-inline-block {
+    display: inline-block !important;
 }
 
 .flex-wrap {
