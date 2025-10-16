@@ -1818,7 +1818,7 @@ a:focus, a:hover {
   font-family: "icomoon";
   line-height: 1;
   display: inline-block;
-  color: var(--black);
+  color: var(--primary-color);
   transition: color 0.3s ease;
   font-size: 28px;
 }
@@ -6236,6 +6236,7 @@ input[type=range]::-moz-range-thumb {
 .flat-tab-recommended .nav-tab-recommended {
   margin-bottom: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-tab-recommended {
@@ -6705,7 +6706,7 @@ input[type=range]::-moz-range-thumb {
     width: 100%;
   }
   .flat-img.style-2 .content-right {
-    padding: 70px 15px !important;
+    padding: 70px 15px 0 15px !important;
     width: 100%;
   }
   .flat-img.style-2 .content-left {
@@ -7050,6 +7051,16 @@ input[type=range]::-moz-range-thumb {
   }
   .wrap-banner .box-left {
     padding: 30px;
+  }
+  .nav-tab-recommended {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-tab-recommended .nav-link-item {
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
   .flat-img.style-2 .box-count {
     gap: 5px;
