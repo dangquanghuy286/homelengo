@@ -24,16 +24,19 @@
 .header__menu-frame__logo {
     display: block;
     width: auto;
+    flex-shrink: 0;
 }
 
 .header__logo-img {
     height: 100%;
-    width: 100%;
+    width: auto;
+    max-width: none;
 }
 
 .header__menu-frame__nav {
     gap: 60px;
     height: 100%;
+    flex-shrink: 1;
 }
 
 .nav-link {

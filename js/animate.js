@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     preload.style.transition = "opacity 1s ease"; // mờ trong
     preload.style.opacity = "0";
-    setTimeout(() => preload.remove(), 1000); // xóa
+    setTimeout(() => preload.remove(), 500); // xóa
   }, 1000);
 });
 

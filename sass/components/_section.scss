@@ -1,11 +1,9 @@
 .flat-section {
     padding-top: 100px;
     padding-bottom: 100px;
-
-
 }
 
-// box title
+//========== Box title==========
 .box-title {
     margin-bottom: 50px;
     max-width: 645px;
@@ -37,7 +35,7 @@
     }
 }
 
-// Benefits
+//========== Benefits===========
 .flat-section-benefit {
     display: flex;
     flex-direction: row;
@@ -181,85 +179,7 @@
     }
 }
 
-.flat-recommended {
-    .homelengo-box {
-        margin-bottom: 30px;
-    }
-
-
-    .box-title {
-        margin-bottom: 32px;
-    }
-}
-
-
-// ==========Service====================
-.box-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    padding: 50px 30px;
-    border: 1px solid var(--border-card);
-    border-radius: 16px;
-    background-color: var(--white);
-
-    .image {
-        display: block;
-        transition: all 0.8s ease;
-        display: inline-block;
-    }
-
-    .content {
-        text-align: center;
-
-        .title {
-            text-transform: capitalize;
-            margin-bottom: 20px;
-        }
-
-        .description {
-            color: var(--text-label);
-            margin-bottom: 30px;
-        }
-    }
-
-    .tf-btn {
-        padding-left: 45px;
-        padding-right: 45px;
-    }
-
-    &:hover {
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-        border-color: transparent;
-        cursor: pointer;
-
-        .title {
-            color: var(--primary-color);
-        }
-
-        .image {
-            transform: rotateY(360deg);
-        }
-
-        .tf-btn {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 10px 60px;
-
-            .icon {
-                color: var(--white);
-                // animation: 0.3s link-icon linear;
-            }
-        }
-    }
-}
-
+// V2
 .gallery-img {
     position: relative;
     padding-top: 15%;
@@ -366,7 +286,88 @@
     }
 }
 
-// Hero
+//============= Feature ================
+.flat-recommended {
+    .homelengo-box {
+        margin-bottom: 30px;
+    }
+
+
+    .box-title {
+        margin-bottom: 32px;
+    }
+}
+
+
+// ==========Service====================
+.box-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 50px 30px;
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    background-color: var(--white);
+
+    .image {
+        display: block;
+        transition: all 0.8s ease;
+        display: inline-block;
+    }
+
+    .content {
+        text-align: center;
+
+        .title {
+            text-transform: capitalize;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: var(--text-label);
+            margin-bottom: 30px;
+        }
+    }
+
+    .tf-btn {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    &:hover {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        border-color: transparent;
+        cursor: pointer;
+
+        .title {
+            color: var(--primary-color);
+        }
+
+        .image {
+            transform: rotateY(360deg);
+        }
+
+        .tf-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 60px;
+
+            .icon {
+                color: var(--white);
+                // animation: 0.3s link-icon linear;
+            }
+        }
+    }
+}
+
+
+//============== Hero===================
 .home-box {
     display: block;
     border-radius: 16px;
@@ -538,7 +539,115 @@
 
 }
 
-// Become Partners
+.form-control {
+    border: 1px solid var(--border-card);
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 999px;
+    padding: 14px 16px;
+    width: 100%;
+    background: var(--white);
+    color: var(--black);
+    font-weight: 400;
+
+    &:focus {
+        box-shadow: unset;
+        border-color: var(--primary-color) !important;
+    }
+
+
+
+    &.style-1 {
+        padding: 10px 16px;
+    }
+}
+
+.ip-icon {
+    position: relative;
+
+    .icon-right {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+}
+
+.wd-filter-select {
+    background-color: var(--white);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    padding: 22px;
+
+
+
+    .hero__input-group {
+        border: 1px solid var(--border-card);
+        border-radius: 999px;
+        padding: 14px 16px;
+    }
+
+    .hero__dropdown-selected {
+        font-weight: 400;
+    }
+
+    .form-style {
+        .icon-right {
+            right: 18px;
+        }
+
+        &:not(:first-child) {
+            margin-top: 12px;
+        }
+
+        // label {
+        //     margin-bottom: 8px;
+        //     text-transform: uppercase;
+        //     font-size: 14px;
+        //     line-height: 24px;
+        //     font-weight: 700;
+        //     letter-spacing: 0.8px;
+        //     color: $on-surface;
+        // }
+        .form-control,
+        .nice-select {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 15px 18px;
+            padding-right: 40px;
+        }
+    }
+
+    .filter-advanced {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .icon {
+            font-size: 28px;
+            color: var(--color-tab);
+        }
+    }
+
+    .tf-btn {
+        width: 100%;
+    }
+}
+
+.flat-filter-form {
+    .wd-search-form {
+        left: 15px;
+        right: 15px;
+        width: auto;
+    }
+}
+
+//============ Become Partners==========
 .wrap-banner {
     display: flex;
     justify-content: space-between;
@@ -567,7 +676,7 @@
     }
 }
 
-// ---------- widget ---------------
+// ---------- widget-Tag ---------------
 .flag-tag {
     font-weight: 600;
     font-size: 12px;
@@ -845,7 +954,7 @@
 }
 
 
-// Testimonial
+// ===============Testimonial======================
 .box-testimonial-item {
     padding: 30px;
     border-radius: 20px;
@@ -886,7 +995,61 @@
     }
 }
 
-//Latest
+.flat-testimonial-v2 {
+    .content-left {
+        position: relative;
+        width: 44.375%;
+
+        .content-text {
+            position: absolute;
+            bottom: 14%;
+            left: 6%;
+            right: 8%;
+
+            p {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .content-right {
+        width: 55.625%;
+
+        .archive-top {
+            max-width: 675px;
+        }
+
+        .archive-bottom {
+            margin-top: 70px;
+        }
+    }
+
+    .box-testimonial-item {
+        padding: 0;
+        background-color: transparent;
+
+        .list-star {
+            margin-top: 0;
+
+            .icon {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .archive-bottom {
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+
+        .partners__wrapper {
+            width: 100%;
+        }
+    }
+}
+
+//=================Latest==========================
+// V1
 .flat-blog-item {
     margin-bottom: 40px;
     display: block;
@@ -894,14 +1057,25 @@
     .img-style {
         position: relative;
         border-radius: 16px;
-        aspect-ratio: 300 / 533;
+        aspect-ratio: 3/2;
+        overflow: hidden;
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: inherit;
+            display: block;
+            border-radius: 16px;
+            overflow: hidden;
+
+            &:hover {
+                filter: brightness(60%);
+                cursor: pointer;
+                transform: scale(1.05);
+            }
         }
+
+
     }
 
     .date-post {
@@ -941,6 +1115,11 @@
             border-radius: 0;
             width: 100%;
             height: 100%;
+            aspect-ratio: 300 / 533;
+            overflow: hidden;
+
+
+
         }
 
         .content-box {
@@ -1019,7 +1198,7 @@
     }
 }
 
-// img
+//================== Image========================
 .flat-img {
     display: flex;
     flex-direction: row;
@@ -1129,64 +1308,8 @@
     }
 }
 
-.flat-testimonial-v2 {
-    .content-left {
-        position: relative;
-        width: 44.375%;
 
-        .content-text {
-            position: absolute;
-            bottom: 14%;
-            left: 6%;
-            right: 8%;
-
-            p {
-                margin-top: 20px;
-            }
-        }
-    }
-
-    .content-right {
-        width: 55.625%;
-
-        .archive-top {
-            max-width: 675px;
-        }
-
-        .archive-bottom {
-            margin-top: 70px;
-        }
-    }
-
-    .box-testimonial-item {
-        padding: 0;
-        background-color: transparent;
-
-        .list-star {
-            margin-top: 0;
-
-            .icon {
-                font-size: 24px;
-            }
-        }
-    }
-
-    .archive-bottom {
-        margin-top: 30px;
-        position: relative;
-        overflow: hidden;
-
-        .partners__wrapper {
-            width: 100%;
-        }
-    }
-}
-
-.tf-grid-2 {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+// =================Team=========================
 
 .box-agent {
     display: flex;
@@ -1552,113 +1675,5 @@
                 color: var(--white);
             }
         }
-    }
-}
-
-.form-control {
-    border: 1px solid var(--border-card);
-    outline: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-size: 16px;
-    line-height: 26px;
-    border-radius: 999px;
-    padding: 14px 16px;
-    width: 100%;
-    background: var(--white);
-    color: var(--black);
-    font-weight: 400;
-
-    &:focus {
-        box-shadow: unset;
-        border-color: var(--primary-color) !important;
-    }
-
-
-
-    &.style-1 {
-        padding: 10px 16px;
-    }
-}
-
-.ip-icon {
-    position: relative;
-
-    .icon-right {
-        position: absolute;
-        right: 14px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px;
-    }
-}
-
-.wd-filter-select {
-    background-color: var(--white);
-    border-radius: 10px;
-    border-top-left-radius: 0;
-    padding: 22px;
-
-
-
-    .hero__input-group {
-        border: 1px solid var(--border-card);
-        border-radius: 999px;
-        padding: 14px 16px;
-    }
-
-    .hero__dropdown-selected {
-        font-weight: 400;
-    }
-
-    .form-style {
-        .icon-right {
-            right: 18px;
-        }
-
-        &:not(:first-child) {
-            margin-top: 12px;
-        }
-
-        // label {
-        //     margin-bottom: 8px;
-        //     text-transform: uppercase;
-        //     font-size: 14px;
-        //     line-height: 24px;
-        //     font-weight: 700;
-        //     letter-spacing: 0.8px;
-        //     color: $on-surface;
-        // }
-        .form-control,
-        .nice-select {
-            font-size: 14px;
-            line-height: 22px;
-            padding: 15px 18px;
-            padding-right: 40px;
-        }
-    }
-
-    .filter-advanced {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-
-        .icon {
-            font-size: 28px;
-            color: var(--color-tab);
-        }
-    }
-
-    .tf-btn {
-        width: 100%;
-    }
-}
-
-.flat-filter-form {
-    .wd-search-form {
-        left: 15px;
-        right: 15px;
-        width: auto;
     }
 }

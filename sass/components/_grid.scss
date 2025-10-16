@@ -34,6 +34,12 @@
         }
     }
 
+    .tf-grid-2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
     .grid-location {
         display: grid;
         grid-template-areas:
