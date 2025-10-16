@@ -5662,6 +5662,11 @@ input[type=range]::-moz-range-thumb {
   aspect-ratio: 300/300;
   overflow: hidden;
 }
+.box-agent-v2 .box-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .box-agent-v2 .box-img img {
   width: 100%;
   height: 100%;
