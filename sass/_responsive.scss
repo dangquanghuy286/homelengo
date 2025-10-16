@@ -401,6 +401,8 @@
         .content-right {
             width: 100%;
         }
+
+
     }
 
     .featured-properties {
@@ -423,6 +425,10 @@
         .content-left,
         .content-right {
             width: 100%;
+        }
+
+        .tf-image-wrap .tag-item {
+            display: none;
         }
     }
 

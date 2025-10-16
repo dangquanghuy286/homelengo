@@ -414,6 +414,9 @@
         position: relative;
         overflow: hidden;
 
+        &:hover {
+            filter: brightness(60%);
+        }
 
         img {
             -webkit-transition: all 0.3s ease;
