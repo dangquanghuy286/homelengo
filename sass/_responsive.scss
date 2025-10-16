@@ -724,21 +724,7 @@
 
 @media (max-width: 576px) {
 
-    // Header
-    .header {
 
-        &__menu-frame {
-            &__logo {
-                height: 36px;
-                gap: 6px;
-            }
-        }
-
-        &__logo-img {
-            height: 40px;
-            width: auto;
-        }
-    }
 
     .home-box {
         &.list-style-1 {
@@ -747,6 +733,7 @@
 
 
     }
+
 
     .flat-section-benefit .content-right {
         padding: 15px;

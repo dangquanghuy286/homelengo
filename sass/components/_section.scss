@@ -509,9 +509,7 @@
         position: relative;
         overflow: hidden;
 
-        &:hover {
-            filter: brightness(60%);
-        }
+
 
         img {
             -webkit-transition: all 0.3s ease;
@@ -1154,11 +1152,6 @@
             border-radius: 16px;
             overflow: hidden;
 
-            &:hover {
-                filter: brightness(60%);
-                cursor: pointer;
-                transform: scale(1.05);
-            }
         }
 
 
@@ -1573,10 +1566,6 @@
 
     &:hover {
         .box-img {
-            img {
-                transform: scale(1.05);
-                filter: brightness(60%);
-            }
 
             .agent-social {
                 bottom: 20px;
@@ -1749,10 +1738,7 @@
 
     &:hover {
         .box-img {
-            img {
-                transform: scale(1.05);
-                filter: brightness(60%);
-            }
+
 
             .agent-social {
                 bottom: 20px;

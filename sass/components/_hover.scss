@@ -9,6 +9,7 @@
             object-fit: cover;
             -webkit-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18);
             transition: transform 1.5s cubic-bezier(0, 0, 0.44, 1.18);
+
         }
     }
 
@@ -16,6 +17,8 @@
         img {
             -webkit-transform: scale(1.04);
             transform: scale(1.04);
+
+            filter: brightness(60%);
         }
 
     }

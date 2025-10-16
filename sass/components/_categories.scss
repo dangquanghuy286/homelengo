@@ -27,6 +27,7 @@
             transition: all 0.4s ease;
             font-size: 80px;
             color: var(--text-label);
+            filter: brightness(0) saturate(100%) invert(40%) sepia(7%) saturate(414%) hue-rotate(162deg) brightness(92%) contrast(94%);
         }
 
         svg path {

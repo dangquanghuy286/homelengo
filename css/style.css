@@ -4241,6 +4241,7 @@ input[type=range]::-moz-range-thumb {
   transition: all 0.4s ease;
   font-size: 80px;
   color: var(--text-label);
+  filter: brightness(0) saturate(100%) invert(40%) sepia(7%) saturate(414%) hue-rotate(162deg) brightness(92%) contrast(94%);
 }
 .categories-item .icon-box svg path {
   -webkit-transition: all 0.4s ease;
@@ -4807,9 +4808,6 @@ input[type=range]::-moz-range-thumb {
   position: relative;
   overflow: hidden;
 }
-.home-box .images-style:hover {
-  filter: brightness(60%);
-}
 .home-box .images-style img {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -5304,11 +5302,6 @@ input[type=range]::-moz-range-thumb {
   border-radius: 16px;
   overflow: hidden;
 }
-.flat-blog-item .img-style img:hover {
-  filter: brightness(60%);
-  cursor: pointer;
-  transform: scale(1.05);
-}
 .flat-blog-item .date-post {
   z-index: 1;
   position: absolute;
@@ -5637,10 +5630,6 @@ input[type=range]::-moz-range-thumb {
 .box-agent.style-list .list-info .item:not(:last-child) {
   margin-bottom: 12px;
 }
-.box-agent:hover .box-img img {
-  transform: scale(1.05);
-  filter: brightness(60%);
-}
 .box-agent:hover .box-img .agent-social {
   bottom: 20px;
   opacity: 1;
@@ -5780,10 +5769,6 @@ input[type=range]::-moz-range-thumb {
 .box-agent-v2 .content .tf-btn {
   margin-top: 16px;
 }
-.box-agent-v2:hover .box-img img {
-  transform: scale(1.05);
-  filter: brightness(60%);
-}
 .box-agent-v2:hover .box-img .agent-social {
   bottom: 20px;
   opacity: 1;
@@ -5808,6 +5793,7 @@ input[type=range]::-moz-range-thumb {
 .hover-img:hover img {
   -webkit-transform: scale(1.04);
   transform: scale(1.04);
+  filter: brightness(60%);
 }
 .hover-img.not-overlay .img-style::after {
   content: none;
@@ -7022,14 +7008,6 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media (max-width: 576px) {
-  .header__menu-frame__logo {
-    height: 36px;
-    gap: 6px;
-  }
-  .header__logo-img {
-    height: 40px;
-    width: auto;
-  }
   .home-box.list-style-1 {
     display: block;
   }
