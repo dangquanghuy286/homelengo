@@ -4334,10 +4334,6 @@ input[type=range]::-moz-range-thumb {
   overflow: hidden;
 }
 
-.tf-sw-categories .sw-pagination .swiper-pagination-bullet {
-  background-color: #acc6ec;
-}
-
 .flat-categories-v3 {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -5441,8 +5437,6 @@ input[type=range]::-moz-range-thumb {
 }
 .flat-img.style-2 .content-right {
   width: 47.5%;
-  padding-right: 295px;
-  padding-left: 95px;
 }
 .flat-img.style-2 .content-right .box-title {
   margin-left: 0;
@@ -6554,61 +6548,11 @@ input[type=range]::-moz-range-thumb {
   .flat-testimonial-v2 .content-right {
     padding: 100px 30px 100px 100px;
   }
-  .benefits__hero-image {
-    display: none;
-  }
-  .benefits__content {
-    padding: 60px 50px;
-    gap: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .flat-img.style-2 {
     align-items: center;
-    text-align: center;
   }
-  .benefits__header {
-    margin-bottom: 20px;
-  }
-  .benefits__title-section {
-    margin: auto;
-  }
-  .benefits__title {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--primary-color);
-    text-align: center;
-    width: 100%;
-  }
-  .benefits__subtitle {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 700;
-    text-align: center;
-    width: 100%;
-  }
-  .benefits__intro {
-    margin: 0 auto;
-    text-align: center;
-  }
-  .benefits__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
-  }
-  .benefits__item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    gap: 20px;
-  }
-  .benefits__icon {
-    margin-bottom: 15px;
-  }
-  .benefits__details {
-    align-items: center;
-    text-align: center;
+  .flat-img.style-2 .content-right {
+    padding: 0 50px !important;
   }
 }
 @media (max-width: 1200px) {
@@ -6663,6 +6607,16 @@ input[type=range]::-moz-range-thumb {
   }
   .footer__main {
     gap: 30px;
+  }
+  .wrap-banner .box-right {
+    flex-shrink: unset;
+  }
+  .wrap-banner .box-right img {
+    margin-top: 0;
+  }
+  .wrap-banner .box-left {
+    padding: 0;
+    padding-left: 50px;
   }
 }
 @media (max-width: 1024px) {
@@ -6745,6 +6699,14 @@ input[type=range]::-moz-range-thumb {
   }
   .flat-img .content-left,
   .flat-img .content-right {
+    width: 100%;
+  }
+  .flat-img.style-2 .content-right {
+    padding: 70px 15px !important;
+    width: 100%;
+  }
+  .flat-img.style-2 .content-left {
+    padding: 0 15px !important;
     width: 100%;
   }
   .flat-slider.home-1 .slider-content {
@@ -6898,6 +6860,16 @@ input[type=range]::-moz-range-thumb {
     top: 0;
     padding: 0;
   }
+  .wrap-banner {
+    display: block;
+  }
+  .wrap-banner h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .wrap-banner .box-left {
+    padding: 50px;
+  }
   .footer__social-icons {
     width: auto;
     justify-content: center;
@@ -6906,34 +6878,6 @@ input[type=range]::-moz-range-thumb {
   .footer__newsletter-input {
     width: 100%;
     max-width: 340px;
-  }
-  .benefits {
-    border-radius: 10px;
-  }
-  .benefits__content {
-    padding: 40px 30px;
-    gap: 25px;
-    width: 100%;
-  }
-  .benefits__subtitle {
-    font-size: 26px;
-    line-height: 34px;
-  }
-  .benefits__intro {
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .benefits__item {
-    gap: 15px;
-    padding: 15px;
-  }
-  .benefits__icon {
-    width: 45px;
-    height: 45px;
-  }
-  .benefits__name {
-    font-size: 20px;
-    line-height: 26px;
   }
 }
 @media (max-width: 768px) {
@@ -7066,6 +7010,14 @@ input[type=range]::-moz-range-thumb {
   .hero__dropdown-menu {
     top: calc(100% + 10px);
   }
+  .flat-img.style-2 .content-right h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .flat-section-benefit .content-right h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
   .animationtext.slide .cd-words-wrapper {
     text-align: center;
   }
@@ -7092,6 +7044,12 @@ input[type=range]::-moz-range-thumb {
   }
   .social {
     flex-direction: column;
+  }
+  .wrap-banner .box-left {
+    padding: 30px;
+  }
+  .flat-img.style-2 .box-count {
+    gap: 5px;
   }
   .footer__bottom {
     flex-direction: column;
