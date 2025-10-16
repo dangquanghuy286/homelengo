@@ -6654,6 +6654,9 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media (max-width: 992px) {
+  .flat-section {
+    padding: 70px 0;
+  }
   .header__menu {
     padding: 15px 20px;
   }
