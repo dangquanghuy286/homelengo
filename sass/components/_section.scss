@@ -1288,6 +1288,7 @@
 
     .content-left {
 
+
         img {
             width: 100%;
             height: 100%;
@@ -1308,18 +1309,20 @@
         .content-left {
             width: 52.5%;
             padding-left: 35px;
-            aspect-ratio: 945/657;
+
+
 
             img {
                 border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 945/657;
             }
         }
 
         .content-right {
             width: 47.5%;
             padding-right: 295px;
-            padding-top: 78px;
-            padding-bottom: 78px;
             padding-left: 95px;
 
             .box-title {
@@ -1349,6 +1352,7 @@
 
         .img-wrap {
             position: relative;
+            aspect-ratio: 945/800;
         }
 
         .box-count {

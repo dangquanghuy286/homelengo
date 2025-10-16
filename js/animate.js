@@ -102,3 +102,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new WOW().init();
 });
+// ===================Count====================
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.body.classList.contains("counter-scroll")) {
+    let triggered = false; // Biến để đảm bảo hiệu ứng chỉ chạy 1 lần
+
+    window.addEventListener("scroll", () => {
+      // Lắng nghe sự kiện cuộn trang
+      const counters = document.querySelectorAll(".tf-counter");
+      if (!counters.length) return; // Nếu không có phần tử nào thì thoát
+
+      const firstTop = counters[0].offsetTop - window.innerHeight;
+      // Tính vị trí phần tử đầu tiên so với chiều cao khung nhìn
+
+      if (!triggered && window.scrollY > firstTop) {
+        // Khi người dùng cuộn đến vị trí phần tử
+        counters.forEach((counter) => {
+          // Duyệt qua từng khối .tf-counter
+          counter.querySelectorAll(".number").forEach((el) => {
+            // Duyệt qua từng phần tử số bên trong
+            const to = parseFloat(el.dataset.to) || 0; // Giá trị đích cần đếm tới
+            const speed = parseInt(el.dataset.speed) || 2000; // Thời gian chạy hiệu ứng
+            const dec = parseInt(el.dataset.dec) || 0; // Số chữ số thập phân
+
+            const startTime = performance.now(); // Lấy thời gian bắt đầu
+
+            const animate = (now) => {
+              // Hàm  đếm
+              const progress = Math.min((now - startTime) / speed, 1);
+              // Tính tiến trình
+              const current = to * progress;
+              // Tính giá trị hiện tại
+              el.textContent = current.toFixed(dec);
+              // Cập nhật nội dung hiển thị
+
+              if (progress < 1) requestAnimationFrame(animate);
+              // Nếu chưa hoàn tất  tiếp tục lặp
+              else el.textContent = to.toFixed(dec);
+              // Hiển thị giá trị cuối
+            };
+
+            requestAnimationFrame(animate);
+            // Bắt đầu hoạt ảnh
+          });
+        });
+        triggered = true; // Đánh dấu đã chạy
+      }
+    });
+  }
+
+  if (typeof WOW === "function") new WOW().init();
+});
