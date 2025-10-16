@@ -273,6 +273,14 @@
     .img-style {
         overflow: hidden;
         border-radius: 30px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 30px;
+        }
     }
 
     &.item-2 {

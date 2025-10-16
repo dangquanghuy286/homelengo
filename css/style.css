@@ -4582,6 +4582,13 @@ input[type=range]::-moz-range-thumb {
   overflow: hidden;
   border-radius: 30px;
 }
+.tf-image-wrap .img-style img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 30px;
+}
 .tf-image-wrap.item-2 {
   left: 14%;
   width: 71.67%;
