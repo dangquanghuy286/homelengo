@@ -7410,6 +7410,14 @@ input[type=range]::-moz-range-thumb {
   .flat-section-benefit-v2 .tf-image-wrap .tag-item {
     display: none;
   }
+  .wd-navigation {
+    gap: 5px;
+  }
+  .wd-navigation .nav-item {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
   .hero__title {
     white-space: normal;
     font-size: 60px;
