@@ -1,12 +1,12 @@
 // =====================Preload=========================
 window.addEventListener("load", function () {
   const preload = document.querySelector(".preload");
-  // Đợi 1s trước khi bắt đầu mờ dần
+
   setTimeout(() => {
-    preload.style.transition = "opacity 1s ease"; // mờ trong
+    preload.style.transition = "opacity 0.5s ease";
     preload.style.opacity = "0";
-    setTimeout(() => preload.remove(), 500); // xóa
-  }, 1000);
+    setTimeout(() => preload.remove(), 500);
+  }, 500);
 });
 
 // ==================== Hidden Text===================
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new WOW().init();
 });
-// ===================Count====================
+
 // ===================Count====================
 document.addEventListener("DOMContentLoaded", () => {
   if (document.body.classList.contains("counter-scroll")) {

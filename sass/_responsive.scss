@@ -85,8 +85,6 @@
         }
     }
 
-
-
     // Hero
 
     .hero {
@@ -126,12 +124,12 @@
 
     .col-lg-7 {
         flex: 0 0 auto;
-        width: 58.3333333% !important;
+        width: 58.3333333%;
     }
 
     .col-lg-5 {
         flex: 0 0 auto;
-        width: 41.6666667% !important;
+        width: 41.6666667%;
     }
 
     .flat-slider.home-3 .slider-content {
@@ -350,6 +348,19 @@
     }
 
 
+    .col-md-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .flat-slider.home-3 .slider-content {
+        .heading {
+            margin-bottom: 20px;
+        }
+
+        padding: 0;
+        margin-bottom: 20px;
+    }
 
     .tf-swiper-mobile-1 .swiper-wrapper {
         display: flex !important;
