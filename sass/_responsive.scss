@@ -194,29 +194,7 @@
 
 
 
-    // Benefits
 
-    .benefits {
-        &__list {
-            margin: 0 auto;
-        }
-
-        &__item {
-            flex-direction: row;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        &__icon {
-            margin: 0;
-            flex-shrink: 0;
-        }
-
-        &__details {
-            flex-grow: 1;
-            text-align: left;
-        }
-    }
 
 }
 
@@ -356,12 +334,22 @@
         width: 100%;
     }
 
-    .row>* {
-        flex-shrink: 0 !important;
-        width: 100% !important;
-        max-width: 100%;
-        margin-top: 20px;
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+
+        .footer-info-1,
+        .footer-info-2 {
+            margin: 0 0 30px 0;
+        }
+
+        .footer-info-3,
+        .footer-info-4 {
+            margin: 0;
+        }
     }
+
+
 
     .tf-swiper-mobile-1 .swiper-wrapper {
         display: flex !important;
@@ -508,25 +496,7 @@
         }
     }
 
-    // ==================== BLOG RESPONSIVE ====================
-    .blog__content {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        gap: 30px;
-    }
 
-    .blog__list,
-    .blog__sidebar {
-        width: 100%;
-        flex: none;
-    }
-
-    .blog__sidebar {
-        position: relative;
-        top: 0;
-        padding: 0;
-    }
 
     .wrap-banner {
         display: block;
@@ -541,20 +511,7 @@
         }
     }
 
-    // Footer
-    .footer {
-        &__social-icons {
-            width: auto;
-            justify-content: center;
-            gap: 10px;
-        }
 
-        &__newsletter-input {
-            width: 100%;
-            max-width: 340px;
-        }
-
-    }
 
 
 
@@ -616,25 +573,6 @@
         }
     }
 
-    // Footer
-    .footer {
-
-
-        &__main {
-            flex-direction: column;
-        }
-
-        &__info,
-        &__section,
-        &__newsletter {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        &__terms {
-            margin-top: 10px;
-        }
-    }
 
     // Benefits
     .benefits {
@@ -730,6 +668,11 @@
         font-weight: 400;
         line-height: 22.4px;
 
+    }
+
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
     }
 
     .archive-top {
@@ -848,27 +791,7 @@
         }
     }
 
-    //Footer
-    .footer {
-        &__bottom {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            text-align: left;
-        }
 
-        &__terms li {
-            padding: 0 10px 0 0;
-
-        }
-
-        &__logo {
-            height: 36px;
-            gap: 6px;
-            justify-content: flex-start;
-        }
-
-    }
 
 }
 
@@ -899,7 +822,7 @@
 
     .footer {
 
-        &__social-text {
+        .text-social {
             display: none;
         }
     }
