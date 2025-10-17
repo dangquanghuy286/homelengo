@@ -5415,7 +5415,6 @@ input[type=range]::-moz-range-thumb {
 }
 .sidebar-blog .recent .recent-post-item {
   display: flex;
-  align-items: center;
   gap: 10px;
   padding-top: 20px;
   margin-top: 20px;
