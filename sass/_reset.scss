@@ -465,6 +465,12 @@ textarea {
 }
 
 textarea {
+    height: 112px;
+    resize: none;
+    border-radius: 16px;
+}
+
+textarea {
     overflow: auto;
     /* Removes default vertical scrollbar in IE6/7/8/9 */
     vertical-align: top;
@@ -876,6 +882,10 @@ h6,
     color: var(--primary-color);
 }
 
+.text-black {
+    color: var(--black);
+}
+
 .text-black-2 {
     color: #000000;
 }
@@ -1082,6 +1092,10 @@ a {
     border-top: 1px solid var(--border-card);
 }
 
+.bb-1 {
+    border-bottom: 1px solid var(--border-card);
+}
+
 // Rounded
 .rounded-cycle {
     border-radius: 999px;
@@ -1189,11 +1203,26 @@ a {
 }
 
 .gap_20 {
-    gap: 20px;
+    gap: 20px !important;
+}
+
+// Width
+.w_100 {
+    width: 100% !important;
 }
 
 /* margin
 -------------------------------------------------------------- */
+.my_30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.my_20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .mt_22 {
     margin-top: 22px;
 }
@@ -1210,6 +1239,14 @@ a {
     margin: 15px 0 0 0 !important;
 }
 
+.mt_16 {
+    margin-top: 16px !important;
+}
+
+.mt_8 {
+    margin-top: 8px;
+}
+
 .mt_4 {
     margin-top: 4px;
 }
@@ -1220,6 +1257,10 @@ a {
 
 .mt_30 {
     margin-top: 30px;
+}
+
+.mb_0 {
+    margin-bottom: 0px !important;
 }
 
 .mb_2 {
@@ -1326,6 +1367,14 @@ a {
 
 .fl-row {
     flex-direction: row !important;
+}
+
+.pb_30 {
+    padding-bottom: 30px;
+}
+
+.pb_12 {
+    padding-bottom: 12px !important;
 }
 
 /* spacing-section
@@ -1582,6 +1631,10 @@ a {
 
 .justify-content-center {
     justify-content: center
+}
+
+.justify-content-between {
+    justify-content: space-between
 }
 
 

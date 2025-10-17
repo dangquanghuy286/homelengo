@@ -472,6 +472,12 @@ textarea {
 }
 
 textarea {
+  height: 112px;
+  resize: none;
+  border-radius: 16px;
+}
+
+textarea {
   overflow: auto;
   /* Removes default vertical scrollbar in IE6/7/8/9 */
   vertical-align: top;
@@ -737,6 +743,10 @@ h6,
   color: var(--primary-color);
 }
 
+.text-black {
+  color: var(--black);
+}
+
 .text-black-2 {
   color: #000000;
 }
@@ -935,6 +945,10 @@ a:focus, a:hover {
   border-top: 1px solid var(--border-card);
 }
 
+.bb-1 {
+  border-bottom: 1px solid var(--border-card);
+}
+
 .rounded-cycle {
   border-radius: 999px;
 }
@@ -1040,11 +1054,25 @@ a:focus, a:hover {
 }
 
 .gap_20 {
-  gap: 20px;
+  gap: 20px !important;
+}
+
+.w_100 {
+  width: 100% !important;
 }
 
 /* margin
 -------------------------------------------------------------- */
+.my_30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.my_20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .mt_22 {
   margin-top: 22px;
 }
@@ -1061,6 +1089,14 @@ a:focus, a:hover {
   margin: 15px 0 0 0 !important;
 }
 
+.mt_16 {
+  margin-top: 16px !important;
+}
+
+.mt_8 {
+  margin-top: 8px;
+}
+
 .mt_4 {
   margin-top: 4px;
 }
@@ -1071,6 +1107,10 @@ a:focus, a:hover {
 
 .mt_30 {
   margin-top: 30px;
+}
+
+.mb_0 {
+  margin-bottom: 0px !important;
 }
 
 .mb_2 {
@@ -1177,6 +1217,14 @@ a:focus, a:hover {
 
 .fl-row {
   flex-direction: row !important;
+}
+
+.pb_30 {
+  padding-bottom: 30px;
+}
+
+.pb_12 {
+  padding-bottom: 12px !important;
 }
 
 /* spacing-section
@@ -1400,6 +1448,10 @@ a:focus, a:hover {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 .ap-1-2 {
@@ -4351,6 +4403,48 @@ input[type=range]::-moz-range-thumb {
   margin-top: 20px;
 }
 
+.wrap-form-comment .group-ip {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.wrap-form-comment .form-wg {
+  margin-top: 20px;
+}
+
+.comment-form {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  border: 1px solid var(--border-card);
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: var(--white);
+}
+
+.comment-form textarea {
+  border-radius: 10px;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.comment-form .sub-ip {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-label);
+}
+
 .flat-section-benefit {
   display: flex;
   flex-direction: row;
@@ -5557,15 +5651,76 @@ input[type=range]::-moz-range-thumb {
   margin-top: 40px;
 }
 
+.list-review-item {
+  display: flex;
+  gap: 20px;
+}
+.list-review-item .avatar {
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.list-review-item .name {
+  font-size: 18px;
+  line-height: 25.2px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.list-review-item .action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.list-review-item .action span {
+  color: #7c818b;
+  font-size: 12px;
+  line-height: 16.8px;
+}
+.list-review-item:not(:last-child) .content {
+  padding-bottom: 34px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid var(--border-card);
+}
+.list-review-item .box-img-review {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.list-review-item .box-img-review .img-review {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-tab);
+}
+.list-review-item .view-question {
+  margin-top: 22px;
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 1px solid var(--border-card);
+}
+
 .flat-quote {
-  padding: 30px;
+  padding: 30px 50px 30px 30px;
   border-radius: 10px;
   background-color: var(--bg-three);
   border-left: 4px solid var(--primary-color);
 }
+.flat-quote .quote {
+  font-family: "Rubik", sans-serif;
+}
 .flat-quote .author {
   margin-top: 30px;
   display: block;
+  font-family: "Rubik", sans-serif;
 }
 
 .blog-tag {
