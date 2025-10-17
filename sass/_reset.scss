@@ -643,15 +643,8 @@ h6,
 }
 
 .bg-transparent {
-    &:hover {
-        background-color: transparent !important;
-        border: 1px solid var(--white);
-
-        .featured-properties__button-text,
-        .featured-properties__button-icon {
-            color: var(--white) !important;
-        }
-    }
+    background-color: transparent !important;
+    color: white;
 }
 
 .text-body-1 {

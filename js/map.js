@@ -107,6 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ========== INIT ==========
   if (document.getElementById("map")) {
-    google.maps.event.addDomListener(window, "load", mainMap);
+    mainMap();
   }
 });

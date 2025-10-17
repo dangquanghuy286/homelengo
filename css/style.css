@@ -652,13 +652,9 @@ h6,
   font-weight: 800;
 }
 
-.bg-transparent:hover {
+.bg-transparent {
   background-color: transparent !important;
-  border: 1px solid var(--white);
-}
-.bg-transparent:hover .featured-properties__button-text,
-.bg-transparent:hover .featured-properties__button-icon {
-  color: var(--white) !important;
+  color: white;
 }
 
 .text-body-1 {
