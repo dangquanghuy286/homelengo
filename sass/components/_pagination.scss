@@ -1,59 +1,39 @@
-.pagination {
+.wd-navigation {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin: auto;
-    justify-content: center;
-    margin-top: 40px;
+    width: 100%;
 
-}
+    .nav-item {
+        width: 44px;
+        height: 44px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21.86px;
+        border-radius: 10px;
+        border: 1px solid var(--border-card);
 
-.pagination__prev-icon,
-.pagination__next-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: var(--border-card);
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
-}
+        &:hover,
+        &.active {
+            background-color: var(--primary-color);
+            color: var(--white);
 
-.pagination__page {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: var(--border-card);
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 0.01em;
-    line-height: 1.4;
-    font-style: normal;
-    transition: all 0.25s ease;
-}
+            .icon {
+                color: var(--white);
+            }
+        }
+    }
 
-.pagination__page.active {
-    width: 44px;
-    height: 44px;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    color: var(--white);
-}
-
-.pagination__page:hover,
-.pagination__prev-icon:hover,
-.pagination__next-icon:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-    cursor: pointer;
+    .icon {
+        font-size: 14px;
+        color: var(--black);
+    }
 }

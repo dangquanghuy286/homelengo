@@ -44,6 +44,12 @@
         }
     }
 
+    .flat-latest-hero {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 85px 0;
+    }
+
 
 }
 
@@ -284,6 +290,14 @@
         }
     }
 
+    .flat-latest-hero {
+
+        h1 {
+            font-size: 46px;
+            line-height: 58px;
+            margin-top: 10px;
+        }
+    }
 
     .flat-img.style-2 {
         .content-right {
@@ -808,10 +822,15 @@
 
     }
 
-    .nav-tab-recommended .nav-link-item {
-        flex: 0 0 auto;
 
-        white-space: nowrap;
+
+    .flat-latest-hero {
+
+        h1 {
+            font-size: 30px;
+            line-height: 42px;
+            margin-top: 6px;
+        }
     }
 
     // Benefit

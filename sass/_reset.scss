@@ -1008,6 +1008,16 @@ a {
     }
 }
 
+.col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.6666667%;
+}
+
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+
 .col-10 {
     flex: 0 0 auto;
     width: 83.33333333%
@@ -1066,6 +1076,10 @@ a {
 .border-1 {
     border: 1px solid var(--border-card);
 
+}
+
+.bt-1 {
+    border-top: 1px solid var(--border-card);
 }
 
 // Rounded
@@ -1184,6 +1198,10 @@ a {
     margin-top: 22px;
 }
 
+.mt_40 {
+    margin-top: 40px;
+}
+
 .mt_12 {
     margin-top: 12px;
 }
@@ -1194,6 +1212,10 @@ a {
 
 .mt_4 {
     margin-top: 4px;
+}
+
+.mt_20 {
+    margin-top: 20px;
 }
 
 .mt_30 {
@@ -1294,8 +1316,16 @@ a {
     padding: 0 15px !important;
 }
 
+.pt-26 {
+    padding-top: 26px;
+}
+
 .fl-col {
     flex-direction: column !important;
+}
+
+.fl-row {
+    flex-direction: row !important;
 }
 
 /* spacing-section
@@ -1542,6 +1572,10 @@ a {
     display: inline-block !important;
 }
 
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
 .flex-wrap {
     flex-wrap: wrap !important;
 }
@@ -1551,6 +1585,22 @@ a {
 }
 
 
+// Khung Hình
+.ap-1-2 {
+    aspect-ratio: 1 / 2 !important;
+}
+
+.ap-3-2 {
+    aspect-ratio: 3 / 2 !important;
+}
+
+.ap-4-3 {
+    aspect-ratio: 4 / 3 !important;
+}
+
+.ap-16-9 {
+    aspect-ratio: 16 / 9 !important;
+}
 
 .overlay-link {
     position: absolute;
