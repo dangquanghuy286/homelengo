@@ -34,7 +34,6 @@
 }
 
 .nav-link {
-    position: relative;
     height: 100%;
     font-size: 16px;
     color: var(--text-dark);
@@ -70,7 +69,6 @@
 }
 
 .header__nav-text {
-    font-size: 16px;
     line-height: 1;
 }
 
@@ -152,9 +150,6 @@
         min-width: 140px;
     }
 }
-
-
-
 
 .icon-menu:before {
     content: "\e936";
@@ -313,79 +308,15 @@
 
 // Action buttons
 .header__mobile-actions {
-    display: flex;
     flex-direction: column;
     gap: 12px;
     width: 100%;
     margin: 20px 0;
-}
 
-.header__mobile-btn--login,
-.header__mobile-btn--submit {
-    all: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    height: 48px;
-    font-weight: 600;
-    font-size: 16px;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Icon chung */
-.header__mobile-btn-icon {
-    width: 20px;
-    height: 20px;
-    transition: filter 0.3s ease;
-}
-
-/* ===== Nút login ===== */
-.header__mobile-btn--login {
-    background-color: var(--white);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
-
-
-.header__mobile-btn--login .header__mobile-btn-icon {
-    filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
-}
-
-/* Hover — trắng */
-.header__mobile-btn--login:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.header__mobile-btn--login:hover .header__mobile-btn-icon {
-    filter: brightness(0) invert(1);
-}
-
-/* ===== Nút submit ===== */
-.header__mobile-btn--submit {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: 1px solid var(--primary-color);
-}
-
-
-.header__mobile-btn--submit .header__mobile-btn-icon {
-    filter: brightness(0) invert(1);
-}
-
-
-.header__mobile-btn--submit:hover {
-    background-color: var(--white);
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-}
-
-.header__mobile-btn--submit:hover .header__mobile-btn-icon {
-    filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
+    .btn-login,
+    .btn-sub {
+        width: 100%;
+    }
 }
 
 /* Contact info */
@@ -397,22 +328,18 @@
     margin: 20px 0;
 }
 
-.header__mobile-contact div {
+.header__mobile-contact a {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.header__mobile-contact span {
     font-size: 16px;
-    color: var(--primary-color);
-}
 
-.header__mobile-contact p {
-    font-size: 16px;
-    color: var(--text-dark);
-}
+    span {
+        color: var(--primary-color);
+    }
 
-.header__mobile-nav-item.active .header__mobile-sub-menu {
-    display: flex;
+    p {
+        font-size: 16px;
+        color: var(--text-dark);
+    }
 }

@@ -31,7 +31,6 @@
         }
 
         &__menu-frame {
-            gap: 25px;
 
             &__nav {
                 gap: 30px;
@@ -187,7 +186,8 @@
     // Header
     .header {
         &__menu-frame {
-            gap: 15px;
+            gap: 5px;
+            flex: 1;
 
             &__nav {
                 gap: 5px;
@@ -212,11 +212,6 @@
         }
     }
 
-
-
-
-
-
 }
 
 @media (max-width: 992px) {
@@ -228,7 +223,7 @@
     // Header
     .header {
         &__menu {
-            padding: 15px 20px;
+            padding: 15px 10px;
 
             &> :last-child {
                 margin-left: auto;
@@ -236,9 +231,6 @@
         }
 
         &__menu-frame {
-            gap: 20px;
-            flex: 1;
-
             &__nav {
                 display: none;
             }
