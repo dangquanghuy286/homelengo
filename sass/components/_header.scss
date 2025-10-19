@@ -58,6 +58,7 @@
 .nav-link:hover .header__nav-icon,
 .nav-link:hover .icon-CaretDown:before {
     color: var(--primary-color);
+
 }
 
 .nav-link:hover {
@@ -72,10 +73,7 @@
     line-height: 1;
 }
 
-.header__nav-icon {
-    width: 12px;
-    height: 12px;
-}
+
 
 .icon-CaretDown:before {
     content: "\e927";
@@ -84,6 +82,7 @@
     line-height: 1;
     display: inline-block;
     color: var(--black);
+    font-weight: 800;
 }
 
 .header__nav-link--dropdown {
