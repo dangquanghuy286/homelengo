@@ -37,14 +37,10 @@
           <div class="header__menu-frame d-flex">
             <div class="header__menu-frame__logo">
               <a href="/">
-                <img
-                  class="header__logo-img"
-                  src="./images/logo/logoHeader.png"
-                  alt="HomeLengo-Logo"
-                />
+                <img src="./images/logo/logoHeader.png" alt="HomeLengo-Logo" />
               </a>
             </div>
-            <div class="header__menu-frame__nav d-flex">
+            <nav class="header__menu-frame__nav d-flex">
               <!-- Home -->
               <div class="header__nav-link--dropdown nav-link d-flex">
                 <span class="header__nav-text">Home</span>
@@ -214,25 +210,17 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </nav>
           </div>
           <div class="header__menu-actions d-flex">
-            <button class="header__btn header__btn--login">
-              <img
-                src="./images/logo/user-logo.svg"
-                alt="User"
-                class="header__btn-icon"
-              />
-              <span class="header__btn-text">Sign in</span>
-            </button>
-            <button class="header__btn header__btn--submit">
-              <img
-                src="./images/logo/copy-folder.svg"
-                alt="Folder"
-                class="header__btn-icon"
-              />
-              <span class="header__btn-text--submit">Submit Property</span>
-            </button>
+            <a href="#loginModal" class="tf-btn btn-line btn-login">
+              <img src="./images/logo/user-logo.svg" alt="logo-user" />
+              Sign In
+            </a>
+            <a href="#loginModal" class="tf-btn primary btn-sub">
+              <img src="./images/logo/copy-folder.svg" alt="logo-user" />
+              Submit Property
+            </a>
           </div>
           <div class="toggle-mobile hidden">
             <span class="toggle-mobile__icon icon-menu"></span>
@@ -2601,7 +2589,9 @@
         <div class="container-3">
           <h6
             id="partners-heading"
-            class="text-capitalize text-black-2 mb_20 text-center"
+            class="text-capitalize text-black-2 mb_20 text-center wow animate__animated animate__fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="0.2s"
           >
             Trusted By Over 150+ Major Companies
           </h6>

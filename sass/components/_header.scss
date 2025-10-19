@@ -27,16 +27,10 @@
     flex-shrink: 0;
 }
 
-.header__logo-img {
-    height: 100%;
-    width: auto;
-    max-width: none;
-}
-
 .header__menu-frame__nav {
-    gap: 60px;
+    gap: clamp(16px, 4vw, 60px);
     height: 100%;
-    flex-shrink: 1;
+
 }
 
 .nav-link {
@@ -152,87 +146,13 @@
 /* Action */
 .header__menu-actions {
     gap: 16px;
+
+
+    .btn-login {
+        min-width: 140px;
+    }
 }
 
-/* Button chung */
-.header__btn {
-    all: unset;
-    box-sizing: border-box;
-    display: flex;
-    padding: 11px 20px;
-    border-radius: 9999px;
-    height: 48px;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-/* Icon chung */
-.header__btn-icon {
-    width: 20px;
-    height: 20px;
-    transition: filter 0.3s ease;
-}
-
-/* Text chung */
-.header__btn-text,
-.header__btn-text--submit {
-    font-weight: 600;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-/* ===== Nút Login ===== */
-.header__btn--login {
-    border: 1px solid var(--primary-color);
-    width: 140px;
-}
-
-.header__btn--login .header__btn-text {
-    color: var(--text-dark);
-}
-
-
-/* Hover đổi màu */
-.header__btn--login:hover {
-    background-color: var(--primary-color);
-}
-
-.header__btn--login:hover .header__btn-text {
-    color: var(--white);
-}
-
-.header__btn--login:hover .header__btn-icon {
-    filter: brightness(0) invert(1);
-}
-
-/* ===== Nút Submit ===== */
-.header__btn--submit {
-    width: 206px;
-    background-color: var(--primary-color);
-    border: 1px solid transparent;
-}
-
-
-.header__btn-text--submit {
-    color: var(--white);
-}
-
-/* Hover đổi màu */
-.header__btn--submit:hover {
-    background-color: var(--white);
-    border-color: var(--primary-color);
-    opacity: 0.9;
-}
-
-.header__btn--submit:hover .header__btn-text--submit {
-    color: var(--black);
-}
-
-.header__btn--submit:hover .header__btn-icon {
-    filter: brightness(0) invert(0);
-}
 
 
 

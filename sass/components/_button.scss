@@ -33,6 +33,14 @@
         transition: all 0.3s ease;
     }
 
+    img {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
     svg {
         width: 20px;
         flex-shrink: 0;
@@ -47,6 +55,11 @@
         background-color: var(--primary-color);
         color: var(--white);
         border-color: var(--primary-color);
+
+        img {
+            filter: brightness(0) invert(1);
+
+        }
     }
 
     &.primary {
@@ -57,6 +70,11 @@
         &:hover {
             background-color: transparent;
             color: var(--primary-color);
+
+            img {
+                filter: brightness(0) saturate(100%) invert(32%) sepia(91%) saturate(1359%) hue-rotate(198deg) brightness(88%) contrast(100%);
+                transition: none;
+            }
         }
 
         .icon {
