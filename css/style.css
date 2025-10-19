@@ -5998,6 +5998,7 @@ input[type=range]::-moz-range-thumb {
   }
   .flat-section-benefit .content-right {
     width: 100%;
+    padding: 50px 15px !important;
   }
   .featured-properties__tab-menu {
     justify-content: center;
@@ -6125,7 +6126,7 @@ input[type=range]::-moz-range-thumb {
     display: block;
   }
   .flat-section-benefit .content-right {
-    padding: 15px;
+    padding: 15px !important;
   }
   .flat-testimonial-v2 .content-right {
     padding: 50px 15px;
