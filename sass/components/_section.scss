@@ -130,8 +130,18 @@
     }
 
     &.style-3 {
-        border-radius: 15px;
+
+        .content-left {
+            width: 55%;
+            aspect-ratio: 13/12;
+        }
+
+        border-radius: 30px;
         overflow: hidden;
+
+        .content-right {
+            padding: 50px 115px 50px 60px;
+        }
     }
 
     .img-wrap {

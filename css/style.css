@@ -3361,9 +3361,16 @@ input[type=range]::-moz-range-thumb {
 .flat-section-benefit.style-2 .content-left img {
   border-radius: 15px;
 }
+.flat-section-benefit.style-3 .content-left {
+  width: 55%;
+  aspect-ratio: 13/12;
+}
 .flat-section-benefit.style-3 {
-  border-radius: 15px;
+  border-radius: 30px;
   overflow: hidden;
+}
+.flat-section-benefit.style-3 .content-right {
+  padding: 50px 115px 50px 60px;
 }
 .flat-section-benefit .img-wrap {
   position: relative;
@@ -5986,7 +5993,7 @@ input[type=range]::-moz-range-thumb {
     flex-direction: column;
   }
   .flat-section-benefit .content-left {
-    width: 100%;
+    width: 100% !important;
     border-radius: 30px 30px 0 0;
   }
   .flat-section-benefit .content-right {
