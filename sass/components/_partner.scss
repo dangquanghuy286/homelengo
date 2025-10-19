@@ -1,17 +1,5 @@
 // ===================PARTNER====================
 .partners {
-    gap: 20px;
-    flex-direction: column;
-
-    &__title {
-        font-weight: 600;
-        color: var(--black);
-        font-size: 18px;
-        line-height: 25.2px;
-        white-space: nowrap;
-        margin-bottom: 20px;
-    }
-
     &__wrapper {
         overflow: hidden;
         width: 100%;
